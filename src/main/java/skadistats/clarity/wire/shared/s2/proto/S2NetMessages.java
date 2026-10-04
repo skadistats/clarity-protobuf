@@ -1259,6 +1259,24 @@ public final class S2NetMessages {
      * <code>optional int32 passthrough = 7;</code>
      */
     int getPassthrough();
+
+    /**
+     * <code>optional int32 entity = 8 [default = -1];</code>
+     */
+    boolean hasEntity();
+    /**
+     * <code>optional int32 entity = 8 [default = -1];</code>
+     */
+    int getEntity();
+
+    /**
+     * <code>optional bool caster = 9;</code>
+     */
+    boolean hasCaster();
+    /**
+     * <code>optional bool caster = 9;</code>
+     */
+    boolean getCaster();
   }
   /**
    * Protobuf type {@code CSVCMsg_VoiceData}
@@ -1353,6 +1371,16 @@ public final class S2NetMessages {
             case 56: {
               bitField0_ |= 0x00000040;
               passthrough_ = input.readInt32();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              entity_ = input.readInt32();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              caster_ = input.readBool();
               break;
             }
           }
@@ -1506,6 +1534,36 @@ public final class S2NetMessages {
       return passthrough_;
     }
 
+    public static final int ENTITY_FIELD_NUMBER = 8;
+    private int entity_;
+    /**
+     * <code>optional int32 entity = 8 [default = -1];</code>
+     */
+    public boolean hasEntity() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional int32 entity = 8 [default = -1];</code>
+     */
+    public int getEntity() {
+      return entity_;
+    }
+
+    public static final int CASTER_FIELD_NUMBER = 9;
+    private boolean caster_;
+    /**
+     * <code>optional bool caster = 9;</code>
+     */
+    public boolean hasCaster() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional bool caster = 9;</code>
+     */
+    public boolean getCaster() {
+      return caster_;
+    }
+
     private void initFields() {
       audio_ = skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio.getDefaultInstance();
       client_ = 0;
@@ -1514,6 +1572,8 @@ public final class S2NetMessages {
       audibleMask_ = 0;
       tick_ = 0;
       passthrough_ = 0;
+      entity_ = -1;
+      caster_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1548,6 +1608,12 @@ public final class S2NetMessages {
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         output.writeInt32(7, passthrough_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeInt32(8, entity_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeBool(9, caster_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1585,6 +1651,14 @@ public final class S2NetMessages {
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(7, passthrough_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(8, entity_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeBoolSize(9, caster_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1722,6 +1796,10 @@ public final class S2NetMessages {
         bitField0_ = (bitField0_ & ~0x00000020);
         passthrough_ = 0;
         bitField0_ = (bitField0_ & ~0x00000040);
+        entity_ = -1;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        caster_ = false;
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -1782,6 +1860,14 @@ public final class S2NetMessages {
           to_bitField0_ |= 0x00000040;
         }
         result.passthrough_ = passthrough_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.entity_ = entity_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.caster_ = caster_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1818,6 +1904,12 @@ public final class S2NetMessages {
         }
         if (other.hasPassthrough()) {
           setPassthrough(other.getPassthrough());
+        }
+        if (other.hasEntity()) {
+          setEntity(other.getEntity());
+        }
+        if (other.hasCaster()) {
+          setCaster(other.getCaster());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -2150,6 +2242,70 @@ public final class S2NetMessages {
       public Builder clearPassthrough() {
         bitField0_ = (bitField0_ & ~0x00000040);
         passthrough_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int entity_ = -1;
+      /**
+       * <code>optional int32 entity = 8 [default = -1];</code>
+       */
+      public boolean hasEntity() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional int32 entity = 8 [default = -1];</code>
+       */
+      public int getEntity() {
+        return entity_;
+      }
+      /**
+       * <code>optional int32 entity = 8 [default = -1];</code>
+       */
+      public Builder setEntity(int value) {
+        bitField0_ |= 0x00000080;
+        entity_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 entity = 8 [default = -1];</code>
+       */
+      public Builder clearEntity() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        entity_ = -1;
+        onChanged();
+        return this;
+      }
+
+      private boolean caster_ ;
+      /**
+       * <code>optional bool caster = 9;</code>
+       */
+      public boolean hasCaster() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional bool caster = 9;</code>
+       */
+      public boolean getCaster() {
+        return caster_;
+      }
+      /**
+       * <code>optional bool caster = 9;</code>
+       */
+      public Builder setCaster(boolean value) {
+        bitField0_ |= 0x00000100;
+        caster_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool caster = 9;</code>
+       */
+      public Builder clearCaster() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        caster_ = false;
         onChanged();
         return this;
       }
@@ -2923,6 +3079,19 @@ public final class S2NetMessages {
      * <code>optional int32 var_serializer_sym = 12;</code>
      */
     int getVarSerializerSym();
+
+    /**
+     * <code>optional .ProtoFlattenedSerializerField_t.proto_enum_info_t var_enum_info = 13;</code>
+     */
+    boolean hasVarEnumInfo();
+    /**
+     * <code>optional .ProtoFlattenedSerializerField_t.proto_enum_info_t var_enum_info = 13;</code>
+     */
+    skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t getVarEnumInfo();
+    /**
+     * <code>optional .ProtoFlattenedSerializerField_t.proto_enum_info_t var_enum_info = 13;</code>
+     */
+    skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_tOrBuilder getVarEnumInfoOrBuilder();
   }
   /**
    * Protobuf type {@code ProtoFlattenedSerializerField_t}
@@ -3037,6 +3206,19 @@ public final class S2NetMessages {
             case 96: {
               bitField0_ |= 0x00000400;
               varSerializerSym_ = input.readInt32();
+              break;
+            }
+            case 106: {
+              skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000800) == 0x00000800)) {
+                subBuilder = varEnumInfo_.toBuilder();
+              }
+              varEnumInfo_ = input.readMessage(skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(varEnumInfo_);
+                varEnumInfo_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000800;
               break;
             }
           }
@@ -3556,6 +3738,403 @@ public final class S2NetMessages {
       // @@protoc_insertion_point(class_scope:ProtoFlattenedSerializerField_t.polymorphic_field_t)
     }
 
+    public interface proto_enum_info_tOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:ProtoFlattenedSerializerField_t.proto_enum_info_t)
+        skadistats.clarity.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional bool is_signed_enum = 1;</code>
+       */
+      boolean hasIsSignedEnum();
+      /**
+       * <code>optional bool is_signed_enum = 1;</code>
+       */
+      boolean getIsSignedEnum();
+    }
+    /**
+     * Protobuf type {@code ProtoFlattenedSerializerField_t.proto_enum_info_t}
+     */
+    public static final class proto_enum_info_t extends
+        skadistats.clarity.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:ProtoFlattenedSerializerField_t.proto_enum_info_t)
+        proto_enum_info_tOrBuilder {
+      // Use proto_enum_info_t.newBuilder() to construct.
+      private proto_enum_info_t(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private proto_enum_info_t(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final proto_enum_info_t defaultInstance;
+      public static proto_enum_info_t getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public proto_enum_info_t getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final skadistats.clarity.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private proto_enum_info_t(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+                bitField0_ |= 0x00000001;
+                isSignedEnum_ = input.readBool();
+                break;
+              }
+            }
+          }
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.s2.proto.S2NetMessages.internal_static_ProtoFlattenedSerializerField_t_proto_enum_info_t_descriptor;
+      }
+
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.s2.proto.S2NetMessages.internal_static_ProtoFlattenedSerializerField_t_proto_enum_info_t_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.class, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.Builder.class);
+      }
+
+      public static skadistats.clarity.protobuf.Parser<proto_enum_info_t> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<proto_enum_info_t>() {
+        public proto_enum_info_t parsePartialFrom(
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+          return new proto_enum_info_t(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public skadistats.clarity.protobuf.Parser<proto_enum_info_t> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int IS_SIGNED_ENUM_FIELD_NUMBER = 1;
+      private boolean isSignedEnum_;
+      /**
+       * <code>optional bool is_signed_enum = 1;</code>
+       */
+      public boolean hasIsSignedEnum() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional bool is_signed_enum = 1;</code>
+       */
+      public boolean getIsSignedEnum() {
+        return isSignedEnum_;
+      }
+
+      private void initFields() {
+        isSignedEnum_ = false;
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeBool(1, isSignedEnum_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeBoolSize(1, isSignedEnum_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t parseFrom(
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t parseFrom(
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t parseFrom(byte[] data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t parseFrom(
+          byte[] data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t parseFrom(
+          java.io.InputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t parseDelimitedFrom(
+          java.io.InputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t parseFrom(
+          skadistats.clarity.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t parseFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code ProtoFlattenedSerializerField_t.proto_enum_info_t}
+       */
+      public static final class Builder extends
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:ProtoFlattenedSerializerField_t.proto_enum_info_t)
+          skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_tOrBuilder {
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.shared.s2.proto.S2NetMessages.internal_static_ProtoFlattenedSerializerField_t_proto_enum_info_t_descriptor;
+        }
+
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.shared.s2.proto.S2NetMessages.internal_static_ProtoFlattenedSerializerField_t_proto_enum_info_t_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.class, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          isSignedEnum_ = false;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.shared.s2.proto.S2NetMessages.internal_static_ProtoFlattenedSerializerField_t_proto_enum_info_t_descriptor;
+        }
+
+        public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t getDefaultInstanceForType() {
+          return skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t build() {
+          skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t buildPartial() {
+          skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t result = new skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.isSignedEnum_ = isSignedEnum_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t) {
+            return mergeFrom((skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t other) {
+          if (other == skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.getDefaultInstance()) return this;
+          if (other.hasIsSignedEnum()) {
+            setIsSignedEnum(other.getIsSignedEnum());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private boolean isSignedEnum_ ;
+        /**
+         * <code>optional bool is_signed_enum = 1;</code>
+         */
+        public boolean hasIsSignedEnum() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional bool is_signed_enum = 1;</code>
+         */
+        public boolean getIsSignedEnum() {
+          return isSignedEnum_;
+        }
+        /**
+         * <code>optional bool is_signed_enum = 1;</code>
+         */
+        public Builder setIsSignedEnum(boolean value) {
+          bitField0_ |= 0x00000001;
+          isSignedEnum_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool is_signed_enum = 1;</code>
+         */
+        public Builder clearIsSignedEnum() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          isSignedEnum_ = false;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:ProtoFlattenedSerializerField_t.proto_enum_info_t)
+      }
+
+      static {
+        defaultInstance = new proto_enum_info_t(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:ProtoFlattenedSerializerField_t.proto_enum_info_t)
+    }
+
     private int bitField0_;
     public static final int VAR_TYPE_SYM_FIELD_NUMBER = 1;
     private int varTypeSym_;
@@ -3757,6 +4336,27 @@ public final class S2NetMessages {
       return varSerializerSym_;
     }
 
+    public static final int VAR_ENUM_INFO_FIELD_NUMBER = 13;
+    private skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t varEnumInfo_;
+    /**
+     * <code>optional .ProtoFlattenedSerializerField_t.proto_enum_info_t var_enum_info = 13;</code>
+     */
+    public boolean hasVarEnumInfo() {
+      return ((bitField0_ & 0x00000800) == 0x00000800);
+    }
+    /**
+     * <code>optional .ProtoFlattenedSerializerField_t.proto_enum_info_t var_enum_info = 13;</code>
+     */
+    public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t getVarEnumInfo() {
+      return varEnumInfo_;
+    }
+    /**
+     * <code>optional .ProtoFlattenedSerializerField_t.proto_enum_info_t var_enum_info = 13;</code>
+     */
+    public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_tOrBuilder getVarEnumInfoOrBuilder() {
+      return varEnumInfo_;
+    }
+
     private void initFields() {
       varTypeSym_ = 0;
       varNameSym_ = 0;
@@ -3770,6 +4370,7 @@ public final class S2NetMessages {
       varEncoderSym_ = 0;
       polymorphicTypes_ = java.util.Collections.emptyList();
       varSerializerSym_ = 0;
+      varEnumInfo_ = skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3819,6 +4420,9 @@ public final class S2NetMessages {
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
         output.writeInt32(12, varSerializerSym_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        output.writeMessage(13, varEnumInfo_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3876,6 +4480,10 @@ public final class S2NetMessages {
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
         size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(12, varSerializerSym_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeMessageSize(13, varEnumInfo_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -3987,6 +4595,7 @@ public final class S2NetMessages {
       private void maybeForceBuilderInitialization() {
         if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getPolymorphicTypesFieldBuilder();
+          getVarEnumInfoFieldBuilder();
         }
       }
       private static Builder create() {
@@ -4023,6 +4632,12 @@ public final class S2NetMessages {
         }
         varSerializerSym_ = 0;
         bitField0_ = (bitField0_ & ~0x00000800);
+        if (varEnumInfoBuilder_ == null) {
+          varEnumInfo_ = skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.getDefaultInstance();
+        } else {
+          varEnumInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
 
@@ -4104,6 +4719,14 @@ public final class S2NetMessages {
           to_bitField0_ |= 0x00000400;
         }
         result.varSerializerSym_ = varSerializerSym_;
+        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+          to_bitField0_ |= 0x00000800;
+        }
+        if (varEnumInfoBuilder_ == null) {
+          result.varEnumInfo_ = varEnumInfo_;
+        } else {
+          result.varEnumInfo_ = varEnumInfoBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4178,6 +4801,9 @@ public final class S2NetMessages {
         }
         if (other.hasVarSerializerSym()) {
           setVarSerializerSym(other.getVarSerializerSym());
+        }
+        if (other.hasVarEnumInfo()) {
+          mergeVarEnumInfo(other.getVarEnumInfo());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -4796,6 +5422,122 @@ public final class S2NetMessages {
         varSerializerSym_ = 0;
         onChanged();
         return this;
+      }
+
+      private skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t varEnumInfo_ = skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.getDefaultInstance();
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.Builder, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_tOrBuilder> varEnumInfoBuilder_;
+      /**
+       * <code>optional .ProtoFlattenedSerializerField_t.proto_enum_info_t var_enum_info = 13;</code>
+       */
+      public boolean hasVarEnumInfo() {
+        return ((bitField0_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional .ProtoFlattenedSerializerField_t.proto_enum_info_t var_enum_info = 13;</code>
+       */
+      public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t getVarEnumInfo() {
+        if (varEnumInfoBuilder_ == null) {
+          return varEnumInfo_;
+        } else {
+          return varEnumInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .ProtoFlattenedSerializerField_t.proto_enum_info_t var_enum_info = 13;</code>
+       */
+      public Builder setVarEnumInfo(skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t value) {
+        if (varEnumInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          varEnumInfo_ = value;
+          onChanged();
+        } else {
+          varEnumInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00001000;
+        return this;
+      }
+      /**
+       * <code>optional .ProtoFlattenedSerializerField_t.proto_enum_info_t var_enum_info = 13;</code>
+       */
+      public Builder setVarEnumInfo(
+          skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.Builder builderForValue) {
+        if (varEnumInfoBuilder_ == null) {
+          varEnumInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          varEnumInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00001000;
+        return this;
+      }
+      /**
+       * <code>optional .ProtoFlattenedSerializerField_t.proto_enum_info_t var_enum_info = 13;</code>
+       */
+      public Builder mergeVarEnumInfo(skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t value) {
+        if (varEnumInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) == 0x00001000) &&
+              varEnumInfo_ != skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.getDefaultInstance()) {
+            varEnumInfo_ =
+              skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.newBuilder(varEnumInfo_).mergeFrom(value).buildPartial();
+          } else {
+            varEnumInfo_ = value;
+          }
+          onChanged();
+        } else {
+          varEnumInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00001000;
+        return this;
+      }
+      /**
+       * <code>optional .ProtoFlattenedSerializerField_t.proto_enum_info_t var_enum_info = 13;</code>
+       */
+      public Builder clearVarEnumInfo() {
+        if (varEnumInfoBuilder_ == null) {
+          varEnumInfo_ = skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.getDefaultInstance();
+          onChanged();
+        } else {
+          varEnumInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00001000);
+        return this;
+      }
+      /**
+       * <code>optional .ProtoFlattenedSerializerField_t.proto_enum_info_t var_enum_info = 13;</code>
+       */
+      public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.Builder getVarEnumInfoBuilder() {
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return getVarEnumInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .ProtoFlattenedSerializerField_t.proto_enum_info_t var_enum_info = 13;</code>
+       */
+      public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_tOrBuilder getVarEnumInfoOrBuilder() {
+        if (varEnumInfoBuilder_ != null) {
+          return varEnumInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return varEnumInfo_;
+        }
+      }
+      /**
+       * <code>optional .ProtoFlattenedSerializerField_t.proto_enum_info_t var_enum_info = 13;</code>
+       */
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.Builder, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_tOrBuilder> 
+          getVarEnumInfoFieldBuilder() {
+        if (varEnumInfoBuilder_ == null) {
+          varEnumInfoBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_t.Builder, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.proto_enum_info_tOrBuilder>(
+                  getVarEnumInfo(),
+                  getParentForChildren(),
+                  isClean());
+          varEnumInfo_ = null;
+        }
+        return varEnumInfoBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:ProtoFlattenedSerializerField_t)
@@ -5439,6 +6181,793 @@ public final class S2NetMessages {
     // @@protoc_insertion_point(class_scope:ProtoFlattenedSerializer_t)
   }
 
+  public interface ProtoCoordSizeParams_tOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ProtoCoordSizeParams_t)
+      skadistats.clarity.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 coord_integer_bits = 1;</code>
+     */
+    boolean hasCoordIntegerBits();
+    /**
+     * <code>optional int32 coord_integer_bits = 1;</code>
+     */
+    int getCoordIntegerBits();
+
+    /**
+     * <code>optional int32 coord_fractional_bits = 2;</code>
+     */
+    boolean hasCoordFractionalBits();
+    /**
+     * <code>optional int32 coord_fractional_bits = 2;</code>
+     */
+    int getCoordFractionalBits();
+
+    /**
+     * <code>optional int32 coord_integer_bits_mp = 3;</code>
+     */
+    boolean hasCoordIntegerBitsMp();
+    /**
+     * <code>optional int32 coord_integer_bits_mp = 3;</code>
+     */
+    int getCoordIntegerBitsMp();
+
+    /**
+     * <code>optional int32 coord_fractional_bits_mp = 4;</code>
+     */
+    boolean hasCoordFractionalBitsMp();
+    /**
+     * <code>optional int32 coord_fractional_bits_mp = 4;</code>
+     */
+    int getCoordFractionalBitsMp();
+
+    /**
+     * <code>optional int32 normal_fractional_bits = 5;</code>
+     */
+    boolean hasNormalFractionalBits();
+    /**
+     * <code>optional int32 normal_fractional_bits = 5;</code>
+     */
+    int getNormalFractionalBits();
+
+    /**
+     * <code>optional int32 angle_bits = 6;</code>
+     */
+    boolean hasAngleBits();
+    /**
+     * <code>optional int32 angle_bits = 6;</code>
+     */
+    int getAngleBits();
+  }
+  /**
+   * Protobuf type {@code ProtoCoordSizeParams_t}
+   */
+  public static final class ProtoCoordSizeParams_t extends
+      skadistats.clarity.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ProtoCoordSizeParams_t)
+      ProtoCoordSizeParams_tOrBuilder {
+    // Use ProtoCoordSizeParams_t.newBuilder() to construct.
+    private ProtoCoordSizeParams_t(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private ProtoCoordSizeParams_t(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final ProtoCoordSizeParams_t defaultInstance;
+    public static ProtoCoordSizeParams_t getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public ProtoCoordSizeParams_t getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final skadistats.clarity.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ProtoCoordSizeParams_t(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              coordIntegerBits_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              coordFractionalBits_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              coordIntegerBitsMp_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              coordFractionalBitsMp_ = input.readInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              normalFractionalBits_ = input.readInt32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              angleBits_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.shared.s2.proto.S2NetMessages.internal_static_ProtoCoordSizeParams_t_descriptor;
+    }
+
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.shared.s2.proto.S2NetMessages.internal_static_ProtoCoordSizeParams_t_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.class, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.Builder.class);
+    }
+
+    public static skadistats.clarity.protobuf.Parser<ProtoCoordSizeParams_t> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<ProtoCoordSizeParams_t>() {
+      public ProtoCoordSizeParams_t parsePartialFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return new ProtoCoordSizeParams_t(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public skadistats.clarity.protobuf.Parser<ProtoCoordSizeParams_t> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int COORD_INTEGER_BITS_FIELD_NUMBER = 1;
+    private int coordIntegerBits_;
+    /**
+     * <code>optional int32 coord_integer_bits = 1;</code>
+     */
+    public boolean hasCoordIntegerBits() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 coord_integer_bits = 1;</code>
+     */
+    public int getCoordIntegerBits() {
+      return coordIntegerBits_;
+    }
+
+    public static final int COORD_FRACTIONAL_BITS_FIELD_NUMBER = 2;
+    private int coordFractionalBits_;
+    /**
+     * <code>optional int32 coord_fractional_bits = 2;</code>
+     */
+    public boolean hasCoordFractionalBits() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 coord_fractional_bits = 2;</code>
+     */
+    public int getCoordFractionalBits() {
+      return coordFractionalBits_;
+    }
+
+    public static final int COORD_INTEGER_BITS_MP_FIELD_NUMBER = 3;
+    private int coordIntegerBitsMp_;
+    /**
+     * <code>optional int32 coord_integer_bits_mp = 3;</code>
+     */
+    public boolean hasCoordIntegerBitsMp() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 coord_integer_bits_mp = 3;</code>
+     */
+    public int getCoordIntegerBitsMp() {
+      return coordIntegerBitsMp_;
+    }
+
+    public static final int COORD_FRACTIONAL_BITS_MP_FIELD_NUMBER = 4;
+    private int coordFractionalBitsMp_;
+    /**
+     * <code>optional int32 coord_fractional_bits_mp = 4;</code>
+     */
+    public boolean hasCoordFractionalBitsMp() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 coord_fractional_bits_mp = 4;</code>
+     */
+    public int getCoordFractionalBitsMp() {
+      return coordFractionalBitsMp_;
+    }
+
+    public static final int NORMAL_FRACTIONAL_BITS_FIELD_NUMBER = 5;
+    private int normalFractionalBits_;
+    /**
+     * <code>optional int32 normal_fractional_bits = 5;</code>
+     */
+    public boolean hasNormalFractionalBits() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int32 normal_fractional_bits = 5;</code>
+     */
+    public int getNormalFractionalBits() {
+      return normalFractionalBits_;
+    }
+
+    public static final int ANGLE_BITS_FIELD_NUMBER = 6;
+    private int angleBits_;
+    /**
+     * <code>optional int32 angle_bits = 6;</code>
+     */
+    public boolean hasAngleBits() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional int32 angle_bits = 6;</code>
+     */
+    public int getAngleBits() {
+      return angleBits_;
+    }
+
+    private void initFields() {
+      coordIntegerBits_ = 0;
+      coordFractionalBits_ = 0;
+      coordIntegerBitsMp_ = 0;
+      coordFractionalBitsMp_ = 0;
+      normalFractionalBits_ = 0;
+      angleBits_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, coordIntegerBits_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, coordFractionalBits_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, coordIntegerBitsMp_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, coordFractionalBitsMp_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(5, normalFractionalBits_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeInt32(6, angleBits_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(1, coordIntegerBits_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(2, coordFractionalBits_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(3, coordIntegerBitsMp_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(4, coordFractionalBitsMp_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(5, normalFractionalBits_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(6, angleBits_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t parseFrom(
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t parseFrom(
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t parseFrom(byte[] data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t parseFrom(
+        byte[] data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t parseFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t parseDelimitedFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ProtoCoordSizeParams_t}
+     */
+    public static final class Builder extends
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ProtoCoordSizeParams_t)
+        skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_tOrBuilder {
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.s2.proto.S2NetMessages.internal_static_ProtoCoordSizeParams_t_descriptor;
+      }
+
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.s2.proto.S2NetMessages.internal_static_ProtoCoordSizeParams_t_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.class, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        coordIntegerBits_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        coordFractionalBits_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        coordIntegerBitsMp_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        coordFractionalBitsMp_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        normalFractionalBits_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        angleBits_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.shared.s2.proto.S2NetMessages.internal_static_ProtoCoordSizeParams_t_descriptor;
+      }
+
+      public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t getDefaultInstanceForType() {
+        return skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t build() {
+        skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t buildPartial() {
+        skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t result = new skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.coordIntegerBits_ = coordIntegerBits_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.coordFractionalBits_ = coordFractionalBits_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.coordIntegerBitsMp_ = coordIntegerBitsMp_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.coordFractionalBitsMp_ = coordFractionalBitsMp_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.normalFractionalBits_ = normalFractionalBits_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.angleBits_ = angleBits_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t) {
+          return mergeFrom((skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t other) {
+        if (other == skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.getDefaultInstance()) return this;
+        if (other.hasCoordIntegerBits()) {
+          setCoordIntegerBits(other.getCoordIntegerBits());
+        }
+        if (other.hasCoordFractionalBits()) {
+          setCoordFractionalBits(other.getCoordFractionalBits());
+        }
+        if (other.hasCoordIntegerBitsMp()) {
+          setCoordIntegerBitsMp(other.getCoordIntegerBitsMp());
+        }
+        if (other.hasCoordFractionalBitsMp()) {
+          setCoordFractionalBitsMp(other.getCoordFractionalBitsMp());
+        }
+        if (other.hasNormalFractionalBits()) {
+          setNormalFractionalBits(other.getNormalFractionalBits());
+        }
+        if (other.hasAngleBits()) {
+          setAngleBits(other.getAngleBits());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int coordIntegerBits_ ;
+      /**
+       * <code>optional int32 coord_integer_bits = 1;</code>
+       */
+      public boolean hasCoordIntegerBits() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 coord_integer_bits = 1;</code>
+       */
+      public int getCoordIntegerBits() {
+        return coordIntegerBits_;
+      }
+      /**
+       * <code>optional int32 coord_integer_bits = 1;</code>
+       */
+      public Builder setCoordIntegerBits(int value) {
+        bitField0_ |= 0x00000001;
+        coordIntegerBits_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 coord_integer_bits = 1;</code>
+       */
+      public Builder clearCoordIntegerBits() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        coordIntegerBits_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int coordFractionalBits_ ;
+      /**
+       * <code>optional int32 coord_fractional_bits = 2;</code>
+       */
+      public boolean hasCoordFractionalBits() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 coord_fractional_bits = 2;</code>
+       */
+      public int getCoordFractionalBits() {
+        return coordFractionalBits_;
+      }
+      /**
+       * <code>optional int32 coord_fractional_bits = 2;</code>
+       */
+      public Builder setCoordFractionalBits(int value) {
+        bitField0_ |= 0x00000002;
+        coordFractionalBits_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 coord_fractional_bits = 2;</code>
+       */
+      public Builder clearCoordFractionalBits() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        coordFractionalBits_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int coordIntegerBitsMp_ ;
+      /**
+       * <code>optional int32 coord_integer_bits_mp = 3;</code>
+       */
+      public boolean hasCoordIntegerBitsMp() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 coord_integer_bits_mp = 3;</code>
+       */
+      public int getCoordIntegerBitsMp() {
+        return coordIntegerBitsMp_;
+      }
+      /**
+       * <code>optional int32 coord_integer_bits_mp = 3;</code>
+       */
+      public Builder setCoordIntegerBitsMp(int value) {
+        bitField0_ |= 0x00000004;
+        coordIntegerBitsMp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 coord_integer_bits_mp = 3;</code>
+       */
+      public Builder clearCoordIntegerBitsMp() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        coordIntegerBitsMp_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int coordFractionalBitsMp_ ;
+      /**
+       * <code>optional int32 coord_fractional_bits_mp = 4;</code>
+       */
+      public boolean hasCoordFractionalBitsMp() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 coord_fractional_bits_mp = 4;</code>
+       */
+      public int getCoordFractionalBitsMp() {
+        return coordFractionalBitsMp_;
+      }
+      /**
+       * <code>optional int32 coord_fractional_bits_mp = 4;</code>
+       */
+      public Builder setCoordFractionalBitsMp(int value) {
+        bitField0_ |= 0x00000008;
+        coordFractionalBitsMp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 coord_fractional_bits_mp = 4;</code>
+       */
+      public Builder clearCoordFractionalBitsMp() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        coordFractionalBitsMp_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int normalFractionalBits_ ;
+      /**
+       * <code>optional int32 normal_fractional_bits = 5;</code>
+       */
+      public boolean hasNormalFractionalBits() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int32 normal_fractional_bits = 5;</code>
+       */
+      public int getNormalFractionalBits() {
+        return normalFractionalBits_;
+      }
+      /**
+       * <code>optional int32 normal_fractional_bits = 5;</code>
+       */
+      public Builder setNormalFractionalBits(int value) {
+        bitField0_ |= 0x00000010;
+        normalFractionalBits_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 normal_fractional_bits = 5;</code>
+       */
+      public Builder clearNormalFractionalBits() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        normalFractionalBits_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int angleBits_ ;
+      /**
+       * <code>optional int32 angle_bits = 6;</code>
+       */
+      public boolean hasAngleBits() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional int32 angle_bits = 6;</code>
+       */
+      public int getAngleBits() {
+        return angleBits_;
+      }
+      /**
+       * <code>optional int32 angle_bits = 6;</code>
+       */
+      public Builder setAngleBits(int value) {
+        bitField0_ |= 0x00000020;
+        angleBits_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 angle_bits = 6;</code>
+       */
+      public Builder clearAngleBits() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        angleBits_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ProtoCoordSizeParams_t)
+    }
+
+    static {
+      defaultInstance = new ProtoCoordSizeParams_t(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:ProtoCoordSizeParams_t)
+  }
+
   public interface CSVCMsg_FlattenedSerializerOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CSVCMsg_FlattenedSerializer)
       skadistats.clarity.protobuf.MessageOrBuilder {
@@ -5509,6 +7038,19 @@ public final class S2NetMessages {
      */
     skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_tOrBuilder getFieldsOrBuilder(
         int index);
+
+    /**
+     * <code>optional .ProtoCoordSizeParams_t coord_size_params = 4;</code>
+     */
+    boolean hasCoordSizeParams();
+    /**
+     * <code>optional .ProtoCoordSizeParams_t coord_size_params = 4;</code>
+     */
+    skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t getCoordSizeParams();
+    /**
+     * <code>optional .ProtoCoordSizeParams_t coord_size_params = 4;</code>
+     */
+    skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_tOrBuilder getCoordSizeParamsOrBuilder();
   }
   /**
    * Protobuf type {@code CSVCMsg_FlattenedSerializer}
@@ -5587,6 +7129,19 @@ public final class S2NetMessages {
               fields_.add(input.readMessage(skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.PARSER, extensionRegistry));
               break;
             }
+            case 34: {
+              skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = coordSizeParams_.toBuilder();
+              }
+              coordSizeParams_ = input.readMessage(skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(coordSizeParams_);
+                coordSizeParams_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
           }
         }
       } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
@@ -5635,6 +7190,7 @@ public final class S2NetMessages {
       return PARSER;
     }
 
+    private int bitField0_;
     public static final int SERIALIZERS_FIELD_NUMBER = 1;
     private java.util.List<skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializer_t> serializers_;
     /**
@@ -5734,10 +7290,32 @@ public final class S2NetMessages {
       return fields_.get(index);
     }
 
+    public static final int COORD_SIZE_PARAMS_FIELD_NUMBER = 4;
+    private skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t coordSizeParams_;
+    /**
+     * <code>optional .ProtoCoordSizeParams_t coord_size_params = 4;</code>
+     */
+    public boolean hasCoordSizeParams() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .ProtoCoordSizeParams_t coord_size_params = 4;</code>
+     */
+    public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t getCoordSizeParams() {
+      return coordSizeParams_;
+    }
+    /**
+     * <code>optional .ProtoCoordSizeParams_t coord_size_params = 4;</code>
+     */
+    public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_tOrBuilder getCoordSizeParamsOrBuilder() {
+      return coordSizeParams_;
+    }
+
     private void initFields() {
       serializers_ = java.util.Collections.emptyList();
       symbols_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
       fields_ = java.util.Collections.emptyList();
+      coordSizeParams_ = skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -5760,6 +7338,9 @@ public final class S2NetMessages {
       }
       for (int i = 0; i < fields_.size(); i++) {
         output.writeMessage(3, fields_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(4, coordSizeParams_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -5786,6 +7367,10 @@ public final class S2NetMessages {
       for (int i = 0; i < fields_.size(); i++) {
         size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(3, fields_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeMessageSize(4, coordSizeParams_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -5898,6 +7483,7 @@ public final class S2NetMessages {
         if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getSerializersFieldBuilder();
           getFieldsFieldBuilder();
+          getCoordSizeParamsFieldBuilder();
         }
       }
       private static Builder create() {
@@ -5920,6 +7506,12 @@ public final class S2NetMessages {
         } else {
           fieldsBuilder_.clear();
         }
+        if (coordSizeParamsBuilder_ == null) {
+          coordSizeParams_ = skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.getDefaultInstance();
+        } else {
+          coordSizeParamsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -5947,6 +7539,7 @@ public final class S2NetMessages {
       public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.CSVCMsg_FlattenedSerializer buildPartial() {
         skadistats.clarity.wire.shared.s2.proto.S2NetMessages.CSVCMsg_FlattenedSerializer result = new skadistats.clarity.wire.shared.s2.proto.S2NetMessages.CSVCMsg_FlattenedSerializer(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (serializersBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
             serializers_ = java.util.Collections.unmodifiableList(serializers_);
@@ -5970,6 +7563,15 @@ public final class S2NetMessages {
         } else {
           result.fields_ = fieldsBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (coordSizeParamsBuilder_ == null) {
+          result.coordSizeParams_ = coordSizeParams_;
+        } else {
+          result.coordSizeParams_ = coordSizeParamsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -6046,6 +7648,9 @@ public final class S2NetMessages {
               fieldsBuilder_.addAllMessages(other.fields_);
             }
           }
+        }
+        if (other.hasCoordSizeParams()) {
+          mergeCoordSizeParams(other.getCoordSizeParams());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -6645,6 +8250,122 @@ public final class S2NetMessages {
           fields_ = null;
         }
         return fieldsBuilder_;
+      }
+
+      private skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t coordSizeParams_ = skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.getDefaultInstance();
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.Builder, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_tOrBuilder> coordSizeParamsBuilder_;
+      /**
+       * <code>optional .ProtoCoordSizeParams_t coord_size_params = 4;</code>
+       */
+      public boolean hasCoordSizeParams() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .ProtoCoordSizeParams_t coord_size_params = 4;</code>
+       */
+      public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t getCoordSizeParams() {
+        if (coordSizeParamsBuilder_ == null) {
+          return coordSizeParams_;
+        } else {
+          return coordSizeParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .ProtoCoordSizeParams_t coord_size_params = 4;</code>
+       */
+      public Builder setCoordSizeParams(skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t value) {
+        if (coordSizeParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          coordSizeParams_ = value;
+          onChanged();
+        } else {
+          coordSizeParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .ProtoCoordSizeParams_t coord_size_params = 4;</code>
+       */
+      public Builder setCoordSizeParams(
+          skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.Builder builderForValue) {
+        if (coordSizeParamsBuilder_ == null) {
+          coordSizeParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          coordSizeParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .ProtoCoordSizeParams_t coord_size_params = 4;</code>
+       */
+      public Builder mergeCoordSizeParams(skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t value) {
+        if (coordSizeParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              coordSizeParams_ != skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.getDefaultInstance()) {
+            coordSizeParams_ =
+              skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.newBuilder(coordSizeParams_).mergeFrom(value).buildPartial();
+          } else {
+            coordSizeParams_ = value;
+          }
+          onChanged();
+        } else {
+          coordSizeParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .ProtoCoordSizeParams_t coord_size_params = 4;</code>
+       */
+      public Builder clearCoordSizeParams() {
+        if (coordSizeParamsBuilder_ == null) {
+          coordSizeParams_ = skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.getDefaultInstance();
+          onChanged();
+        } else {
+          coordSizeParamsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .ProtoCoordSizeParams_t coord_size_params = 4;</code>
+       */
+      public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.Builder getCoordSizeParamsBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getCoordSizeParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .ProtoCoordSizeParams_t coord_size_params = 4;</code>
+       */
+      public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_tOrBuilder getCoordSizeParamsOrBuilder() {
+        if (coordSizeParamsBuilder_ != null) {
+          return coordSizeParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return coordSizeParams_;
+        }
+      }
+      /**
+       * <code>optional .ProtoCoordSizeParams_t coord_size_params = 4;</code>
+       */
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.Builder, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_tOrBuilder> 
+          getCoordSizeParamsFieldBuilder() {
+        if (coordSizeParamsBuilder_ == null) {
+          coordSizeParamsBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_t.Builder, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoCoordSizeParams_tOrBuilder>(
+                  getCoordSizeParams(),
+                  getParentForChildren(),
+                  isClean());
+          coordSizeParams_ = null;
+        }
+        return coordSizeParamsBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:CSVCMsg_FlattenedSerializer)
@@ -10797,10 +12518,20 @@ public final class S2NetMessages {
     skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ProtoFlattenedSerializerField_t_polymorphic_field_t_fieldAccessorTable;
   private static final skadistats.clarity.protobuf.Descriptors.Descriptor
+    internal_static_ProtoFlattenedSerializerField_t_proto_enum_info_t_descriptor;
+  private static
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ProtoFlattenedSerializerField_t_proto_enum_info_t_fieldAccessorTable;
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_ProtoFlattenedSerializer_t_descriptor;
   private static
     skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ProtoFlattenedSerializer_t_fieldAccessorTable;
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
+    internal_static_ProtoCoordSizeParams_t_descriptor;
+  private static
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ProtoCoordSizeParams_t_fieldAccessorTable;
   private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsg_FlattenedSerializer_descriptor;
   private static
@@ -10857,47 +12588,57 @@ public final class S2NetMessages {
       "\004 \001(\005\022\033\n\023user_data_size_bits\030\005 \001(\005\022\r\n\005fl" +
       "ags\030\006 \001(\005\022\023\n\013string_data\030\007 \001(\014\022\031\n\021uncomp" +
       "ressed_size\030\010 \001(\005\022\027\n\017data_compressed\030\t \001" +
-      "(\010\022\036\n\026using_varint_bitcounts\030\n \001(\010\"\235\001\n\021C" +
+      "(\010\022\036\n\026using_varint_bitcounts\030\n \001(\010\"\301\001\n\021C" +
       "SVCMsg_VoiceData\022\036\n\005audio\030\001 \001(\0132\017.CMsgVo" +
       "iceAudio\022\016\n\006client\030\002 \001(\005\022\021\n\tproximity\030\003 ",
       "\001(\010\022\014\n\004xuid\030\004 \001(\006\022\024\n\014audible_mask\030\005 \001(\005\022" +
-      "\014\n\004tick\030\006 \001(\r\022\023\n\013passthrough\030\007 \001(\005\"_\n\034CS" +
-      "VCMsg_ClearAllStringTables\022\017\n\007mapname\030\001 " +
-      "\001(\t\022\017\n\007map_crc\030\002 \001(\r\022\035\n\025create_tables_sk" +
-      "ipped\030\003 \001(\010\"\363\003\n\037ProtoFlattenedSerializer" +
-      "Field_t\022\024\n\014var_type_sym\030\001 \001(\005\022\024\n\014var_nam" +
-      "e_sym\030\002 \001(\005\022\021\n\tbit_count\030\003 \001(\005\022\021\n\tlow_va" +
-      "lue\030\004 \001(\002\022\022\n\nhigh_value\030\005 \001(\002\022\024\n\014encode_" +
-      "flags\030\006 \001(\005\022!\n\031field_serializer_name_sym" +
-      "\030\007 \001(\005\022 \n\030field_serializer_version\030\010 \001(\005",
-      "\022\025\n\rsend_node_sym\030\t \001(\005\022\027\n\017var_encoder_s" +
-      "ym\030\n \001(\005\022O\n\021polymorphic_types\030\013 \003(\01324.Pr" +
-      "otoFlattenedSerializerField_t.polymorphi" +
-      "c_field_t\022\032\n\022var_serializer_sym\030\014 \001(\005\032r\n" +
-      "\023polymorphic_field_t\022-\n%polymorphic_fiel" +
-      "d_serializer_name_sym\030\001 \001(\005\022,\n$polymorph" +
-      "ic_field_serializer_version\030\002 \001(\005\"k\n\032Pro" +
-      "toFlattenedSerializer_t\022\033\n\023serializer_na" +
-      "me_sym\030\001 \001(\005\022\032\n\022serializer_version\030\002 \001(\005" +
-      "\022\024\n\014fields_index\030\003 \003(\005\"\222\001\n\033CSVCMsg_Flatt",
-      "enedSerializer\0220\n\013serializers\030\001 \003(\0132\033.Pr" +
-      "otoFlattenedSerializer_t\022\017\n\007symbols\030\002 \003(" +
-      "\t\0220\n\006fields\030\003 \003(\0132 .ProtoFlattenedSerial" +
-      "izerField_t\";\n\016CMsgIPCAddress\022\025\n\rcompute" +
-      "r_guid\030\001 \001(\006\022\022\n\nprocess_id\030\002 \001(\r\"\240\001\n\016CMs" +
-      "gServerPeer\022\023\n\013player_slot\030\001 \001(\005\022\017\n\007stea" +
-      "mid\030\002 \001(\006\022\034\n\003ipc\030\003 \001(\0132\017.CMsgIPCAddress\022" +
-      "\025\n\rthey_hear_you\030\004 \001(\010\022\025\n\ryou_hear_them\030" +
-      "\005 \001(\010\022\034\n\024is_listenserver_host\030\006 \001(\010\"1\n\020C" +
-      "SVCMsg_PeerList\022\035\n\004peer\030\001 \003(\0132\017.CMsgServ",
-      "erPeer\"U\n\022CSVCMsg_HLTVStatus\022\016\n\006master\030\001" +
-      " \001(\t\022\017\n\007clients\030\002 \001(\005\022\r\n\005slots\030\003 \001(\005\022\017\n\007" +
-      "proxies\030\004 \001(\005\")\n\025CSVCMsg_ServerSteamID\022\020" +
-      "\n\010steam_id\030\001 \001(\004\"$\n\024CSVCMsg_CmdKeyValues" +
-      "\022\014\n\004data\030\001 \001(\014\";\n\031CSVCMsg_RconServerDeta" +
-      "ils\022\r\n\005token\030\001 \001(\014\022\017\n\007details\030\002 \001(\tB8\n\'s" +
-      "kadistats.clarity.wire.shared.s2.protoB\r" +
-      "S2NetMessages"
+      "\014\n\004tick\030\006 \001(\r\022\023\n\013passthrough\030\007 \001(\005\022\022\n\006en" +
+      "tity\030\010 \001(\005:\002-1\022\016\n\006caster\030\t \001(\010\"_\n\034CSVCMs" +
+      "g_ClearAllStringTables\022\017\n\007mapname\030\001 \001(\t\022" +
+      "\017\n\007map_crc\030\002 \001(\r\022\035\n\025create_tables_skippe" +
+      "d\030\003 \001(\010\"\353\004\n\037ProtoFlattenedSerializerFiel" +
+      "d_t\022\024\n\014var_type_sym\030\001 \001(\005\022\024\n\014var_name_sy" +
+      "m\030\002 \001(\005\022\021\n\tbit_count\030\003 \001(\005\022\021\n\tlow_value\030" +
+      "\004 \001(\002\022\022\n\nhigh_value\030\005 \001(\002\022\024\n\014encode_flag" +
+      "s\030\006 \001(\005\022!\n\031field_serializer_name_sym\030\007 \001",
+      "(\005\022 \n\030field_serializer_version\030\010 \001(\005\022\025\n\r" +
+      "send_node_sym\030\t \001(\005\022\027\n\017var_encoder_sym\030\n" +
+      " \001(\005\022O\n\021polymorphic_types\030\013 \003(\01324.ProtoF" +
+      "lattenedSerializerField_t.polymorphic_fi" +
+      "eld_t\022\032\n\022var_serializer_sym\030\014 \001(\005\022I\n\rvar" +
+      "_enum_info\030\r \001(\01322.ProtoFlattenedSeriali" +
+      "zerField_t.proto_enum_info_t\032r\n\023polymorp" +
+      "hic_field_t\022-\n%polymorphic_field_seriali" +
+      "zer_name_sym\030\001 \001(\005\022,\n$polymorphic_field_" +
+      "serializer_version\030\002 \001(\005\032+\n\021proto_enum_i",
+      "nfo_t\022\026\n\016is_signed_enum\030\001 \001(\010\"k\n\032ProtoFl" +
+      "attenedSerializer_t\022\033\n\023serializer_name_s" +
+      "ym\030\001 \001(\005\022\032\n\022serializer_version\030\002 \001(\005\022\024\n\014" +
+      "fields_index\030\003 \003(\005\"\310\001\n\026ProtoCoordSizePar" +
+      "ams_t\022\032\n\022coord_integer_bits\030\001 \001(\005\022\035\n\025coo" +
+      "rd_fractional_bits\030\002 \001(\005\022\035\n\025coord_intege" +
+      "r_bits_mp\030\003 \001(\005\022 \n\030coord_fractional_bits" +
+      "_mp\030\004 \001(\005\022\036\n\026normal_fractional_bits\030\005 \001(" +
+      "\005\022\022\n\nangle_bits\030\006 \001(\005\"\306\001\n\033CSVCMsg_Flatte" +
+      "nedSerializer\0220\n\013serializers\030\001 \003(\0132\033.Pro",
+      "toFlattenedSerializer_t\022\017\n\007symbols\030\002 \003(\t" +
+      "\0220\n\006fields\030\003 \003(\0132 .ProtoFlattenedSeriali" +
+      "zerField_t\0222\n\021coord_size_params\030\004 \001(\0132\027." +
+      "ProtoCoordSizeParams_t\";\n\016CMsgIPCAddress" +
+      "\022\025\n\rcomputer_guid\030\001 \001(\006\022\022\n\nprocess_id\030\002 " +
+      "\001(\r\"\240\001\n\016CMsgServerPeer\022\023\n\013player_slot\030\001 " +
+      "\001(\005\022\017\n\007steamid\030\002 \001(\006\022\034\n\003ipc\030\003 \001(\0132\017.CMsg" +
+      "IPCAddress\022\025\n\rthey_hear_you\030\004 \001(\010\022\025\n\ryou" +
+      "_hear_them\030\005 \001(\010\022\034\n\024is_listenserver_host" +
+      "\030\006 \001(\010\"1\n\020CSVCMsg_PeerList\022\035\n\004peer\030\001 \003(\013",
+      "2\017.CMsgServerPeer\"U\n\022CSVCMsg_HLTVStatus\022" +
+      "\016\n\006master\030\001 \001(\t\022\017\n\007clients\030\002 \001(\005\022\r\n\005slot" +
+      "s\030\003 \001(\005\022\017\n\007proxies\030\004 \001(\005\")\n\025CSVCMsg_Serv" +
+      "erSteamID\022\020\n\010steam_id\030\001 \001(\004\"$\n\024CSVCMsg_C" +
+      "mdKeyValues\022\014\n\004data\030\001 \001(\014\";\n\031CSVCMsg_Rco" +
+      "nServerDetails\022\r\n\005token\030\001 \001(\014\022\017\n\007details" +
+      "\030\002 \001(\tB8\n\'skadistats.clarity.wire.shared" +
+      ".s2.protoB\rS2NetMessages"
     };
     skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10923,7 +12664,7 @@ public final class S2NetMessages {
     internal_static_CSVCMsg_VoiceData_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_VoiceData_descriptor,
-        new java.lang.String[] { "Audio", "Client", "Proximity", "Xuid", "AudibleMask", "Tick", "Passthrough", });
+        new java.lang.String[] { "Audio", "Client", "Proximity", "Xuid", "AudibleMask", "Tick", "Passthrough", "Entity", "Caster", });
     internal_static_CSVCMsg_ClearAllStringTables_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_CSVCMsg_ClearAllStringTables_fieldAccessorTable = new
@@ -10935,63 +12676,75 @@ public final class S2NetMessages {
     internal_static_ProtoFlattenedSerializerField_t_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ProtoFlattenedSerializerField_t_descriptor,
-        new java.lang.String[] { "VarTypeSym", "VarNameSym", "BitCount", "LowValue", "HighValue", "EncodeFlags", "FieldSerializerNameSym", "FieldSerializerVersion", "SendNodeSym", "VarEncoderSym", "PolymorphicTypes", "VarSerializerSym", });
+        new java.lang.String[] { "VarTypeSym", "VarNameSym", "BitCount", "LowValue", "HighValue", "EncodeFlags", "FieldSerializerNameSym", "FieldSerializerVersion", "SendNodeSym", "VarEncoderSym", "PolymorphicTypes", "VarSerializerSym", "VarEnumInfo", });
     internal_static_ProtoFlattenedSerializerField_t_polymorphic_field_t_descriptor =
       internal_static_ProtoFlattenedSerializerField_t_descriptor.getNestedTypes().get(0);
     internal_static_ProtoFlattenedSerializerField_t_polymorphic_field_t_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ProtoFlattenedSerializerField_t_polymorphic_field_t_descriptor,
         new java.lang.String[] { "PolymorphicFieldSerializerNameSym", "PolymorphicFieldSerializerVersion", });
+    internal_static_ProtoFlattenedSerializerField_t_proto_enum_info_t_descriptor =
+      internal_static_ProtoFlattenedSerializerField_t_descriptor.getNestedTypes().get(1);
+    internal_static_ProtoFlattenedSerializerField_t_proto_enum_info_t_fieldAccessorTable = new
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ProtoFlattenedSerializerField_t_proto_enum_info_t_descriptor,
+        new java.lang.String[] { "IsSignedEnum", });
     internal_static_ProtoFlattenedSerializer_t_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_ProtoFlattenedSerializer_t_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ProtoFlattenedSerializer_t_descriptor,
         new java.lang.String[] { "SerializerNameSym", "SerializerVersion", "FieldsIndex", });
-    internal_static_CSVCMsg_FlattenedSerializer_descriptor =
+    internal_static_ProtoCoordSizeParams_t_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_ProtoCoordSizeParams_t_fieldAccessorTable = new
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ProtoCoordSizeParams_t_descriptor,
+        new java.lang.String[] { "CoordIntegerBits", "CoordFractionalBits", "CoordIntegerBitsMp", "CoordFractionalBitsMp", "NormalFractionalBits", "AngleBits", });
+    internal_static_CSVCMsg_FlattenedSerializer_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_CSVCMsg_FlattenedSerializer_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_FlattenedSerializer_descriptor,
-        new java.lang.String[] { "Serializers", "Symbols", "Fields", });
+        new java.lang.String[] { "Serializers", "Symbols", "Fields", "CoordSizeParams", });
     internal_static_CMsgIPCAddress_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_CMsgIPCAddress_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgIPCAddress_descriptor,
         new java.lang.String[] { "ComputerGuid", "ProcessId", });
     internal_static_CMsgServerPeer_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CMsgServerPeer_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgServerPeer_descriptor,
         new java.lang.String[] { "PlayerSlot", "Steamid", "Ipc", "TheyHearYou", "YouHearThem", "IsListenserverHost", });
     internal_static_CSVCMsg_PeerList_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CSVCMsg_PeerList_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_PeerList_descriptor,
         new java.lang.String[] { "Peer", });
     internal_static_CSVCMsg_HLTVStatus_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_CSVCMsg_HLTVStatus_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_HLTVStatus_descriptor,
         new java.lang.String[] { "Master", "Clients", "Slots", "Proxies", });
     internal_static_CSVCMsg_ServerSteamID_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_CSVCMsg_ServerSteamID_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_ServerSteamID_descriptor,
         new java.lang.String[] { "SteamId", });
     internal_static_CSVCMsg_CmdKeyValues_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_CSVCMsg_CmdKeyValues_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_CmdKeyValues_descriptor,
         new java.lang.String[] { "Data", });
     internal_static_CSVCMsg_RconServerDetails_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_CSVCMsg_RconServerDetails_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_RconServerDetails_descriptor,

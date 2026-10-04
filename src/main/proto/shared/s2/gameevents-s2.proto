@@ -41,6 +41,7 @@ message CMsgPlaceDecalEvent {
 	optional int32 boneindex = 12;
 	optional bool translucenthit = 13;
 	optional bool is_adjacent = 14;
+	optional .CMsgVector normal_objectspace = 15;
 }
 
 message CMsgClearWorldDecalsEvent {

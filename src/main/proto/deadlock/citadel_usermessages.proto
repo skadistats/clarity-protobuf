@@ -13,6 +13,7 @@ enum ChatMsgPingMarkerInfo {
 	k_EPingMarkerInfo_OnlyShowMarker = 3;
 	k_EPingMarkerInfo_OnlyPlaySound = 4;
 	k_EPingMarkerInfo_OnlyMiniMap = 5;
+	k_EPingMarkerInfo_NoMarkerYesSoundMiniMap = 6;
 }
 
 enum ECitadelChatMessage {
@@ -38,6 +39,35 @@ enum PostProcessingGameStates {
 	PostProcState_ShivPossessed = 3;
 	PostProcState_DrifterDarknessCaster = 4;
 	PostProcState_MatchIntro = 5;
+}
+
+enum CameraAction {
+	k_EAction_AddOp = 0;
+	k_EAction_ClearAllOps = 1;
+	k_EAction_ClearOpsForContext = 2;
+}
+
+enum CameraOperation {
+	k_ECameraOp_Maintain = 2;
+	k_ECameraOp_Approach = 3;
+	k_ECameraOp_Spring = 4;
+	k_ECameraOp_Lerp = 5;
+	k_ECameraOp_Lag = 6;
+}
+
+enum CameraParam {
+	k_EParam_ClearAllOps = 0;
+	k_EParam_ClearAllOpsForContext = 1;
+	k_EParam_Distance = 2;
+	k_EParam_FOV = 3;
+	k_EParam_TargetPosition = 4;
+	k_EParam_VertOffset = 5;
+	k_EParam_HorizOffset = 6;
+}
+
+enum CameraParamMode {
+	k_EParamMode_AllowInOneContext = 0;
+	k_EParamMode_AllowInMultipleContexts = 1;
 }
 
 message CCitadelUserMessage_Damage {
@@ -70,6 +100,7 @@ message CCitadelUserMessage_Damage {
 	optional float pre_damage = 27;
 	optional float damage_absorbed = 28;
 	optional int32 server_tick = 29;
+	optional uint32 attacker_subclass = 31;
 }
 
 message PingCommonData {
@@ -80,6 +111,10 @@ message PingCommonData {
 	optional int32 speech_concept = 5;
 	optional string response_chosen = 6;
 	optional float cooldown_time = 7;
+	optional .CMsgLaneColor lane_color = 8 [default = k_ELaneColor_Invalid];
+	optional int32 ping_anim_type = 9;
+	optional uint32 ability_id = 10;
+	optional bool is_corrupted_item = 11;
 }
 
 message CCitadelUserMsg_MapPing {
@@ -138,6 +173,8 @@ message CCitadelUserMsg_HeroKilled {
 	optional int32 entindex_scorer = 5 [default = -1];
 	optional int32 respawn_reason = 6;
 	optional int32 victim_team_number = 7;
+	optional int32 killfeed_gold = 8;
+	optional uint32 killer_ability_id = 9;
 }
 
 message CCitadelEntityMsg_BreakablePropSpawnDebris {
@@ -145,6 +182,7 @@ message CCitadelEntityMsg_BreakablePropSpawnDebris {
 	optional .CMsgVector damage_pos = 2;
 	optional float damage = 3;
 	optional .CMsgVector damage_force = 4;
+	optional float radial_force = 5;
 }
 
 message CCitadelUserMsg_PostProcessingAnim {
@@ -204,6 +242,8 @@ message CCitadelUserMsg_BossKilled {
 	required float gametime = 6;
 	optional int32 bosses_remaining = 7;
 	optional .CMsgVector entity_position = 8;
+	optional int32 killfeed_gold = 9;
+	optional uint32 killer_ability_id = 10;
 }
 
 message CCitadelUserMsg_BossDamaged {
@@ -235,11 +275,13 @@ message CCitadelUserMsg_TeamMsg {
 	optional int32 team_number = 2;
 	optional int32 lane_color = 3;
 	optional uint32 player_controller = 4 [default = 16777215];
+	optional int32 killfeed_gold = 5;
 }
 
 message CCitadelUserMsg_PlayerRespawned {
 	optional uint32 player_pawn = 1 [default = 16777215];
 	optional float facing_yaw = 2;
+	optional uint32 respawn_reason = 3;
 }
 
 message CCitadelUserMsg_CallCheaterVote {
@@ -284,6 +326,10 @@ message CCitadelUserMsg_HudGameAnnouncement {
 	repeated string classname = 3;
 	repeated string dialog_variable_name = 4;
 	repeated string dialog_variable_locstring = 5;
+	optional float duration_override = 6;
+	optional string snippet_panel = 7;
+	repeated string dialog_variable_int_name = 8;
+	repeated int32 dialog_variable_int_value = 9;
 }
 
 message CCitadelUserMsg_ItemDraftReaction {
@@ -294,4 +340,97 @@ message CCitadelUserMsg_ItemDraftReaction {
 
 message CCitadelUserMsg_BannedHeroes {
 	repeated uint32 banned_hero_ids = 1;
+}
+
+message CCitadelUserMsg_AbilitiesChanged {
+	enum Change {
+		EInvalid = -1;
+		EPurchased = 0;
+		EUpgraded = 1;
+		ESold = 2;
+		ESwappedActivatedAbility = 3;
+		ELeveledUp = 4;
+		EFailure = 5;
+	}
+
+	optional int32 purchaser_player_slot = 1 [default = -1];
+	optional uint32 ability_id = 2;
+	optional .CCitadelUserMsg_AbilitiesChanged.Change change = 3 [default = EInvalid];
+}
+
+message CCitadelUserMsg_CameraController {
+	message Maintain {
+		optional float duration = 1 [default = 0];
+	}
+
+	message Approach {
+		optional float speed = 1 [default = 600];
+		optional float default_speed = 2 [default = 600];
+		optional float acceleration = 3 [default = 1000];
+		optional float min_duration = 4 [default = 0];
+		optional float approach_float = 5;
+		optional .CMsgVector approach_vector = 6;
+		optional bool chase_default = 7;
+	}
+
+	message Spring {
+		optional float spring_strength = 1 [default = 10];
+		optional float min_speed = 4 [default = 0];
+		optional float max_duration = 5 [default = 0];
+		optional float target_float = 6;
+		optional .CMsgVector target_vector = 7;
+	}
+
+	message Lerp {
+		optional float start_float = 1;
+		optional .CMsgVector start_vector = 2;
+		optional float end_float = 3;
+		optional .CMsgVector end_vector = 4;
+		optional float bias = 5;
+		optional float gain = 6;
+		optional float duration = 7 [default = 1];
+	}
+
+	message Lag {
+		optional float min_duration = 1;
+		optional float lag_time = 2;
+		optional float max_speed = 3;
+		optional float spring_strength = 4;
+		optional bool increase_spring_strength_to_keep_target_on_screen = 5 [default = true];
+	}
+
+	optional .CameraAction action = 1 [default = k_EAction_AddOp];
+	optional .CameraOperation operation = 2 [default = k_ECameraOp_Maintain];
+	optional .CameraParam param = 3 [default = k_EParam_ClearAllOps];
+	optional .CameraParamMode param_mode = 12 [default = k_EParamMode_AllowInOneContext];
+	optional float delay = 4;
+	optional bool relative_values = 11;
+	optional uint32 context_symbol_id = 5;
+	optional uint32 priority = 13 [default = 1];
+	optional uint32 target_pawn = 14 [default = 16777215];
+	optional .CCitadelUserMsg_CameraController.Maintain maintain = 6;
+	optional .CCitadelUserMsg_CameraController.Approach approach = 7;
+	optional .CCitadelUserMsg_CameraController.Spring spring = 8;
+	optional .CCitadelUserMsg_CameraController.Lerp lerp = 9;
+	optional .CCitadelUserMsg_CameraController.Lag lag = 10;
+}
+
+message CCitadelUserMsg_CurrencyChanged {
+	optional int32 userid = 1 [default = -1];
+	optional int32 currency_type = 2;
+	optional int32 currency_source = 3;
+	optional int32 delta = 4;
+	optional bool notification = 5;
+	optional uint32 victim = 6 [default = 16777215];
+	optional .CMsgVector victim_pos = 7;
+	optional int32 playsound = 8;
+	optional uint32 ability_id = 9;
+	optional uint32 new_value = 10;
+}
+
+message CCitadelUserMsg_PlayerTyping {
+	optional int32 player_slot = 1 [default = -1];
+	optional float game_time = 2;
+	optional bool all_chat = 3;
+	optional bool typing = 4;
 }

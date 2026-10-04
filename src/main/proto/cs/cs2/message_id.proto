@@ -74,6 +74,7 @@ enum SVC_Messages {
   svc_HltvFixupOperatorStatus = 75;
   svc_UserCmds = 76;
   svc_NextMsgPredicted = 77;
+  svc_EncryptedData = 78;
 }
 
 enum EBaseUserMessages {
@@ -128,6 +129,10 @@ enum EBaseUserMessages {
   UM_ExtraUserData = 164;
   UM_NotifyResponseFound = 165;
   UM_PlayResponseConditional = 166;
+  UM_UserSentBugBug = 167;
+  UM_UsageReport = 168;
+  UM_RemoteServerCommand = 169;
+  UM_RemoteServerResponse = 170;
   UM_MAX_BASE = 200;
 }
 
@@ -222,4 +227,5 @@ enum ECstrike15UserMessages {
   CS_UM_RecurringMissionSchema = 387;
   CS_UM_SendPlayerLoadout = 388;
   CS_UM_WeaponMagDrop = 389;
+  CS_UM_CustomHudClicked = 390;
 }

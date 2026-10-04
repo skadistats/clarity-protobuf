@@ -29777,6 +29777,25 @@ public final class DOTAS2MatchMetadata {
      */
     skadistats.clarity.wire.dota.s2.proto.DOTAS2MatchMetadata.CDOTAMatchPrivateMetadata.ContributionsCombatSegmentOrBuilder getContributionsOrBuilder(
         int index);
+
+    /**
+     * <code>repeated string contribution_unit_names = 5;</code>
+     */
+    skadistats.clarity.protobuf.ProtocolStringList
+        getContributionUnitNamesList();
+    /**
+     * <code>repeated string contribution_unit_names = 5;</code>
+     */
+    int getContributionUnitNamesCount();
+    /**
+     * <code>repeated string contribution_unit_names = 5;</code>
+     */
+    java.lang.String getContributionUnitNames(int index);
+    /**
+     * <code>repeated string contribution_unit_names = 5;</code>
+     */
+    skadistats.clarity.protobuf.ByteString
+        getContributionUnitNamesBytes(int index);
   }
   /**
    * Protobuf type {@code CDOTAMatchPrivateMetadata}
@@ -29875,6 +29894,15 @@ public final class DOTAS2MatchMetadata {
               contributions_.add(input.readMessage(skadistats.clarity.wire.dota.s2.proto.DOTAS2MatchMetadata.CDOTAMatchPrivateMetadata.ContributionsCombatSegment.PARSER, extensionRegistry));
               break;
             }
+            case 42: {
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                contributionUnitNames_ = new skadistats.clarity.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              contributionUnitNames_.add(bs);
+              break;
+            }
           }
         }
       } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
@@ -29894,6 +29922,9 @@ public final class DOTAS2MatchMetadata {
         }
         if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           contributions_ = java.util.Collections.unmodifiableList(contributions_);
+        }
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          contributionUnitNames_ = contributionUnitNames_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -49409,11 +49440,41 @@ public final class DOTAS2MatchMetadata {
       return contributions_.get(index);
     }
 
+    public static final int CONTRIBUTION_UNIT_NAMES_FIELD_NUMBER = 5;
+    private skadistats.clarity.protobuf.LazyStringList contributionUnitNames_;
+    /**
+     * <code>repeated string contribution_unit_names = 5;</code>
+     */
+    public skadistats.clarity.protobuf.ProtocolStringList
+        getContributionUnitNamesList() {
+      return contributionUnitNames_;
+    }
+    /**
+     * <code>repeated string contribution_unit_names = 5;</code>
+     */
+    public int getContributionUnitNamesCount() {
+      return contributionUnitNames_.size();
+    }
+    /**
+     * <code>repeated string contribution_unit_names = 5;</code>
+     */
+    public java.lang.String getContributionUnitNames(int index) {
+      return contributionUnitNames_.get(index);
+    }
+    /**
+     * <code>repeated string contribution_unit_names = 5;</code>
+     */
+    public skadistats.clarity.protobuf.ByteString
+        getContributionUnitNamesBytes(int index) {
+      return contributionUnitNames_.getByteString(index);
+    }
+
     private void initFields() {
       teams_ = java.util.Collections.emptyList();
       graphWinProbability_ = java.util.Collections.emptyList();
       stringNames_ = java.util.Collections.emptyList();
       contributions_ = java.util.Collections.emptyList();
+      contributionUnitNames_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -49439,6 +49500,9 @@ public final class DOTAS2MatchMetadata {
       }
       for (int i = 0; i < contributions_.size(); i++) {
         output.writeMessage(4, contributions_.get(i));
+      }
+      for (int i = 0; i < contributionUnitNames_.size(); i++) {
+        output.writeBytes(5, contributionUnitNames_.getByteString(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -49466,6 +49530,15 @@ public final class DOTAS2MatchMetadata {
       for (int i = 0; i < contributions_.size(); i++) {
         size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(4, contributions_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < contributionUnitNames_.size(); i++) {
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(contributionUnitNames_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getContributionUnitNamesList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -49607,6 +49680,8 @@ public final class DOTAS2MatchMetadata {
         } else {
           contributionsBuilder_.clear();
         }
+        contributionUnitNames_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -49666,6 +49741,11 @@ public final class DOTAS2MatchMetadata {
         } else {
           result.contributions_ = contributionsBuilder_.build();
         }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          contributionUnitNames_ = contributionUnitNames_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.contributionUnitNames_ = contributionUnitNames_;
         onBuilt();
         return result;
       }
@@ -49768,6 +49848,16 @@ public final class DOTAS2MatchMetadata {
               contributionsBuilder_.addAllMessages(other.contributions_);
             }
           }
+        }
+        if (!other.contributionUnitNames_.isEmpty()) {
+          if (contributionUnitNames_.isEmpty()) {
+            contributionUnitNames_ = other.contributionUnitNames_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureContributionUnitNamesIsMutable();
+            contributionUnitNames_.addAll(other.contributionUnitNames_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -50582,6 +50672,99 @@ public final class DOTAS2MatchMetadata {
         return contributionsBuilder_;
       }
 
+      private skadistats.clarity.protobuf.LazyStringList contributionUnitNames_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureContributionUnitNamesIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          contributionUnitNames_ = new skadistats.clarity.protobuf.LazyStringArrayList(contributionUnitNames_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <code>repeated string contribution_unit_names = 5;</code>
+       */
+      public skadistats.clarity.protobuf.ProtocolStringList
+          getContributionUnitNamesList() {
+        return contributionUnitNames_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string contribution_unit_names = 5;</code>
+       */
+      public int getContributionUnitNamesCount() {
+        return contributionUnitNames_.size();
+      }
+      /**
+       * <code>repeated string contribution_unit_names = 5;</code>
+       */
+      public java.lang.String getContributionUnitNames(int index) {
+        return contributionUnitNames_.get(index);
+      }
+      /**
+       * <code>repeated string contribution_unit_names = 5;</code>
+       */
+      public skadistats.clarity.protobuf.ByteString
+          getContributionUnitNamesBytes(int index) {
+        return contributionUnitNames_.getByteString(index);
+      }
+      /**
+       * <code>repeated string contribution_unit_names = 5;</code>
+       */
+      public Builder setContributionUnitNames(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureContributionUnitNamesIsMutable();
+        contributionUnitNames_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string contribution_unit_names = 5;</code>
+       */
+      public Builder addContributionUnitNames(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureContributionUnitNamesIsMutable();
+        contributionUnitNames_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string contribution_unit_names = 5;</code>
+       */
+      public Builder addAllContributionUnitNames(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureContributionUnitNamesIsMutable();
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
+            values, contributionUnitNames_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string contribution_unit_names = 5;</code>
+       */
+      public Builder clearContributionUnitNames() {
+        contributionUnitNames_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string contribution_unit_names = 5;</code>
+       */
+      public Builder addContributionUnitNamesBytes(
+          skadistats.clarity.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureContributionUnitNamesIsMutable();
+        contributionUnitNames_.add(value);
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:CDOTAMatchPrivateMetadata)
     }
 
@@ -50977,110 +51160,111 @@ public final class DOTAS2MatchMetadata {
       "Tip\022\032\n\022source_player_slot\030\001 \001(\r\022\032\n\022targe" +
       "t_player_slot\030\002 \001(\r\022\022\n\ntip_amount\030\003 \001(\r\022" +
       "(\n\010event_id\030\004 \001(\0162\007.EEvent:\rEVENT_ID_NON" +
-      "E\"\336\037\n\031CDOTAMatchPrivateMetadata\022.\n\005teams" +
+      "E\"\377\037\n\031CDOTAMatchPrivateMetadata\022.\n\005teams" +
       "\030\001 \003(\0132\037.CDOTAMatchPrivateMetadata.Team\022" +
       "\035\n\025graph_win_probability\030\002 \003(\002\022;\n\014string" +
       "_names\030\003 \003(\0132%.CDOTAMatchPrivateMetadata" +
       ".StringName\022L\n\rcontributions\030\004 \003(\01325.CDO",
       "TAMatchPrivateMetadata.ContributionsComb" +
-      "atSegment\032&\n\nStringName\022\n\n\002id\030\001 \001(\r\022\014\n\004n" +
-      "ame\030\002 \001(\t\032\377\017\n\004Team\022\021\n\tdota_team\030\001 \001(\r\0227\n" +
-      "\007players\030\002 \003(\0132&.CDOTAMatchPrivateMetada" +
-      "ta.Team.Player\022;\n\tbuildings\030\003 \003(\0132(.CDOT" +
-      "AMatchPrivateMetadata.Team.Building\032\206\016\n\006" +
-      "Player\022\023\n\013player_slot\030\002 \001(\r\022\027\n\017position_" +
-      "stream\030\003 \001(\014\022M\n\017combat_segments\030\004 \003(\01324." +
-      "CDOTAMatchPrivateMetadata.Team.Player.Co" +
-      "mbatSegment\022\031\n\021damage_unit_names\030\005 \003(\t\022G",
-      "\n\014buff_records\030\006 \003(\01321.CDOTAMatchPrivate" +
-      "Metadata.Team.Player.BuffRecord\022\023\n\013graph" +
-      "_kills\030\007 \003(\002\022\024\n\014graph_deaths\030\010 \003(\002\022\025\n\rgr" +
-      "aph_assists\030\t \003(\002\022\026\n\016graph_lasthits\030\n \003(" +
-      "\002\022\024\n\014graph_denies\030\013 \003(\002\022J\n\rgold_received" +
-      "\030\014 \001(\01323.CDOTAMatchPrivateMetadata.Team." +
-      "Player.GoldReceived\022F\n\013xp_received\030\r \001(\013" +
-      "21.CDOTAMatchPrivateMetadata.Team.Player" +
-      ".XPReceived\022:\n\013team_number\030\016 \001(\0162\r.DOTA_" +
-      "GC_TEAM:\026DOTA_GC_TEAM_GOOD_GUYS\022\021\n\tteam_",
-      "slot\030\017 \001(\r\032\261\005\n\rCombatSegment\022\021\n\tgame_tim" +
-      "e\030\001 \001(\005\022_\n\021damage_by_ability\030\002 \003(\0132D.CDO" +
-      "TAMatchPrivateMetadata.Team.Player.Comba" +
-      "tSegment.DamageByAbility\022a\n\022healing_by_a" +
-      "bility\030\003 \003(\0132E.CDOTAMatchPrivateMetadata" +
-      ".Team.Player.CombatSegment.HealingByAbil" +
-      "ity\032\341\001\n\017DamageByAbility\022\031\n\021source_unit_i" +
-      "ndex\030\003 \001(\r\022\026\n\nability_id\030\001 \001(\005:\002-1\022j\n\017by" +
-      "_hero_targets\030\002 \003(\0132Q.CDOTAMatchPrivateM" +
-      "etadata.Team.Player.CombatSegment.Damage",
-      "ByAbility.ByHeroTarget\032/\n\014ByHeroTarget\022\017" +
-      "\n\007hero_id\030\001 \001(\005\022\016\n\006damage\030\002 \001(\r\032\344\001\n\020Heal" +
-      "ingByAbility\022\031\n\021source_unit_index\030\003 \001(\r\022" +
-      "\026\n\nability_id\030\001 \001(\005:\002-1\022k\n\017by_hero_targe" +
-      "ts\030\002 \003(\0132R.CDOTAMatchPrivateMetadata.Tea" +
-      "m.Player.CombatSegment.HealingByAbility." +
-      "ByHeroTarget\0320\n\014ByHeroTarget\022\017\n\007hero_id\030" +
-      "\001 \001(\005\022\017\n\007healing\030\002 \001(\r\032\354\001\n\nBuffRecord\022\033\n" +
-      "\017buff_ability_id\030\001 \001(\005:\002-1\022\032\n\022buff_modif" +
-      "ier_name\030\003 \001(\t\022W\n\017by_hero_targets\030\002 \003(\0132",
-      ">.CDOTAMatchPrivateMetadata.Team.Player." +
-      "BuffRecord.ByHeroTarget\032L\n\014ByHeroTarget\022" +
-      "\017\n\007hero_id\030\001 \001(\005\022\030\n\020elapsed_duration\030\002 \001" +
-      "(\002\022\021\n\tis_hidden\030\003 \001(\010\032\230\001\n\014GoldReceived\022\r" +
-      "\n\005creep\030\001 \001(\r\022\016\n\006heroes\030\002 \001(\r\022\024\n\014bounty_" +
-      "runes\030\003 \001(\r\022\017\n\007passive\030\004 \001(\r\022\021\n\tbuilding" +
-      "s\030\005 \001(\r\022\021\n\tabilities\030\006 \001(\r\022\r\n\005wards\030\007 \001(" +
-      "\r\022\r\n\005other\030\010 \001(\r\032\211\001\n\nXPReceived\022\r\n\005creep" +
-      "\030\001 \001(\r\022\016\n\006heroes\030\002 \001(\r\022\016\n\006roshan\030\003 \001(\r\022\031" +
-      "\n\021tome_of_knowledge\030\004 \001(\r\022\017\n\007outpost\030\005 \001",
-      "(\r\022\r\n\005other\030\006 \001(\r\022\021\n\tabilities\030\007 \001(\r\032e\n\010" +
-      "Building\022\021\n\tunit_name\030\001 \001(\t\022\030\n\020position_" +
-      "quant_x\030\002 \001(\r\022\030\n\020position_quant_y\030\003 \001(\r\022" +
-      "\022\n\ndeath_time\030\004 \001(\002\032\274\r\n\032ContributionsCom" +
-      "batSegment\022\021\n\tgame_time\030\001 \001(\005\022l\n\024damage_" +
-      "contributions\030\002 \003(\0132N.CDOTAMatchPrivateM" +
-      "etadata.ContributionsCombatSegment.Damag" +
-      "eContributionRecord\022h\n\022damage_mitigation" +
-      "s\030\003 \003(\0132L.CDOTAMatchPrivateMetadata.Cont" +
-      "ributionsCombatSegment.DamageMitigationR",
-      "ecord\022n\n\025healing_contributions\030\004 \003(\0132O.C" +
-      "DOTAMatchPrivateMetadata.ContributionsCo" +
-      "mbatSegment.HealingContributionRecord\022h\n" +
-      "\022healing_reductions\030\005 \003(\0132L.CDOTAMatchPr" +
-      "ivateMetadata.ContributionsCombatSegment" +
-      ".HealingReductionRecord\022X\n\rkilling_blows" +
-      "\030\006 \003(\0132A.CDOTAMatchPrivateMetadata.Contr" +
-      "ibutionsCombatSegment.KillingBlow\022M\n\007dis" +
-      "pels\030\007 \003(\0132<.CDOTAMatchPrivateMetadata.C" +
-      "ontributionsCombatSegment.Dispel\032\313\001\n\030Dam",
-      "ageContributionRecord\022\037\n\023attacker_abilit" +
-      "y_id\030\001 \001(\005:\002-1\022\030\n\020attacker_hero_id\030\002 \001(\005" +
-      "\022\026\n\016target_hero_id\030\003 \001(\005\022\"\n\026contributor_" +
-      "ability_id\030\004 \001(\005:\002-1\022\033\n\023contributor_hero" +
-      "_id\030\005 \001(\005\022\r\n\005value\030\006 \001(\r\022\014\n\004type\030\007 \001(\r\032\311" +
-      "\001\n\026DamageMitigationRecord\022\037\n\023attacker_ab" +
+      "atSegment\022\037\n\027contribution_unit_names\030\005 \003" +
+      "(\t\032&\n\nStringName\022\n\n\002id\030\001 \001(\r\022\014\n\004name\030\002 \001" +
+      "(\t\032\377\017\n\004Team\022\021\n\tdota_team\030\001 \001(\r\0227\n\007player" +
+      "s\030\002 \003(\0132&.CDOTAMatchPrivateMetadata.Team" +
+      ".Player\022;\n\tbuildings\030\003 \003(\0132(.CDOTAMatchP" +
+      "rivateMetadata.Team.Building\032\206\016\n\006Player\022" +
+      "\023\n\013player_slot\030\002 \001(\r\022\027\n\017position_stream\030" +
+      "\003 \001(\014\022M\n\017combat_segments\030\004 \003(\01324.CDOTAMa" +
+      "tchPrivateMetadata.Team.Player.CombatSeg",
+      "ment\022\031\n\021damage_unit_names\030\005 \003(\t\022G\n\014buff_" +
+      "records\030\006 \003(\01321.CDOTAMatchPrivateMetadat" +
+      "a.Team.Player.BuffRecord\022\023\n\013graph_kills\030" +
+      "\007 \003(\002\022\024\n\014graph_deaths\030\010 \003(\002\022\025\n\rgraph_ass" +
+      "ists\030\t \003(\002\022\026\n\016graph_lasthits\030\n \003(\002\022\024\n\014gr" +
+      "aph_denies\030\013 \003(\002\022J\n\rgold_received\030\014 \001(\0132" +
+      "3.CDOTAMatchPrivateMetadata.Team.Player." +
+      "GoldReceived\022F\n\013xp_received\030\r \001(\01321.CDOT" +
+      "AMatchPrivateMetadata.Team.Player.XPRece" +
+      "ived\022:\n\013team_number\030\016 \001(\0162\r.DOTA_GC_TEAM",
+      ":\026DOTA_GC_TEAM_GOOD_GUYS\022\021\n\tteam_slot\030\017 " +
+      "\001(\r\032\261\005\n\rCombatSegment\022\021\n\tgame_time\030\001 \001(\005" +
+      "\022_\n\021damage_by_ability\030\002 \003(\0132D.CDOTAMatch" +
+      "PrivateMetadata.Team.Player.CombatSegmen" +
+      "t.DamageByAbility\022a\n\022healing_by_ability\030" +
+      "\003 \003(\0132E.CDOTAMatchPrivateMetadata.Team.P" +
+      "layer.CombatSegment.HealingByAbility\032\341\001\n" +
+      "\017DamageByAbility\022\031\n\021source_unit_index\030\003 " +
+      "\001(\r\022\026\n\nability_id\030\001 \001(\005:\002-1\022j\n\017by_hero_t" +
+      "argets\030\002 \003(\0132Q.CDOTAMatchPrivateMetadata",
+      ".Team.Player.CombatSegment.DamageByAbili" +
+      "ty.ByHeroTarget\032/\n\014ByHeroTarget\022\017\n\007hero_" +
+      "id\030\001 \001(\005\022\016\n\006damage\030\002 \001(\r\032\344\001\n\020HealingByAb" +
+      "ility\022\031\n\021source_unit_index\030\003 \001(\r\022\026\n\nabil" +
+      "ity_id\030\001 \001(\005:\002-1\022k\n\017by_hero_targets\030\002 \003(" +
+      "\0132R.CDOTAMatchPrivateMetadata.Team.Playe" +
+      "r.CombatSegment.HealingByAbility.ByHeroT" +
+      "arget\0320\n\014ByHeroTarget\022\017\n\007hero_id\030\001 \001(\005\022\017" +
+      "\n\007healing\030\002 \001(\r\032\354\001\n\nBuffRecord\022\033\n\017buff_a" +
+      "bility_id\030\001 \001(\005:\002-1\022\032\n\022buff_modifier_nam",
+      "e\030\003 \001(\t\022W\n\017by_hero_targets\030\002 \003(\0132>.CDOTA" +
+      "MatchPrivateMetadata.Team.Player.BuffRec" +
+      "ord.ByHeroTarget\032L\n\014ByHeroTarget\022\017\n\007hero" +
+      "_id\030\001 \001(\005\022\030\n\020elapsed_duration\030\002 \001(\002\022\021\n\ti" +
+      "s_hidden\030\003 \001(\010\032\230\001\n\014GoldReceived\022\r\n\005creep" +
+      "\030\001 \001(\r\022\016\n\006heroes\030\002 \001(\r\022\024\n\014bounty_runes\030\003" +
+      " \001(\r\022\017\n\007passive\030\004 \001(\r\022\021\n\tbuildings\030\005 \001(\r" +
+      "\022\021\n\tabilities\030\006 \001(\r\022\r\n\005wards\030\007 \001(\r\022\r\n\005ot" +
+      "her\030\010 \001(\r\032\211\001\n\nXPReceived\022\r\n\005creep\030\001 \001(\r\022" +
+      "\016\n\006heroes\030\002 \001(\r\022\016\n\006roshan\030\003 \001(\r\022\031\n\021tome_",
+      "of_knowledge\030\004 \001(\r\022\017\n\007outpost\030\005 \001(\r\022\r\n\005o" +
+      "ther\030\006 \001(\r\022\021\n\tabilities\030\007 \001(\r\032e\n\010Buildin" +
+      "g\022\021\n\tunit_name\030\001 \001(\t\022\030\n\020position_quant_x" +
+      "\030\002 \001(\r\022\030\n\020position_quant_y\030\003 \001(\r\022\022\n\ndeat" +
+      "h_time\030\004 \001(\002\032\274\r\n\032ContributionsCombatSegm" +
+      "ent\022\021\n\tgame_time\030\001 \001(\005\022l\n\024damage_contrib" +
+      "utions\030\002 \003(\0132N.CDOTAMatchPrivateMetadata" +
+      ".ContributionsCombatSegment.DamageContri" +
+      "butionRecord\022h\n\022damage_mitigations\030\003 \003(\013" +
+      "2L.CDOTAMatchPrivateMetadata.Contributio",
+      "nsCombatSegment.DamageMitigationRecord\022n" +
+      "\n\025healing_contributions\030\004 \003(\0132O.CDOTAMat" +
+      "chPrivateMetadata.ContributionsCombatSeg" +
+      "ment.HealingContributionRecord\022h\n\022healin" +
+      "g_reductions\030\005 \003(\0132L.CDOTAMatchPrivateMe" +
+      "tadata.ContributionsCombatSegment.Healin" +
+      "gReductionRecord\022X\n\rkilling_blows\030\006 \003(\0132" +
+      "A.CDOTAMatchPrivateMetadata.Contribution" +
+      "sCombatSegment.KillingBlow\022M\n\007dispels\030\007 " +
+      "\003(\0132<.CDOTAMatchPrivateMetadata.Contribu",
+      "tionsCombatSegment.Dispel\032\313\001\n\030DamageCont" +
+      "ributionRecord\022\037\n\023attacker_ability_id\030\001 " +
+      "\001(\005:\002-1\022\030\n\020attacker_hero_id\030\002 \001(\005\022\026\n\016tar" +
+      "get_hero_id\030\003 \001(\005\022\"\n\026contributor_ability" +
+      "_id\030\004 \001(\005:\002-1\022\033\n\023contributor_hero_id\030\005 \001" +
+      "(\005\022\r\n\005value\030\006 \001(\r\022\014\n\004type\030\007 \001(\r\032\311\001\n\026Dama" +
+      "geMitigationRecord\022\037\n\023attacker_ability_i" +
+      "d\030\001 \001(\005:\002-1\022\030\n\020attacker_hero_id\030\002 \001(\005\022\026\n" +
+      "\016target_hero_id\030\003 \001(\005\022\"\n\026contributor_abi" +
+      "lity_id\030\004 \001(\005:\002-1\022\033\n\023contributor_hero_id",
+      "\030\005 \001(\005\022\r\n\005value\030\006 \001(\r\022\014\n\004type\030\007 \001(\r\032\314\001\n\031" +
+      "HealingContributionRecord\022\037\n\023attacker_ab" +
       "ility_id\030\001 \001(\005:\002-1\022\030\n\020attacker_hero_id\030\002" +
       " \001(\005\022\026\n\016target_hero_id\030\003 \001(\005\022\"\n\026contribu" +
       "tor_ability_id\030\004 \001(\005:\002-1\022\033\n\023contributor_" +
-      "hero_id\030\005 \001(\005\022\r\n\005value\030\006 \001(\r\022\014\n\004type\030\007 \001",
-      "(\r\032\314\001\n\031HealingContributionRecord\022\037\n\023atta" +
-      "cker_ability_id\030\001 \001(\005:\002-1\022\030\n\020attacker_he" +
-      "ro_id\030\002 \001(\005\022\026\n\016target_hero_id\030\003 \001(\005\022\"\n\026c" +
-      "ontributor_ability_id\030\004 \001(\005:\002-1\022\033\n\023contr" +
-      "ibutor_hero_id\030\005 \001(\005\022\r\n\005value\030\006 \001(\r\022\014\n\004t" +
-      "ype\030\007 \001(\r\032\311\001\n\026HealingReductionRecord\022\037\n\023" +
-      "attacker_ability_id\030\001 \001(\005:\002-1\022\030\n\020attacke" +
-      "r_hero_id\030\002 \001(\005\022\026\n\016target_hero_id\030\003 \001(\005\022" +
-      "\"\n\026contributor_ability_id\030\004 \001(\005:\002-1\022\033\n\023c" +
-      "ontributor_hero_id\030\005 \001(\005\022\r\n\005value\030\006 \001(\r\022",
-      "\014\n\004type\030\007 \001(\r\032a\n\013KillingBlow\022\030\n\020attacker" +
-      "_hero_id\030\001 \001(\005\022\026\n\016target_hero_id\030\002 \001(\005\022 " +
-      "\n\024inflictor_ability_id\030\003 \001(\005:\002-1\032\227\001\n\006Dis" +
-      "pel\022\030\n\020attacker_hero_id\030\001 \001(\005\022\026\n\016target_" +
-      "hero_id\030\002 \001(\005\022 \n\024inflictor_ability_id\030\003 " +
-      "\001(\005:\002-1\022\037\n\023modifier_ability_id\030\004 \001(\005:\002-1" +
-      "\022\030\n\020duration_reduced\030\005 \001(\002B<\n%skadistats" +
-      ".clarity.wire.dota.s2.protoB\023DOTAS2Match" +
-      "Metadata"
+      "hero_id\030\005 \001(\005\022\r\n\005value\030\006 \001(\r\022\014\n\004type\030\007 \001" +
+      "(\r\032\311\001\n\026HealingReductionRecord\022\037\n\023attacke" +
+      "r_ability_id\030\001 \001(\005:\002-1\022\030\n\020attacker_hero_" +
+      "id\030\002 \001(\005\022\026\n\016target_hero_id\030\003 \001(\005\022\"\n\026cont" +
+      "ributor_ability_id\030\004 \001(\005:\002-1\022\033\n\023contribu",
+      "tor_hero_id\030\005 \001(\005\022\r\n\005value\030\006 \001(\r\022\014\n\004type" +
+      "\030\007 \001(\r\032a\n\013KillingBlow\022\030\n\020attacker_hero_i" +
+      "d\030\001 \001(\005\022\026\n\016target_hero_id\030\002 \001(\005\022 \n\024infli" +
+      "ctor_ability_id\030\003 \001(\005:\002-1\032\227\001\n\006Dispel\022\030\n\020" +
+      "attacker_hero_id\030\001 \001(\005\022\026\n\016target_hero_id" +
+      "\030\002 \001(\005\022 \n\024inflictor_ability_id\030\003 \001(\005:\002-1" +
+      "\022\037\n\023modifier_ability_id\030\004 \001(\005:\002-1\022\030\n\020dur" +
+      "ation_reduced\030\005 \001(\002B<\n%skadistats.clarit" +
+      "y.wire.dota.s2.protoB\023DOTAS2MatchMetadat" +
+      "a"
     };
     skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -51243,7 +51427,7 @@ public final class DOTAS2MatchMetadata {
     internal_static_CDOTAMatchPrivateMetadata_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchPrivateMetadata_descriptor,
-        new java.lang.String[] { "Teams", "GraphWinProbability", "StringNames", "Contributions", });
+        new java.lang.String[] { "Teams", "GraphWinProbability", "StringNames", "Contributions", "ContributionUnitNames", });
     internal_static_CDOTAMatchPrivateMetadata_StringName_descriptor =
       internal_static_CDOTAMatchPrivateMetadata_descriptor.getNestedTypes().get(0);
     internal_static_CDOTAMatchPrivateMetadata_StringName_fieldAccessorTable = new

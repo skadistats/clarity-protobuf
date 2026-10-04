@@ -412,6 +412,55 @@ public final class DeadlockGameEvents {
      * <code>optional bool ability_as_bullet = 25;</code>
      */
     boolean getAbilityAsBullet();
+
+    /**
+     * <code>optional bool friendly_fire = 26;</code>
+     */
+    boolean hasFriendlyFire();
+    /**
+     * <code>optional bool friendly_fire = 26;</code>
+     */
+    boolean getFriendlyFire();
+
+    /**
+     * <code>optional uint32 friendly_fire_damage_type = 27;</code>
+     */
+    boolean hasFriendlyFireDamageType();
+    /**
+     * <code>optional uint32 friendly_fire_damage_type = 27;</code>
+     */
+    int getFriendlyFireDamageType();
+
+    /**
+     * <code>optional uint32 bullet_state = 28;</code>
+     */
+    boolean hasBulletState();
+    /**
+     * <code>optional uint32 bullet_state = 28;</code>
+     */
+    int getBulletState();
+
+    /**
+     * <code>optional uint32 weapon_info_id = 29;</code>
+     */
+    boolean hasWeaponInfoId();
+    /**
+     * <code>optional uint32 weapon_info_id = 29;</code>
+     */
+    int getWeaponInfoId();
+
+    /**
+     * <code>optional .CMsgVector target_pos = 30;</code>
+     */
+    boolean hasTargetPos();
+    /**
+     * <code>optional .CMsgVector target_pos = 30;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getTargetPos();
+    /**
+     * <code>optional .CMsgVector target_pos = 30;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getTargetPosOrBuilder();
   }
   /**
    * Protobuf type {@code CMsgFireBullets}
@@ -613,6 +662,39 @@ public final class DeadlockGameEvents {
             case 200: {
               bitField0_ |= 0x00200000;
               abilityAsBullet_ = input.readBool();
+              break;
+            }
+            case 208: {
+              bitField0_ |= 0x00400000;
+              friendlyFire_ = input.readBool();
+              break;
+            }
+            case 216: {
+              bitField0_ |= 0x00800000;
+              friendlyFireDamageType_ = input.readUInt32();
+              break;
+            }
+            case 224: {
+              bitField0_ |= 0x01000000;
+              bulletState_ = input.readUInt32();
+              break;
+            }
+            case 232: {
+              bitField0_ |= 0x02000000;
+              weaponInfoId_ = input.readUInt32();
+              break;
+            }
+            case 242: {
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+              if (((bitField0_ & 0x04000000) == 0x04000000)) {
+                subBuilder = targetPos_.toBuilder();
+              }
+              targetPos_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(targetPos_);
+                targetPos_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x04000000;
               break;
             }
           }
@@ -1522,6 +1604,87 @@ public final class DeadlockGameEvents {
       return abilityAsBullet_;
     }
 
+    public static final int FRIENDLY_FIRE_FIELD_NUMBER = 26;
+    private boolean friendlyFire_;
+    /**
+     * <code>optional bool friendly_fire = 26;</code>
+     */
+    public boolean hasFriendlyFire() {
+      return ((bitField0_ & 0x00400000) == 0x00400000);
+    }
+    /**
+     * <code>optional bool friendly_fire = 26;</code>
+     */
+    public boolean getFriendlyFire() {
+      return friendlyFire_;
+    }
+
+    public static final int FRIENDLY_FIRE_DAMAGE_TYPE_FIELD_NUMBER = 27;
+    private int friendlyFireDamageType_;
+    /**
+     * <code>optional uint32 friendly_fire_damage_type = 27;</code>
+     */
+    public boolean hasFriendlyFireDamageType() {
+      return ((bitField0_ & 0x00800000) == 0x00800000);
+    }
+    /**
+     * <code>optional uint32 friendly_fire_damage_type = 27;</code>
+     */
+    public int getFriendlyFireDamageType() {
+      return friendlyFireDamageType_;
+    }
+
+    public static final int BULLET_STATE_FIELD_NUMBER = 28;
+    private int bulletState_;
+    /**
+     * <code>optional uint32 bullet_state = 28;</code>
+     */
+    public boolean hasBulletState() {
+      return ((bitField0_ & 0x01000000) == 0x01000000);
+    }
+    /**
+     * <code>optional uint32 bullet_state = 28;</code>
+     */
+    public int getBulletState() {
+      return bulletState_;
+    }
+
+    public static final int WEAPON_INFO_ID_FIELD_NUMBER = 29;
+    private int weaponInfoId_;
+    /**
+     * <code>optional uint32 weapon_info_id = 29;</code>
+     */
+    public boolean hasWeaponInfoId() {
+      return ((bitField0_ & 0x02000000) == 0x02000000);
+    }
+    /**
+     * <code>optional uint32 weapon_info_id = 29;</code>
+     */
+    public int getWeaponInfoId() {
+      return weaponInfoId_;
+    }
+
+    public static final int TARGET_POS_FIELD_NUMBER = 30;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector targetPos_;
+    /**
+     * <code>optional .CMsgVector target_pos = 30;</code>
+     */
+    public boolean hasTargetPos() {
+      return ((bitField0_ & 0x04000000) == 0x04000000);
+    }
+    /**
+     * <code>optional .CMsgVector target_pos = 30;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getTargetPos() {
+      return targetPos_;
+    }
+    /**
+     * <code>optional .CMsgVector target_pos = 30;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getTargetPosOrBuilder() {
+      return targetPos_;
+    }
+
     private void initFields() {
       origin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
       angles_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
@@ -1546,6 +1709,11 @@ public final class DeadlockGameEvents {
       bulletGravityOverride_ = 0F;
       muzzleNumber_ = 0;
       abilityAsBullet_ = false;
+      friendlyFire_ = false;
+      friendlyFireDamageType_ = 0;
+      bulletState_ = 0;
+      weaponInfoId_ = 0;
+      targetPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1628,6 +1796,21 @@ public final class DeadlockGameEvents {
       }
       if (((bitField0_ & 0x00200000) == 0x00200000)) {
         output.writeBool(25, abilityAsBullet_);
+      }
+      if (((bitField0_ & 0x00400000) == 0x00400000)) {
+        output.writeBool(26, friendlyFire_);
+      }
+      if (((bitField0_ & 0x00800000) == 0x00800000)) {
+        output.writeUInt32(27, friendlyFireDamageType_);
+      }
+      if (((bitField0_ & 0x01000000) == 0x01000000)) {
+        output.writeUInt32(28, bulletState_);
+      }
+      if (((bitField0_ & 0x02000000) == 0x02000000)) {
+        output.writeUInt32(29, weaponInfoId_);
+      }
+      if (((bitField0_ & 0x04000000) == 0x04000000)) {
+        output.writeMessage(30, targetPos_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1729,6 +1912,26 @@ public final class DeadlockGameEvents {
       if (((bitField0_ & 0x00200000) == 0x00200000)) {
         size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(25, abilityAsBullet_);
+      }
+      if (((bitField0_ & 0x00400000) == 0x00400000)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeBoolSize(26, friendlyFire_);
+      }
+      if (((bitField0_ & 0x00800000) == 0x00800000)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(27, friendlyFireDamageType_);
+      }
+      if (((bitField0_ & 0x01000000) == 0x01000000)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(28, bulletState_);
+      }
+      if (((bitField0_ & 0x02000000) == 0x02000000)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(29, weaponInfoId_);
+      }
+      if (((bitField0_ & 0x04000000) == 0x04000000)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeMessageSize(30, targetPos_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1844,6 +2047,7 @@ public final class DeadlockGameEvents {
           getTracerReplacementFieldBuilder();
           getTracerAdditionalFieldBuilder();
           getAnglesOriginalFieldBuilder();
+          getTargetPosFieldBuilder();
         }
       }
       private static Builder create() {
@@ -1918,6 +2122,20 @@ public final class DeadlockGameEvents {
         bitField0_ = (bitField0_ & ~0x00200000);
         abilityAsBullet_ = false;
         bitField0_ = (bitField0_ & ~0x00400000);
+        friendlyFire_ = false;
+        bitField0_ = (bitField0_ & ~0x00800000);
+        friendlyFireDamageType_ = 0;
+        bitField0_ = (bitField0_ & ~0x01000000);
+        bulletState_ = 0;
+        bitField0_ = (bitField0_ & ~0x02000000);
+        weaponInfoId_ = 0;
+        bitField0_ = (bitField0_ & ~0x04000000);
+        if (targetPosBuilder_ == null) {
+          targetPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        } else {
+          targetPosBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x08000000);
         return this;
       }
 
@@ -2059,6 +2277,30 @@ public final class DeadlockGameEvents {
           to_bitField0_ |= 0x00200000;
         }
         result.abilityAsBullet_ = abilityAsBullet_;
+        if (((from_bitField0_ & 0x00800000) == 0x00800000)) {
+          to_bitField0_ |= 0x00400000;
+        }
+        result.friendlyFire_ = friendlyFire_;
+        if (((from_bitField0_ & 0x01000000) == 0x01000000)) {
+          to_bitField0_ |= 0x00800000;
+        }
+        result.friendlyFireDamageType_ = friendlyFireDamageType_;
+        if (((from_bitField0_ & 0x02000000) == 0x02000000)) {
+          to_bitField0_ |= 0x01000000;
+        }
+        result.bulletState_ = bulletState_;
+        if (((from_bitField0_ & 0x04000000) == 0x04000000)) {
+          to_bitField0_ |= 0x02000000;
+        }
+        result.weaponInfoId_ = weaponInfoId_;
+        if (((from_bitField0_ & 0x08000000) == 0x08000000)) {
+          to_bitField0_ |= 0x04000000;
+        }
+        if (targetPosBuilder_ == null) {
+          result.targetPos_ = targetPos_;
+        } else {
+          result.targetPos_ = targetPosBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2166,6 +2408,21 @@ public final class DeadlockGameEvents {
         }
         if (other.hasAbilityAsBullet()) {
           setAbilityAsBullet(other.getAbilityAsBullet());
+        }
+        if (other.hasFriendlyFire()) {
+          setFriendlyFire(other.getFriendlyFire());
+        }
+        if (other.hasFriendlyFireDamageType()) {
+          setFriendlyFireDamageType(other.getFriendlyFireDamageType());
+        }
+        if (other.hasBulletState()) {
+          setBulletState(other.getBulletState());
+        }
+        if (other.hasWeaponInfoId()) {
+          setWeaponInfoId(other.getWeaponInfoId());
+        }
+        if (other.hasTargetPos()) {
+          mergeTargetPos(other.getTargetPos());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -3474,6 +3731,250 @@ public final class DeadlockGameEvents {
         return this;
       }
 
+      private boolean friendlyFire_ ;
+      /**
+       * <code>optional bool friendly_fire = 26;</code>
+       */
+      public boolean hasFriendlyFire() {
+        return ((bitField0_ & 0x00800000) == 0x00800000);
+      }
+      /**
+       * <code>optional bool friendly_fire = 26;</code>
+       */
+      public boolean getFriendlyFire() {
+        return friendlyFire_;
+      }
+      /**
+       * <code>optional bool friendly_fire = 26;</code>
+       */
+      public Builder setFriendlyFire(boolean value) {
+        bitField0_ |= 0x00800000;
+        friendlyFire_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool friendly_fire = 26;</code>
+       */
+      public Builder clearFriendlyFire() {
+        bitField0_ = (bitField0_ & ~0x00800000);
+        friendlyFire_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int friendlyFireDamageType_ ;
+      /**
+       * <code>optional uint32 friendly_fire_damage_type = 27;</code>
+       */
+      public boolean hasFriendlyFireDamageType() {
+        return ((bitField0_ & 0x01000000) == 0x01000000);
+      }
+      /**
+       * <code>optional uint32 friendly_fire_damage_type = 27;</code>
+       */
+      public int getFriendlyFireDamageType() {
+        return friendlyFireDamageType_;
+      }
+      /**
+       * <code>optional uint32 friendly_fire_damage_type = 27;</code>
+       */
+      public Builder setFriendlyFireDamageType(int value) {
+        bitField0_ |= 0x01000000;
+        friendlyFireDamageType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 friendly_fire_damage_type = 27;</code>
+       */
+      public Builder clearFriendlyFireDamageType() {
+        bitField0_ = (bitField0_ & ~0x01000000);
+        friendlyFireDamageType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int bulletState_ ;
+      /**
+       * <code>optional uint32 bullet_state = 28;</code>
+       */
+      public boolean hasBulletState() {
+        return ((bitField0_ & 0x02000000) == 0x02000000);
+      }
+      /**
+       * <code>optional uint32 bullet_state = 28;</code>
+       */
+      public int getBulletState() {
+        return bulletState_;
+      }
+      /**
+       * <code>optional uint32 bullet_state = 28;</code>
+       */
+      public Builder setBulletState(int value) {
+        bitField0_ |= 0x02000000;
+        bulletState_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 bullet_state = 28;</code>
+       */
+      public Builder clearBulletState() {
+        bitField0_ = (bitField0_ & ~0x02000000);
+        bulletState_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int weaponInfoId_ ;
+      /**
+       * <code>optional uint32 weapon_info_id = 29;</code>
+       */
+      public boolean hasWeaponInfoId() {
+        return ((bitField0_ & 0x04000000) == 0x04000000);
+      }
+      /**
+       * <code>optional uint32 weapon_info_id = 29;</code>
+       */
+      public int getWeaponInfoId() {
+        return weaponInfoId_;
+      }
+      /**
+       * <code>optional uint32 weapon_info_id = 29;</code>
+       */
+      public Builder setWeaponInfoId(int value) {
+        bitField0_ |= 0x04000000;
+        weaponInfoId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 weapon_info_id = 29;</code>
+       */
+      public Builder clearWeaponInfoId() {
+        bitField0_ = (bitField0_ & ~0x04000000);
+        weaponInfoId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector targetPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> targetPosBuilder_;
+      /**
+       * <code>optional .CMsgVector target_pos = 30;</code>
+       */
+      public boolean hasTargetPos() {
+        return ((bitField0_ & 0x08000000) == 0x08000000);
+      }
+      /**
+       * <code>optional .CMsgVector target_pos = 30;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getTargetPos() {
+        if (targetPosBuilder_ == null) {
+          return targetPos_;
+        } else {
+          return targetPosBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgVector target_pos = 30;</code>
+       */
+      public Builder setTargetPos(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+        if (targetPosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          targetPos_ = value;
+          onChanged();
+        } else {
+          targetPosBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x08000000;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector target_pos = 30;</code>
+       */
+      public Builder setTargetPos(
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+        if (targetPosBuilder_ == null) {
+          targetPos_ = builderForValue.build();
+          onChanged();
+        } else {
+          targetPosBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x08000000;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector target_pos = 30;</code>
+       */
+      public Builder mergeTargetPos(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+        if (targetPosBuilder_ == null) {
+          if (((bitField0_ & 0x08000000) == 0x08000000) &&
+              targetPos_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+            targetPos_ =
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(targetPos_).mergeFrom(value).buildPartial();
+          } else {
+            targetPos_ = value;
+          }
+          onChanged();
+        } else {
+          targetPosBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x08000000;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector target_pos = 30;</code>
+       */
+      public Builder clearTargetPos() {
+        if (targetPosBuilder_ == null) {
+          targetPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          onChanged();
+        } else {
+          targetPosBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x08000000);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector target_pos = 30;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getTargetPosBuilder() {
+        bitField0_ |= 0x08000000;
+        onChanged();
+        return getTargetPosFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgVector target_pos = 30;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getTargetPosOrBuilder() {
+        if (targetPosBuilder_ != null) {
+          return targetPosBuilder_.getMessageOrBuilder();
+        } else {
+          return targetPos_;
+        }
+      }
+      /**
+       * <code>optional .CMsgVector target_pos = 30;</code>
+       */
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+          getTargetPosFieldBuilder() {
+        if (targetPosBuilder_ == null) {
+          targetPosBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                  getTargetPos(),
+                  getParentForChildren(),
+                  isClean());
+          targetPos_ = null;
+        }
+        return targetPosBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:CMsgFireBullets)
     }
 
@@ -3599,6 +4100,15 @@ public final class DeadlockGameEvents {
      * <code>optional float bullet_radius_override = 12;</code>
      */
     float getBulletRadiusOverride();
+
+    /**
+     * <code>optional uint32 weapon_info_id = 13;</code>
+     */
+    boolean hasWeaponInfoId();
+    /**
+     * <code>optional uint32 weapon_info_id = 13;</code>
+     */
+    int getWeaponInfoId();
   }
   /**
    * Protobuf type {@code CMsgBulletImpact}
@@ -3729,6 +4239,11 @@ public final class DeadlockGameEvents {
             case 101: {
               bitField0_ |= 0x00000400;
               bulletRadiusOverride_ = input.readFloat();
+              break;
+            }
+            case 104: {
+              bitField0_ |= 0x00000800;
+              weaponInfoId_ = input.readUInt32();
               break;
             }
           }
@@ -3954,6 +4469,21 @@ public final class DeadlockGameEvents {
       return bulletRadiusOverride_;
     }
 
+    public static final int WEAPON_INFO_ID_FIELD_NUMBER = 13;
+    private int weaponInfoId_;
+    /**
+     * <code>optional uint32 weapon_info_id = 13;</code>
+     */
+    public boolean hasWeaponInfoId() {
+      return ((bitField0_ & 0x00000800) == 0x00000800);
+    }
+    /**
+     * <code>optional uint32 weapon_info_id = 13;</code>
+     */
+    public int getWeaponInfoId() {
+      return weaponInfoId_;
+    }
+
     private void initFields() {
       traceStart_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
       impactOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
@@ -3966,6 +4496,7 @@ public final class DeadlockGameEvents {
       weaponSubclassId_ = 0;
       shooterEntindex_ = -1;
       bulletRadiusOverride_ = 0F;
+      weaponInfoId_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -4012,6 +4543,9 @@ public final class DeadlockGameEvents {
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
         output.writeFloat(12, bulletRadiusOverride_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        output.writeUInt32(13, weaponInfoId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -4065,6 +4599,10 @@ public final class DeadlockGameEvents {
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
         size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(12, bulletRadiusOverride_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(13, weaponInfoId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -4220,6 +4758,8 @@ public final class DeadlockGameEvents {
         bitField0_ = (bitField0_ & ~0x00000200);
         bulletRadiusOverride_ = 0F;
         bitField0_ = (bitField0_ & ~0x00000400);
+        weaponInfoId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
 
@@ -4304,6 +4844,10 @@ public final class DeadlockGameEvents {
           to_bitField0_ |= 0x00000400;
         }
         result.bulletRadiusOverride_ = bulletRadiusOverride_;
+        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+          to_bitField0_ |= 0x00000800;
+        }
+        result.weaponInfoId_ = weaponInfoId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4352,6 +4896,9 @@ public final class DeadlockGameEvents {
         }
         if (other.hasBulletRadiusOverride()) {
           setBulletRadiusOverride(other.getBulletRadiusOverride());
+        }
+        if (other.hasWeaponInfoId()) {
+          setWeaponInfoId(other.getWeaponInfoId());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -4984,6 +5531,38 @@ public final class DeadlockGameEvents {
         return this;
       }
 
+      private int weaponInfoId_ ;
+      /**
+       * <code>optional uint32 weapon_info_id = 13;</code>
+       */
+      public boolean hasWeaponInfoId() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional uint32 weapon_info_id = 13;</code>
+       */
+      public int getWeaponInfoId() {
+        return weaponInfoId_;
+      }
+      /**
+       * <code>optional uint32 weapon_info_id = 13;</code>
+       */
+      public Builder setWeaponInfoId(int value) {
+        bitField0_ |= 0x00000800;
+        weaponInfoId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 weapon_info_id = 13;</code>
+       */
+      public Builder clearWeaponInfoId() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        weaponInfoId_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:CMsgBulletImpact)
     }
 
@@ -4993,6 +5572,559 @@ public final class DeadlockGameEvents {
     }
 
     // @@protoc_insertion_point(class_scope:CMsgBulletImpact)
+  }
+
+  public interface CMsgRemoveBulletOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgRemoveBullet)
+      skadistats.clarity.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 shooter_entindex = 1 [default = -1];</code>
+     */
+    boolean hasShooterEntindex();
+    /**
+     * <code>optional int32 shooter_entindex = 1 [default = -1];</code>
+     */
+    int getShooterEntindex();
+
+    /**
+     * <code>optional uint32 shot_id = 2;</code>
+     */
+    boolean hasShotId();
+    /**
+     * <code>optional uint32 shot_id = 2;</code>
+     */
+    int getShotId();
+
+    /**
+     * <code>optional uint32 bullet_index = 3;</code>
+     */
+    boolean hasBulletIndex();
+    /**
+     * <code>optional uint32 bullet_index = 3;</code>
+     */
+    int getBulletIndex();
+  }
+  /**
+   * Protobuf type {@code CMsgRemoveBullet}
+   */
+  public static final class CMsgRemoveBullet extends
+      skadistats.clarity.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CMsgRemoveBullet)
+      CMsgRemoveBulletOrBuilder {
+    // Use CMsgRemoveBullet.newBuilder() to construct.
+    private CMsgRemoveBullet(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CMsgRemoveBullet(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CMsgRemoveBullet defaultInstance;
+    public static CMsgRemoveBullet getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CMsgRemoveBullet getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final skadistats.clarity.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgRemoveBullet(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              shooterEntindex_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              shotId_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              bulletIndex_ = input.readUInt32();
+              break;
+            }
+          }
+        }
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgRemoveBullet_descriptor;
+    }
+
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgRemoveBullet_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet.class, skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet.Builder.class);
+    }
+
+    public static skadistats.clarity.protobuf.Parser<CMsgRemoveBullet> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CMsgRemoveBullet>() {
+      public CMsgRemoveBullet parsePartialFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return new CMsgRemoveBullet(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public skadistats.clarity.protobuf.Parser<CMsgRemoveBullet> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int SHOOTER_ENTINDEX_FIELD_NUMBER = 1;
+    private int shooterEntindex_;
+    /**
+     * <code>optional int32 shooter_entindex = 1 [default = -1];</code>
+     */
+    public boolean hasShooterEntindex() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 shooter_entindex = 1 [default = -1];</code>
+     */
+    public int getShooterEntindex() {
+      return shooterEntindex_;
+    }
+
+    public static final int SHOT_ID_FIELD_NUMBER = 2;
+    private int shotId_;
+    /**
+     * <code>optional uint32 shot_id = 2;</code>
+     */
+    public boolean hasShotId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional uint32 shot_id = 2;</code>
+     */
+    public int getShotId() {
+      return shotId_;
+    }
+
+    public static final int BULLET_INDEX_FIELD_NUMBER = 3;
+    private int bulletIndex_;
+    /**
+     * <code>optional uint32 bullet_index = 3;</code>
+     */
+    public boolean hasBulletIndex() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional uint32 bullet_index = 3;</code>
+     */
+    public int getBulletIndex() {
+      return bulletIndex_;
+    }
+
+    private void initFields() {
+      shooterEntindex_ = -1;
+      shotId_ = 0;
+      bulletIndex_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, shooterEntindex_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeUInt32(2, shotId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeUInt32(3, bulletIndex_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(1, shooterEntindex_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(2, shotId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(3, bulletIndex_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet parseFrom(
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet parseFrom(
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet parseFrom(byte[] data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet parseFrom(
+        byte[] data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet parseFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet parseDelimitedFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgRemoveBullet}
+     */
+    public static final class Builder extends
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgRemoveBullet)
+        skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBulletOrBuilder {
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgRemoveBullet_descriptor;
+      }
+
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgRemoveBullet_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet.class, skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        shooterEntindex_ = -1;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        shotId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        bulletIndex_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgRemoveBullet_descriptor;
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet getDefaultInstanceForType() {
+        return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet build() {
+        skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet buildPartial() {
+        skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet result = new skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.shooterEntindex_ = shooterEntindex_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.shotId_ = shotId_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bulletIndex_ = bulletIndex_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet) {
+          return mergeFrom((skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet other) {
+        if (other == skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet.getDefaultInstance()) return this;
+        if (other.hasShooterEntindex()) {
+          setShooterEntindex(other.getShooterEntindex());
+        }
+        if (other.hasShotId()) {
+          setShotId(other.getShotId());
+        }
+        if (other.hasBulletIndex()) {
+          setBulletIndex(other.getBulletIndex());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgRemoveBullet) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int shooterEntindex_ = -1;
+      /**
+       * <code>optional int32 shooter_entindex = 1 [default = -1];</code>
+       */
+      public boolean hasShooterEntindex() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 shooter_entindex = 1 [default = -1];</code>
+       */
+      public int getShooterEntindex() {
+        return shooterEntindex_;
+      }
+      /**
+       * <code>optional int32 shooter_entindex = 1 [default = -1];</code>
+       */
+      public Builder setShooterEntindex(int value) {
+        bitField0_ |= 0x00000001;
+        shooterEntindex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 shooter_entindex = 1 [default = -1];</code>
+       */
+      public Builder clearShooterEntindex() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        shooterEntindex_ = -1;
+        onChanged();
+        return this;
+      }
+
+      private int shotId_ ;
+      /**
+       * <code>optional uint32 shot_id = 2;</code>
+       */
+      public boolean hasShotId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional uint32 shot_id = 2;</code>
+       */
+      public int getShotId() {
+        return shotId_;
+      }
+      /**
+       * <code>optional uint32 shot_id = 2;</code>
+       */
+      public Builder setShotId(int value) {
+        bitField0_ |= 0x00000002;
+        shotId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 shot_id = 2;</code>
+       */
+      public Builder clearShotId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        shotId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int bulletIndex_ ;
+      /**
+       * <code>optional uint32 bullet_index = 3;</code>
+       */
+      public boolean hasBulletIndex() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional uint32 bullet_index = 3;</code>
+       */
+      public int getBulletIndex() {
+        return bulletIndex_;
+      }
+      /**
+       * <code>optional uint32 bullet_index = 3;</code>
+       */
+      public Builder setBulletIndex(int value) {
+        bitField0_ |= 0x00000004;
+        bulletIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 bullet_index = 3;</code>
+       */
+      public Builder clearBulletIndex() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        bulletIndex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CMsgRemoveBullet)
+    }
+
+    static {
+      defaultInstance = new CMsgRemoveBullet(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgRemoveBullet)
   }
 
   private static final skadistats.clarity.protobuf.Descriptors.Descriptor
@@ -5010,6 +6142,11 @@ public final class DeadlockGameEvents {
   private static
     skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgBulletImpact_fieldAccessorTable;
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
+    internal_static_CMsgRemoveBullet_descriptor;
+  private static
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CMsgRemoveBullet_fieldAccessorTable;
 
   public static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5020,7 +6157,7 @@ public final class DeadlockGameEvents {
   static {
     java.lang.String[] descriptorData = {
       "\n\030citadel_gameevents.proto\032\035networkbaset" +
-      "ypes-common.proto\"\220\006\n\017CMsgFireBullets\022\033\n" +
+      "ypes-common.proto\"\231\007\n\017CMsgFireBullets\022\033\n" +
       "\006origin\030\001 \001(\0132\013.CMsgVector\022\033\n\006angles\030\002 \001" +
       "(\0132\013.CMsgQAngle\022\014\n\004seed\030\004 \001(\r\022\032\n\016shooter" +
       "_entity\030\005 \001(\005:\002-1\022\023\n\007ability\030\007 \001(\005:\002-1\022\033" +
@@ -5038,27 +6175,33 @@ public final class DeadlockGameEvents {
       "de\030\025 \001(\002:\0010\022 \n\025bullet_speed_override\030\026 \001" +
       "(\002:\0010\022\"\n\027bullet_gravity_override\030\027 \001(\002:\001" +
       "0\022\025\n\rmuzzle_number\030\030 \001(\005\022\031\n\021ability_as_b" +
-      "ullet\030\031 \001(\010\032G\n\020TracerAssignment\022\032\n\022trace",
-      "r_resource_id\030\001 \001(\004\022\027\n\017bullet_indicies\030\002" +
-      " \001(\r\"\323\002\n\020CMsgBulletImpact\022 \n\013trace_start" +
-      "\030\001 \001(\0132\013.CMsgVector\022\"\n\rimpact_origin\030\002 \001" +
-      "(\0132\013.CMsgVector\022#\n\016surface_normal\030\003 \001(\0132" +
-      "\013.CMsgVector\022\016\n\006damage\030\004 \001(\r\022\024\n\014surface_" +
-      "type\030\005 \001(\r\022\034\n\020ability_entindex\030\007 \001(\005:\002-1" +
-      "\022\035\n\021impacted_entindex\030\010 \001(\005:\002-1\022\027\n\017impac" +
-      "ted_hitbox\030\t \001(\r\022\032\n\022weapon_subclass_id\030\n" +
-      " \001(\r\022\034\n\020shooter_entindex\030\013 \001(\005:\002-1\022\036\n\026bu" +
-      "llet_radius_override\030\014 \001(\002*\300\002\n\022ECitadelG",
-      "ameEvents\022\023\n\016GE_FireBullets\020\302\003\022\027\n\022GE_Pla" +
-      "yerAnimEvent\020\303\003\022\035\n\030GE_ParticleSystemMana" +
-      "ger\020\312\003\022\030\n\023GE_ScreenTextPretty\020\313\003\022\035\n\030GE_S" +
-      "erverRequestedTracer\020\314\003\022\024\n\017GE_BulletImpa" +
-      "ct\020\315\003\022\035\n\030GE_EnableSatVolumesEvent\020\316\003\022\033\n\026" +
-      "GE_PlaceSatVolumeEvent\020\317\003\022\036\n\031GE_DisableS" +
-      "atVolumesEvent\020\320\003\022\034\n\027GE_RemoveSatVolumeE" +
-      "vent\020\321\003\022\024\n\017GE_RemoveBullet\020\322\003B<\n&skadist" +
-      "ats.clarity.wire.deadlock.protoB\022Deadloc" +
-      "kGameEvents"
+      "ullet\030\031 \001(\010\022\025\n\rfriendly_fire\030\032 \001(\010\022!\n\031fr",
+      "iendly_fire_damage_type\030\033 \001(\r\022\024\n\014bullet_" +
+      "state\030\034 \001(\r\022\026\n\016weapon_info_id\030\035 \001(\r\022\037\n\nt" +
+      "arget_pos\030\036 \001(\0132\013.CMsgVector\032G\n\020TracerAs" +
+      "signment\022\032\n\022tracer_resource_id\030\001 \001(\004\022\027\n\017" +
+      "bullet_indicies\030\002 \001(\r\"\353\002\n\020CMsgBulletImpa" +
+      "ct\022 \n\013trace_start\030\001 \001(\0132\013.CMsgVector\022\"\n\r" +
+      "impact_origin\030\002 \001(\0132\013.CMsgVector\022#\n\016surf" +
+      "ace_normal\030\003 \001(\0132\013.CMsgVector\022\016\n\006damage\030" +
+      "\004 \001(\r\022\024\n\014surface_type\030\005 \001(\r\022\034\n\020ability_e" +
+      "ntindex\030\007 \001(\005:\002-1\022\035\n\021impacted_entindex\030\010",
+      " \001(\005:\002-1\022\027\n\017impacted_hitbox\030\t \001(\r\022\032\n\022wea" +
+      "pon_subclass_id\030\n \001(\r\022\034\n\020shooter_entinde" +
+      "x\030\013 \001(\005:\002-1\022\036\n\026bullet_radius_override\030\014 " +
+      "\001(\002\022\026\n\016weapon_info_id\030\r \001(\r\"W\n\020CMsgRemov" +
+      "eBullet\022\034\n\020shooter_entindex\030\001 \001(\005:\002-1\022\017\n" +
+      "\007shot_id\030\002 \001(\r\022\024\n\014bullet_index\030\003 \001(\r*\300\002\n" +
+      "\022ECitadelGameEvents\022\023\n\016GE_FireBullets\020\302\003" +
+      "\022\027\n\022GE_PlayerAnimEvent\020\303\003\022\035\n\030GE_Particle" +
+      "SystemManager\020\312\003\022\030\n\023GE_ScreenTextPretty\020" +
+      "\313\003\022\035\n\030GE_ServerRequestedTracer\020\314\003\022\024\n\017GE_",
+      "BulletImpact\020\315\003\022\035\n\030GE_EnableSatVolumesEv" +
+      "ent\020\316\003\022\033\n\026GE_PlaceSatVolumeEvent\020\317\003\022\036\n\031G" +
+      "E_DisableSatVolumesEvent\020\320\003\022\034\n\027GE_Remove" +
+      "SatVolumeEvent\020\321\003\022\024\n\017GE_RemoveBullet\020\322\003B" +
+      "<\n&skadistats.clarity.wire.deadlock.prot" +
+      "oB\022DeadlockGameEvents"
     };
     skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5078,7 +6221,7 @@ public final class DeadlockGameEvents {
     internal_static_CMsgFireBullets_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgFireBullets_descriptor,
-        new java.lang.String[] { "Origin", "Angles", "Seed", "ShooterEntity", "Ability", "PenetrationPercent", "Spread", "FiredFromGun", "BulletsOverride", "TracerReplacement", "TracerAdditional", "AnglesOriginal", "WeaponSubclassId", "ShotNumber", "IgnoreEntity", "MaxRange", "ShotId", "PredictHitsAgainstUnits", "BulletRadiusOverride", "BulletSpeedOverride", "BulletGravityOverride", "MuzzleNumber", "AbilityAsBullet", });
+        new java.lang.String[] { "Origin", "Angles", "Seed", "ShooterEntity", "Ability", "PenetrationPercent", "Spread", "FiredFromGun", "BulletsOverride", "TracerReplacement", "TracerAdditional", "AnglesOriginal", "WeaponSubclassId", "ShotNumber", "IgnoreEntity", "MaxRange", "ShotId", "PredictHitsAgainstUnits", "BulletRadiusOverride", "BulletSpeedOverride", "BulletGravityOverride", "MuzzleNumber", "AbilityAsBullet", "FriendlyFire", "FriendlyFireDamageType", "BulletState", "WeaponInfoId", "TargetPos", });
     internal_static_CMsgFireBullets_TracerAssignment_descriptor =
       internal_static_CMsgFireBullets_descriptor.getNestedTypes().get(0);
     internal_static_CMsgFireBullets_TracerAssignment_fieldAccessorTable = new
@@ -5090,7 +6233,13 @@ public final class DeadlockGameEvents {
     internal_static_CMsgBulletImpact_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgBulletImpact_descriptor,
-        new java.lang.String[] { "TraceStart", "ImpactOrigin", "SurfaceNormal", "Damage", "SurfaceType", "AbilityEntindex", "ImpactedEntindex", "ImpactedHitbox", "WeaponSubclassId", "ShooterEntindex", "BulletRadiusOverride", });
+        new java.lang.String[] { "TraceStart", "ImpactOrigin", "SurfaceNormal", "Damage", "SurfaceType", "AbilityEntindex", "ImpactedEntindex", "ImpactedHitbox", "WeaponSubclassId", "ShooterEntindex", "BulletRadiusOverride", "WeaponInfoId", });
+    internal_static_CMsgRemoveBullet_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_CMsgRemoveBullet_fieldAccessorTable = new
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CMsgRemoveBullet_descriptor,
+        new java.lang.String[] { "ShooterEntindex", "ShotId", "BulletIndex", });
     skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor();
   }
 

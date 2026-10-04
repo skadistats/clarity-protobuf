@@ -16411,6 +16411,25 @@ public final class CsCommonGcMessages {
      * <code>optional uint32 match_id_additional = 22;</code>
      */
     int getMatchIdAdditional();
+
+    /**
+     * <code>repeated string clan_tags = 23;</code>
+     */
+    skadistats.clarity.protobuf.ProtocolStringList
+        getClanTagsList();
+    /**
+     * <code>repeated string clan_tags = 23;</code>
+     */
+    int getClanTagsCount();
+    /**
+     * <code>repeated string clan_tags = 23;</code>
+     */
+    java.lang.String getClanTags(int index);
+    /**
+     * <code>repeated string clan_tags = 23;</code>
+     */
+    skadistats.clarity.protobuf.ByteString
+        getClanTagsBytes(int index);
   }
   /**
    * Protobuf type {@code CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve}
@@ -16657,6 +16676,15 @@ public final class CsCommonGcMessages {
               matchIdAdditional_ = input.readUInt32();
               break;
             }
+            case 186: {
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+                clanTags_ = new skadistats.clarity.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00100000;
+              }
+              clanTags_.add(bs);
+              break;
+            }
           }
         }
       } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
@@ -16685,6 +16713,9 @@ public final class CsCommonGcMessages {
         }
         if (((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
           teammateColors_ = java.util.Collections.unmodifiableList(teammateColors_);
+        }
+        if (((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+          clanTags_ = clanTags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -17118,6 +17149,35 @@ public final class CsCommonGcMessages {
       return matchIdAdditional_;
     }
 
+    public static final int CLAN_TAGS_FIELD_NUMBER = 23;
+    private skadistats.clarity.protobuf.LazyStringList clanTags_;
+    /**
+     * <code>repeated string clan_tags = 23;</code>
+     */
+    public skadistats.clarity.protobuf.ProtocolStringList
+        getClanTagsList() {
+      return clanTags_;
+    }
+    /**
+     * <code>repeated string clan_tags = 23;</code>
+     */
+    public int getClanTagsCount() {
+      return clanTags_.size();
+    }
+    /**
+     * <code>repeated string clan_tags = 23;</code>
+     */
+    public java.lang.String getClanTags(int index) {
+      return clanTags_.get(index);
+    }
+    /**
+     * <code>repeated string clan_tags = 23;</code>
+     */
+    public skadistats.clarity.protobuf.ByteString
+        getClanTagsBytes(int index) {
+      return clanTags_.getByteString(index);
+    }
+
     private void initFields() {
       accountIds_ = java.util.Collections.emptyList();
       gameType_ = 0;
@@ -17139,6 +17199,7 @@ public final class CsCommonGcMessages {
       tvControl_ = 0;
       teammateColors_ = java.util.Collections.emptyList();
       matchIdAdditional_ = 0;
+      clanTags_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -17212,6 +17273,9 @@ public final class CsCommonGcMessages {
       }
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
         output.writeUInt32(22, matchIdAdditional_);
+      }
+      for (int i = 0; i < clanTags_.size(); i++) {
+        output.writeBytes(23, clanTags_.getByteString(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -17321,6 +17385,15 @@ public final class CsCommonGcMessages {
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
         size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(22, matchIdAdditional_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < clanTags_.size(); i++) {
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(clanTags_.getByteString(i));
+        }
+        size += dataSize;
+        size += 2 * getClanTagsList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -17508,6 +17581,8 @@ public final class CsCommonGcMessages {
         bitField0_ = (bitField0_ & ~0x00040000);
         matchIdAdditional_ = 0;
         bitField0_ = (bitField0_ & ~0x00080000);
+        clanTags_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00100000);
         return this;
       }
 
@@ -17643,6 +17718,11 @@ public final class CsCommonGcMessages {
           to_bitField0_ |= 0x00001000;
         }
         result.matchIdAdditional_ = matchIdAdditional_;
+        if (((bitField0_ & 0x00100000) == 0x00100000)) {
+          clanTags_ = clanTags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00100000);
+        }
+        result.clanTags_ = clanTags_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -17815,6 +17895,16 @@ public final class CsCommonGcMessages {
         }
         if (other.hasMatchIdAdditional()) {
           setMatchIdAdditional(other.getMatchIdAdditional());
+        }
+        if (!other.clanTags_.isEmpty()) {
+          if (clanTags_.isEmpty()) {
+            clanTags_ = other.clanTags_;
+            bitField0_ = (bitField0_ & ~0x00100000);
+          } else {
+            ensureClanTagsIsMutable();
+            clanTags_.addAll(other.clanTags_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -19407,6 +19497,99 @@ public final class CsCommonGcMessages {
       public Builder clearMatchIdAdditional() {
         bitField0_ = (bitField0_ & ~0x00080000);
         matchIdAdditional_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.protobuf.LazyStringList clanTags_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureClanTagsIsMutable() {
+        if (!((bitField0_ & 0x00100000) == 0x00100000)) {
+          clanTags_ = new skadistats.clarity.protobuf.LazyStringArrayList(clanTags_);
+          bitField0_ |= 0x00100000;
+         }
+      }
+      /**
+       * <code>repeated string clan_tags = 23;</code>
+       */
+      public skadistats.clarity.protobuf.ProtocolStringList
+          getClanTagsList() {
+        return clanTags_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string clan_tags = 23;</code>
+       */
+      public int getClanTagsCount() {
+        return clanTags_.size();
+      }
+      /**
+       * <code>repeated string clan_tags = 23;</code>
+       */
+      public java.lang.String getClanTags(int index) {
+        return clanTags_.get(index);
+      }
+      /**
+       * <code>repeated string clan_tags = 23;</code>
+       */
+      public skadistats.clarity.protobuf.ByteString
+          getClanTagsBytes(int index) {
+        return clanTags_.getByteString(index);
+      }
+      /**
+       * <code>repeated string clan_tags = 23;</code>
+       */
+      public Builder setClanTags(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureClanTagsIsMutable();
+        clanTags_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string clan_tags = 23;</code>
+       */
+      public Builder addClanTags(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureClanTagsIsMutable();
+        clanTags_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string clan_tags = 23;</code>
+       */
+      public Builder addAllClanTags(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureClanTagsIsMutable();
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
+            values, clanTags_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string clan_tags = 23;</code>
+       */
+      public Builder clearClanTags() {
+        clanTags_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00100000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string clan_tags = 23;</code>
+       */
+      public Builder addClanTagsBytes(
+          skadistats.clarity.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureClanTagsIsMutable();
+        clanTags_.add(value);
         onChanged();
         return this;
       }
@@ -23101,6 +23284,24 @@ public final class CsCommonGcMessages {
      * <code>optional uint32 upgrade_level = 23;</code>
      */
     int getUpgradeLevel();
+
+    /**
+     * <code>optional uint32 pet_food_expiration_date = 24;</code>
+     */
+    boolean hasPetFoodExpirationDate();
+    /**
+     * <code>optional uint32 pet_food_expiration_date = 24;</code>
+     */
+    int getPetFoodExpirationDate();
+
+    /**
+     * <code>optional bytes blobdata = 25;</code>
+     */
+    boolean hasBlobdata();
+    /**
+     * <code>optional bytes blobdata = 25;</code>
+     */
+    skadistats.clarity.protobuf.ByteString getBlobdata();
   }
   /**
    * Protobuf type {@code CEconItemPreviewDataBlock}
@@ -23268,6 +23469,16 @@ public final class CsCommonGcMessages {
             case 184: {
               bitField0_ |= 0x00040000;
               upgradeLevel_ = input.readUInt32();
+              break;
+            }
+            case 192: {
+              bitField0_ |= 0x00080000;
+              petFoodExpirationDate_ = input.readUInt32();
+              break;
+            }
+            case 202: {
+              bitField0_ |= 0x00100000;
+              blobdata_ = input.readBytes();
               break;
             }
           }
@@ -24485,6 +24696,36 @@ public final class CsCommonGcMessages {
       return upgradeLevel_;
     }
 
+    public static final int PET_FOOD_EXPIRATION_DATE_FIELD_NUMBER = 24;
+    private int petFoodExpirationDate_;
+    /**
+     * <code>optional uint32 pet_food_expiration_date = 24;</code>
+     */
+    public boolean hasPetFoodExpirationDate() {
+      return ((bitField0_ & 0x00080000) == 0x00080000);
+    }
+    /**
+     * <code>optional uint32 pet_food_expiration_date = 24;</code>
+     */
+    public int getPetFoodExpirationDate() {
+      return petFoodExpirationDate_;
+    }
+
+    public static final int BLOBDATA_FIELD_NUMBER = 25;
+    private skadistats.clarity.protobuf.ByteString blobdata_;
+    /**
+     * <code>optional bytes blobdata = 25;</code>
+     */
+    public boolean hasBlobdata() {
+      return ((bitField0_ & 0x00100000) == 0x00100000);
+    }
+    /**
+     * <code>optional bytes blobdata = 25;</code>
+     */
+    public skadistats.clarity.protobuf.ByteString getBlobdata() {
+      return blobdata_;
+    }
+
     private void initFields() {
       accountid_ = 0;
       itemid_ = 0L;
@@ -24507,6 +24748,8 @@ public final class CsCommonGcMessages {
       style_ = 0;
       variations_ = java.util.Collections.emptyList();
       upgradeLevel_ = 0;
+      petFoodExpirationDate_ = 0;
+      blobdata_ = skadistats.clarity.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -24583,6 +24826,12 @@ public final class CsCommonGcMessages {
       }
       if (((bitField0_ & 0x00040000) == 0x00040000)) {
         output.writeUInt32(23, upgradeLevel_);
+      }
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+        output.writeUInt32(24, petFoodExpirationDate_);
+      }
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        output.writeBytes(25, blobdata_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -24676,6 +24925,14 @@ public final class CsCommonGcMessages {
       if (((bitField0_ & 0x00040000) == 0x00040000)) {
         size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(23, upgradeLevel_);
+      }
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(24, petFoodExpirationDate_);
+      }
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeBytesSize(25, blobdata_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -24850,6 +25107,10 @@ public final class CsCommonGcMessages {
         }
         upgradeLevel_ = 0;
         bitField0_ = (bitField0_ & ~0x00100000);
+        petFoodExpirationDate_ = 0;
+        bitField0_ = (bitField0_ & ~0x00200000);
+        blobdata_ = skadistats.clarity.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00400000);
         return this;
       }
 
@@ -24972,6 +25233,14 @@ public final class CsCommonGcMessages {
           to_bitField0_ |= 0x00040000;
         }
         result.upgradeLevel_ = upgradeLevel_;
+        if (((from_bitField0_ & 0x00200000) == 0x00200000)) {
+          to_bitField0_ |= 0x00080000;
+        }
+        result.petFoodExpirationDate_ = petFoodExpirationDate_;
+        if (((from_bitField0_ & 0x00400000) == 0x00400000)) {
+          to_bitField0_ |= 0x00100000;
+        }
+        result.blobdata_ = blobdata_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -25098,6 +25367,12 @@ public final class CsCommonGcMessages {
         }
         if (other.hasUpgradeLevel()) {
           setUpgradeLevel(other.getUpgradeLevel());
+        }
+        if (other.hasPetFoodExpirationDate()) {
+          setPetFoodExpirationDate(other.getPetFoodExpirationDate());
+        }
+        if (other.hasBlobdata()) {
+          setBlobdata(other.getBlobdata());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -26254,6 +26529,73 @@ public final class CsCommonGcMessages {
       public Builder clearUpgradeLevel() {
         bitField0_ = (bitField0_ & ~0x00100000);
         upgradeLevel_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int petFoodExpirationDate_ ;
+      /**
+       * <code>optional uint32 pet_food_expiration_date = 24;</code>
+       */
+      public boolean hasPetFoodExpirationDate() {
+        return ((bitField0_ & 0x00200000) == 0x00200000);
+      }
+      /**
+       * <code>optional uint32 pet_food_expiration_date = 24;</code>
+       */
+      public int getPetFoodExpirationDate() {
+        return petFoodExpirationDate_;
+      }
+      /**
+       * <code>optional uint32 pet_food_expiration_date = 24;</code>
+       */
+      public Builder setPetFoodExpirationDate(int value) {
+        bitField0_ |= 0x00200000;
+        petFoodExpirationDate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 pet_food_expiration_date = 24;</code>
+       */
+      public Builder clearPetFoodExpirationDate() {
+        bitField0_ = (bitField0_ & ~0x00200000);
+        petFoodExpirationDate_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.protobuf.ByteString blobdata_ = skadistats.clarity.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes blobdata = 25;</code>
+       */
+      public boolean hasBlobdata() {
+        return ((bitField0_ & 0x00400000) == 0x00400000);
+      }
+      /**
+       * <code>optional bytes blobdata = 25;</code>
+       */
+      public skadistats.clarity.protobuf.ByteString getBlobdata() {
+        return blobdata_;
+      }
+      /**
+       * <code>optional bytes blobdata = 25;</code>
+       */
+      public Builder setBlobdata(skadistats.clarity.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00400000;
+        blobdata_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes blobdata = 25;</code>
+       */
+      public Builder clearBlobdata() {
+        bitField0_ = (bitField0_ & ~0x00400000);
+        blobdata_ = getDefaultInstance().getBlobdata();
         onChanged();
         return this;
       }
@@ -28179,7 +28521,7 @@ public final class CsCommonGcMessages {
       "\005stats\030\005 \003(\0132\034.CPreMatchInfoData.TeamSta" +
       "ts\022\014\n\004wins\030\006 \003(\005\032X\n\tTeamStats\022\031\n\021match_i" +
       "nfo_idxtxt\030\001 \001(\005\022\026\n\016match_info_txt\030\002 \001(\t" +
-      "\022\030\n\020match_info_teams\030\003 \003(\t\"\350\004\n.CMsgGCCSt" +
+      "\022\030\n\020match_info_teams\030\003 \003(\t\"\373\004\n.CMsgGCCSt" +
       "rike15_v2_MatchmakingGC2ServerReserve\022\023\n",
       "\013account_ids\030\001 \003(\r\022\021\n\tgame_type\030\002 \001(\r\022\020\n" +
       "\010match_id\030\003 \001(\004\022\026\n\016server_version\030\004 \001(\r\022" +
@@ -28195,44 +28537,46 @@ public final class CsCommonGcMessages {
       "(\0132\022.CPreMatchInfoData\022\033\n\023rtime32_event_" +
       "start\030\020 \001(\r\022\022\n\ntv_control\030\021 \001(\r\022\027\n\017teamm" +
       "ate_colors\030\025 \003(\005\022\033\n\023match_id_additional\030" +
-      "\026 \001(\r\"\325\002\n\037CMsgGCCStrike15_ClientDeepStat" +
-      "s\022\022\n\naccount_id\030\001 \001(\r\022>\n\005range\030\002 \001(\0132/.C" +
-      "MsgGCCStrike15_ClientDeepStats.DeepStats" +
-      "Range\022@\n\007matches\030\003 \003(\0132/.CMsgGCCStrike15" +
-      "_ClientDeepStats.DeepStatsMatch\032<\n\016DeepS" +
-      "tatsRange\022\r\n\005begin\030\001 \001(\r\022\013\n\003end\030\002 \001(\r\022\016\n",
-      "\006frozen\030\003 \001(\010\032^\n\016DeepStatsMatch\022%\n\006playe" +
-      "r\030\001 \001(\0132\025.DeepPlayerStatsEntry\022%\n\006events" +
-      "\030\002 \003(\0132\025.DeepPlayerMatchEvent\"\323\001\n,CMsgGC" +
-      "Cstrike15_v2_GC2ServerNotifyXPRewarded\022)" +
-      "\n\020xp_progress_data\030\001 \003(\0132\017.XpProgressDat" +
-      "a\022\022\n\naccount_id\030\002 \001(\r\022\022\n\ncurrent_xp\030\003 \001(" +
-      "\r\022\025\n\rcurrent_level\030\004 \001(\r\022\027\n\017upgraded_def" +
-      "idx\030\005 \001(\r\022 \n\030operation_points_awarded\030\006 " +
-      "\001(\r\"\342\004\n\031CEconItemPreviewDataBlock\022\021\n\tacc" +
-      "ountid\030\001 \001(\r\022\016\n\006itemid\030\002 \001(\004\022\020\n\010defindex",
-      "\030\003 \001(\r\022\022\n\npaintindex\030\004 \001(\r\022\016\n\006rarity\030\005 \001" +
-      "(\r\022\017\n\007quality\030\006 \001(\r\022\021\n\tpaintwear\030\007 \001(\r\022\021" +
-      "\n\tpaintseed\030\010 \001(\r\022\032\n\022killeaterscoretype\030" +
-      "\t \001(\r\022\026\n\016killeatervalue\030\n \001(\r\022\022\n\ncustomn" +
-      "ame\030\013 \001(\t\0224\n\010stickers\030\014 \003(\0132\".CEconItemP" +
-      "reviewDataBlock.Sticker\022\021\n\tinventory\030\r \001" +
-      "(\r\022\016\n\006origin\030\016 \001(\r\022\017\n\007questid\030\017 \001(\r\022\022\n\nd" +
-      "ropreason\030\020 \001(\r\022\022\n\nmusicindex\030\021 \001(\r\022\020\n\010e" +
-      "ntindex\030\022 \001(\005\022\r\n\005style\030\025 \001(\r\0226\n\nvariatio" +
-      "ns\030\026 \003(\0132\".CEconItemPreviewDataBlock.Sti",
-      "cker\022\025\n\rupgrade_level\030\027 \001(\r\032k\n\007Sticker\022\014" +
-      "\n\004slot\030\001 \001(\r\022\022\n\nsticker_id\030\002 \001(\r\022\014\n\004wear" +
-      "\030\003 \001(\002\022\r\n\005scale\030\004 \001(\002\022\020\n\010rotation\030\005 \001(\002\022" +
-      "\017\n\007tint_id\030\006 \001(\r\"\223\002\n\033PlayerDecalDigitalS" +
-      "ignature\022\021\n\tsignature\030\001 \001(\014\022\021\n\taccountid" +
-      "\030\002 \001(\r\022\r\n\005rtime\030\003 \001(\r\022\016\n\006endpos\030\004 \003(\002\022\020\n" +
-      "\010startpos\030\005 \003(\002\022\014\n\004left\030\006 \003(\002\022\021\n\ttx_defi" +
-      "dx\030\007 \001(\r\022\020\n\010entindex\030\010 \001(\005\022\016\n\006hitbox\030\t \001" +
-      "(\r\022\024\n\014creationtime\030\n \001(\002\022\021\n\tequipslot\030\013 " +
-      "\001(\r\022\020\n\010trace_id\030\014 \001(\r\022\016\n\006normal\030\r \003(\002\022\017\n",
-      "\007tint_id\030\016 \001(\rB=\n\'skadistats.clarity.wir" +
-      "e.cs.common.protoB\022CsCommonGcMessages"
+      "\026 \001(\r\022\021\n\tclan_tags\030\027 \003(\t\"\325\002\n\037CMsgGCCStri" +
+      "ke15_ClientDeepStats\022\022\n\naccount_id\030\001 \001(\r" +
+      "\022>\n\005range\030\002 \001(\0132/.CMsgGCCStrike15_Client" +
+      "DeepStats.DeepStatsRange\022@\n\007matches\030\003 \003(" +
+      "\0132/.CMsgGCCStrike15_ClientDeepStats.Deep" +
+      "StatsMatch\032<\n\016DeepStatsRange\022\r\n\005begin\030\001 ",
+      "\001(\r\022\013\n\003end\030\002 \001(\r\022\016\n\006frozen\030\003 \001(\010\032^\n\016Deep" +
+      "StatsMatch\022%\n\006player\030\001 \001(\0132\025.DeepPlayerS" +
+      "tatsEntry\022%\n\006events\030\002 \003(\0132\025.DeepPlayerMa" +
+      "tchEvent\"\323\001\n,CMsgGCCstrike15_v2_GC2Serve" +
+      "rNotifyXPRewarded\022)\n\020xp_progress_data\030\001 " +
+      "\003(\0132\017.XpProgressData\022\022\n\naccount_id\030\002 \001(\r" +
+      "\022\022\n\ncurrent_xp\030\003 \001(\r\022\025\n\rcurrent_level\030\004 " +
+      "\001(\r\022\027\n\017upgraded_defidx\030\005 \001(\r\022 \n\030operatio" +
+      "n_points_awarded\030\006 \001(\r\"\226\005\n\031CEconItemPrev" +
+      "iewDataBlock\022\021\n\taccountid\030\001 \001(\r\022\016\n\006itemi",
+      "d\030\002 \001(\004\022\020\n\010defindex\030\003 \001(\r\022\022\n\npaintindex\030" +
+      "\004 \001(\r\022\016\n\006rarity\030\005 \001(\r\022\017\n\007quality\030\006 \001(\r\022\021" +
+      "\n\tpaintwear\030\007 \001(\r\022\021\n\tpaintseed\030\010 \001(\r\022\032\n\022" +
+      "killeaterscoretype\030\t \001(\r\022\026\n\016killeaterval" +
+      "ue\030\n \001(\r\022\022\n\ncustomname\030\013 \001(\t\0224\n\010stickers" +
+      "\030\014 \003(\0132\".CEconItemPreviewDataBlock.Stick" +
+      "er\022\021\n\tinventory\030\r \001(\r\022\016\n\006origin\030\016 \001(\r\022\017\n" +
+      "\007questid\030\017 \001(\r\022\022\n\ndropreason\030\020 \001(\r\022\022\n\nmu" +
+      "sicindex\030\021 \001(\r\022\020\n\010entindex\030\022 \001(\005\022\r\n\005styl" +
+      "e\030\025 \001(\r\0226\n\nvariations\030\026 \003(\0132\".CEconItemP",
+      "reviewDataBlock.Sticker\022\025\n\rupgrade_level" +
+      "\030\027 \001(\r\022 \n\030pet_food_expiration_date\030\030 \001(\r" +
+      "\022\020\n\010blobdata\030\031 \001(\014\032k\n\007Sticker\022\014\n\004slot\030\001 " +
+      "\001(\r\022\022\n\nsticker_id\030\002 \001(\r\022\014\n\004wear\030\003 \001(\002\022\r\n" +
+      "\005scale\030\004 \001(\002\022\020\n\010rotation\030\005 \001(\002\022\017\n\007tint_i" +
+      "d\030\006 \001(\r\"\223\002\n\033PlayerDecalDigitalSignature\022" +
+      "\021\n\tsignature\030\001 \001(\014\022\021\n\taccountid\030\002 \001(\r\022\r\n" +
+      "\005rtime\030\003 \001(\r\022\016\n\006endpos\030\004 \003(\002\022\020\n\010startpos" +
+      "\030\005 \003(\002\022\014\n\004left\030\006 \003(\002\022\021\n\ttx_defidx\030\007 \001(\r\022" +
+      "\020\n\010entindex\030\010 \001(\005\022\016\n\006hitbox\030\t \001(\r\022\024\n\014cre",
+      "ationtime\030\n \001(\002\022\021\n\tequipslot\030\013 \001(\r\022\020\n\010tr" +
+      "ace_id\030\014 \001(\r\022\016\n\006normal\030\r \003(\002\022\017\n\007tint_id\030" +
+      "\016 \001(\rB=\n\'skadistats.clarity.wire.cs.comm" +
+      "on.protoB\022CsCommonGcMessages"
     };
     skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -28341,7 +28685,7 @@ public final class CsCommonGcMessages {
     internal_static_CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve_descriptor,
-        new java.lang.String[] { "AccountIds", "GameType", "MatchId", "ServerVersion", "Flags", "Rankings", "EncryptionKey", "EncryptionKeyPub", "PartyIds", "Whitelist", "TvMasterSteamid", "TournamentEvent", "TournamentTeams", "TournamentCastersAccountIds", "TvRelaySteamid", "PreMatchData", "Rtime32EventStart", "TvControl", "TeammateColors", "MatchIdAdditional", });
+        new java.lang.String[] { "AccountIds", "GameType", "MatchId", "ServerVersion", "Flags", "Rankings", "EncryptionKey", "EncryptionKeyPub", "PartyIds", "Whitelist", "TvMasterSteamid", "TournamentEvent", "TournamentTeams", "TournamentCastersAccountIds", "TvRelaySteamid", "PreMatchData", "Rtime32EventStart", "TvControl", "TeammateColors", "MatchIdAdditional", "ClanTags", });
     internal_static_CMsgGCCStrike15_ClientDeepStats_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_CMsgGCCStrike15_ClientDeepStats_fieldAccessorTable = new
@@ -28371,7 +28715,7 @@ public final class CsCommonGcMessages {
     internal_static_CEconItemPreviewDataBlock_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEconItemPreviewDataBlock_descriptor,
-        new java.lang.String[] { "Accountid", "Itemid", "Defindex", "Paintindex", "Rarity", "Quality", "Paintwear", "Paintseed", "Killeaterscoretype", "Killeatervalue", "Customname", "Stickers", "Inventory", "Origin", "Questid", "Dropreason", "Musicindex", "Entindex", "Style", "Variations", "UpgradeLevel", });
+        new java.lang.String[] { "Accountid", "Itemid", "Defindex", "Paintindex", "Rarity", "Quality", "Paintwear", "Paintseed", "Killeaterscoretype", "Killeatervalue", "Customname", "Stickers", "Inventory", "Origin", "Questid", "Dropreason", "Musicindex", "Entindex", "Style", "Variations", "UpgradeLevel", "PetFoodExpirationDate", "Blobdata", });
     internal_static_CEconItemPreviewDataBlock_Sticker_descriptor =
       internal_static_CEconItemPreviewDataBlock_descriptor.getNestedTypes().get(0);
     internal_static_CEconItemPreviewDataBlock_Sticker_fieldAccessorTable = new

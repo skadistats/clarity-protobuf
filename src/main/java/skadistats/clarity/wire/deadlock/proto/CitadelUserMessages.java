@@ -37,6 +37,10 @@ public final class CitadelUserMessages {
      * <code>k_EPingMarkerInfo_OnlyMiniMap = 5;</code>
      */
     k_EPingMarkerInfo_OnlyMiniMap(5, 5),
+    /**
+     * <code>k_EPingMarkerInfo_NoMarkerYesSoundMiniMap = 6;</code>
+     */
+    k_EPingMarkerInfo_NoMarkerYesSoundMiniMap(6, 6),
     ;
 
     /**
@@ -63,6 +67,10 @@ public final class CitadelUserMessages {
      * <code>k_EPingMarkerInfo_OnlyMiniMap = 5;</code>
      */
     public static final int k_EPingMarkerInfo_OnlyMiniMap_VALUE = 5;
+    /**
+     * <code>k_EPingMarkerInfo_NoMarkerYesSoundMiniMap = 6;</code>
+     */
+    public static final int k_EPingMarkerInfo_NoMarkerYesSoundMiniMap_VALUE = 6;
 
 
     public final int getNumber() { return value; }
@@ -75,6 +83,7 @@ public final class CitadelUserMessages {
         case 3: return k_EPingMarkerInfo_OnlyShowMarker;
         case 4: return k_EPingMarkerInfo_OnlyPlaySound;
         case 5: return k_EPingMarkerInfo_OnlyMiniMap;
+        case 6: return k_EPingMarkerInfo_NoMarkerYesSoundMiniMap;
         default: return null;
       }
     }
@@ -425,6 +434,415 @@ public final class CitadelUserMessages {
     // @@protoc_insertion_point(enum_scope:PostProcessingGameStates)
   }
 
+  /**
+   * Protobuf enum {@code CameraAction}
+   */
+  public enum CameraAction
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EAction_AddOp = 0;</code>
+     */
+    k_EAction_AddOp(0, 0),
+    /**
+     * <code>k_EAction_ClearAllOps = 1;</code>
+     */
+    k_EAction_ClearAllOps(1, 1),
+    /**
+     * <code>k_EAction_ClearOpsForContext = 2;</code>
+     */
+    k_EAction_ClearOpsForContext(2, 2),
+    ;
+
+    /**
+     * <code>k_EAction_AddOp = 0;</code>
+     */
+    public static final int k_EAction_AddOp_VALUE = 0;
+    /**
+     * <code>k_EAction_ClearAllOps = 1;</code>
+     */
+    public static final int k_EAction_ClearAllOps_VALUE = 1;
+    /**
+     * <code>k_EAction_ClearOpsForContext = 2;</code>
+     */
+    public static final int k_EAction_ClearOpsForContext_VALUE = 2;
+
+
+    public final int getNumber() { return value; }
+
+    public static CameraAction valueOf(int value) {
+      switch (value) {
+        case 0: return k_EAction_AddOp;
+        case 1: return k_EAction_ClearAllOps;
+        case 2: return k_EAction_ClearOpsForContext;
+        default: return null;
+      }
+    }
+
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<CameraAction>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<CameraAction>
+        internalValueMap =
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<CameraAction>() {
+            public CameraAction findValueByNumber(int number) {
+              return CameraAction.valueOf(number);
+            }
+          };
+
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final CameraAction[] VALUES = values();
+
+    public static CameraAction valueOf(
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private CameraAction(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:CameraAction)
+  }
+
+  /**
+   * Protobuf enum {@code CameraOperation}
+   */
+  public enum CameraOperation
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ECameraOp_Maintain = 2;</code>
+     */
+    k_ECameraOp_Maintain(0, 2),
+    /**
+     * <code>k_ECameraOp_Approach = 3;</code>
+     */
+    k_ECameraOp_Approach(1, 3),
+    /**
+     * <code>k_ECameraOp_Spring = 4;</code>
+     */
+    k_ECameraOp_Spring(2, 4),
+    /**
+     * <code>k_ECameraOp_Lerp = 5;</code>
+     */
+    k_ECameraOp_Lerp(3, 5),
+    /**
+     * <code>k_ECameraOp_Lag = 6;</code>
+     */
+    k_ECameraOp_Lag(4, 6),
+    ;
+
+    /**
+     * <code>k_ECameraOp_Maintain = 2;</code>
+     */
+    public static final int k_ECameraOp_Maintain_VALUE = 2;
+    /**
+     * <code>k_ECameraOp_Approach = 3;</code>
+     */
+    public static final int k_ECameraOp_Approach_VALUE = 3;
+    /**
+     * <code>k_ECameraOp_Spring = 4;</code>
+     */
+    public static final int k_ECameraOp_Spring_VALUE = 4;
+    /**
+     * <code>k_ECameraOp_Lerp = 5;</code>
+     */
+    public static final int k_ECameraOp_Lerp_VALUE = 5;
+    /**
+     * <code>k_ECameraOp_Lag = 6;</code>
+     */
+    public static final int k_ECameraOp_Lag_VALUE = 6;
+
+
+    public final int getNumber() { return value; }
+
+    public static CameraOperation valueOf(int value) {
+      switch (value) {
+        case 2: return k_ECameraOp_Maintain;
+        case 3: return k_ECameraOp_Approach;
+        case 4: return k_ECameraOp_Spring;
+        case 5: return k_ECameraOp_Lerp;
+        case 6: return k_ECameraOp_Lag;
+        default: return null;
+      }
+    }
+
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<CameraOperation>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<CameraOperation>
+        internalValueMap =
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<CameraOperation>() {
+            public CameraOperation findValueByNumber(int number) {
+              return CameraOperation.valueOf(number);
+            }
+          };
+
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.getDescriptor().getEnumTypes().get(4);
+    }
+
+    private static final CameraOperation[] VALUES = values();
+
+    public static CameraOperation valueOf(
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private CameraOperation(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:CameraOperation)
+  }
+
+  /**
+   * Protobuf enum {@code CameraParam}
+   */
+  public enum CameraParam
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EParam_ClearAllOps = 0;</code>
+     */
+    k_EParam_ClearAllOps(0, 0),
+    /**
+     * <code>k_EParam_ClearAllOpsForContext = 1;</code>
+     */
+    k_EParam_ClearAllOpsForContext(1, 1),
+    /**
+     * <code>k_EParam_Distance = 2;</code>
+     */
+    k_EParam_Distance(2, 2),
+    /**
+     * <code>k_EParam_FOV = 3;</code>
+     */
+    k_EParam_FOV(3, 3),
+    /**
+     * <code>k_EParam_TargetPosition = 4;</code>
+     */
+    k_EParam_TargetPosition(4, 4),
+    /**
+     * <code>k_EParam_VertOffset = 5;</code>
+     */
+    k_EParam_VertOffset(5, 5),
+    /**
+     * <code>k_EParam_HorizOffset = 6;</code>
+     */
+    k_EParam_HorizOffset(6, 6),
+    ;
+
+    /**
+     * <code>k_EParam_ClearAllOps = 0;</code>
+     */
+    public static final int k_EParam_ClearAllOps_VALUE = 0;
+    /**
+     * <code>k_EParam_ClearAllOpsForContext = 1;</code>
+     */
+    public static final int k_EParam_ClearAllOpsForContext_VALUE = 1;
+    /**
+     * <code>k_EParam_Distance = 2;</code>
+     */
+    public static final int k_EParam_Distance_VALUE = 2;
+    /**
+     * <code>k_EParam_FOV = 3;</code>
+     */
+    public static final int k_EParam_FOV_VALUE = 3;
+    /**
+     * <code>k_EParam_TargetPosition = 4;</code>
+     */
+    public static final int k_EParam_TargetPosition_VALUE = 4;
+    /**
+     * <code>k_EParam_VertOffset = 5;</code>
+     */
+    public static final int k_EParam_VertOffset_VALUE = 5;
+    /**
+     * <code>k_EParam_HorizOffset = 6;</code>
+     */
+    public static final int k_EParam_HorizOffset_VALUE = 6;
+
+
+    public final int getNumber() { return value; }
+
+    public static CameraParam valueOf(int value) {
+      switch (value) {
+        case 0: return k_EParam_ClearAllOps;
+        case 1: return k_EParam_ClearAllOpsForContext;
+        case 2: return k_EParam_Distance;
+        case 3: return k_EParam_FOV;
+        case 4: return k_EParam_TargetPosition;
+        case 5: return k_EParam_VertOffset;
+        case 6: return k_EParam_HorizOffset;
+        default: return null;
+      }
+    }
+
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<CameraParam>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<CameraParam>
+        internalValueMap =
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<CameraParam>() {
+            public CameraParam findValueByNumber(int number) {
+              return CameraParam.valueOf(number);
+            }
+          };
+
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.getDescriptor().getEnumTypes().get(5);
+    }
+
+    private static final CameraParam[] VALUES = values();
+
+    public static CameraParam valueOf(
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private CameraParam(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:CameraParam)
+  }
+
+  /**
+   * Protobuf enum {@code CameraParamMode}
+   */
+  public enum CameraParamMode
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EParamMode_AllowInOneContext = 0;</code>
+     */
+    k_EParamMode_AllowInOneContext(0, 0),
+    /**
+     * <code>k_EParamMode_AllowInMultipleContexts = 1;</code>
+     */
+    k_EParamMode_AllowInMultipleContexts(1, 1),
+    ;
+
+    /**
+     * <code>k_EParamMode_AllowInOneContext = 0;</code>
+     */
+    public static final int k_EParamMode_AllowInOneContext_VALUE = 0;
+    /**
+     * <code>k_EParamMode_AllowInMultipleContexts = 1;</code>
+     */
+    public static final int k_EParamMode_AllowInMultipleContexts_VALUE = 1;
+
+
+    public final int getNumber() { return value; }
+
+    public static CameraParamMode valueOf(int value) {
+      switch (value) {
+        case 0: return k_EParamMode_AllowInOneContext;
+        case 1: return k_EParamMode_AllowInMultipleContexts;
+        default: return null;
+      }
+    }
+
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<CameraParamMode>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<CameraParamMode>
+        internalValueMap =
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<CameraParamMode>() {
+            public CameraParamMode findValueByNumber(int number) {
+              return CameraParamMode.valueOf(number);
+            }
+          };
+
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.getDescriptor().getEnumTypes().get(6);
+    }
+
+    private static final CameraParamMode[] VALUES = values();
+
+    public static CameraParamMode valueOf(
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private CameraParamMode(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:CameraParamMode)
+  }
+
   public interface CCitadelUserMessage_DamageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMessage_Damage)
       skadistats.clarity.protobuf.MessageOrBuilder {
@@ -697,6 +1115,15 @@ public final class CitadelUserMessages {
      * <code>optional int32 server_tick = 29;</code>
      */
     int getServerTick();
+
+    /**
+     * <code>optional uint32 attacker_subclass = 31;</code>
+     */
+    boolean hasAttackerSubclass();
+    /**
+     * <code>optional uint32 attacker_subclass = 31;</code>
+     */
+    int getAttackerSubclass();
   }
   /**
    * Protobuf type {@code CCitadelUserMessage_Damage}
@@ -909,6 +1336,11 @@ public final class CitadelUserMessages {
             case 232: {
               bitField0_ |= 0x10000000;
               serverTick_ = input.readInt32();
+              break;
+            }
+            case 248: {
+              bitField0_ |= 0x20000000;
+              attackerSubclass_ = input.readUInt32();
               break;
             }
           }
@@ -1398,6 +1830,21 @@ public final class CitadelUserMessages {
       return serverTick_;
     }
 
+    public static final int ATTACKER_SUBCLASS_FIELD_NUMBER = 31;
+    private int attackerSubclass_;
+    /**
+     * <code>optional uint32 attacker_subclass = 31;</code>
+     */
+    public boolean hasAttackerSubclass() {
+      return ((bitField0_ & 0x20000000) == 0x20000000);
+    }
+    /**
+     * <code>optional uint32 attacker_subclass = 31;</code>
+     */
+    public int getAttackerSubclass() {
+      return attackerSubclass_;
+    }
+
     private void initFields() {
       damage_ = 0;
       preDamageDeprecated_ = 0;
@@ -1428,6 +1875,7 @@ public final class CitadelUserMessages {
       preDamage_ = 0F;
       damageAbsorbed_ = 0F;
       serverTick_ = 0;
+      attackerSubclass_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1528,6 +1976,9 @@ public final class CitadelUserMessages {
       }
       if (((bitField0_ & 0x10000000) == 0x10000000)) {
         output.writeInt32(29, serverTick_);
+      }
+      if (((bitField0_ & 0x20000000) == 0x20000000)) {
+        output.writeUInt32(31, attackerSubclass_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1653,6 +2104,10 @@ public final class CitadelUserMessages {
       if (((bitField0_ & 0x10000000) == 0x10000000)) {
         size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(29, serverTick_);
+      }
+      if (((bitField0_ & 0x20000000) == 0x20000000)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(31, attackerSubclass_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1839,6 +2294,8 @@ public final class CitadelUserMessages {
         bitField0_ = (bitField0_ & ~0x08000000);
         serverTick_ = 0;
         bitField0_ = (bitField0_ & ~0x10000000);
+        attackerSubclass_ = 0;
+        bitField0_ = (bitField0_ & ~0x20000000);
         return this;
       }
 
@@ -1991,6 +2448,10 @@ public final class CitadelUserMessages {
           to_bitField0_ |= 0x10000000;
         }
         result.serverTick_ = serverTick_;
+        if (((from_bitField0_ & 0x20000000) == 0x20000000)) {
+          to_bitField0_ |= 0x20000000;
+        }
+        result.attackerSubclass_ = attackerSubclass_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2093,6 +2554,9 @@ public final class CitadelUserMessages {
         }
         if (other.hasServerTick()) {
           setServerTick(other.getServerTick());
+        }
+        if (other.hasAttackerSubclass()) {
+          setAttackerSubclass(other.getAttackerSubclass());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -3217,6 +3681,38 @@ public final class CitadelUserMessages {
         return this;
       }
 
+      private int attackerSubclass_ ;
+      /**
+       * <code>optional uint32 attacker_subclass = 31;</code>
+       */
+      public boolean hasAttackerSubclass() {
+        return ((bitField0_ & 0x20000000) == 0x20000000);
+      }
+      /**
+       * <code>optional uint32 attacker_subclass = 31;</code>
+       */
+      public int getAttackerSubclass() {
+        return attackerSubclass_;
+      }
+      /**
+       * <code>optional uint32 attacker_subclass = 31;</code>
+       */
+      public Builder setAttackerSubclass(int value) {
+        bitField0_ |= 0x20000000;
+        attackerSubclass_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 attacker_subclass = 31;</code>
+       */
+      public Builder clearAttackerSubclass() {
+        bitField0_ = (bitField0_ & ~0x20000000);
+        attackerSubclass_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:CCitadelUserMessage_Damage)
     }
 
@@ -3303,6 +3799,42 @@ public final class CitadelUserMessages {
      * <code>optional float cooldown_time = 7;</code>
      */
     float getCooldownTime();
+
+    /**
+     * <code>optional .CMsgLaneColor lane_color = 8 [default = k_ELaneColor_Invalid];</code>
+     */
+    boolean hasLaneColor();
+    /**
+     * <code>optional .CMsgLaneColor lane_color = 8 [default = k_ELaneColor_Invalid];</code>
+     */
+    skadistats.clarity.wire.deadlock.proto.DeadlockCommonGcMessages.CMsgLaneColor getLaneColor();
+
+    /**
+     * <code>optional int32 ping_anim_type = 9;</code>
+     */
+    boolean hasPingAnimType();
+    /**
+     * <code>optional int32 ping_anim_type = 9;</code>
+     */
+    int getPingAnimType();
+
+    /**
+     * <code>optional uint32 ability_id = 10;</code>
+     */
+    boolean hasAbilityId();
+    /**
+     * <code>optional uint32 ability_id = 10;</code>
+     */
+    int getAbilityId();
+
+    /**
+     * <code>optional bool is_corrupted_item = 11;</code>
+     */
+    boolean hasIsCorruptedItem();
+    /**
+     * <code>optional bool is_corrupted_item = 11;</code>
+     */
+    boolean getIsCorruptedItem();
   }
   /**
    * Protobuf type {@code PingCommonData}
@@ -3398,6 +3930,32 @@ public final class CitadelUserMessages {
             case 61: {
               bitField0_ |= 0x00000040;
               cooldownTime_ = input.readFloat();
+              break;
+            }
+            case 64: {
+              int rawValue = input.readEnum();
+              skadistats.clarity.wire.deadlock.proto.DeadlockCommonGcMessages.CMsgLaneColor value = skadistats.clarity.wire.deadlock.proto.DeadlockCommonGcMessages.CMsgLaneColor.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(8, rawValue);
+              } else {
+                bitField0_ |= 0x00000080;
+                laneColor_ = value;
+              }
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              pingAnimType_ = input.readInt32();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000200;
+              abilityId_ = input.readUInt32();
+              break;
+            }
+            case 88: {
+              bitField0_ |= 0x00000400;
+              isCorruptedItem_ = input.readBool();
               break;
             }
           }
@@ -3578,6 +4136,66 @@ public final class CitadelUserMessages {
       return cooldownTime_;
     }
 
+    public static final int LANE_COLOR_FIELD_NUMBER = 8;
+    private skadistats.clarity.wire.deadlock.proto.DeadlockCommonGcMessages.CMsgLaneColor laneColor_;
+    /**
+     * <code>optional .CMsgLaneColor lane_color = 8 [default = k_ELaneColor_Invalid];</code>
+     */
+    public boolean hasLaneColor() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional .CMsgLaneColor lane_color = 8 [default = k_ELaneColor_Invalid];</code>
+     */
+    public skadistats.clarity.wire.deadlock.proto.DeadlockCommonGcMessages.CMsgLaneColor getLaneColor() {
+      return laneColor_;
+    }
+
+    public static final int PING_ANIM_TYPE_FIELD_NUMBER = 9;
+    private int pingAnimType_;
+    /**
+     * <code>optional int32 ping_anim_type = 9;</code>
+     */
+    public boolean hasPingAnimType() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional int32 ping_anim_type = 9;</code>
+     */
+    public int getPingAnimType() {
+      return pingAnimType_;
+    }
+
+    public static final int ABILITY_ID_FIELD_NUMBER = 10;
+    private int abilityId_;
+    /**
+     * <code>optional uint32 ability_id = 10;</code>
+     */
+    public boolean hasAbilityId() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional uint32 ability_id = 10;</code>
+     */
+    public int getAbilityId() {
+      return abilityId_;
+    }
+
+    public static final int IS_CORRUPTED_ITEM_FIELD_NUMBER = 11;
+    private boolean isCorruptedItem_;
+    /**
+     * <code>optional bool is_corrupted_item = 11;</code>
+     */
+    public boolean hasIsCorruptedItem() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>optional bool is_corrupted_item = 11;</code>
+     */
+    public boolean getIsCorruptedItem() {
+      return isCorruptedItem_;
+    }
+
     private void initFields() {
       pingMessageId_ = 0;
       pingLocation_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
@@ -3586,6 +4204,10 @@ public final class CitadelUserMessages {
       speechConcept_ = 0;
       responseChosen_ = "";
       cooldownTime_ = 0F;
+      laneColor_ = skadistats.clarity.wire.deadlock.proto.DeadlockCommonGcMessages.CMsgLaneColor.k_ELaneColor_Invalid;
+      pingAnimType_ = 0;
+      abilityId_ = 0;
+      isCorruptedItem_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3620,6 +4242,18 @@ public final class CitadelUserMessages {
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         output.writeFloat(7, cooldownTime_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeEnum(8, laneColor_.getNumber());
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeInt32(9, pingAnimType_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeUInt32(10, abilityId_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeBool(11, isCorruptedItem_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3657,6 +4291,22 @@ public final class CitadelUserMessages {
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(7, cooldownTime_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeEnumSize(8, laneColor_.getNumber());
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(9, pingAnimType_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(10, abilityId_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeBoolSize(11, isCorruptedItem_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -3794,6 +4444,14 @@ public final class CitadelUserMessages {
         bitField0_ = (bitField0_ & ~0x00000020);
         cooldownTime_ = 0F;
         bitField0_ = (bitField0_ & ~0x00000040);
+        laneColor_ = skadistats.clarity.wire.deadlock.proto.DeadlockCommonGcMessages.CMsgLaneColor.k_ELaneColor_Invalid;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        pingAnimType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        abilityId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        isCorruptedItem_ = false;
+        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
 
@@ -3854,6 +4512,22 @@ public final class CitadelUserMessages {
           to_bitField0_ |= 0x00000040;
         }
         result.cooldownTime_ = cooldownTime_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.laneColor_ = laneColor_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.pingAnimType_ = pingAnimType_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.abilityId_ = abilityId_;
+        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.isCorruptedItem_ = isCorruptedItem_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3892,6 +4566,18 @@ public final class CitadelUserMessages {
         }
         if (other.hasCooldownTime()) {
           setCooldownTime(other.getCooldownTime());
+        }
+        if (other.hasLaneColor()) {
+          setLaneColor(other.getLaneColor());
+        }
+        if (other.hasPingAnimType()) {
+          setPingAnimType(other.getPingAnimType());
+        }
+        if (other.hasAbilityId()) {
+          setAbilityId(other.getAbilityId());
+        }
+        if (other.hasIsCorruptedItem()) {
+          setIsCorruptedItem(other.getIsCorruptedItem());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -4268,6 +4954,137 @@ public final class CitadelUserMessages {
       public Builder clearCooldownTime() {
         bitField0_ = (bitField0_ & ~0x00000040);
         cooldownTime_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.wire.deadlock.proto.DeadlockCommonGcMessages.CMsgLaneColor laneColor_ = skadistats.clarity.wire.deadlock.proto.DeadlockCommonGcMessages.CMsgLaneColor.k_ELaneColor_Invalid;
+      /**
+       * <code>optional .CMsgLaneColor lane_color = 8 [default = k_ELaneColor_Invalid];</code>
+       */
+      public boolean hasLaneColor() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional .CMsgLaneColor lane_color = 8 [default = k_ELaneColor_Invalid];</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.DeadlockCommonGcMessages.CMsgLaneColor getLaneColor() {
+        return laneColor_;
+      }
+      /**
+       * <code>optional .CMsgLaneColor lane_color = 8 [default = k_ELaneColor_Invalid];</code>
+       */
+      public Builder setLaneColor(skadistats.clarity.wire.deadlock.proto.DeadlockCommonGcMessages.CMsgLaneColor value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000080;
+        laneColor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .CMsgLaneColor lane_color = 8 [default = k_ELaneColor_Invalid];</code>
+       */
+      public Builder clearLaneColor() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        laneColor_ = skadistats.clarity.wire.deadlock.proto.DeadlockCommonGcMessages.CMsgLaneColor.k_ELaneColor_Invalid;
+        onChanged();
+        return this;
+      }
+
+      private int pingAnimType_ ;
+      /**
+       * <code>optional int32 ping_anim_type = 9;</code>
+       */
+      public boolean hasPingAnimType() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional int32 ping_anim_type = 9;</code>
+       */
+      public int getPingAnimType() {
+        return pingAnimType_;
+      }
+      /**
+       * <code>optional int32 ping_anim_type = 9;</code>
+       */
+      public Builder setPingAnimType(int value) {
+        bitField0_ |= 0x00000100;
+        pingAnimType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 ping_anim_type = 9;</code>
+       */
+      public Builder clearPingAnimType() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        pingAnimType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int abilityId_ ;
+      /**
+       * <code>optional uint32 ability_id = 10;</code>
+       */
+      public boolean hasAbilityId() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional uint32 ability_id = 10;</code>
+       */
+      public int getAbilityId() {
+        return abilityId_;
+      }
+      /**
+       * <code>optional uint32 ability_id = 10;</code>
+       */
+      public Builder setAbilityId(int value) {
+        bitField0_ |= 0x00000200;
+        abilityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 ability_id = 10;</code>
+       */
+      public Builder clearAbilityId() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        abilityId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isCorruptedItem_ ;
+      /**
+       * <code>optional bool is_corrupted_item = 11;</code>
+       */
+      public boolean hasIsCorruptedItem() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>optional bool is_corrupted_item = 11;</code>
+       */
+      public boolean getIsCorruptedItem() {
+        return isCorruptedItem_;
+      }
+      /**
+       * <code>optional bool is_corrupted_item = 11;</code>
+       */
+      public Builder setIsCorruptedItem(boolean value) {
+        bitField0_ |= 0x00000400;
+        isCorruptedItem_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_corrupted_item = 11;</code>
+       */
+      public Builder clearIsCorruptedItem() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        isCorruptedItem_ = false;
         onChanged();
         return this;
       }
@@ -9267,6 +10084,24 @@ public final class CitadelUserMessages {
      * <code>optional int32 victim_team_number = 7;</code>
      */
     int getVictimTeamNumber();
+
+    /**
+     * <code>optional int32 killfeed_gold = 8;</code>
+     */
+    boolean hasKillfeedGold();
+    /**
+     * <code>optional int32 killfeed_gold = 8;</code>
+     */
+    int getKillfeedGold();
+
+    /**
+     * <code>optional uint32 killer_ability_id = 9;</code>
+     */
+    boolean hasKillerAbilityId();
+    /**
+     * <code>optional uint32 killer_ability_id = 9;</code>
+     */
+    int getKillerAbilityId();
   }
   /**
    * Protobuf type {@code CCitadelUserMsg_HeroKilled}
@@ -9369,6 +10204,16 @@ public final class CitadelUserMessages {
             case 56: {
               bitField0_ |= 0x00000020;
               victimTeamNumber_ = input.readInt32();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000040;
+              killfeedGold_ = input.readInt32();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000080;
+              killerAbilityId_ = input.readUInt32();
               break;
             }
           }
@@ -9526,6 +10371,36 @@ public final class CitadelUserMessages {
       return victimTeamNumber_;
     }
 
+    public static final int KILLFEED_GOLD_FIELD_NUMBER = 8;
+    private int killfeedGold_;
+    /**
+     * <code>optional int32 killfeed_gold = 8;</code>
+     */
+    public boolean hasKillfeedGold() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional int32 killfeed_gold = 8;</code>
+     */
+    public int getKillfeedGold() {
+      return killfeedGold_;
+    }
+
+    public static final int KILLER_ABILITY_ID_FIELD_NUMBER = 9;
+    private int killerAbilityId_;
+    /**
+     * <code>optional uint32 killer_ability_id = 9;</code>
+     */
+    public boolean hasKillerAbilityId() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional uint32 killer_ability_id = 9;</code>
+     */
+    public int getKillerAbilityId() {
+      return killerAbilityId_;
+    }
+
     private void initFields() {
       entindexVictim_ = -1;
       entindexInflictor_ = -1;
@@ -9534,6 +10409,8 @@ public final class CitadelUserMessages {
       entindexScorer_ = -1;
       respawnReason_ = 0;
       victimTeamNumber_ = 0;
+      killfeedGold_ = 0;
+      killerAbilityId_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -9568,6 +10445,12 @@ public final class CitadelUserMessages {
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeInt32(7, victimTeamNumber_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeInt32(8, killfeedGold_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeUInt32(9, killerAbilityId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -9610,6 +10493,14 @@ public final class CitadelUserMessages {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(7, victimTeamNumber_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(8, killfeedGold_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(9, killerAbilityId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -9742,6 +10633,10 @@ public final class CitadelUserMessages {
         bitField0_ = (bitField0_ & ~0x00000020);
         victimTeamNumber_ = 0;
         bitField0_ = (bitField0_ & ~0x00000040);
+        killfeedGold_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        killerAbilityId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -9799,6 +10694,14 @@ public final class CitadelUserMessages {
           to_bitField0_ |= 0x00000020;
         }
         result.victimTeamNumber_ = victimTeamNumber_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.killfeedGold_ = killfeedGold_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.killerAbilityId_ = killerAbilityId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -9842,6 +10745,12 @@ public final class CitadelUserMessages {
         }
         if (other.hasVictimTeamNumber()) {
           setVictimTeamNumber(other.getVictimTeamNumber());
+        }
+        if (other.hasKillfeedGold()) {
+          setKillfeedGold(other.getKillfeedGold());
+        }
+        if (other.hasKillerAbilityId()) {
+          setKillerAbilityId(other.getKillerAbilityId());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -10128,6 +11037,70 @@ public final class CitadelUserMessages {
         return this;
       }
 
+      private int killfeedGold_ ;
+      /**
+       * <code>optional int32 killfeed_gold = 8;</code>
+       */
+      public boolean hasKillfeedGold() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional int32 killfeed_gold = 8;</code>
+       */
+      public int getKillfeedGold() {
+        return killfeedGold_;
+      }
+      /**
+       * <code>optional int32 killfeed_gold = 8;</code>
+       */
+      public Builder setKillfeedGold(int value) {
+        bitField0_ |= 0x00000080;
+        killfeedGold_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 killfeed_gold = 8;</code>
+       */
+      public Builder clearKillfeedGold() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        killfeedGold_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int killerAbilityId_ ;
+      /**
+       * <code>optional uint32 killer_ability_id = 9;</code>
+       */
+      public boolean hasKillerAbilityId() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional uint32 killer_ability_id = 9;</code>
+       */
+      public int getKillerAbilityId() {
+        return killerAbilityId_;
+      }
+      /**
+       * <code>optional uint32 killer_ability_id = 9;</code>
+       */
+      public Builder setKillerAbilityId(int value) {
+        bitField0_ |= 0x00000100;
+        killerAbilityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 killer_ability_id = 9;</code>
+       */
+      public Builder clearKillerAbilityId() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        killerAbilityId_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:CCitadelUserMsg_HeroKilled)
     }
 
@@ -10190,6 +11163,15 @@ public final class CitadelUserMessages {
      * <code>optional .CMsgVector damage_force = 4;</code>
      */
     skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getDamageForceOrBuilder();
+
+    /**
+     * <code>optional float radial_force = 5;</code>
+     */
+    boolean hasRadialForce();
+    /**
+     * <code>optional float radial_force = 5;</code>
+     */
+    float getRadialForce();
   }
   /**
    * Protobuf type {@code CCitadelEntityMsg_BreakablePropSpawnDebris}
@@ -10285,6 +11267,11 @@ public final class CitadelUserMessages {
                 damageForce_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000008;
+              break;
+            }
+            case 45: {
+              bitField0_ |= 0x00000010;
+              radialForce_ = input.readFloat();
               break;
             }
           }
@@ -10405,11 +11392,27 @@ public final class CitadelUserMessages {
       return damageForce_;
     }
 
+    public static final int RADIAL_FORCE_FIELD_NUMBER = 5;
+    private float radialForce_;
+    /**
+     * <code>optional float radial_force = 5;</code>
+     */
+    public boolean hasRadialForce() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional float radial_force = 5;</code>
+     */
+    public float getRadialForce() {
+      return radialForce_;
+    }
+
     private void initFields() {
       entityMsg_ = skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CEntityMsg.getDefaultInstance();
       damagePos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
       damage_ = 0F;
       damageForce_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      radialForce_ = 0F;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -10436,6 +11439,9 @@ public final class CitadelUserMessages {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeMessage(4, damageForce_);
       }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeFloat(5, radialForce_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -10460,6 +11466,10 @@ public final class CitadelUserMessages {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(4, damageForce_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeFloatSize(5, radialForce_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -10601,6 +11611,8 @@ public final class CitadelUserMessages {
           damageForceBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000008);
+        radialForce_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -10657,6 +11669,10 @@ public final class CitadelUserMessages {
         } else {
           result.damageForce_ = damageForceBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.radialForce_ = radialForce_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -10684,6 +11700,9 @@ public final class CitadelUserMessages {
         }
         if (other.hasDamageForce()) {
           mergeDamageForce(other.getDamageForce());
+        }
+        if (other.hasRadialForce()) {
+          setRadialForce(other.getRadialForce());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -11090,6 +12109,38 @@ public final class CitadelUserMessages {
           damageForce_ = null;
         }
         return damageForceBuilder_;
+      }
+
+      private float radialForce_ ;
+      /**
+       * <code>optional float radial_force = 5;</code>
+       */
+      public boolean hasRadialForce() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional float radial_force = 5;</code>
+       */
+      public float getRadialForce() {
+        return radialForce_;
+      }
+      /**
+       * <code>optional float radial_force = 5;</code>
+       */
+      public Builder setRadialForce(float value) {
+        bitField0_ |= 0x00000010;
+        radialForce_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float radial_force = 5;</code>
+       */
+      public Builder clearRadialForce() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        radialForce_ = 0F;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:CCitadelEntityMsg_BreakablePropSpawnDebris)
@@ -16595,6 +17646,24 @@ public final class CitadelUserMessages {
      * <code>optional .CMsgVector entity_position = 8;</code>
      */
     skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getEntityPositionOrBuilder();
+
+    /**
+     * <code>optional int32 killfeed_gold = 9;</code>
+     */
+    boolean hasKillfeedGold();
+    /**
+     * <code>optional int32 killfeed_gold = 9;</code>
+     */
+    int getKillfeedGold();
+
+    /**
+     * <code>optional uint32 killer_ability_id = 10;</code>
+     */
+    boolean hasKillerAbilityId();
+    /**
+     * <code>optional uint32 killer_ability_id = 10;</code>
+     */
+    int getKillerAbilityId();
   }
   /**
    * Protobuf type {@code CCitadelUserMsg_BossKilled}
@@ -16694,6 +17763,16 @@ public final class CitadelUserMessages {
                 entityPosition_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000080;
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              killfeedGold_ = input.readInt32();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000200;
+              killerAbilityId_ = input.readUInt32();
               break;
             }
           }
@@ -16862,6 +17941,36 @@ public final class CitadelUserMessages {
       return entityPosition_;
     }
 
+    public static final int KILLFEED_GOLD_FIELD_NUMBER = 9;
+    private int killfeedGold_;
+    /**
+     * <code>optional int32 killfeed_gold = 9;</code>
+     */
+    public boolean hasKillfeedGold() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional int32 killfeed_gold = 9;</code>
+     */
+    public int getKillfeedGold() {
+      return killfeedGold_;
+    }
+
+    public static final int KILLER_ABILITY_ID_FIELD_NUMBER = 10;
+    private int killerAbilityId_;
+    /**
+     * <code>optional uint32 killer_ability_id = 10;</code>
+     */
+    public boolean hasKillerAbilityId() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional uint32 killer_ability_id = 10;</code>
+     */
+    public int getKillerAbilityId() {
+      return killerAbilityId_;
+    }
+
     private void initFields() {
       objectiveTeam_ = 0;
       objectiveMaskChange_ = 0;
@@ -16871,6 +17980,8 @@ public final class CitadelUserMessages {
       gametime_ = 0F;
       bossesRemaining_ = 0;
       entityPosition_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      killfeedGold_ = 0;
+      killerAbilityId_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -16925,6 +18036,12 @@ public final class CitadelUserMessages {
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         output.writeMessage(8, entityPosition_);
       }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeInt32(9, killfeedGold_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeUInt32(10, killerAbilityId_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -16965,6 +18082,14 @@ public final class CitadelUserMessages {
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(8, entityPosition_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(9, killfeedGold_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(10, killerAbilityId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -17104,6 +18229,10 @@ public final class CitadelUserMessages {
           entityPositionBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000080);
+        killfeedGold_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        killerAbilityId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -17168,6 +18297,14 @@ public final class CitadelUserMessages {
         } else {
           result.entityPosition_ = entityPositionBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.killfeedGold_ = killfeedGold_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.killerAbilityId_ = killerAbilityId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -17207,6 +18344,12 @@ public final class CitadelUserMessages {
         }
         if (other.hasEntityPosition()) {
           mergeEntityPosition(other.getEntityPosition());
+        }
+        if (other.hasKillfeedGold()) {
+          setKillfeedGold(other.getKillfeedGold());
+        }
+        if (other.hasKillerAbilityId()) {
+          setKillerAbilityId(other.getKillerAbilityId());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -17589,6 +18732,70 @@ public final class CitadelUserMessages {
           entityPosition_ = null;
         }
         return entityPositionBuilder_;
+      }
+
+      private int killfeedGold_ ;
+      /**
+       * <code>optional int32 killfeed_gold = 9;</code>
+       */
+      public boolean hasKillfeedGold() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional int32 killfeed_gold = 9;</code>
+       */
+      public int getKillfeedGold() {
+        return killfeedGold_;
+      }
+      /**
+       * <code>optional int32 killfeed_gold = 9;</code>
+       */
+      public Builder setKillfeedGold(int value) {
+        bitField0_ |= 0x00000100;
+        killfeedGold_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 killfeed_gold = 9;</code>
+       */
+      public Builder clearKillfeedGold() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        killfeedGold_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int killerAbilityId_ ;
+      /**
+       * <code>optional uint32 killer_ability_id = 10;</code>
+       */
+      public boolean hasKillerAbilityId() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional uint32 killer_ability_id = 10;</code>
+       */
+      public int getKillerAbilityId() {
+        return killerAbilityId_;
+      }
+      /**
+       * <code>optional uint32 killer_ability_id = 10;</code>
+       */
+      public Builder setKillerAbilityId(int value) {
+        bitField0_ |= 0x00000200;
+        killerAbilityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 killer_ability_id = 10;</code>
+       */
+      public Builder clearKillerAbilityId() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        killerAbilityId_ = 0;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:CCitadelUserMsg_BossKilled)
@@ -19847,6 +21054,15 @@ public final class CitadelUserMessages {
      * <code>optional uint32 player_controller = 4 [default = 16777215];</code>
      */
     int getPlayerController();
+
+    /**
+     * <code>optional int32 killfeed_gold = 5;</code>
+     */
+    boolean hasKillfeedGold();
+    /**
+     * <code>optional int32 killfeed_gold = 5;</code>
+     */
+    int getKillfeedGold();
   }
   /**
    * Protobuf type {@code CCitadelUserMsg_TeamMsg}
@@ -19918,6 +21134,11 @@ public final class CitadelUserMessages {
             case 32: {
               bitField0_ |= 0x00000008;
               playerController_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              killfeedGold_ = input.readInt32();
               break;
             }
           }
@@ -20020,11 +21241,27 @@ public final class CitadelUserMessages {
       return playerController_;
     }
 
+    public static final int KILLFEED_GOLD_FIELD_NUMBER = 5;
+    private int killfeedGold_;
+    /**
+     * <code>optional int32 killfeed_gold = 5;</code>
+     */
+    public boolean hasKillfeedGold() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int32 killfeed_gold = 5;</code>
+     */
+    public int getKillfeedGold() {
+      return killfeedGold_;
+    }
+
     private void initFields() {
       eventType_ = 0;
       teamNumber_ = 0;
       laneColor_ = 0;
       playerController_ = 16777215;
+      killfeedGold_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -20051,6 +21288,9 @@ public final class CitadelUserMessages {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeUInt32(4, playerController_);
       }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(5, killfeedGold_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -20075,6 +21315,10 @@ public final class CitadelUserMessages {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(4, playerController_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(5, killfeedGold_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -20201,6 +21445,8 @@ public final class CitadelUserMessages {
         bitField0_ = (bitField0_ & ~0x00000004);
         playerController_ = 16777215;
         bitField0_ = (bitField0_ & ~0x00000008);
+        killfeedGold_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -20245,6 +21491,10 @@ public final class CitadelUserMessages {
           to_bitField0_ |= 0x00000008;
         }
         result.playerController_ = playerController_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.killfeedGold_ = killfeedGold_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -20272,6 +21522,9 @@ public final class CitadelUserMessages {
         }
         if (other.hasPlayerController()) {
           setPlayerController(other.getPlayerController());
+        }
+        if (other.hasKillfeedGold()) {
+          setKillfeedGold(other.getKillfeedGold());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -20428,6 +21681,38 @@ public final class CitadelUserMessages {
         return this;
       }
 
+      private int killfeedGold_ ;
+      /**
+       * <code>optional int32 killfeed_gold = 5;</code>
+       */
+      public boolean hasKillfeedGold() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int32 killfeed_gold = 5;</code>
+       */
+      public int getKillfeedGold() {
+        return killfeedGold_;
+      }
+      /**
+       * <code>optional int32 killfeed_gold = 5;</code>
+       */
+      public Builder setKillfeedGold(int value) {
+        bitField0_ |= 0x00000010;
+        killfeedGold_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 killfeed_gold = 5;</code>
+       */
+      public Builder clearKillfeedGold() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        killfeedGold_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:CCitadelUserMsg_TeamMsg)
     }
 
@@ -20460,6 +21745,15 @@ public final class CitadelUserMessages {
      * <code>optional float facing_yaw = 2;</code>
      */
     float getFacingYaw();
+
+    /**
+     * <code>optional uint32 respawn_reason = 3;</code>
+     */
+    boolean hasRespawnReason();
+    /**
+     * <code>optional uint32 respawn_reason = 3;</code>
+     */
+    int getRespawnReason();
   }
   /**
    * Protobuf type {@code CCitadelUserMsg_PlayerRespawned}
@@ -20521,6 +21815,11 @@ public final class CitadelUserMessages {
             case 21: {
               bitField0_ |= 0x00000002;
               facingYaw_ = input.readFloat();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              respawnReason_ = input.readUInt32();
               break;
             }
           }
@@ -20593,9 +21892,25 @@ public final class CitadelUserMessages {
       return facingYaw_;
     }
 
+    public static final int RESPAWN_REASON_FIELD_NUMBER = 3;
+    private int respawnReason_;
+    /**
+     * <code>optional uint32 respawn_reason = 3;</code>
+     */
+    public boolean hasRespawnReason() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional uint32 respawn_reason = 3;</code>
+     */
+    public int getRespawnReason() {
+      return respawnReason_;
+    }
+
     private void initFields() {
       playerPawn_ = 16777215;
       facingYaw_ = 0F;
+      respawnReason_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -20616,6 +21931,9 @@ public final class CitadelUserMessages {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeFloat(2, facingYaw_);
       }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeUInt32(3, respawnReason_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -20632,6 +21950,10 @@ public final class CitadelUserMessages {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(2, facingYaw_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(3, respawnReason_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -20754,6 +22076,8 @@ public final class CitadelUserMessages {
         bitField0_ = (bitField0_ & ~0x00000001);
         facingYaw_ = 0F;
         bitField0_ = (bitField0_ & ~0x00000002);
+        respawnReason_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -20790,6 +22114,10 @@ public final class CitadelUserMessages {
           to_bitField0_ |= 0x00000002;
         }
         result.facingYaw_ = facingYaw_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.respawnReason_ = respawnReason_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -20811,6 +22139,9 @@ public final class CitadelUserMessages {
         }
         if (other.hasFacingYaw()) {
           setFacingYaw(other.getFacingYaw());
+        }
+        if (other.hasRespawnReason()) {
+          setRespawnReason(other.getRespawnReason());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -20899,6 +22230,38 @@ public final class CitadelUserMessages {
       public Builder clearFacingYaw() {
         bitField0_ = (bitField0_ & ~0x00000002);
         facingYaw_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private int respawnReason_ ;
+      /**
+       * <code>optional uint32 respawn_reason = 3;</code>
+       */
+      public boolean hasRespawnReason() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional uint32 respawn_reason = 3;</code>
+       */
+      public int getRespawnReason() {
+        return respawnReason_;
+      }
+      /**
+       * <code>optional uint32 respawn_reason = 3;</code>
+       */
+      public Builder setRespawnReason(int value) {
+        bitField0_ |= 0x00000004;
+        respawnReason_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 respawn_reason = 3;</code>
+       */
+      public Builder clearRespawnReason() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        respawnReason_ = 0;
         onChanged();
         return this;
       }
@@ -24674,6 +26037,61 @@ public final class CitadelUserMessages {
      */
     skadistats.clarity.protobuf.ByteString
         getDialogVariableLocstringBytes(int index);
+
+    /**
+     * <code>optional float duration_override = 6;</code>
+     */
+    boolean hasDurationOverride();
+    /**
+     * <code>optional float duration_override = 6;</code>
+     */
+    float getDurationOverride();
+
+    /**
+     * <code>optional string snippet_panel = 7;</code>
+     */
+    boolean hasSnippetPanel();
+    /**
+     * <code>optional string snippet_panel = 7;</code>
+     */
+    java.lang.String getSnippetPanel();
+    /**
+     * <code>optional string snippet_panel = 7;</code>
+     */
+    skadistats.clarity.protobuf.ByteString
+        getSnippetPanelBytes();
+
+    /**
+     * <code>repeated string dialog_variable_int_name = 8;</code>
+     */
+    skadistats.clarity.protobuf.ProtocolStringList
+        getDialogVariableIntNameList();
+    /**
+     * <code>repeated string dialog_variable_int_name = 8;</code>
+     */
+    int getDialogVariableIntNameCount();
+    /**
+     * <code>repeated string dialog_variable_int_name = 8;</code>
+     */
+    java.lang.String getDialogVariableIntName(int index);
+    /**
+     * <code>repeated string dialog_variable_int_name = 8;</code>
+     */
+    skadistats.clarity.protobuf.ByteString
+        getDialogVariableIntNameBytes(int index);
+
+    /**
+     * <code>repeated int32 dialog_variable_int_value = 9;</code>
+     */
+    java.util.List<java.lang.Integer> getDialogVariableIntValueList();
+    /**
+     * <code>repeated int32 dialog_variable_int_value = 9;</code>
+     */
+    int getDialogVariableIntValueCount();
+    /**
+     * <code>repeated int32 dialog_variable_int_value = 9;</code>
+     */
+    int getDialogVariableIntValue(int index);
   }
   /**
    * Protobuf type {@code CCitadelUserMsg_HudGameAnnouncement}
@@ -24766,6 +26184,47 @@ public final class CitadelUserMessages {
               dialogVariableLocstring_.add(bs);
               break;
             }
+            case 53: {
+              bitField0_ |= 0x00000004;
+              durationOverride_ = input.readFloat();
+              break;
+            }
+            case 58: {
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              snippetPanel_ = bs;
+              break;
+            }
+            case 66: {
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+                dialogVariableIntName_ = new skadistats.clarity.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              dialogVariableIntName_.add(bs);
+              break;
+            }
+            case 72: {
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+                dialogVariableIntValue_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000100;
+              }
+              dialogVariableIntValue_.add(input.readInt32());
+              break;
+            }
+            case 74: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100) && input.getBytesUntilLimit() > 0) {
+                dialogVariableIntValue_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000100;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                dialogVariableIntValue_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
           }
         }
       } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
@@ -24782,6 +26241,12 @@ public final class CitadelUserMessages {
         }
         if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
           dialogVariableLocstring_ = dialogVariableLocstring_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+          dialogVariableIntName_ = dialogVariableIntName_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+          dialogVariableIntValue_ = java.util.Collections.unmodifiableList(dialogVariableIntValue_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -24986,12 +26451,124 @@ public final class CitadelUserMessages {
       return dialogVariableLocstring_.getByteString(index);
     }
 
+    public static final int DURATION_OVERRIDE_FIELD_NUMBER = 6;
+    private float durationOverride_;
+    /**
+     * <code>optional float duration_override = 6;</code>
+     */
+    public boolean hasDurationOverride() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional float duration_override = 6;</code>
+     */
+    public float getDurationOverride() {
+      return durationOverride_;
+    }
+
+    public static final int SNIPPET_PANEL_FIELD_NUMBER = 7;
+    private java.lang.Object snippetPanel_;
+    /**
+     * <code>optional string snippet_panel = 7;</code>
+     */
+    public boolean hasSnippetPanel() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string snippet_panel = 7;</code>
+     */
+    public java.lang.String getSnippetPanel() {
+      java.lang.Object ref = snippetPanel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          snippetPanel_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string snippet_panel = 7;</code>
+     */
+    public skadistats.clarity.protobuf.ByteString
+        getSnippetPanelBytes() {
+      java.lang.Object ref = snippetPanel_;
+      if (ref instanceof java.lang.String) {
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        snippetPanel_ = b;
+        return b;
+      } else {
+        return (skadistats.clarity.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DIALOG_VARIABLE_INT_NAME_FIELD_NUMBER = 8;
+    private skadistats.clarity.protobuf.LazyStringList dialogVariableIntName_;
+    /**
+     * <code>repeated string dialog_variable_int_name = 8;</code>
+     */
+    public skadistats.clarity.protobuf.ProtocolStringList
+        getDialogVariableIntNameList() {
+      return dialogVariableIntName_;
+    }
+    /**
+     * <code>repeated string dialog_variable_int_name = 8;</code>
+     */
+    public int getDialogVariableIntNameCount() {
+      return dialogVariableIntName_.size();
+    }
+    /**
+     * <code>repeated string dialog_variable_int_name = 8;</code>
+     */
+    public java.lang.String getDialogVariableIntName(int index) {
+      return dialogVariableIntName_.get(index);
+    }
+    /**
+     * <code>repeated string dialog_variable_int_name = 8;</code>
+     */
+    public skadistats.clarity.protobuf.ByteString
+        getDialogVariableIntNameBytes(int index) {
+      return dialogVariableIntName_.getByteString(index);
+    }
+
+    public static final int DIALOG_VARIABLE_INT_VALUE_FIELD_NUMBER = 9;
+    private java.util.List<java.lang.Integer> dialogVariableIntValue_;
+    /**
+     * <code>repeated int32 dialog_variable_int_value = 9;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getDialogVariableIntValueList() {
+      return dialogVariableIntValue_;
+    }
+    /**
+     * <code>repeated int32 dialog_variable_int_value = 9;</code>
+     */
+    public int getDialogVariableIntValueCount() {
+      return dialogVariableIntValue_.size();
+    }
+    /**
+     * <code>repeated int32 dialog_variable_int_value = 9;</code>
+     */
+    public int getDialogVariableIntValue(int index) {
+      return dialogVariableIntValue_.get(index);
+    }
+
     private void initFields() {
       titleLocstring_ = "";
       descriptionLocstring_ = "";
       classname_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
       dialogVariableName_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
       dialogVariableLocstring_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
+      durationOverride_ = 0F;
+      snippetPanel_ = "";
+      dialogVariableIntName_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
+      dialogVariableIntValue_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -25020,6 +26597,18 @@ public final class CitadelUserMessages {
       }
       for (int i = 0; i < dialogVariableLocstring_.size(); i++) {
         output.writeBytes(5, dialogVariableLocstring_.getByteString(i));
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeFloat(6, durationOverride_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(7, getSnippetPanelBytes());
+      }
+      for (int i = 0; i < dialogVariableIntName_.size(); i++) {
+        output.writeBytes(8, dialogVariableIntName_.getByteString(i));
+      }
+      for (int i = 0; i < dialogVariableIntValue_.size(); i++) {
+        output.writeInt32(9, dialogVariableIntValue_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -25064,6 +26653,32 @@ public final class CitadelUserMessages {
         }
         size += dataSize;
         size += 1 * getDialogVariableLocstringList().size();
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeFloatSize(6, durationOverride_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeBytesSize(7, getSnippetPanelBytes());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < dialogVariableIntName_.size(); i++) {
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(dialogVariableIntName_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getDialogVariableIntNameList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < dialogVariableIntValue_.size(); i++) {
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dialogVariableIntValue_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getDialogVariableIntValueList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -25192,6 +26807,14 @@ public final class CitadelUserMessages {
         bitField0_ = (bitField0_ & ~0x00000008);
         dialogVariableLocstring_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000010);
+        durationOverride_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        snippetPanel_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
+        dialogVariableIntName_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        dialogVariableIntValue_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -25243,6 +26866,24 @@ public final class CitadelUserMessages {
           bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.dialogVariableLocstring_ = dialogVariableLocstring_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.durationOverride_ = durationOverride_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.snippetPanel_ = snippetPanel_;
+        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          dialogVariableIntName_ = dialogVariableIntName_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000080);
+        }
+        result.dialogVariableIntName_ = dialogVariableIntName_;
+        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          dialogVariableIntValue_ = java.util.Collections.unmodifiableList(dialogVariableIntValue_);
+          bitField0_ = (bitField0_ & ~0x00000100);
+        }
+        result.dialogVariableIntValue_ = dialogVariableIntValue_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -25296,6 +26937,34 @@ public final class CitadelUserMessages {
           } else {
             ensureDialogVariableLocstringIsMutable();
             dialogVariableLocstring_.addAll(other.dialogVariableLocstring_);
+          }
+          onChanged();
+        }
+        if (other.hasDurationOverride()) {
+          setDurationOverride(other.getDurationOverride());
+        }
+        if (other.hasSnippetPanel()) {
+          bitField0_ |= 0x00000040;
+          snippetPanel_ = other.snippetPanel_;
+          onChanged();
+        }
+        if (!other.dialogVariableIntName_.isEmpty()) {
+          if (dialogVariableIntName_.isEmpty()) {
+            dialogVariableIntName_ = other.dialogVariableIntName_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+          } else {
+            ensureDialogVariableIntNameIsMutable();
+            dialogVariableIntName_.addAll(other.dialogVariableIntName_);
+          }
+          onChanged();
+        }
+        if (!other.dialogVariableIntValue_.isEmpty()) {
+          if (dialogVariableIntValue_.isEmpty()) {
+            dialogVariableIntValue_ = other.dialogVariableIntValue_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+          } else {
+            ensureDialogVariableIntValueIsMutable();
+            dialogVariableIntValue_.addAll(other.dialogVariableIntValue_);
           }
           onChanged();
         }
@@ -25753,6 +27422,273 @@ public final class CitadelUserMessages {
   }
   ensureDialogVariableLocstringIsMutable();
         dialogVariableLocstring_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private float durationOverride_ ;
+      /**
+       * <code>optional float duration_override = 6;</code>
+       */
+      public boolean hasDurationOverride() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional float duration_override = 6;</code>
+       */
+      public float getDurationOverride() {
+        return durationOverride_;
+      }
+      /**
+       * <code>optional float duration_override = 6;</code>
+       */
+      public Builder setDurationOverride(float value) {
+        bitField0_ |= 0x00000020;
+        durationOverride_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float duration_override = 6;</code>
+       */
+      public Builder clearDurationOverride() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        durationOverride_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object snippetPanel_ = "";
+      /**
+       * <code>optional string snippet_panel = 7;</code>
+       */
+      public boolean hasSnippetPanel() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional string snippet_panel = 7;</code>
+       */
+      public java.lang.String getSnippetPanel() {
+        java.lang.Object ref = snippetPanel_;
+        if (!(ref instanceof java.lang.String)) {
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            snippetPanel_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string snippet_panel = 7;</code>
+       */
+      public skadistats.clarity.protobuf.ByteString
+          getSnippetPanelBytes() {
+        java.lang.Object ref = snippetPanel_;
+        if (ref instanceof String) {
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          snippetPanel_ = b;
+          return b;
+        } else {
+          return (skadistats.clarity.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string snippet_panel = 7;</code>
+       */
+      public Builder setSnippetPanel(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        snippetPanel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string snippet_panel = 7;</code>
+       */
+      public Builder clearSnippetPanel() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        snippetPanel_ = getDefaultInstance().getSnippetPanel();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string snippet_panel = 7;</code>
+       */
+      public Builder setSnippetPanelBytes(
+          skadistats.clarity.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        snippetPanel_ = value;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.protobuf.LazyStringList dialogVariableIntName_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureDialogVariableIntNameIsMutable() {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+          dialogVariableIntName_ = new skadistats.clarity.protobuf.LazyStringArrayList(dialogVariableIntName_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+      /**
+       * <code>repeated string dialog_variable_int_name = 8;</code>
+       */
+      public skadistats.clarity.protobuf.ProtocolStringList
+          getDialogVariableIntNameList() {
+        return dialogVariableIntName_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string dialog_variable_int_name = 8;</code>
+       */
+      public int getDialogVariableIntNameCount() {
+        return dialogVariableIntName_.size();
+      }
+      /**
+       * <code>repeated string dialog_variable_int_name = 8;</code>
+       */
+      public java.lang.String getDialogVariableIntName(int index) {
+        return dialogVariableIntName_.get(index);
+      }
+      /**
+       * <code>repeated string dialog_variable_int_name = 8;</code>
+       */
+      public skadistats.clarity.protobuf.ByteString
+          getDialogVariableIntNameBytes(int index) {
+        return dialogVariableIntName_.getByteString(index);
+      }
+      /**
+       * <code>repeated string dialog_variable_int_name = 8;</code>
+       */
+      public Builder setDialogVariableIntName(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDialogVariableIntNameIsMutable();
+        dialogVariableIntName_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string dialog_variable_int_name = 8;</code>
+       */
+      public Builder addDialogVariableIntName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDialogVariableIntNameIsMutable();
+        dialogVariableIntName_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string dialog_variable_int_name = 8;</code>
+       */
+      public Builder addAllDialogVariableIntName(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDialogVariableIntNameIsMutable();
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
+            values, dialogVariableIntName_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string dialog_variable_int_name = 8;</code>
+       */
+      public Builder clearDialogVariableIntName() {
+        dialogVariableIntName_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string dialog_variable_int_name = 8;</code>
+       */
+      public Builder addDialogVariableIntNameBytes(
+          skadistats.clarity.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDialogVariableIntNameIsMutable();
+        dialogVariableIntName_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> dialogVariableIntValue_ = java.util.Collections.emptyList();
+      private void ensureDialogVariableIntValueIsMutable() {
+        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+          dialogVariableIntValue_ = new java.util.ArrayList<java.lang.Integer>(dialogVariableIntValue_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+      /**
+       * <code>repeated int32 dialog_variable_int_value = 9;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getDialogVariableIntValueList() {
+        return java.util.Collections.unmodifiableList(dialogVariableIntValue_);
+      }
+      /**
+       * <code>repeated int32 dialog_variable_int_value = 9;</code>
+       */
+      public int getDialogVariableIntValueCount() {
+        return dialogVariableIntValue_.size();
+      }
+      /**
+       * <code>repeated int32 dialog_variable_int_value = 9;</code>
+       */
+      public int getDialogVariableIntValue(int index) {
+        return dialogVariableIntValue_.get(index);
+      }
+      /**
+       * <code>repeated int32 dialog_variable_int_value = 9;</code>
+       */
+      public Builder setDialogVariableIntValue(
+          int index, int value) {
+        ensureDialogVariableIntValueIsMutable();
+        dialogVariableIntValue_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 dialog_variable_int_value = 9;</code>
+       */
+      public Builder addDialogVariableIntValue(int value) {
+        ensureDialogVariableIntValueIsMutable();
+        dialogVariableIntValue_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 dialog_variable_int_value = 9;</code>
+       */
+      public Builder addAllDialogVariableIntValue(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureDialogVariableIntValueIsMutable();
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
+            values, dialogVariableIntValue_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 dialog_variable_int_value = 9;</code>
+       */
+      public Builder clearDialogVariableIntValue() {
+        dialogVariableIntValue_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -26903,6 +28839,8527 @@ public final class CitadelUserMessages {
     // @@protoc_insertion_point(class_scope:CCitadelUserMsg_BannedHeroes)
   }
 
+  public interface CCitadelUserMsg_AbilitiesChangedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_AbilitiesChanged)
+      skadistats.clarity.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 purchaser_player_slot = 1 [default = -1];</code>
+     */
+    boolean hasPurchaserPlayerSlot();
+    /**
+     * <code>optional int32 purchaser_player_slot = 1 [default = -1];</code>
+     */
+    int getPurchaserPlayerSlot();
+
+    /**
+     * <code>optional uint32 ability_id = 2;</code>
+     */
+    boolean hasAbilityId();
+    /**
+     * <code>optional uint32 ability_id = 2;</code>
+     */
+    int getAbilityId();
+
+    /**
+     * <code>optional .CCitadelUserMsg_AbilitiesChanged.Change change = 3 [default = EInvalid];</code>
+     */
+    boolean hasChange();
+    /**
+     * <code>optional .CCitadelUserMsg_AbilitiesChanged.Change change = 3 [default = EInvalid];</code>
+     */
+    skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.Change getChange();
+  }
+  /**
+   * Protobuf type {@code CCitadelUserMsg_AbilitiesChanged}
+   */
+  public static final class CCitadelUserMsg_AbilitiesChanged extends
+      skadistats.clarity.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CCitadelUserMsg_AbilitiesChanged)
+      CCitadelUserMsg_AbilitiesChangedOrBuilder {
+    // Use CCitadelUserMsg_AbilitiesChanged.newBuilder() to construct.
+    private CCitadelUserMsg_AbilitiesChanged(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CCitadelUserMsg_AbilitiesChanged(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CCitadelUserMsg_AbilitiesChanged defaultInstance;
+    public static CCitadelUserMsg_AbilitiesChanged getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CCitadelUserMsg_AbilitiesChanged getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final skadistats.clarity.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCitadelUserMsg_AbilitiesChanged(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              purchaserPlayerSlot_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              abilityId_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.Change value = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.Change.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                bitField0_ |= 0x00000004;
+                change_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_AbilitiesChanged_descriptor;
+    }
+
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_AbilitiesChanged_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.Builder.class);
+    }
+
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_AbilitiesChanged> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_AbilitiesChanged>() {
+      public CCitadelUserMsg_AbilitiesChanged parsePartialFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return new CCitadelUserMsg_AbilitiesChanged(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_AbilitiesChanged> getParserForType() {
+      return PARSER;
+    }
+
+    /**
+     * Protobuf enum {@code CCitadelUserMsg_AbilitiesChanged.Change}
+     */
+    public enum Change
+        implements skadistats.clarity.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>EInvalid = -1;</code>
+       */
+      EInvalid(0, -1),
+      /**
+       * <code>EPurchased = 0;</code>
+       */
+      EPurchased(1, 0),
+      /**
+       * <code>EUpgraded = 1;</code>
+       */
+      EUpgraded(2, 1),
+      /**
+       * <code>ESold = 2;</code>
+       */
+      ESold(3, 2),
+      /**
+       * <code>ESwappedActivatedAbility = 3;</code>
+       */
+      ESwappedActivatedAbility(4, 3),
+      /**
+       * <code>ELeveledUp = 4;</code>
+       */
+      ELeveledUp(5, 4),
+      /**
+       * <code>EFailure = 5;</code>
+       */
+      EFailure(6, 5),
+      ;
+
+      /**
+       * <code>EInvalid = -1;</code>
+       */
+      public static final int EInvalid_VALUE = -1;
+      /**
+       * <code>EPurchased = 0;</code>
+       */
+      public static final int EPurchased_VALUE = 0;
+      /**
+       * <code>EUpgraded = 1;</code>
+       */
+      public static final int EUpgraded_VALUE = 1;
+      /**
+       * <code>ESold = 2;</code>
+       */
+      public static final int ESold_VALUE = 2;
+      /**
+       * <code>ESwappedActivatedAbility = 3;</code>
+       */
+      public static final int ESwappedActivatedAbility_VALUE = 3;
+      /**
+       * <code>ELeveledUp = 4;</code>
+       */
+      public static final int ELeveledUp_VALUE = 4;
+      /**
+       * <code>EFailure = 5;</code>
+       */
+      public static final int EFailure_VALUE = 5;
+
+
+      public final int getNumber() { return value; }
+
+      public static Change valueOf(int value) {
+        switch (value) {
+          case -1: return EInvalid;
+          case 0: return EPurchased;
+          case 1: return EUpgraded;
+          case 2: return ESold;
+          case 3: return ESwappedActivatedAbility;
+          case 4: return ELeveledUp;
+          case 5: return EFailure;
+          default: return null;
+        }
+      }
+
+      public static skadistats.clarity.protobuf.Internal.EnumLiteMap<Change>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static skadistats.clarity.protobuf.Internal.EnumLiteMap<Change>
+          internalValueMap =
+            new skadistats.clarity.protobuf.Internal.EnumLiteMap<Change>() {
+              public Change findValueByNumber(int number) {
+                return Change.valueOf(number);
+              }
+            };
+
+      public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(index);
+      }
+      public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Change[] VALUES = values();
+
+      public static Change valueOf(
+          skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private Change(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:CCitadelUserMsg_AbilitiesChanged.Change)
+    }
+
+    private int bitField0_;
+    public static final int PURCHASER_PLAYER_SLOT_FIELD_NUMBER = 1;
+    private int purchaserPlayerSlot_;
+    /**
+     * <code>optional int32 purchaser_player_slot = 1 [default = -1];</code>
+     */
+    public boolean hasPurchaserPlayerSlot() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 purchaser_player_slot = 1 [default = -1];</code>
+     */
+    public int getPurchaserPlayerSlot() {
+      return purchaserPlayerSlot_;
+    }
+
+    public static final int ABILITY_ID_FIELD_NUMBER = 2;
+    private int abilityId_;
+    /**
+     * <code>optional uint32 ability_id = 2;</code>
+     */
+    public boolean hasAbilityId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional uint32 ability_id = 2;</code>
+     */
+    public int getAbilityId() {
+      return abilityId_;
+    }
+
+    public static final int CHANGE_FIELD_NUMBER = 3;
+    private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.Change change_;
+    /**
+     * <code>optional .CCitadelUserMsg_AbilitiesChanged.Change change = 3 [default = EInvalid];</code>
+     */
+    public boolean hasChange() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .CCitadelUserMsg_AbilitiesChanged.Change change = 3 [default = EInvalid];</code>
+     */
+    public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.Change getChange() {
+      return change_;
+    }
+
+    private void initFields() {
+      purchaserPlayerSlot_ = -1;
+      abilityId_ = 0;
+      change_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.Change.EInvalid;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, purchaserPlayerSlot_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeUInt32(2, abilityId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeEnum(3, change_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(1, purchaserPlayerSlot_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(2, abilityId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeEnumSize(3, change_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged parseFrom(
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged parseFrom(
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged parseFrom(byte[] data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged parseFrom(
+        byte[] data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged parseFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged parseDelimitedFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCitadelUserMsg_AbilitiesChanged}
+     */
+    public static final class Builder extends
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_AbilitiesChanged)
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChangedOrBuilder {
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_AbilitiesChanged_descriptor;
+      }
+
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_AbilitiesChanged_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        purchaserPlayerSlot_ = -1;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        abilityId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        change_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.Change.EInvalid;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_AbilitiesChanged_descriptor;
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged getDefaultInstanceForType() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged build() {
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged buildPartial() {
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged result = new skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.purchaserPlayerSlot_ = purchaserPlayerSlot_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.abilityId_ = abilityId_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.change_ = change_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged) {
+          return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged other) {
+        if (other == skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.getDefaultInstance()) return this;
+        if (other.hasPurchaserPlayerSlot()) {
+          setPurchaserPlayerSlot(other.getPurchaserPlayerSlot());
+        }
+        if (other.hasAbilityId()) {
+          setAbilityId(other.getAbilityId());
+        }
+        if (other.hasChange()) {
+          setChange(other.getChange());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int purchaserPlayerSlot_ = -1;
+      /**
+       * <code>optional int32 purchaser_player_slot = 1 [default = -1];</code>
+       */
+      public boolean hasPurchaserPlayerSlot() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 purchaser_player_slot = 1 [default = -1];</code>
+       */
+      public int getPurchaserPlayerSlot() {
+        return purchaserPlayerSlot_;
+      }
+      /**
+       * <code>optional int32 purchaser_player_slot = 1 [default = -1];</code>
+       */
+      public Builder setPurchaserPlayerSlot(int value) {
+        bitField0_ |= 0x00000001;
+        purchaserPlayerSlot_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 purchaser_player_slot = 1 [default = -1];</code>
+       */
+      public Builder clearPurchaserPlayerSlot() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        purchaserPlayerSlot_ = -1;
+        onChanged();
+        return this;
+      }
+
+      private int abilityId_ ;
+      /**
+       * <code>optional uint32 ability_id = 2;</code>
+       */
+      public boolean hasAbilityId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional uint32 ability_id = 2;</code>
+       */
+      public int getAbilityId() {
+        return abilityId_;
+      }
+      /**
+       * <code>optional uint32 ability_id = 2;</code>
+       */
+      public Builder setAbilityId(int value) {
+        bitField0_ |= 0x00000002;
+        abilityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 ability_id = 2;</code>
+       */
+      public Builder clearAbilityId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        abilityId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.Change change_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.Change.EInvalid;
+      /**
+       * <code>optional .CCitadelUserMsg_AbilitiesChanged.Change change = 3 [default = EInvalid];</code>
+       */
+      public boolean hasChange() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_AbilitiesChanged.Change change = 3 [default = EInvalid];</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.Change getChange() {
+        return change_;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_AbilitiesChanged.Change change = 3 [default = EInvalid];</code>
+       */
+      public Builder setChange(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.Change value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_AbilitiesChanged.Change change = 3 [default = EInvalid];</code>
+       */
+      public Builder clearChange() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        change_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.Change.EInvalid;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CCitadelUserMsg_AbilitiesChanged)
+    }
+
+    static {
+      defaultInstance = new CCitadelUserMsg_AbilitiesChanged(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CCitadelUserMsg_AbilitiesChanged)
+  }
+
+  public interface CCitadelUserMsg_CameraControllerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_CameraController)
+      skadistats.clarity.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .CameraAction action = 1 [default = k_EAction_AddOp];</code>
+     */
+    boolean hasAction();
+    /**
+     * <code>optional .CameraAction action = 1 [default = k_EAction_AddOp];</code>
+     */
+    skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraAction getAction();
+
+    /**
+     * <code>optional .CameraOperation operation = 2 [default = k_ECameraOp_Maintain];</code>
+     */
+    boolean hasOperation();
+    /**
+     * <code>optional .CameraOperation operation = 2 [default = k_ECameraOp_Maintain];</code>
+     */
+    skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraOperation getOperation();
+
+    /**
+     * <code>optional .CameraParam param = 3 [default = k_EParam_ClearAllOps];</code>
+     */
+    boolean hasParam();
+    /**
+     * <code>optional .CameraParam param = 3 [default = k_EParam_ClearAllOps];</code>
+     */
+    skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParam getParam();
+
+    /**
+     * <code>optional .CameraParamMode param_mode = 12 [default = k_EParamMode_AllowInOneContext];</code>
+     */
+    boolean hasParamMode();
+    /**
+     * <code>optional .CameraParamMode param_mode = 12 [default = k_EParamMode_AllowInOneContext];</code>
+     */
+    skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParamMode getParamMode();
+
+    /**
+     * <code>optional float delay = 4;</code>
+     */
+    boolean hasDelay();
+    /**
+     * <code>optional float delay = 4;</code>
+     */
+    float getDelay();
+
+    /**
+     * <code>optional bool relative_values = 11;</code>
+     */
+    boolean hasRelativeValues();
+    /**
+     * <code>optional bool relative_values = 11;</code>
+     */
+    boolean getRelativeValues();
+
+    /**
+     * <code>optional uint32 context_symbol_id = 5;</code>
+     */
+    boolean hasContextSymbolId();
+    /**
+     * <code>optional uint32 context_symbol_id = 5;</code>
+     */
+    int getContextSymbolId();
+
+    /**
+     * <code>optional uint32 priority = 13 [default = 1];</code>
+     */
+    boolean hasPriority();
+    /**
+     * <code>optional uint32 priority = 13 [default = 1];</code>
+     */
+    int getPriority();
+
+    /**
+     * <code>optional uint32 target_pawn = 14 [default = 16777215];</code>
+     */
+    boolean hasTargetPawn();
+    /**
+     * <code>optional uint32 target_pawn = 14 [default = 16777215];</code>
+     */
+    int getTargetPawn();
+
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Maintain maintain = 6;</code>
+     */
+    boolean hasMaintain();
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Maintain maintain = 6;</code>
+     */
+    skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain getMaintain();
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Maintain maintain = 6;</code>
+     */
+    skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.MaintainOrBuilder getMaintainOrBuilder();
+
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Approach approach = 7;</code>
+     */
+    boolean hasApproach();
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Approach approach = 7;</code>
+     */
+    skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach getApproach();
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Approach approach = 7;</code>
+     */
+    skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.ApproachOrBuilder getApproachOrBuilder();
+
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Spring spring = 8;</code>
+     */
+    boolean hasSpring();
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Spring spring = 8;</code>
+     */
+    skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring getSpring();
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Spring spring = 8;</code>
+     */
+    skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.SpringOrBuilder getSpringOrBuilder();
+
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Lerp lerp = 9;</code>
+     */
+    boolean hasLerp();
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Lerp lerp = 9;</code>
+     */
+    skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp getLerp();
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Lerp lerp = 9;</code>
+     */
+    skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.LerpOrBuilder getLerpOrBuilder();
+
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Lag lag = 10;</code>
+     */
+    boolean hasLag();
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Lag lag = 10;</code>
+     */
+    skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag getLag();
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Lag lag = 10;</code>
+     */
+    skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.LagOrBuilder getLagOrBuilder();
+  }
+  /**
+   * Protobuf type {@code CCitadelUserMsg_CameraController}
+   */
+  public static final class CCitadelUserMsg_CameraController extends
+      skadistats.clarity.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CCitadelUserMsg_CameraController)
+      CCitadelUserMsg_CameraControllerOrBuilder {
+    // Use CCitadelUserMsg_CameraController.newBuilder() to construct.
+    private CCitadelUserMsg_CameraController(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CCitadelUserMsg_CameraController(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CCitadelUserMsg_CameraController defaultInstance;
+    public static CCitadelUserMsg_CameraController getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CCitadelUserMsg_CameraController getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final skadistats.clarity.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCitadelUserMsg_CameraController(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraAction value = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraAction.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                action_ = value;
+              }
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraOperation value = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraOperation.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                operation_ = value;
+              }
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParam value = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParam.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                bitField0_ |= 0x00000004;
+                param_ = value;
+              }
+              break;
+            }
+            case 37: {
+              bitField0_ |= 0x00000010;
+              delay_ = input.readFloat();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000040;
+              contextSymbolId_ = input.readUInt32();
+              break;
+            }
+            case 50: {
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000200) == 0x00000200)) {
+                subBuilder = maintain_.toBuilder();
+              }
+              maintain_ = input.readMessage(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maintain_);
+                maintain_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000200;
+              break;
+            }
+            case 58: {
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000400) == 0x00000400)) {
+                subBuilder = approach_.toBuilder();
+              }
+              approach_ = input.readMessage(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(approach_);
+                approach_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000400;
+              break;
+            }
+            case 66: {
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000800) == 0x00000800)) {
+                subBuilder = spring_.toBuilder();
+              }
+              spring_ = input.readMessage(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(spring_);
+                spring_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000800;
+              break;
+            }
+            case 74: {
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.Builder subBuilder = null;
+              if (((bitField0_ & 0x00001000) == 0x00001000)) {
+                subBuilder = lerp_.toBuilder();
+              }
+              lerp_ = input.readMessage(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lerp_);
+                lerp_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00001000;
+              break;
+            }
+            case 82: {
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.Builder subBuilder = null;
+              if (((bitField0_ & 0x00002000) == 0x00002000)) {
+                subBuilder = lag_.toBuilder();
+              }
+              lag_ = input.readMessage(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lag_);
+                lag_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00002000;
+              break;
+            }
+            case 88: {
+              bitField0_ |= 0x00000020;
+              relativeValues_ = input.readBool();
+              break;
+            }
+            case 96: {
+              int rawValue = input.readEnum();
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParamMode value = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParamMode.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(12, rawValue);
+              } else {
+                bitField0_ |= 0x00000008;
+                paramMode_ = value;
+              }
+              break;
+            }
+            case 104: {
+              bitField0_ |= 0x00000080;
+              priority_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+              bitField0_ |= 0x00000100;
+              targetPawn_ = input.readUInt32();
+              break;
+            }
+          }
+        }
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_descriptor;
+    }
+
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Builder.class);
+    }
+
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_CameraController> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_CameraController>() {
+      public CCitadelUserMsg_CameraController parsePartialFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return new CCitadelUserMsg_CameraController(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_CameraController> getParserForType() {
+      return PARSER;
+    }
+
+    public interface MaintainOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_CameraController.Maintain)
+        skadistats.clarity.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional float duration = 1 [default = 0];</code>
+       */
+      boolean hasDuration();
+      /**
+       * <code>optional float duration = 1 [default = 0];</code>
+       */
+      float getDuration();
+    }
+    /**
+     * Protobuf type {@code CCitadelUserMsg_CameraController.Maintain}
+     */
+    public static final class Maintain extends
+        skadistats.clarity.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CCitadelUserMsg_CameraController.Maintain)
+        MaintainOrBuilder {
+      // Use Maintain.newBuilder() to construct.
+      private Maintain(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private Maintain(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final Maintain defaultInstance;
+      public static Maintain getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public Maintain getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final skadistats.clarity.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Maintain(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 13: {
+                bitField0_ |= 0x00000001;
+                duration_ = input.readFloat();
+                break;
+              }
+            }
+          }
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Maintain_descriptor;
+      }
+
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Maintain_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.Builder.class);
+      }
+
+      public static skadistats.clarity.protobuf.Parser<Maintain> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<Maintain>() {
+        public Maintain parsePartialFrom(
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+          return new Maintain(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public skadistats.clarity.protobuf.Parser<Maintain> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int DURATION_FIELD_NUMBER = 1;
+      private float duration_;
+      /**
+       * <code>optional float duration = 1 [default = 0];</code>
+       */
+      public boolean hasDuration() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional float duration = 1 [default = 0];</code>
+       */
+      public float getDuration() {
+        return duration_;
+      }
+
+      private void initFields() {
+        duration_ = 0F;
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeFloat(1, duration_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(1, duration_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain parseFrom(
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain parseFrom(
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain parseFrom(byte[] data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain parseFrom(
+          byte[] data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain parseFrom(
+          java.io.InputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain parseDelimitedFrom(
+          java.io.InputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain parseFrom(
+          skadistats.clarity.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain parseFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CCitadelUserMsg_CameraController.Maintain}
+       */
+      public static final class Builder extends
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_CameraController.Maintain)
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.MaintainOrBuilder {
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Maintain_descriptor;
+        }
+
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Maintain_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          duration_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Maintain_descriptor;
+        }
+
+        public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain getDefaultInstanceForType() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain build() {
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain buildPartial() {
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain result = new skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.duration_ = duration_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain) {
+            return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain other) {
+          if (other == skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.getDefaultInstance()) return this;
+          if (other.hasDuration()) {
+            setDuration(other.getDuration());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private float duration_ ;
+        /**
+         * <code>optional float duration = 1 [default = 0];</code>
+         */
+        public boolean hasDuration() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional float duration = 1 [default = 0];</code>
+         */
+        public float getDuration() {
+          return duration_;
+        }
+        /**
+         * <code>optional float duration = 1 [default = 0];</code>
+         */
+        public Builder setDuration(float value) {
+          bitField0_ |= 0x00000001;
+          duration_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float duration = 1 [default = 0];</code>
+         */
+        public Builder clearDuration() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          duration_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CCitadelUserMsg_CameraController.Maintain)
+      }
+
+      static {
+        defaultInstance = new Maintain(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CCitadelUserMsg_CameraController.Maintain)
+    }
+
+    public interface ApproachOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_CameraController.Approach)
+        skadistats.clarity.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional float speed = 1 [default = 600];</code>
+       */
+      boolean hasSpeed();
+      /**
+       * <code>optional float speed = 1 [default = 600];</code>
+       */
+      float getSpeed();
+
+      /**
+       * <code>optional float default_speed = 2 [default = 600];</code>
+       */
+      boolean hasDefaultSpeed();
+      /**
+       * <code>optional float default_speed = 2 [default = 600];</code>
+       */
+      float getDefaultSpeed();
+
+      /**
+       * <code>optional float acceleration = 3 [default = 1000];</code>
+       */
+      boolean hasAcceleration();
+      /**
+       * <code>optional float acceleration = 3 [default = 1000];</code>
+       */
+      float getAcceleration();
+
+      /**
+       * <code>optional float min_duration = 4 [default = 0];</code>
+       */
+      boolean hasMinDuration();
+      /**
+       * <code>optional float min_duration = 4 [default = 0];</code>
+       */
+      float getMinDuration();
+
+      /**
+       * <code>optional float approach_float = 5;</code>
+       */
+      boolean hasApproachFloat();
+      /**
+       * <code>optional float approach_float = 5;</code>
+       */
+      float getApproachFloat();
+
+      /**
+       * <code>optional .CMsgVector approach_vector = 6;</code>
+       */
+      boolean hasApproachVector();
+      /**
+       * <code>optional .CMsgVector approach_vector = 6;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getApproachVector();
+      /**
+       * <code>optional .CMsgVector approach_vector = 6;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getApproachVectorOrBuilder();
+
+      /**
+       * <code>optional bool chase_default = 7;</code>
+       */
+      boolean hasChaseDefault();
+      /**
+       * <code>optional bool chase_default = 7;</code>
+       */
+      boolean getChaseDefault();
+    }
+    /**
+     * Protobuf type {@code CCitadelUserMsg_CameraController.Approach}
+     */
+    public static final class Approach extends
+        skadistats.clarity.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CCitadelUserMsg_CameraController.Approach)
+        ApproachOrBuilder {
+      // Use Approach.newBuilder() to construct.
+      private Approach(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private Approach(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final Approach defaultInstance;
+      public static Approach getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public Approach getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final skadistats.clarity.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Approach(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 13: {
+                bitField0_ |= 0x00000001;
+                speed_ = input.readFloat();
+                break;
+              }
+              case 21: {
+                bitField0_ |= 0x00000002;
+                defaultSpeed_ = input.readFloat();
+                break;
+              }
+              case 29: {
+                bitField0_ |= 0x00000004;
+                acceleration_ = input.readFloat();
+                break;
+              }
+              case 37: {
+                bitField0_ |= 0x00000008;
+                minDuration_ = input.readFloat();
+                break;
+              }
+              case 45: {
+                bitField0_ |= 0x00000010;
+                approachFloat_ = input.readFloat();
+                break;
+              }
+              case 50: {
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                  subBuilder = approachVector_.toBuilder();
+                }
+                approachVector_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(approachVector_);
+                  approachVector_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000020;
+                break;
+              }
+              case 56: {
+                bitField0_ |= 0x00000040;
+                chaseDefault_ = input.readBool();
+                break;
+              }
+            }
+          }
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Approach_descriptor;
+      }
+
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Approach_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.Builder.class);
+      }
+
+      public static skadistats.clarity.protobuf.Parser<Approach> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<Approach>() {
+        public Approach parsePartialFrom(
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+          return new Approach(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public skadistats.clarity.protobuf.Parser<Approach> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int SPEED_FIELD_NUMBER = 1;
+      private float speed_;
+      /**
+       * <code>optional float speed = 1 [default = 600];</code>
+       */
+      public boolean hasSpeed() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional float speed = 1 [default = 600];</code>
+       */
+      public float getSpeed() {
+        return speed_;
+      }
+
+      public static final int DEFAULT_SPEED_FIELD_NUMBER = 2;
+      private float defaultSpeed_;
+      /**
+       * <code>optional float default_speed = 2 [default = 600];</code>
+       */
+      public boolean hasDefaultSpeed() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional float default_speed = 2 [default = 600];</code>
+       */
+      public float getDefaultSpeed() {
+        return defaultSpeed_;
+      }
+
+      public static final int ACCELERATION_FIELD_NUMBER = 3;
+      private float acceleration_;
+      /**
+       * <code>optional float acceleration = 3 [default = 1000];</code>
+       */
+      public boolean hasAcceleration() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional float acceleration = 3 [default = 1000];</code>
+       */
+      public float getAcceleration() {
+        return acceleration_;
+      }
+
+      public static final int MIN_DURATION_FIELD_NUMBER = 4;
+      private float minDuration_;
+      /**
+       * <code>optional float min_duration = 4 [default = 0];</code>
+       */
+      public boolean hasMinDuration() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional float min_duration = 4 [default = 0];</code>
+       */
+      public float getMinDuration() {
+        return minDuration_;
+      }
+
+      public static final int APPROACH_FLOAT_FIELD_NUMBER = 5;
+      private float approachFloat_;
+      /**
+       * <code>optional float approach_float = 5;</code>
+       */
+      public boolean hasApproachFloat() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional float approach_float = 5;</code>
+       */
+      public float getApproachFloat() {
+        return approachFloat_;
+      }
+
+      public static final int APPROACH_VECTOR_FIELD_NUMBER = 6;
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector approachVector_;
+      /**
+       * <code>optional .CMsgVector approach_vector = 6;</code>
+       */
+      public boolean hasApproachVector() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional .CMsgVector approach_vector = 6;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getApproachVector() {
+        return approachVector_;
+      }
+      /**
+       * <code>optional .CMsgVector approach_vector = 6;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getApproachVectorOrBuilder() {
+        return approachVector_;
+      }
+
+      public static final int CHASE_DEFAULT_FIELD_NUMBER = 7;
+      private boolean chaseDefault_;
+      /**
+       * <code>optional bool chase_default = 7;</code>
+       */
+      public boolean hasChaseDefault() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional bool chase_default = 7;</code>
+       */
+      public boolean getChaseDefault() {
+        return chaseDefault_;
+      }
+
+      private void initFields() {
+        speed_ = 600F;
+        defaultSpeed_ = 600F;
+        acceleration_ = 1000F;
+        minDuration_ = 0F;
+        approachFloat_ = 0F;
+        approachVector_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        chaseDefault_ = false;
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeFloat(1, speed_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeFloat(2, defaultSpeed_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeFloat(3, acceleration_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          output.writeFloat(4, minDuration_);
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          output.writeFloat(5, approachFloat_);
+        }
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          output.writeMessage(6, approachVector_);
+        }
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          output.writeBool(7, chaseDefault_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(1, speed_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(2, defaultSpeed_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(3, acceleration_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(4, minDuration_);
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(5, approachFloat_);
+        }
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeMessageSize(6, approachVector_);
+        }
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeBoolSize(7, chaseDefault_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach parseFrom(
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach parseFrom(
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach parseFrom(byte[] data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach parseFrom(
+          byte[] data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach parseFrom(
+          java.io.InputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach parseDelimitedFrom(
+          java.io.InputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach parseFrom(
+          skadistats.clarity.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach parseFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CCitadelUserMsg_CameraController.Approach}
+       */
+      public static final class Builder extends
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_CameraController.Approach)
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.ApproachOrBuilder {
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Approach_descriptor;
+        }
+
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Approach_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            getApproachVectorFieldBuilder();
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          speed_ = 600F;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          defaultSpeed_ = 600F;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          acceleration_ = 1000F;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          minDuration_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000008);
+          approachFloat_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000010);
+          if (approachVectorBuilder_ == null) {
+            approachVector_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          } else {
+            approachVectorBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000020);
+          chaseDefault_ = false;
+          bitField0_ = (bitField0_ & ~0x00000040);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Approach_descriptor;
+        }
+
+        public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach getDefaultInstanceForType() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach build() {
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach buildPartial() {
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach result = new skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.speed_ = speed_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.defaultSpeed_ = defaultSpeed_;
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          result.acceleration_ = acceleration_;
+          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+            to_bitField0_ |= 0x00000008;
+          }
+          result.minDuration_ = minDuration_;
+          if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+            to_bitField0_ |= 0x00000010;
+          }
+          result.approachFloat_ = approachFloat_;
+          if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+            to_bitField0_ |= 0x00000020;
+          }
+          if (approachVectorBuilder_ == null) {
+            result.approachVector_ = approachVector_;
+          } else {
+            result.approachVector_ = approachVectorBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+            to_bitField0_ |= 0x00000040;
+          }
+          result.chaseDefault_ = chaseDefault_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach) {
+            return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach other) {
+          if (other == skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.getDefaultInstance()) return this;
+          if (other.hasSpeed()) {
+            setSpeed(other.getSpeed());
+          }
+          if (other.hasDefaultSpeed()) {
+            setDefaultSpeed(other.getDefaultSpeed());
+          }
+          if (other.hasAcceleration()) {
+            setAcceleration(other.getAcceleration());
+          }
+          if (other.hasMinDuration()) {
+            setMinDuration(other.getMinDuration());
+          }
+          if (other.hasApproachFloat()) {
+            setApproachFloat(other.getApproachFloat());
+          }
+          if (other.hasApproachVector()) {
+            mergeApproachVector(other.getApproachVector());
+          }
+          if (other.hasChaseDefault()) {
+            setChaseDefault(other.getChaseDefault());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private float speed_ = 600F;
+        /**
+         * <code>optional float speed = 1 [default = 600];</code>
+         */
+        public boolean hasSpeed() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional float speed = 1 [default = 600];</code>
+         */
+        public float getSpeed() {
+          return speed_;
+        }
+        /**
+         * <code>optional float speed = 1 [default = 600];</code>
+         */
+        public Builder setSpeed(float value) {
+          bitField0_ |= 0x00000001;
+          speed_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float speed = 1 [default = 600];</code>
+         */
+        public Builder clearSpeed() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          speed_ = 600F;
+          onChanged();
+          return this;
+        }
+
+        private float defaultSpeed_ = 600F;
+        /**
+         * <code>optional float default_speed = 2 [default = 600];</code>
+         */
+        public boolean hasDefaultSpeed() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional float default_speed = 2 [default = 600];</code>
+         */
+        public float getDefaultSpeed() {
+          return defaultSpeed_;
+        }
+        /**
+         * <code>optional float default_speed = 2 [default = 600];</code>
+         */
+        public Builder setDefaultSpeed(float value) {
+          bitField0_ |= 0x00000002;
+          defaultSpeed_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float default_speed = 2 [default = 600];</code>
+         */
+        public Builder clearDefaultSpeed() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          defaultSpeed_ = 600F;
+          onChanged();
+          return this;
+        }
+
+        private float acceleration_ = 1000F;
+        /**
+         * <code>optional float acceleration = 3 [default = 1000];</code>
+         */
+        public boolean hasAcceleration() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional float acceleration = 3 [default = 1000];</code>
+         */
+        public float getAcceleration() {
+          return acceleration_;
+        }
+        /**
+         * <code>optional float acceleration = 3 [default = 1000];</code>
+         */
+        public Builder setAcceleration(float value) {
+          bitField0_ |= 0x00000004;
+          acceleration_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float acceleration = 3 [default = 1000];</code>
+         */
+        public Builder clearAcceleration() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          acceleration_ = 1000F;
+          onChanged();
+          return this;
+        }
+
+        private float minDuration_ ;
+        /**
+         * <code>optional float min_duration = 4 [default = 0];</code>
+         */
+        public boolean hasMinDuration() {
+          return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <code>optional float min_duration = 4 [default = 0];</code>
+         */
+        public float getMinDuration() {
+          return minDuration_;
+        }
+        /**
+         * <code>optional float min_duration = 4 [default = 0];</code>
+         */
+        public Builder setMinDuration(float value) {
+          bitField0_ |= 0x00000008;
+          minDuration_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float min_duration = 4 [default = 0];</code>
+         */
+        public Builder clearMinDuration() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          minDuration_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private float approachFloat_ ;
+        /**
+         * <code>optional float approach_float = 5;</code>
+         */
+        public boolean hasApproachFloat() {
+          return ((bitField0_ & 0x00000010) == 0x00000010);
+        }
+        /**
+         * <code>optional float approach_float = 5;</code>
+         */
+        public float getApproachFloat() {
+          return approachFloat_;
+        }
+        /**
+         * <code>optional float approach_float = 5;</code>
+         */
+        public Builder setApproachFloat(float value) {
+          bitField0_ |= 0x00000010;
+          approachFloat_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float approach_float = 5;</code>
+         */
+        public Builder clearApproachFloat() {
+          bitField0_ = (bitField0_ & ~0x00000010);
+          approachFloat_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector approachVector_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> approachVectorBuilder_;
+        /**
+         * <code>optional .CMsgVector approach_vector = 6;</code>
+         */
+        public boolean hasApproachVector() {
+          return ((bitField0_ & 0x00000020) == 0x00000020);
+        }
+        /**
+         * <code>optional .CMsgVector approach_vector = 6;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getApproachVector() {
+          if (approachVectorBuilder_ == null) {
+            return approachVector_;
+          } else {
+            return approachVectorBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .CMsgVector approach_vector = 6;</code>
+         */
+        public Builder setApproachVector(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (approachVectorBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            approachVector_ = value;
+            onChanged();
+          } else {
+            approachVectorBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000020;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector approach_vector = 6;</code>
+         */
+        public Builder setApproachVector(
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          if (approachVectorBuilder_ == null) {
+            approachVector_ = builderForValue.build();
+            onChanged();
+          } else {
+            approachVectorBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000020;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector approach_vector = 6;</code>
+         */
+        public Builder mergeApproachVector(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (approachVectorBuilder_ == null) {
+            if (((bitField0_ & 0x00000020) == 0x00000020) &&
+                approachVector_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              approachVector_ =
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(approachVector_).mergeFrom(value).buildPartial();
+            } else {
+              approachVector_ = value;
+            }
+            onChanged();
+          } else {
+            approachVectorBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000020;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector approach_vector = 6;</code>
+         */
+        public Builder clearApproachVector() {
+          if (approachVectorBuilder_ == null) {
+            approachVector_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+            onChanged();
+          } else {
+            approachVectorBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000020);
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector approach_vector = 6;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getApproachVectorBuilder() {
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return getApproachVectorFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .CMsgVector approach_vector = 6;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getApproachVectorOrBuilder() {
+          if (approachVectorBuilder_ != null) {
+            return approachVectorBuilder_.getMessageOrBuilder();
+          } else {
+            return approachVector_;
+          }
+        }
+        /**
+         * <code>optional .CMsgVector approach_vector = 6;</code>
+         */
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+            getApproachVectorFieldBuilder() {
+          if (approachVectorBuilder_ == null) {
+            approachVectorBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                    getApproachVector(),
+                    getParentForChildren(),
+                    isClean());
+            approachVector_ = null;
+          }
+          return approachVectorBuilder_;
+        }
+
+        private boolean chaseDefault_ ;
+        /**
+         * <code>optional bool chase_default = 7;</code>
+         */
+        public boolean hasChaseDefault() {
+          return ((bitField0_ & 0x00000040) == 0x00000040);
+        }
+        /**
+         * <code>optional bool chase_default = 7;</code>
+         */
+        public boolean getChaseDefault() {
+          return chaseDefault_;
+        }
+        /**
+         * <code>optional bool chase_default = 7;</code>
+         */
+        public Builder setChaseDefault(boolean value) {
+          bitField0_ |= 0x00000040;
+          chaseDefault_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool chase_default = 7;</code>
+         */
+        public Builder clearChaseDefault() {
+          bitField0_ = (bitField0_ & ~0x00000040);
+          chaseDefault_ = false;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CCitadelUserMsg_CameraController.Approach)
+      }
+
+      static {
+        defaultInstance = new Approach(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CCitadelUserMsg_CameraController.Approach)
+    }
+
+    public interface SpringOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_CameraController.Spring)
+        skadistats.clarity.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional float spring_strength = 1 [default = 10];</code>
+       */
+      boolean hasSpringStrength();
+      /**
+       * <code>optional float spring_strength = 1 [default = 10];</code>
+       */
+      float getSpringStrength();
+
+      /**
+       * <code>optional float min_speed = 4 [default = 0];</code>
+       */
+      boolean hasMinSpeed();
+      /**
+       * <code>optional float min_speed = 4 [default = 0];</code>
+       */
+      float getMinSpeed();
+
+      /**
+       * <code>optional float max_duration = 5 [default = 0];</code>
+       */
+      boolean hasMaxDuration();
+      /**
+       * <code>optional float max_duration = 5 [default = 0];</code>
+       */
+      float getMaxDuration();
+
+      /**
+       * <code>optional float target_float = 6;</code>
+       */
+      boolean hasTargetFloat();
+      /**
+       * <code>optional float target_float = 6;</code>
+       */
+      float getTargetFloat();
+
+      /**
+       * <code>optional .CMsgVector target_vector = 7;</code>
+       */
+      boolean hasTargetVector();
+      /**
+       * <code>optional .CMsgVector target_vector = 7;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getTargetVector();
+      /**
+       * <code>optional .CMsgVector target_vector = 7;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getTargetVectorOrBuilder();
+    }
+    /**
+     * Protobuf type {@code CCitadelUserMsg_CameraController.Spring}
+     */
+    public static final class Spring extends
+        skadistats.clarity.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CCitadelUserMsg_CameraController.Spring)
+        SpringOrBuilder {
+      // Use Spring.newBuilder() to construct.
+      private Spring(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private Spring(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final Spring defaultInstance;
+      public static Spring getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public Spring getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final skadistats.clarity.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Spring(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 13: {
+                bitField0_ |= 0x00000001;
+                springStrength_ = input.readFloat();
+                break;
+              }
+              case 37: {
+                bitField0_ |= 0x00000002;
+                minSpeed_ = input.readFloat();
+                break;
+              }
+              case 45: {
+                bitField0_ |= 0x00000004;
+                maxDuration_ = input.readFloat();
+                break;
+              }
+              case 53: {
+                bitField0_ |= 0x00000008;
+                targetFloat_ = input.readFloat();
+                break;
+              }
+              case 58: {
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                  subBuilder = targetVector_.toBuilder();
+                }
+                targetVector_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(targetVector_);
+                  targetVector_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000010;
+                break;
+              }
+            }
+          }
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Spring_descriptor;
+      }
+
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Spring_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.Builder.class);
+      }
+
+      public static skadistats.clarity.protobuf.Parser<Spring> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<Spring>() {
+        public Spring parsePartialFrom(
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+          return new Spring(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public skadistats.clarity.protobuf.Parser<Spring> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int SPRING_STRENGTH_FIELD_NUMBER = 1;
+      private float springStrength_;
+      /**
+       * <code>optional float spring_strength = 1 [default = 10];</code>
+       */
+      public boolean hasSpringStrength() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional float spring_strength = 1 [default = 10];</code>
+       */
+      public float getSpringStrength() {
+        return springStrength_;
+      }
+
+      public static final int MIN_SPEED_FIELD_NUMBER = 4;
+      private float minSpeed_;
+      /**
+       * <code>optional float min_speed = 4 [default = 0];</code>
+       */
+      public boolean hasMinSpeed() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional float min_speed = 4 [default = 0];</code>
+       */
+      public float getMinSpeed() {
+        return minSpeed_;
+      }
+
+      public static final int MAX_DURATION_FIELD_NUMBER = 5;
+      private float maxDuration_;
+      /**
+       * <code>optional float max_duration = 5 [default = 0];</code>
+       */
+      public boolean hasMaxDuration() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional float max_duration = 5 [default = 0];</code>
+       */
+      public float getMaxDuration() {
+        return maxDuration_;
+      }
+
+      public static final int TARGET_FLOAT_FIELD_NUMBER = 6;
+      private float targetFloat_;
+      /**
+       * <code>optional float target_float = 6;</code>
+       */
+      public boolean hasTargetFloat() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional float target_float = 6;</code>
+       */
+      public float getTargetFloat() {
+        return targetFloat_;
+      }
+
+      public static final int TARGET_VECTOR_FIELD_NUMBER = 7;
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector targetVector_;
+      /**
+       * <code>optional .CMsgVector target_vector = 7;</code>
+       */
+      public boolean hasTargetVector() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .CMsgVector target_vector = 7;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getTargetVector() {
+        return targetVector_;
+      }
+      /**
+       * <code>optional .CMsgVector target_vector = 7;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getTargetVectorOrBuilder() {
+        return targetVector_;
+      }
+
+      private void initFields() {
+        springStrength_ = 10F;
+        minSpeed_ = 0F;
+        maxDuration_ = 0F;
+        targetFloat_ = 0F;
+        targetVector_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeFloat(1, springStrength_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeFloat(4, minSpeed_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeFloat(5, maxDuration_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          output.writeFloat(6, targetFloat_);
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          output.writeMessage(7, targetVector_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(1, springStrength_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(4, minSpeed_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(5, maxDuration_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(6, targetFloat_);
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeMessageSize(7, targetVector_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring parseFrom(
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring parseFrom(
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring parseFrom(byte[] data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring parseFrom(
+          byte[] data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring parseFrom(
+          java.io.InputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring parseDelimitedFrom(
+          java.io.InputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring parseFrom(
+          skadistats.clarity.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring parseFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CCitadelUserMsg_CameraController.Spring}
+       */
+      public static final class Builder extends
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_CameraController.Spring)
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.SpringOrBuilder {
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Spring_descriptor;
+        }
+
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Spring_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            getTargetVectorFieldBuilder();
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          springStrength_ = 10F;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          minSpeed_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          maxDuration_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          targetFloat_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000008);
+          if (targetVectorBuilder_ == null) {
+            targetVector_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          } else {
+            targetVectorBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000010);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Spring_descriptor;
+        }
+
+        public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring getDefaultInstanceForType() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring build() {
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring buildPartial() {
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring result = new skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.springStrength_ = springStrength_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.minSpeed_ = minSpeed_;
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          result.maxDuration_ = maxDuration_;
+          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+            to_bitField0_ |= 0x00000008;
+          }
+          result.targetFloat_ = targetFloat_;
+          if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+            to_bitField0_ |= 0x00000010;
+          }
+          if (targetVectorBuilder_ == null) {
+            result.targetVector_ = targetVector_;
+          } else {
+            result.targetVector_ = targetVectorBuilder_.build();
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring) {
+            return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring other) {
+          if (other == skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.getDefaultInstance()) return this;
+          if (other.hasSpringStrength()) {
+            setSpringStrength(other.getSpringStrength());
+          }
+          if (other.hasMinSpeed()) {
+            setMinSpeed(other.getMinSpeed());
+          }
+          if (other.hasMaxDuration()) {
+            setMaxDuration(other.getMaxDuration());
+          }
+          if (other.hasTargetFloat()) {
+            setTargetFloat(other.getTargetFloat());
+          }
+          if (other.hasTargetVector()) {
+            mergeTargetVector(other.getTargetVector());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private float springStrength_ = 10F;
+        /**
+         * <code>optional float spring_strength = 1 [default = 10];</code>
+         */
+        public boolean hasSpringStrength() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional float spring_strength = 1 [default = 10];</code>
+         */
+        public float getSpringStrength() {
+          return springStrength_;
+        }
+        /**
+         * <code>optional float spring_strength = 1 [default = 10];</code>
+         */
+        public Builder setSpringStrength(float value) {
+          bitField0_ |= 0x00000001;
+          springStrength_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float spring_strength = 1 [default = 10];</code>
+         */
+        public Builder clearSpringStrength() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          springStrength_ = 10F;
+          onChanged();
+          return this;
+        }
+
+        private float minSpeed_ ;
+        /**
+         * <code>optional float min_speed = 4 [default = 0];</code>
+         */
+        public boolean hasMinSpeed() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional float min_speed = 4 [default = 0];</code>
+         */
+        public float getMinSpeed() {
+          return minSpeed_;
+        }
+        /**
+         * <code>optional float min_speed = 4 [default = 0];</code>
+         */
+        public Builder setMinSpeed(float value) {
+          bitField0_ |= 0x00000002;
+          minSpeed_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float min_speed = 4 [default = 0];</code>
+         */
+        public Builder clearMinSpeed() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          minSpeed_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private float maxDuration_ ;
+        /**
+         * <code>optional float max_duration = 5 [default = 0];</code>
+         */
+        public boolean hasMaxDuration() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional float max_duration = 5 [default = 0];</code>
+         */
+        public float getMaxDuration() {
+          return maxDuration_;
+        }
+        /**
+         * <code>optional float max_duration = 5 [default = 0];</code>
+         */
+        public Builder setMaxDuration(float value) {
+          bitField0_ |= 0x00000004;
+          maxDuration_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float max_duration = 5 [default = 0];</code>
+         */
+        public Builder clearMaxDuration() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          maxDuration_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private float targetFloat_ ;
+        /**
+         * <code>optional float target_float = 6;</code>
+         */
+        public boolean hasTargetFloat() {
+          return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <code>optional float target_float = 6;</code>
+         */
+        public float getTargetFloat() {
+          return targetFloat_;
+        }
+        /**
+         * <code>optional float target_float = 6;</code>
+         */
+        public Builder setTargetFloat(float value) {
+          bitField0_ |= 0x00000008;
+          targetFloat_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float target_float = 6;</code>
+         */
+        public Builder clearTargetFloat() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          targetFloat_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector targetVector_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> targetVectorBuilder_;
+        /**
+         * <code>optional .CMsgVector target_vector = 7;</code>
+         */
+        public boolean hasTargetVector() {
+          return ((bitField0_ & 0x00000010) == 0x00000010);
+        }
+        /**
+         * <code>optional .CMsgVector target_vector = 7;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getTargetVector() {
+          if (targetVectorBuilder_ == null) {
+            return targetVector_;
+          } else {
+            return targetVectorBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .CMsgVector target_vector = 7;</code>
+         */
+        public Builder setTargetVector(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (targetVectorBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            targetVector_ = value;
+            onChanged();
+          } else {
+            targetVectorBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000010;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector target_vector = 7;</code>
+         */
+        public Builder setTargetVector(
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          if (targetVectorBuilder_ == null) {
+            targetVector_ = builderForValue.build();
+            onChanged();
+          } else {
+            targetVectorBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000010;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector target_vector = 7;</code>
+         */
+        public Builder mergeTargetVector(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (targetVectorBuilder_ == null) {
+            if (((bitField0_ & 0x00000010) == 0x00000010) &&
+                targetVector_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              targetVector_ =
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(targetVector_).mergeFrom(value).buildPartial();
+            } else {
+              targetVector_ = value;
+            }
+            onChanged();
+          } else {
+            targetVectorBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000010;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector target_vector = 7;</code>
+         */
+        public Builder clearTargetVector() {
+          if (targetVectorBuilder_ == null) {
+            targetVector_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+            onChanged();
+          } else {
+            targetVectorBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000010);
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector target_vector = 7;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getTargetVectorBuilder() {
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return getTargetVectorFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .CMsgVector target_vector = 7;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getTargetVectorOrBuilder() {
+          if (targetVectorBuilder_ != null) {
+            return targetVectorBuilder_.getMessageOrBuilder();
+          } else {
+            return targetVector_;
+          }
+        }
+        /**
+         * <code>optional .CMsgVector target_vector = 7;</code>
+         */
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+            getTargetVectorFieldBuilder() {
+          if (targetVectorBuilder_ == null) {
+            targetVectorBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                    getTargetVector(),
+                    getParentForChildren(),
+                    isClean());
+            targetVector_ = null;
+          }
+          return targetVectorBuilder_;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CCitadelUserMsg_CameraController.Spring)
+      }
+
+      static {
+        defaultInstance = new Spring(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CCitadelUserMsg_CameraController.Spring)
+    }
+
+    public interface LerpOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_CameraController.Lerp)
+        skadistats.clarity.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional float start_float = 1;</code>
+       */
+      boolean hasStartFloat();
+      /**
+       * <code>optional float start_float = 1;</code>
+       */
+      float getStartFloat();
+
+      /**
+       * <code>optional .CMsgVector start_vector = 2;</code>
+       */
+      boolean hasStartVector();
+      /**
+       * <code>optional .CMsgVector start_vector = 2;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getStartVector();
+      /**
+       * <code>optional .CMsgVector start_vector = 2;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getStartVectorOrBuilder();
+
+      /**
+       * <code>optional float end_float = 3;</code>
+       */
+      boolean hasEndFloat();
+      /**
+       * <code>optional float end_float = 3;</code>
+       */
+      float getEndFloat();
+
+      /**
+       * <code>optional .CMsgVector end_vector = 4;</code>
+       */
+      boolean hasEndVector();
+      /**
+       * <code>optional .CMsgVector end_vector = 4;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getEndVector();
+      /**
+       * <code>optional .CMsgVector end_vector = 4;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getEndVectorOrBuilder();
+
+      /**
+       * <code>optional float bias = 5;</code>
+       */
+      boolean hasBias();
+      /**
+       * <code>optional float bias = 5;</code>
+       */
+      float getBias();
+
+      /**
+       * <code>optional float gain = 6;</code>
+       */
+      boolean hasGain();
+      /**
+       * <code>optional float gain = 6;</code>
+       */
+      float getGain();
+
+      /**
+       * <code>optional float duration = 7 [default = 1];</code>
+       */
+      boolean hasDuration();
+      /**
+       * <code>optional float duration = 7 [default = 1];</code>
+       */
+      float getDuration();
+    }
+    /**
+     * Protobuf type {@code CCitadelUserMsg_CameraController.Lerp}
+     */
+    public static final class Lerp extends
+        skadistats.clarity.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CCitadelUserMsg_CameraController.Lerp)
+        LerpOrBuilder {
+      // Use Lerp.newBuilder() to construct.
+      private Lerp(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private Lerp(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final Lerp defaultInstance;
+      public static Lerp getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public Lerp getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final skadistats.clarity.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Lerp(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 13: {
+                bitField0_ |= 0x00000001;
+                startFloat_ = input.readFloat();
+                break;
+              }
+              case 18: {
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                  subBuilder = startVector_.toBuilder();
+                }
+                startVector_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(startVector_);
+                  startVector_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000002;
+                break;
+              }
+              case 29: {
+                bitField0_ |= 0x00000004;
+                endFloat_ = input.readFloat();
+                break;
+              }
+              case 34: {
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                  subBuilder = endVector_.toBuilder();
+                }
+                endVector_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(endVector_);
+                  endVector_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000008;
+                break;
+              }
+              case 45: {
+                bitField0_ |= 0x00000010;
+                bias_ = input.readFloat();
+                break;
+              }
+              case 53: {
+                bitField0_ |= 0x00000020;
+                gain_ = input.readFloat();
+                break;
+              }
+              case 61: {
+                bitField0_ |= 0x00000040;
+                duration_ = input.readFloat();
+                break;
+              }
+            }
+          }
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Lerp_descriptor;
+      }
+
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Lerp_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.Builder.class);
+      }
+
+      public static skadistats.clarity.protobuf.Parser<Lerp> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<Lerp>() {
+        public Lerp parsePartialFrom(
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+          return new Lerp(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public skadistats.clarity.protobuf.Parser<Lerp> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int START_FLOAT_FIELD_NUMBER = 1;
+      private float startFloat_;
+      /**
+       * <code>optional float start_float = 1;</code>
+       */
+      public boolean hasStartFloat() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional float start_float = 1;</code>
+       */
+      public float getStartFloat() {
+        return startFloat_;
+      }
+
+      public static final int START_VECTOR_FIELD_NUMBER = 2;
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector startVector_;
+      /**
+       * <code>optional .CMsgVector start_vector = 2;</code>
+       */
+      public boolean hasStartVector() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .CMsgVector start_vector = 2;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getStartVector() {
+        return startVector_;
+      }
+      /**
+       * <code>optional .CMsgVector start_vector = 2;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getStartVectorOrBuilder() {
+        return startVector_;
+      }
+
+      public static final int END_FLOAT_FIELD_NUMBER = 3;
+      private float endFloat_;
+      /**
+       * <code>optional float end_float = 3;</code>
+       */
+      public boolean hasEndFloat() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional float end_float = 3;</code>
+       */
+      public float getEndFloat() {
+        return endFloat_;
+      }
+
+      public static final int END_VECTOR_FIELD_NUMBER = 4;
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector endVector_;
+      /**
+       * <code>optional .CMsgVector end_vector = 4;</code>
+       */
+      public boolean hasEndVector() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .CMsgVector end_vector = 4;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getEndVector() {
+        return endVector_;
+      }
+      /**
+       * <code>optional .CMsgVector end_vector = 4;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getEndVectorOrBuilder() {
+        return endVector_;
+      }
+
+      public static final int BIAS_FIELD_NUMBER = 5;
+      private float bias_;
+      /**
+       * <code>optional float bias = 5;</code>
+       */
+      public boolean hasBias() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional float bias = 5;</code>
+       */
+      public float getBias() {
+        return bias_;
+      }
+
+      public static final int GAIN_FIELD_NUMBER = 6;
+      private float gain_;
+      /**
+       * <code>optional float gain = 6;</code>
+       */
+      public boolean hasGain() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional float gain = 6;</code>
+       */
+      public float getGain() {
+        return gain_;
+      }
+
+      public static final int DURATION_FIELD_NUMBER = 7;
+      private float duration_;
+      /**
+       * <code>optional float duration = 7 [default = 1];</code>
+       */
+      public boolean hasDuration() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional float duration = 7 [default = 1];</code>
+       */
+      public float getDuration() {
+        return duration_;
+      }
+
+      private void initFields() {
+        startFloat_ = 0F;
+        startVector_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        endFloat_ = 0F;
+        endVector_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        bias_ = 0F;
+        gain_ = 0F;
+        duration_ = 1F;
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeFloat(1, startFloat_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeMessage(2, startVector_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeFloat(3, endFloat_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          output.writeMessage(4, endVector_);
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          output.writeFloat(5, bias_);
+        }
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          output.writeFloat(6, gain_);
+        }
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          output.writeFloat(7, duration_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(1, startFloat_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeMessageSize(2, startVector_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(3, endFloat_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeMessageSize(4, endVector_);
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(5, bias_);
+        }
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(6, gain_);
+        }
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(7, duration_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp parseFrom(
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp parseFrom(
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp parseFrom(byte[] data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp parseFrom(
+          byte[] data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp parseFrom(
+          java.io.InputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp parseDelimitedFrom(
+          java.io.InputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp parseFrom(
+          skadistats.clarity.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp parseFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CCitadelUserMsg_CameraController.Lerp}
+       */
+      public static final class Builder extends
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_CameraController.Lerp)
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.LerpOrBuilder {
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Lerp_descriptor;
+        }
+
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Lerp_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            getStartVectorFieldBuilder();
+            getEndVectorFieldBuilder();
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          startFloat_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          if (startVectorBuilder_ == null) {
+            startVector_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          } else {
+            startVectorBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000002);
+          endFloat_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          if (endVectorBuilder_ == null) {
+            endVector_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          } else {
+            endVectorBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000008);
+          bias_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000010);
+          gain_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000020);
+          duration_ = 1F;
+          bitField0_ = (bitField0_ & ~0x00000040);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Lerp_descriptor;
+        }
+
+        public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp getDefaultInstanceForType() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp build() {
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp buildPartial() {
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp result = new skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.startFloat_ = startFloat_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          if (startVectorBuilder_ == null) {
+            result.startVector_ = startVector_;
+          } else {
+            result.startVector_ = startVectorBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          result.endFloat_ = endFloat_;
+          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+            to_bitField0_ |= 0x00000008;
+          }
+          if (endVectorBuilder_ == null) {
+            result.endVector_ = endVector_;
+          } else {
+            result.endVector_ = endVectorBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+            to_bitField0_ |= 0x00000010;
+          }
+          result.bias_ = bias_;
+          if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+            to_bitField0_ |= 0x00000020;
+          }
+          result.gain_ = gain_;
+          if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+            to_bitField0_ |= 0x00000040;
+          }
+          result.duration_ = duration_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp) {
+            return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp other) {
+          if (other == skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.getDefaultInstance()) return this;
+          if (other.hasStartFloat()) {
+            setStartFloat(other.getStartFloat());
+          }
+          if (other.hasStartVector()) {
+            mergeStartVector(other.getStartVector());
+          }
+          if (other.hasEndFloat()) {
+            setEndFloat(other.getEndFloat());
+          }
+          if (other.hasEndVector()) {
+            mergeEndVector(other.getEndVector());
+          }
+          if (other.hasBias()) {
+            setBias(other.getBias());
+          }
+          if (other.hasGain()) {
+            setGain(other.getGain());
+          }
+          if (other.hasDuration()) {
+            setDuration(other.getDuration());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private float startFloat_ ;
+        /**
+         * <code>optional float start_float = 1;</code>
+         */
+        public boolean hasStartFloat() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional float start_float = 1;</code>
+         */
+        public float getStartFloat() {
+          return startFloat_;
+        }
+        /**
+         * <code>optional float start_float = 1;</code>
+         */
+        public Builder setStartFloat(float value) {
+          bitField0_ |= 0x00000001;
+          startFloat_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float start_float = 1;</code>
+         */
+        public Builder clearStartFloat() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          startFloat_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector startVector_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> startVectorBuilder_;
+        /**
+         * <code>optional .CMsgVector start_vector = 2;</code>
+         */
+        public boolean hasStartVector() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional .CMsgVector start_vector = 2;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getStartVector() {
+          if (startVectorBuilder_ == null) {
+            return startVector_;
+          } else {
+            return startVectorBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .CMsgVector start_vector = 2;</code>
+         */
+        public Builder setStartVector(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (startVectorBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            startVector_ = value;
+            onChanged();
+          } else {
+            startVectorBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000002;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector start_vector = 2;</code>
+         */
+        public Builder setStartVector(
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          if (startVectorBuilder_ == null) {
+            startVector_ = builderForValue.build();
+            onChanged();
+          } else {
+            startVectorBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000002;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector start_vector = 2;</code>
+         */
+        public Builder mergeStartVector(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (startVectorBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) == 0x00000002) &&
+                startVector_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              startVector_ =
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(startVector_).mergeFrom(value).buildPartial();
+            } else {
+              startVector_ = value;
+            }
+            onChanged();
+          } else {
+            startVectorBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000002;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector start_vector = 2;</code>
+         */
+        public Builder clearStartVector() {
+          if (startVectorBuilder_ == null) {
+            startVector_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+            onChanged();
+          } else {
+            startVectorBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector start_vector = 2;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getStartVectorBuilder() {
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return getStartVectorFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .CMsgVector start_vector = 2;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getStartVectorOrBuilder() {
+          if (startVectorBuilder_ != null) {
+            return startVectorBuilder_.getMessageOrBuilder();
+          } else {
+            return startVector_;
+          }
+        }
+        /**
+         * <code>optional .CMsgVector start_vector = 2;</code>
+         */
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+            getStartVectorFieldBuilder() {
+          if (startVectorBuilder_ == null) {
+            startVectorBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                    getStartVector(),
+                    getParentForChildren(),
+                    isClean());
+            startVector_ = null;
+          }
+          return startVectorBuilder_;
+        }
+
+        private float endFloat_ ;
+        /**
+         * <code>optional float end_float = 3;</code>
+         */
+        public boolean hasEndFloat() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional float end_float = 3;</code>
+         */
+        public float getEndFloat() {
+          return endFloat_;
+        }
+        /**
+         * <code>optional float end_float = 3;</code>
+         */
+        public Builder setEndFloat(float value) {
+          bitField0_ |= 0x00000004;
+          endFloat_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float end_float = 3;</code>
+         */
+        public Builder clearEndFloat() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          endFloat_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector endVector_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> endVectorBuilder_;
+        /**
+         * <code>optional .CMsgVector end_vector = 4;</code>
+         */
+        public boolean hasEndVector() {
+          return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <code>optional .CMsgVector end_vector = 4;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getEndVector() {
+          if (endVectorBuilder_ == null) {
+            return endVector_;
+          } else {
+            return endVectorBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .CMsgVector end_vector = 4;</code>
+         */
+        public Builder setEndVector(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (endVectorBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            endVector_ = value;
+            onChanged();
+          } else {
+            endVectorBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000008;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector end_vector = 4;</code>
+         */
+        public Builder setEndVector(
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          if (endVectorBuilder_ == null) {
+            endVector_ = builderForValue.build();
+            onChanged();
+          } else {
+            endVectorBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000008;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector end_vector = 4;</code>
+         */
+        public Builder mergeEndVector(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (endVectorBuilder_ == null) {
+            if (((bitField0_ & 0x00000008) == 0x00000008) &&
+                endVector_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              endVector_ =
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(endVector_).mergeFrom(value).buildPartial();
+            } else {
+              endVector_ = value;
+            }
+            onChanged();
+          } else {
+            endVectorBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000008;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector end_vector = 4;</code>
+         */
+        public Builder clearEndVector() {
+          if (endVectorBuilder_ == null) {
+            endVector_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+            onChanged();
+          } else {
+            endVectorBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000008);
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector end_vector = 4;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getEndVectorBuilder() {
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return getEndVectorFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .CMsgVector end_vector = 4;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getEndVectorOrBuilder() {
+          if (endVectorBuilder_ != null) {
+            return endVectorBuilder_.getMessageOrBuilder();
+          } else {
+            return endVector_;
+          }
+        }
+        /**
+         * <code>optional .CMsgVector end_vector = 4;</code>
+         */
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+            getEndVectorFieldBuilder() {
+          if (endVectorBuilder_ == null) {
+            endVectorBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                    getEndVector(),
+                    getParentForChildren(),
+                    isClean());
+            endVector_ = null;
+          }
+          return endVectorBuilder_;
+        }
+
+        private float bias_ ;
+        /**
+         * <code>optional float bias = 5;</code>
+         */
+        public boolean hasBias() {
+          return ((bitField0_ & 0x00000010) == 0x00000010);
+        }
+        /**
+         * <code>optional float bias = 5;</code>
+         */
+        public float getBias() {
+          return bias_;
+        }
+        /**
+         * <code>optional float bias = 5;</code>
+         */
+        public Builder setBias(float value) {
+          bitField0_ |= 0x00000010;
+          bias_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float bias = 5;</code>
+         */
+        public Builder clearBias() {
+          bitField0_ = (bitField0_ & ~0x00000010);
+          bias_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private float gain_ ;
+        /**
+         * <code>optional float gain = 6;</code>
+         */
+        public boolean hasGain() {
+          return ((bitField0_ & 0x00000020) == 0x00000020);
+        }
+        /**
+         * <code>optional float gain = 6;</code>
+         */
+        public float getGain() {
+          return gain_;
+        }
+        /**
+         * <code>optional float gain = 6;</code>
+         */
+        public Builder setGain(float value) {
+          bitField0_ |= 0x00000020;
+          gain_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float gain = 6;</code>
+         */
+        public Builder clearGain() {
+          bitField0_ = (bitField0_ & ~0x00000020);
+          gain_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private float duration_ = 1F;
+        /**
+         * <code>optional float duration = 7 [default = 1];</code>
+         */
+        public boolean hasDuration() {
+          return ((bitField0_ & 0x00000040) == 0x00000040);
+        }
+        /**
+         * <code>optional float duration = 7 [default = 1];</code>
+         */
+        public float getDuration() {
+          return duration_;
+        }
+        /**
+         * <code>optional float duration = 7 [default = 1];</code>
+         */
+        public Builder setDuration(float value) {
+          bitField0_ |= 0x00000040;
+          duration_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float duration = 7 [default = 1];</code>
+         */
+        public Builder clearDuration() {
+          bitField0_ = (bitField0_ & ~0x00000040);
+          duration_ = 1F;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CCitadelUserMsg_CameraController.Lerp)
+      }
+
+      static {
+        defaultInstance = new Lerp(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CCitadelUserMsg_CameraController.Lerp)
+    }
+
+    public interface LagOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_CameraController.Lag)
+        skadistats.clarity.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional float min_duration = 1;</code>
+       */
+      boolean hasMinDuration();
+      /**
+       * <code>optional float min_duration = 1;</code>
+       */
+      float getMinDuration();
+
+      /**
+       * <code>optional float lag_time = 2;</code>
+       */
+      boolean hasLagTime();
+      /**
+       * <code>optional float lag_time = 2;</code>
+       */
+      float getLagTime();
+
+      /**
+       * <code>optional float max_speed = 3;</code>
+       */
+      boolean hasMaxSpeed();
+      /**
+       * <code>optional float max_speed = 3;</code>
+       */
+      float getMaxSpeed();
+
+      /**
+       * <code>optional float spring_strength = 4;</code>
+       */
+      boolean hasSpringStrength();
+      /**
+       * <code>optional float spring_strength = 4;</code>
+       */
+      float getSpringStrength();
+
+      /**
+       * <code>optional bool increase_spring_strength_to_keep_target_on_screen = 5 [default = true];</code>
+       */
+      boolean hasIncreaseSpringStrengthToKeepTargetOnScreen();
+      /**
+       * <code>optional bool increase_spring_strength_to_keep_target_on_screen = 5 [default = true];</code>
+       */
+      boolean getIncreaseSpringStrengthToKeepTargetOnScreen();
+    }
+    /**
+     * Protobuf type {@code CCitadelUserMsg_CameraController.Lag}
+     */
+    public static final class Lag extends
+        skadistats.clarity.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CCitadelUserMsg_CameraController.Lag)
+        LagOrBuilder {
+      // Use Lag.newBuilder() to construct.
+      private Lag(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private Lag(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final Lag defaultInstance;
+      public static Lag getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public Lag getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final skadistats.clarity.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Lag(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 13: {
+                bitField0_ |= 0x00000001;
+                minDuration_ = input.readFloat();
+                break;
+              }
+              case 21: {
+                bitField0_ |= 0x00000002;
+                lagTime_ = input.readFloat();
+                break;
+              }
+              case 29: {
+                bitField0_ |= 0x00000004;
+                maxSpeed_ = input.readFloat();
+                break;
+              }
+              case 37: {
+                bitField0_ |= 0x00000008;
+                springStrength_ = input.readFloat();
+                break;
+              }
+              case 40: {
+                bitField0_ |= 0x00000010;
+                increaseSpringStrengthToKeepTargetOnScreen_ = input.readBool();
+                break;
+              }
+            }
+          }
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Lag_descriptor;
+      }
+
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Lag_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.Builder.class);
+      }
+
+      public static skadistats.clarity.protobuf.Parser<Lag> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<Lag>() {
+        public Lag parsePartialFrom(
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+          return new Lag(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public skadistats.clarity.protobuf.Parser<Lag> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int MIN_DURATION_FIELD_NUMBER = 1;
+      private float minDuration_;
+      /**
+       * <code>optional float min_duration = 1;</code>
+       */
+      public boolean hasMinDuration() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional float min_duration = 1;</code>
+       */
+      public float getMinDuration() {
+        return minDuration_;
+      }
+
+      public static final int LAG_TIME_FIELD_NUMBER = 2;
+      private float lagTime_;
+      /**
+       * <code>optional float lag_time = 2;</code>
+       */
+      public boolean hasLagTime() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional float lag_time = 2;</code>
+       */
+      public float getLagTime() {
+        return lagTime_;
+      }
+
+      public static final int MAX_SPEED_FIELD_NUMBER = 3;
+      private float maxSpeed_;
+      /**
+       * <code>optional float max_speed = 3;</code>
+       */
+      public boolean hasMaxSpeed() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional float max_speed = 3;</code>
+       */
+      public float getMaxSpeed() {
+        return maxSpeed_;
+      }
+
+      public static final int SPRING_STRENGTH_FIELD_NUMBER = 4;
+      private float springStrength_;
+      /**
+       * <code>optional float spring_strength = 4;</code>
+       */
+      public boolean hasSpringStrength() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional float spring_strength = 4;</code>
+       */
+      public float getSpringStrength() {
+        return springStrength_;
+      }
+
+      public static final int INCREASE_SPRING_STRENGTH_TO_KEEP_TARGET_ON_SCREEN_FIELD_NUMBER = 5;
+      private boolean increaseSpringStrengthToKeepTargetOnScreen_;
+      /**
+       * <code>optional bool increase_spring_strength_to_keep_target_on_screen = 5 [default = true];</code>
+       */
+      public boolean hasIncreaseSpringStrengthToKeepTargetOnScreen() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional bool increase_spring_strength_to_keep_target_on_screen = 5 [default = true];</code>
+       */
+      public boolean getIncreaseSpringStrengthToKeepTargetOnScreen() {
+        return increaseSpringStrengthToKeepTargetOnScreen_;
+      }
+
+      private void initFields() {
+        minDuration_ = 0F;
+        lagTime_ = 0F;
+        maxSpeed_ = 0F;
+        springStrength_ = 0F;
+        increaseSpringStrengthToKeepTargetOnScreen_ = true;
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeFloat(1, minDuration_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeFloat(2, lagTime_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeFloat(3, maxSpeed_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          output.writeFloat(4, springStrength_);
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          output.writeBool(5, increaseSpringStrengthToKeepTargetOnScreen_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(1, minDuration_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(2, lagTime_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(3, maxSpeed_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeFloatSize(4, springStrength_);
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          size += skadistats.clarity.protobuf.CodedOutputStream
+            .computeBoolSize(5, increaseSpringStrengthToKeepTargetOnScreen_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag parseFrom(
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag parseFrom(
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag parseFrom(byte[] data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag parseFrom(
+          byte[] data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag parseFrom(
+          java.io.InputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag parseDelimitedFrom(
+          java.io.InputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag parseFrom(
+          skadistats.clarity.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag parseFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CCitadelUserMsg_CameraController.Lag}
+       */
+      public static final class Builder extends
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_CameraController.Lag)
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.LagOrBuilder {
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Lag_descriptor;
+        }
+
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Lag_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          minDuration_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          lagTime_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          maxSpeed_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          springStrength_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000008);
+          increaseSpringStrengthToKeepTargetOnScreen_ = true;
+          bitField0_ = (bitField0_ & ~0x00000010);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_Lag_descriptor;
+        }
+
+        public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag getDefaultInstanceForType() {
+          return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag build() {
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag buildPartial() {
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag result = new skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.minDuration_ = minDuration_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.lagTime_ = lagTime_;
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          result.maxSpeed_ = maxSpeed_;
+          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+            to_bitField0_ |= 0x00000008;
+          }
+          result.springStrength_ = springStrength_;
+          if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+            to_bitField0_ |= 0x00000010;
+          }
+          result.increaseSpringStrengthToKeepTargetOnScreen_ = increaseSpringStrengthToKeepTargetOnScreen_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag) {
+            return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag other) {
+          if (other == skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.getDefaultInstance()) return this;
+          if (other.hasMinDuration()) {
+            setMinDuration(other.getMinDuration());
+          }
+          if (other.hasLagTime()) {
+            setLagTime(other.getLagTime());
+          }
+          if (other.hasMaxSpeed()) {
+            setMaxSpeed(other.getMaxSpeed());
+          }
+          if (other.hasSpringStrength()) {
+            setSpringStrength(other.getSpringStrength());
+          }
+          if (other.hasIncreaseSpringStrengthToKeepTargetOnScreen()) {
+            setIncreaseSpringStrengthToKeepTargetOnScreen(other.getIncreaseSpringStrengthToKeepTargetOnScreen());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private float minDuration_ ;
+        /**
+         * <code>optional float min_duration = 1;</code>
+         */
+        public boolean hasMinDuration() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional float min_duration = 1;</code>
+         */
+        public float getMinDuration() {
+          return minDuration_;
+        }
+        /**
+         * <code>optional float min_duration = 1;</code>
+         */
+        public Builder setMinDuration(float value) {
+          bitField0_ |= 0x00000001;
+          minDuration_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float min_duration = 1;</code>
+         */
+        public Builder clearMinDuration() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          minDuration_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private float lagTime_ ;
+        /**
+         * <code>optional float lag_time = 2;</code>
+         */
+        public boolean hasLagTime() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional float lag_time = 2;</code>
+         */
+        public float getLagTime() {
+          return lagTime_;
+        }
+        /**
+         * <code>optional float lag_time = 2;</code>
+         */
+        public Builder setLagTime(float value) {
+          bitField0_ |= 0x00000002;
+          lagTime_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float lag_time = 2;</code>
+         */
+        public Builder clearLagTime() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          lagTime_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private float maxSpeed_ ;
+        /**
+         * <code>optional float max_speed = 3;</code>
+         */
+        public boolean hasMaxSpeed() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional float max_speed = 3;</code>
+         */
+        public float getMaxSpeed() {
+          return maxSpeed_;
+        }
+        /**
+         * <code>optional float max_speed = 3;</code>
+         */
+        public Builder setMaxSpeed(float value) {
+          bitField0_ |= 0x00000004;
+          maxSpeed_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float max_speed = 3;</code>
+         */
+        public Builder clearMaxSpeed() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          maxSpeed_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private float springStrength_ ;
+        /**
+         * <code>optional float spring_strength = 4;</code>
+         */
+        public boolean hasSpringStrength() {
+          return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <code>optional float spring_strength = 4;</code>
+         */
+        public float getSpringStrength() {
+          return springStrength_;
+        }
+        /**
+         * <code>optional float spring_strength = 4;</code>
+         */
+        public Builder setSpringStrength(float value) {
+          bitField0_ |= 0x00000008;
+          springStrength_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float spring_strength = 4;</code>
+         */
+        public Builder clearSpringStrength() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          springStrength_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private boolean increaseSpringStrengthToKeepTargetOnScreen_ = true;
+        /**
+         * <code>optional bool increase_spring_strength_to_keep_target_on_screen = 5 [default = true];</code>
+         */
+        public boolean hasIncreaseSpringStrengthToKeepTargetOnScreen() {
+          return ((bitField0_ & 0x00000010) == 0x00000010);
+        }
+        /**
+         * <code>optional bool increase_spring_strength_to_keep_target_on_screen = 5 [default = true];</code>
+         */
+        public boolean getIncreaseSpringStrengthToKeepTargetOnScreen() {
+          return increaseSpringStrengthToKeepTargetOnScreen_;
+        }
+        /**
+         * <code>optional bool increase_spring_strength_to_keep_target_on_screen = 5 [default = true];</code>
+         */
+        public Builder setIncreaseSpringStrengthToKeepTargetOnScreen(boolean value) {
+          bitField0_ |= 0x00000010;
+          increaseSpringStrengthToKeepTargetOnScreen_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool increase_spring_strength_to_keep_target_on_screen = 5 [default = true];</code>
+         */
+        public Builder clearIncreaseSpringStrengthToKeepTargetOnScreen() {
+          bitField0_ = (bitField0_ & ~0x00000010);
+          increaseSpringStrengthToKeepTargetOnScreen_ = true;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CCitadelUserMsg_CameraController.Lag)
+      }
+
+      static {
+        defaultInstance = new Lag(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CCitadelUserMsg_CameraController.Lag)
+    }
+
+    private int bitField0_;
+    public static final int ACTION_FIELD_NUMBER = 1;
+    private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraAction action_;
+    /**
+     * <code>optional .CameraAction action = 1 [default = k_EAction_AddOp];</code>
+     */
+    public boolean hasAction() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .CameraAction action = 1 [default = k_EAction_AddOp];</code>
+     */
+    public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraAction getAction() {
+      return action_;
+    }
+
+    public static final int OPERATION_FIELD_NUMBER = 2;
+    private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraOperation operation_;
+    /**
+     * <code>optional .CameraOperation operation = 2 [default = k_ECameraOp_Maintain];</code>
+     */
+    public boolean hasOperation() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .CameraOperation operation = 2 [default = k_ECameraOp_Maintain];</code>
+     */
+    public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraOperation getOperation() {
+      return operation_;
+    }
+
+    public static final int PARAM_FIELD_NUMBER = 3;
+    private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParam param_;
+    /**
+     * <code>optional .CameraParam param = 3 [default = k_EParam_ClearAllOps];</code>
+     */
+    public boolean hasParam() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .CameraParam param = 3 [default = k_EParam_ClearAllOps];</code>
+     */
+    public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParam getParam() {
+      return param_;
+    }
+
+    public static final int PARAM_MODE_FIELD_NUMBER = 12;
+    private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParamMode paramMode_;
+    /**
+     * <code>optional .CameraParamMode param_mode = 12 [default = k_EParamMode_AllowInOneContext];</code>
+     */
+    public boolean hasParamMode() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional .CameraParamMode param_mode = 12 [default = k_EParamMode_AllowInOneContext];</code>
+     */
+    public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParamMode getParamMode() {
+      return paramMode_;
+    }
+
+    public static final int DELAY_FIELD_NUMBER = 4;
+    private float delay_;
+    /**
+     * <code>optional float delay = 4;</code>
+     */
+    public boolean hasDelay() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional float delay = 4;</code>
+     */
+    public float getDelay() {
+      return delay_;
+    }
+
+    public static final int RELATIVE_VALUES_FIELD_NUMBER = 11;
+    private boolean relativeValues_;
+    /**
+     * <code>optional bool relative_values = 11;</code>
+     */
+    public boolean hasRelativeValues() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional bool relative_values = 11;</code>
+     */
+    public boolean getRelativeValues() {
+      return relativeValues_;
+    }
+
+    public static final int CONTEXT_SYMBOL_ID_FIELD_NUMBER = 5;
+    private int contextSymbolId_;
+    /**
+     * <code>optional uint32 context_symbol_id = 5;</code>
+     */
+    public boolean hasContextSymbolId() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional uint32 context_symbol_id = 5;</code>
+     */
+    public int getContextSymbolId() {
+      return contextSymbolId_;
+    }
+
+    public static final int PRIORITY_FIELD_NUMBER = 13;
+    private int priority_;
+    /**
+     * <code>optional uint32 priority = 13 [default = 1];</code>
+     */
+    public boolean hasPriority() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional uint32 priority = 13 [default = 1];</code>
+     */
+    public int getPriority() {
+      return priority_;
+    }
+
+    public static final int TARGET_PAWN_FIELD_NUMBER = 14;
+    private int targetPawn_;
+    /**
+     * <code>optional uint32 target_pawn = 14 [default = 16777215];</code>
+     */
+    public boolean hasTargetPawn() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional uint32 target_pawn = 14 [default = 16777215];</code>
+     */
+    public int getTargetPawn() {
+      return targetPawn_;
+    }
+
+    public static final int MAINTAIN_FIELD_NUMBER = 6;
+    private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain maintain_;
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Maintain maintain = 6;</code>
+     */
+    public boolean hasMaintain() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Maintain maintain = 6;</code>
+     */
+    public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain getMaintain() {
+      return maintain_;
+    }
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Maintain maintain = 6;</code>
+     */
+    public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.MaintainOrBuilder getMaintainOrBuilder() {
+      return maintain_;
+    }
+
+    public static final int APPROACH_FIELD_NUMBER = 7;
+    private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach approach_;
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Approach approach = 7;</code>
+     */
+    public boolean hasApproach() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Approach approach = 7;</code>
+     */
+    public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach getApproach() {
+      return approach_;
+    }
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Approach approach = 7;</code>
+     */
+    public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.ApproachOrBuilder getApproachOrBuilder() {
+      return approach_;
+    }
+
+    public static final int SPRING_FIELD_NUMBER = 8;
+    private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring spring_;
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Spring spring = 8;</code>
+     */
+    public boolean hasSpring() {
+      return ((bitField0_ & 0x00000800) == 0x00000800);
+    }
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Spring spring = 8;</code>
+     */
+    public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring getSpring() {
+      return spring_;
+    }
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Spring spring = 8;</code>
+     */
+    public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.SpringOrBuilder getSpringOrBuilder() {
+      return spring_;
+    }
+
+    public static final int LERP_FIELD_NUMBER = 9;
+    private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp lerp_;
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Lerp lerp = 9;</code>
+     */
+    public boolean hasLerp() {
+      return ((bitField0_ & 0x00001000) == 0x00001000);
+    }
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Lerp lerp = 9;</code>
+     */
+    public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp getLerp() {
+      return lerp_;
+    }
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Lerp lerp = 9;</code>
+     */
+    public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.LerpOrBuilder getLerpOrBuilder() {
+      return lerp_;
+    }
+
+    public static final int LAG_FIELD_NUMBER = 10;
+    private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag lag_;
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Lag lag = 10;</code>
+     */
+    public boolean hasLag() {
+      return ((bitField0_ & 0x00002000) == 0x00002000);
+    }
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Lag lag = 10;</code>
+     */
+    public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag getLag() {
+      return lag_;
+    }
+    /**
+     * <code>optional .CCitadelUserMsg_CameraController.Lag lag = 10;</code>
+     */
+    public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.LagOrBuilder getLagOrBuilder() {
+      return lag_;
+    }
+
+    private void initFields() {
+      action_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraAction.k_EAction_AddOp;
+      operation_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraOperation.k_ECameraOp_Maintain;
+      param_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParam.k_EParam_ClearAllOps;
+      paramMode_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParamMode.k_EParamMode_AllowInOneContext;
+      delay_ = 0F;
+      relativeValues_ = false;
+      contextSymbolId_ = 0;
+      priority_ = 1;
+      targetPawn_ = 16777215;
+      maintain_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.getDefaultInstance();
+      approach_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.getDefaultInstance();
+      spring_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.getDefaultInstance();
+      lerp_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.getDefaultInstance();
+      lag_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, action_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(2, operation_.getNumber());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeEnum(3, param_.getNumber());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeFloat(4, delay_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeUInt32(5, contextSymbolId_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeMessage(6, maintain_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeMessage(7, approach_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        output.writeMessage(8, spring_);
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        output.writeMessage(9, lerp_);
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        output.writeMessage(10, lag_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBool(11, relativeValues_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeEnum(12, paramMode_.getNumber());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeUInt32(13, priority_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeUInt32(14, targetPawn_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeEnumSize(1, action_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeEnumSize(2, operation_.getNumber());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeEnumSize(3, param_.getNumber());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeFloatSize(4, delay_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(5, contextSymbolId_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeMessageSize(6, maintain_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeMessageSize(7, approach_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeMessageSize(8, spring_);
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeMessageSize(9, lerp_);
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeMessageSize(10, lag_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeBoolSize(11, relativeValues_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeEnumSize(12, paramMode_.getNumber());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(13, priority_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(14, targetPawn_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController parseFrom(
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController parseFrom(
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController parseFrom(byte[] data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController parseFrom(
+        byte[] data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController parseFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController parseDelimitedFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCitadelUserMsg_CameraController}
+     */
+    public static final class Builder extends
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_CameraController)
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraControllerOrBuilder {
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_descriptor;
+      }
+
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getMaintainFieldBuilder();
+          getApproachFieldBuilder();
+          getSpringFieldBuilder();
+          getLerpFieldBuilder();
+          getLagFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        action_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraAction.k_EAction_AddOp;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        operation_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraOperation.k_ECameraOp_Maintain;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        param_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParam.k_EParam_ClearAllOps;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        paramMode_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParamMode.k_EParamMode_AllowInOneContext;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        delay_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        relativeValues_ = false;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        contextSymbolId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        priority_ = 1;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        targetPawn_ = 16777215;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        if (maintainBuilder_ == null) {
+          maintain_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.getDefaultInstance();
+        } else {
+          maintainBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000200);
+        if (approachBuilder_ == null) {
+          approach_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.getDefaultInstance();
+        } else {
+          approachBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000400);
+        if (springBuilder_ == null) {
+          spring_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.getDefaultInstance();
+        } else {
+          springBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000800);
+        if (lerpBuilder_ == null) {
+          lerp_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.getDefaultInstance();
+        } else {
+          lerpBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00001000);
+        if (lagBuilder_ == null) {
+          lag_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.getDefaultInstance();
+        } else {
+          lagBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00002000);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CameraController_descriptor;
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController getDefaultInstanceForType() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController build() {
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController buildPartial() {
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController result = new skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.action_ = action_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.operation_ = operation_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.param_ = param_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.paramMode_ = paramMode_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.delay_ = delay_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.relativeValues_ = relativeValues_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.contextSymbolId_ = contextSymbolId_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.priority_ = priority_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.targetPawn_ = targetPawn_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        if (maintainBuilder_ == null) {
+          result.maintain_ = maintain_;
+        } else {
+          result.maintain_ = maintainBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        if (approachBuilder_ == null) {
+          result.approach_ = approach_;
+        } else {
+          result.approach_ = approachBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+          to_bitField0_ |= 0x00000800;
+        }
+        if (springBuilder_ == null) {
+          result.spring_ = spring_;
+        } else {
+          result.spring_ = springBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        if (lerpBuilder_ == null) {
+          result.lerp_ = lerp_;
+        } else {
+          result.lerp_ = lerpBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
+          to_bitField0_ |= 0x00002000;
+        }
+        if (lagBuilder_ == null) {
+          result.lag_ = lag_;
+        } else {
+          result.lag_ = lagBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController) {
+          return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController other) {
+        if (other == skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.getDefaultInstance()) return this;
+        if (other.hasAction()) {
+          setAction(other.getAction());
+        }
+        if (other.hasOperation()) {
+          setOperation(other.getOperation());
+        }
+        if (other.hasParam()) {
+          setParam(other.getParam());
+        }
+        if (other.hasParamMode()) {
+          setParamMode(other.getParamMode());
+        }
+        if (other.hasDelay()) {
+          setDelay(other.getDelay());
+        }
+        if (other.hasRelativeValues()) {
+          setRelativeValues(other.getRelativeValues());
+        }
+        if (other.hasContextSymbolId()) {
+          setContextSymbolId(other.getContextSymbolId());
+        }
+        if (other.hasPriority()) {
+          setPriority(other.getPriority());
+        }
+        if (other.hasTargetPawn()) {
+          setTargetPawn(other.getTargetPawn());
+        }
+        if (other.hasMaintain()) {
+          mergeMaintain(other.getMaintain());
+        }
+        if (other.hasApproach()) {
+          mergeApproach(other.getApproach());
+        }
+        if (other.hasSpring()) {
+          mergeSpring(other.getSpring());
+        }
+        if (other.hasLerp()) {
+          mergeLerp(other.getLerp());
+        }
+        if (other.hasLag()) {
+          mergeLag(other.getLag());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraAction action_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraAction.k_EAction_AddOp;
+      /**
+       * <code>optional .CameraAction action = 1 [default = k_EAction_AddOp];</code>
+       */
+      public boolean hasAction() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .CameraAction action = 1 [default = k_EAction_AddOp];</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraAction getAction() {
+        return action_;
+      }
+      /**
+       * <code>optional .CameraAction action = 1 [default = k_EAction_AddOp];</code>
+       */
+      public Builder setAction(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraAction value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .CameraAction action = 1 [default = k_EAction_AddOp];</code>
+       */
+      public Builder clearAction() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        action_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraAction.k_EAction_AddOp;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraOperation operation_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraOperation.k_ECameraOp_Maintain;
+      /**
+       * <code>optional .CameraOperation operation = 2 [default = k_ECameraOp_Maintain];</code>
+       */
+      public boolean hasOperation() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .CameraOperation operation = 2 [default = k_ECameraOp_Maintain];</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraOperation getOperation() {
+        return operation_;
+      }
+      /**
+       * <code>optional .CameraOperation operation = 2 [default = k_ECameraOp_Maintain];</code>
+       */
+      public Builder setOperation(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraOperation value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        operation_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .CameraOperation operation = 2 [default = k_ECameraOp_Maintain];</code>
+       */
+      public Builder clearOperation() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        operation_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraOperation.k_ECameraOp_Maintain;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParam param_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParam.k_EParam_ClearAllOps;
+      /**
+       * <code>optional .CameraParam param = 3 [default = k_EParam_ClearAllOps];</code>
+       */
+      public boolean hasParam() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .CameraParam param = 3 [default = k_EParam_ClearAllOps];</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParam getParam() {
+        return param_;
+      }
+      /**
+       * <code>optional .CameraParam param = 3 [default = k_EParam_ClearAllOps];</code>
+       */
+      public Builder setParam(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParam value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        param_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .CameraParam param = 3 [default = k_EParam_ClearAllOps];</code>
+       */
+      public Builder clearParam() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        param_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParam.k_EParam_ClearAllOps;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParamMode paramMode_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParamMode.k_EParamMode_AllowInOneContext;
+      /**
+       * <code>optional .CameraParamMode param_mode = 12 [default = k_EParamMode_AllowInOneContext];</code>
+       */
+      public boolean hasParamMode() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .CameraParamMode param_mode = 12 [default = k_EParamMode_AllowInOneContext];</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParamMode getParamMode() {
+        return paramMode_;
+      }
+      /**
+       * <code>optional .CameraParamMode param_mode = 12 [default = k_EParamMode_AllowInOneContext];</code>
+       */
+      public Builder setParamMode(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParamMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        paramMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .CameraParamMode param_mode = 12 [default = k_EParamMode_AllowInOneContext];</code>
+       */
+      public Builder clearParamMode() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        paramMode_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CameraParamMode.k_EParamMode_AllowInOneContext;
+        onChanged();
+        return this;
+      }
+
+      private float delay_ ;
+      /**
+       * <code>optional float delay = 4;</code>
+       */
+      public boolean hasDelay() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional float delay = 4;</code>
+       */
+      public float getDelay() {
+        return delay_;
+      }
+      /**
+       * <code>optional float delay = 4;</code>
+       */
+      public Builder setDelay(float value) {
+        bitField0_ |= 0x00000010;
+        delay_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float delay = 4;</code>
+       */
+      public Builder clearDelay() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        delay_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private boolean relativeValues_ ;
+      /**
+       * <code>optional bool relative_values = 11;</code>
+       */
+      public boolean hasRelativeValues() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional bool relative_values = 11;</code>
+       */
+      public boolean getRelativeValues() {
+        return relativeValues_;
+      }
+      /**
+       * <code>optional bool relative_values = 11;</code>
+       */
+      public Builder setRelativeValues(boolean value) {
+        bitField0_ |= 0x00000020;
+        relativeValues_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool relative_values = 11;</code>
+       */
+      public Builder clearRelativeValues() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        relativeValues_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int contextSymbolId_ ;
+      /**
+       * <code>optional uint32 context_symbol_id = 5;</code>
+       */
+      public boolean hasContextSymbolId() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional uint32 context_symbol_id = 5;</code>
+       */
+      public int getContextSymbolId() {
+        return contextSymbolId_;
+      }
+      /**
+       * <code>optional uint32 context_symbol_id = 5;</code>
+       */
+      public Builder setContextSymbolId(int value) {
+        bitField0_ |= 0x00000040;
+        contextSymbolId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 context_symbol_id = 5;</code>
+       */
+      public Builder clearContextSymbolId() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        contextSymbolId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int priority_ = 1;
+      /**
+       * <code>optional uint32 priority = 13 [default = 1];</code>
+       */
+      public boolean hasPriority() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional uint32 priority = 13 [default = 1];</code>
+       */
+      public int getPriority() {
+        return priority_;
+      }
+      /**
+       * <code>optional uint32 priority = 13 [default = 1];</code>
+       */
+      public Builder setPriority(int value) {
+        bitField0_ |= 0x00000080;
+        priority_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 priority = 13 [default = 1];</code>
+       */
+      public Builder clearPriority() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        priority_ = 1;
+        onChanged();
+        return this;
+      }
+
+      private int targetPawn_ = 16777215;
+      /**
+       * <code>optional uint32 target_pawn = 14 [default = 16777215];</code>
+       */
+      public boolean hasTargetPawn() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional uint32 target_pawn = 14 [default = 16777215];</code>
+       */
+      public int getTargetPawn() {
+        return targetPawn_;
+      }
+      /**
+       * <code>optional uint32 target_pawn = 14 [default = 16777215];</code>
+       */
+      public Builder setTargetPawn(int value) {
+        bitField0_ |= 0x00000100;
+        targetPawn_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 target_pawn = 14 [default = 16777215];</code>
+       */
+      public Builder clearTargetPawn() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        targetPawn_ = 16777215;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain maintain_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.getDefaultInstance();
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.MaintainOrBuilder> maintainBuilder_;
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Maintain maintain = 6;</code>
+       */
+      public boolean hasMaintain() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Maintain maintain = 6;</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain getMaintain() {
+        if (maintainBuilder_ == null) {
+          return maintain_;
+        } else {
+          return maintainBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Maintain maintain = 6;</code>
+       */
+      public Builder setMaintain(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain value) {
+        if (maintainBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maintain_ = value;
+          onChanged();
+        } else {
+          maintainBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Maintain maintain = 6;</code>
+       */
+      public Builder setMaintain(
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.Builder builderForValue) {
+        if (maintainBuilder_ == null) {
+          maintain_ = builderForValue.build();
+          onChanged();
+        } else {
+          maintainBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Maintain maintain = 6;</code>
+       */
+      public Builder mergeMaintain(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain value) {
+        if (maintainBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) == 0x00000200) &&
+              maintain_ != skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.getDefaultInstance()) {
+            maintain_ =
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.newBuilder(maintain_).mergeFrom(value).buildPartial();
+          } else {
+            maintain_ = value;
+          }
+          onChanged();
+        } else {
+          maintainBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000200;
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Maintain maintain = 6;</code>
+       */
+      public Builder clearMaintain() {
+        if (maintainBuilder_ == null) {
+          maintain_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.getDefaultInstance();
+          onChanged();
+        } else {
+          maintainBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000200);
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Maintain maintain = 6;</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.Builder getMaintainBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getMaintainFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Maintain maintain = 6;</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.MaintainOrBuilder getMaintainOrBuilder() {
+        if (maintainBuilder_ != null) {
+          return maintainBuilder_.getMessageOrBuilder();
+        } else {
+          return maintain_;
+        }
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Maintain maintain = 6;</code>
+       */
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.MaintainOrBuilder> 
+          getMaintainFieldBuilder() {
+        if (maintainBuilder_ == null) {
+          maintainBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Maintain.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.MaintainOrBuilder>(
+                  getMaintain(),
+                  getParentForChildren(),
+                  isClean());
+          maintain_ = null;
+        }
+        return maintainBuilder_;
+      }
+
+      private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach approach_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.getDefaultInstance();
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.ApproachOrBuilder> approachBuilder_;
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Approach approach = 7;</code>
+       */
+      public boolean hasApproach() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Approach approach = 7;</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach getApproach() {
+        if (approachBuilder_ == null) {
+          return approach_;
+        } else {
+          return approachBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Approach approach = 7;</code>
+       */
+      public Builder setApproach(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach value) {
+        if (approachBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          approach_ = value;
+          onChanged();
+        } else {
+          approachBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000400;
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Approach approach = 7;</code>
+       */
+      public Builder setApproach(
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.Builder builderForValue) {
+        if (approachBuilder_ == null) {
+          approach_ = builderForValue.build();
+          onChanged();
+        } else {
+          approachBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000400;
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Approach approach = 7;</code>
+       */
+      public Builder mergeApproach(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach value) {
+        if (approachBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) == 0x00000400) &&
+              approach_ != skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.getDefaultInstance()) {
+            approach_ =
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.newBuilder(approach_).mergeFrom(value).buildPartial();
+          } else {
+            approach_ = value;
+          }
+          onChanged();
+        } else {
+          approachBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000400;
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Approach approach = 7;</code>
+       */
+      public Builder clearApproach() {
+        if (approachBuilder_ == null) {
+          approach_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.getDefaultInstance();
+          onChanged();
+        } else {
+          approachBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000400);
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Approach approach = 7;</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.Builder getApproachBuilder() {
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return getApproachFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Approach approach = 7;</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.ApproachOrBuilder getApproachOrBuilder() {
+        if (approachBuilder_ != null) {
+          return approachBuilder_.getMessageOrBuilder();
+        } else {
+          return approach_;
+        }
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Approach approach = 7;</code>
+       */
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.ApproachOrBuilder> 
+          getApproachFieldBuilder() {
+        if (approachBuilder_ == null) {
+          approachBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Approach.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.ApproachOrBuilder>(
+                  getApproach(),
+                  getParentForChildren(),
+                  isClean());
+          approach_ = null;
+        }
+        return approachBuilder_;
+      }
+
+      private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring spring_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.getDefaultInstance();
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.SpringOrBuilder> springBuilder_;
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Spring spring = 8;</code>
+       */
+      public boolean hasSpring() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Spring spring = 8;</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring getSpring() {
+        if (springBuilder_ == null) {
+          return spring_;
+        } else {
+          return springBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Spring spring = 8;</code>
+       */
+      public Builder setSpring(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring value) {
+        if (springBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          spring_ = value;
+          onChanged();
+        } else {
+          springBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000800;
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Spring spring = 8;</code>
+       */
+      public Builder setSpring(
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.Builder builderForValue) {
+        if (springBuilder_ == null) {
+          spring_ = builderForValue.build();
+          onChanged();
+        } else {
+          springBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000800;
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Spring spring = 8;</code>
+       */
+      public Builder mergeSpring(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring value) {
+        if (springBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) == 0x00000800) &&
+              spring_ != skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.getDefaultInstance()) {
+            spring_ =
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.newBuilder(spring_).mergeFrom(value).buildPartial();
+          } else {
+            spring_ = value;
+          }
+          onChanged();
+        } else {
+          springBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000800;
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Spring spring = 8;</code>
+       */
+      public Builder clearSpring() {
+        if (springBuilder_ == null) {
+          spring_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.getDefaultInstance();
+          onChanged();
+        } else {
+          springBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000800);
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Spring spring = 8;</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.Builder getSpringBuilder() {
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return getSpringFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Spring spring = 8;</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.SpringOrBuilder getSpringOrBuilder() {
+        if (springBuilder_ != null) {
+          return springBuilder_.getMessageOrBuilder();
+        } else {
+          return spring_;
+        }
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Spring spring = 8;</code>
+       */
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.SpringOrBuilder> 
+          getSpringFieldBuilder() {
+        if (springBuilder_ == null) {
+          springBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Spring.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.SpringOrBuilder>(
+                  getSpring(),
+                  getParentForChildren(),
+                  isClean());
+          spring_ = null;
+        }
+        return springBuilder_;
+      }
+
+      private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp lerp_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.getDefaultInstance();
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.LerpOrBuilder> lerpBuilder_;
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Lerp lerp = 9;</code>
+       */
+      public boolean hasLerp() {
+        return ((bitField0_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Lerp lerp = 9;</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp getLerp() {
+        if (lerpBuilder_ == null) {
+          return lerp_;
+        } else {
+          return lerpBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Lerp lerp = 9;</code>
+       */
+      public Builder setLerp(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp value) {
+        if (lerpBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lerp_ = value;
+          onChanged();
+        } else {
+          lerpBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00001000;
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Lerp lerp = 9;</code>
+       */
+      public Builder setLerp(
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.Builder builderForValue) {
+        if (lerpBuilder_ == null) {
+          lerp_ = builderForValue.build();
+          onChanged();
+        } else {
+          lerpBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00001000;
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Lerp lerp = 9;</code>
+       */
+      public Builder mergeLerp(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp value) {
+        if (lerpBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) == 0x00001000) &&
+              lerp_ != skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.getDefaultInstance()) {
+            lerp_ =
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.newBuilder(lerp_).mergeFrom(value).buildPartial();
+          } else {
+            lerp_ = value;
+          }
+          onChanged();
+        } else {
+          lerpBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00001000;
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Lerp lerp = 9;</code>
+       */
+      public Builder clearLerp() {
+        if (lerpBuilder_ == null) {
+          lerp_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.getDefaultInstance();
+          onChanged();
+        } else {
+          lerpBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00001000);
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Lerp lerp = 9;</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.Builder getLerpBuilder() {
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return getLerpFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Lerp lerp = 9;</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.LerpOrBuilder getLerpOrBuilder() {
+        if (lerpBuilder_ != null) {
+          return lerpBuilder_.getMessageOrBuilder();
+        } else {
+          return lerp_;
+        }
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Lerp lerp = 9;</code>
+       */
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.LerpOrBuilder> 
+          getLerpFieldBuilder() {
+        if (lerpBuilder_ == null) {
+          lerpBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lerp.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.LerpOrBuilder>(
+                  getLerp(),
+                  getParentForChildren(),
+                  isClean());
+          lerp_ = null;
+        }
+        return lerpBuilder_;
+      }
+
+      private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag lag_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.getDefaultInstance();
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.LagOrBuilder> lagBuilder_;
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Lag lag = 10;</code>
+       */
+      public boolean hasLag() {
+        return ((bitField0_ & 0x00002000) == 0x00002000);
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Lag lag = 10;</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag getLag() {
+        if (lagBuilder_ == null) {
+          return lag_;
+        } else {
+          return lagBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Lag lag = 10;</code>
+       */
+      public Builder setLag(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag value) {
+        if (lagBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lag_ = value;
+          onChanged();
+        } else {
+          lagBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00002000;
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Lag lag = 10;</code>
+       */
+      public Builder setLag(
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.Builder builderForValue) {
+        if (lagBuilder_ == null) {
+          lag_ = builderForValue.build();
+          onChanged();
+        } else {
+          lagBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00002000;
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Lag lag = 10;</code>
+       */
+      public Builder mergeLag(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag value) {
+        if (lagBuilder_ == null) {
+          if (((bitField0_ & 0x00002000) == 0x00002000) &&
+              lag_ != skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.getDefaultInstance()) {
+            lag_ =
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.newBuilder(lag_).mergeFrom(value).buildPartial();
+          } else {
+            lag_ = value;
+          }
+          onChanged();
+        } else {
+          lagBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00002000;
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Lag lag = 10;</code>
+       */
+      public Builder clearLag() {
+        if (lagBuilder_ == null) {
+          lag_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.getDefaultInstance();
+          onChanged();
+        } else {
+          lagBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00002000);
+        return this;
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Lag lag = 10;</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.Builder getLagBuilder() {
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return getLagFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Lag lag = 10;</code>
+       */
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.LagOrBuilder getLagOrBuilder() {
+        if (lagBuilder_ != null) {
+          return lagBuilder_.getMessageOrBuilder();
+        } else {
+          return lag_;
+        }
+      }
+      /**
+       * <code>optional .CCitadelUserMsg_CameraController.Lag lag = 10;</code>
+       */
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.LagOrBuilder> 
+          getLagFieldBuilder() {
+        if (lagBuilder_ == null) {
+          lagBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.Lag.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CameraController.LagOrBuilder>(
+                  getLag(),
+                  getParentForChildren(),
+                  isClean());
+          lag_ = null;
+        }
+        return lagBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CCitadelUserMsg_CameraController)
+    }
+
+    static {
+      defaultInstance = new CCitadelUserMsg_CameraController(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CCitadelUserMsg_CameraController)
+  }
+
+  public interface CCitadelUserMsg_CurrencyChangedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_CurrencyChanged)
+      skadistats.clarity.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 userid = 1 [default = -1];</code>
+     */
+    boolean hasUserid();
+    /**
+     * <code>optional int32 userid = 1 [default = -1];</code>
+     */
+    int getUserid();
+
+    /**
+     * <code>optional int32 currency_type = 2;</code>
+     */
+    boolean hasCurrencyType();
+    /**
+     * <code>optional int32 currency_type = 2;</code>
+     */
+    int getCurrencyType();
+
+    /**
+     * <code>optional int32 currency_source = 3;</code>
+     */
+    boolean hasCurrencySource();
+    /**
+     * <code>optional int32 currency_source = 3;</code>
+     */
+    int getCurrencySource();
+
+    /**
+     * <code>optional int32 delta = 4;</code>
+     */
+    boolean hasDelta();
+    /**
+     * <code>optional int32 delta = 4;</code>
+     */
+    int getDelta();
+
+    /**
+     * <code>optional bool notification = 5;</code>
+     */
+    boolean hasNotification();
+    /**
+     * <code>optional bool notification = 5;</code>
+     */
+    boolean getNotification();
+
+    /**
+     * <code>optional uint32 victim = 6 [default = 16777215];</code>
+     */
+    boolean hasVictim();
+    /**
+     * <code>optional uint32 victim = 6 [default = 16777215];</code>
+     */
+    int getVictim();
+
+    /**
+     * <code>optional .CMsgVector victim_pos = 7;</code>
+     */
+    boolean hasVictimPos();
+    /**
+     * <code>optional .CMsgVector victim_pos = 7;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getVictimPos();
+    /**
+     * <code>optional .CMsgVector victim_pos = 7;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getVictimPosOrBuilder();
+
+    /**
+     * <code>optional int32 playsound = 8;</code>
+     */
+    boolean hasPlaysound();
+    /**
+     * <code>optional int32 playsound = 8;</code>
+     */
+    int getPlaysound();
+
+    /**
+     * <code>optional uint32 ability_id = 9;</code>
+     */
+    boolean hasAbilityId();
+    /**
+     * <code>optional uint32 ability_id = 9;</code>
+     */
+    int getAbilityId();
+
+    /**
+     * <code>optional uint32 new_value = 10;</code>
+     */
+    boolean hasNewValue();
+    /**
+     * <code>optional uint32 new_value = 10;</code>
+     */
+    int getNewValue();
+  }
+  /**
+   * Protobuf type {@code CCitadelUserMsg_CurrencyChanged}
+   */
+  public static final class CCitadelUserMsg_CurrencyChanged extends
+      skadistats.clarity.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CCitadelUserMsg_CurrencyChanged)
+      CCitadelUserMsg_CurrencyChangedOrBuilder {
+    // Use CCitadelUserMsg_CurrencyChanged.newBuilder() to construct.
+    private CCitadelUserMsg_CurrencyChanged(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CCitadelUserMsg_CurrencyChanged(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CCitadelUserMsg_CurrencyChanged defaultInstance;
+    public static CCitadelUserMsg_CurrencyChanged getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CCitadelUserMsg_CurrencyChanged getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final skadistats.clarity.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCitadelUserMsg_CurrencyChanged(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              userid_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              currencyType_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              currencySource_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              delta_ = input.readInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              notification_ = input.readBool();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              victim_ = input.readUInt32();
+              break;
+            }
+            case 58: {
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                subBuilder = victimPos_.toBuilder();
+              }
+              victimPos_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(victimPos_);
+                victimPos_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000040;
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              playsound_ = input.readInt32();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              abilityId_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000200;
+              newValue_ = input.readUInt32();
+              break;
+            }
+          }
+        }
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CurrencyChanged_descriptor;
+    }
+
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CurrencyChanged_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged.Builder.class);
+    }
+
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_CurrencyChanged> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_CurrencyChanged>() {
+      public CCitadelUserMsg_CurrencyChanged parsePartialFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return new CCitadelUserMsg_CurrencyChanged(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_CurrencyChanged> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int USERID_FIELD_NUMBER = 1;
+    private int userid_;
+    /**
+     * <code>optional int32 userid = 1 [default = -1];</code>
+     */
+    public boolean hasUserid() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 userid = 1 [default = -1];</code>
+     */
+    public int getUserid() {
+      return userid_;
+    }
+
+    public static final int CURRENCY_TYPE_FIELD_NUMBER = 2;
+    private int currencyType_;
+    /**
+     * <code>optional int32 currency_type = 2;</code>
+     */
+    public boolean hasCurrencyType() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 currency_type = 2;</code>
+     */
+    public int getCurrencyType() {
+      return currencyType_;
+    }
+
+    public static final int CURRENCY_SOURCE_FIELD_NUMBER = 3;
+    private int currencySource_;
+    /**
+     * <code>optional int32 currency_source = 3;</code>
+     */
+    public boolean hasCurrencySource() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 currency_source = 3;</code>
+     */
+    public int getCurrencySource() {
+      return currencySource_;
+    }
+
+    public static final int DELTA_FIELD_NUMBER = 4;
+    private int delta_;
+    /**
+     * <code>optional int32 delta = 4;</code>
+     */
+    public boolean hasDelta() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 delta = 4;</code>
+     */
+    public int getDelta() {
+      return delta_;
+    }
+
+    public static final int NOTIFICATION_FIELD_NUMBER = 5;
+    private boolean notification_;
+    /**
+     * <code>optional bool notification = 5;</code>
+     */
+    public boolean hasNotification() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional bool notification = 5;</code>
+     */
+    public boolean getNotification() {
+      return notification_;
+    }
+
+    public static final int VICTIM_FIELD_NUMBER = 6;
+    private int victim_;
+    /**
+     * <code>optional uint32 victim = 6 [default = 16777215];</code>
+     */
+    public boolean hasVictim() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional uint32 victim = 6 [default = 16777215];</code>
+     */
+    public int getVictim() {
+      return victim_;
+    }
+
+    public static final int VICTIM_POS_FIELD_NUMBER = 7;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector victimPos_;
+    /**
+     * <code>optional .CMsgVector victim_pos = 7;</code>
+     */
+    public boolean hasVictimPos() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional .CMsgVector victim_pos = 7;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getVictimPos() {
+      return victimPos_;
+    }
+    /**
+     * <code>optional .CMsgVector victim_pos = 7;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getVictimPosOrBuilder() {
+      return victimPos_;
+    }
+
+    public static final int PLAYSOUND_FIELD_NUMBER = 8;
+    private int playsound_;
+    /**
+     * <code>optional int32 playsound = 8;</code>
+     */
+    public boolean hasPlaysound() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional int32 playsound = 8;</code>
+     */
+    public int getPlaysound() {
+      return playsound_;
+    }
+
+    public static final int ABILITY_ID_FIELD_NUMBER = 9;
+    private int abilityId_;
+    /**
+     * <code>optional uint32 ability_id = 9;</code>
+     */
+    public boolean hasAbilityId() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional uint32 ability_id = 9;</code>
+     */
+    public int getAbilityId() {
+      return abilityId_;
+    }
+
+    public static final int NEW_VALUE_FIELD_NUMBER = 10;
+    private int newValue_;
+    /**
+     * <code>optional uint32 new_value = 10;</code>
+     */
+    public boolean hasNewValue() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional uint32 new_value = 10;</code>
+     */
+    public int getNewValue() {
+      return newValue_;
+    }
+
+    private void initFields() {
+      userid_ = -1;
+      currencyType_ = 0;
+      currencySource_ = 0;
+      delta_ = 0;
+      notification_ = false;
+      victim_ = 16777215;
+      victimPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      playsound_ = 0;
+      abilityId_ = 0;
+      newValue_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, userid_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, currencyType_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, currencySource_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, delta_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBool(5, notification_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeUInt32(6, victim_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeMessage(7, victimPos_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeInt32(8, playsound_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeUInt32(9, abilityId_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeUInt32(10, newValue_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(1, userid_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(2, currencyType_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(3, currencySource_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(4, delta_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeBoolSize(5, notification_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(6, victim_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeMessageSize(7, victimPos_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(8, playsound_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(9, abilityId_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(10, newValue_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged parseFrom(
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged parseFrom(
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged parseFrom(byte[] data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged parseFrom(
+        byte[] data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged parseFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged parseDelimitedFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCitadelUserMsg_CurrencyChanged}
+     */
+    public static final class Builder extends
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_CurrencyChanged)
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChangedOrBuilder {
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CurrencyChanged_descriptor;
+      }
+
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CurrencyChanged_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getVictimPosFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        userid_ = -1;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        currencyType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        currencySource_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        delta_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        notification_ = false;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        victim_ = 16777215;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (victimPosBuilder_ == null) {
+          victimPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        } else {
+          victimPosBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        playsound_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        abilityId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        newValue_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CurrencyChanged_descriptor;
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged getDefaultInstanceForType() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged build() {
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged buildPartial() {
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged result = new skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.userid_ = userid_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.currencyType_ = currencyType_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.currencySource_ = currencySource_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.delta_ = delta_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.notification_ = notification_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.victim_ = victim_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        if (victimPosBuilder_ == null) {
+          result.victimPos_ = victimPos_;
+        } else {
+          result.victimPos_ = victimPosBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.playsound_ = playsound_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.abilityId_ = abilityId_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.newValue_ = newValue_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged) {
+          return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged other) {
+        if (other == skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged.getDefaultInstance()) return this;
+        if (other.hasUserid()) {
+          setUserid(other.getUserid());
+        }
+        if (other.hasCurrencyType()) {
+          setCurrencyType(other.getCurrencyType());
+        }
+        if (other.hasCurrencySource()) {
+          setCurrencySource(other.getCurrencySource());
+        }
+        if (other.hasDelta()) {
+          setDelta(other.getDelta());
+        }
+        if (other.hasNotification()) {
+          setNotification(other.getNotification());
+        }
+        if (other.hasVictim()) {
+          setVictim(other.getVictim());
+        }
+        if (other.hasVictimPos()) {
+          mergeVictimPos(other.getVictimPos());
+        }
+        if (other.hasPlaysound()) {
+          setPlaysound(other.getPlaysound());
+        }
+        if (other.hasAbilityId()) {
+          setAbilityId(other.getAbilityId());
+        }
+        if (other.hasNewValue()) {
+          setNewValue(other.getNewValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CurrencyChanged) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int userid_ = -1;
+      /**
+       * <code>optional int32 userid = 1 [default = -1];</code>
+       */
+      public boolean hasUserid() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 userid = 1 [default = -1];</code>
+       */
+      public int getUserid() {
+        return userid_;
+      }
+      /**
+       * <code>optional int32 userid = 1 [default = -1];</code>
+       */
+      public Builder setUserid(int value) {
+        bitField0_ |= 0x00000001;
+        userid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 userid = 1 [default = -1];</code>
+       */
+      public Builder clearUserid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        userid_ = -1;
+        onChanged();
+        return this;
+      }
+
+      private int currencyType_ ;
+      /**
+       * <code>optional int32 currency_type = 2;</code>
+       */
+      public boolean hasCurrencyType() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 currency_type = 2;</code>
+       */
+      public int getCurrencyType() {
+        return currencyType_;
+      }
+      /**
+       * <code>optional int32 currency_type = 2;</code>
+       */
+      public Builder setCurrencyType(int value) {
+        bitField0_ |= 0x00000002;
+        currencyType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 currency_type = 2;</code>
+       */
+      public Builder clearCurrencyType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        currencyType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int currencySource_ ;
+      /**
+       * <code>optional int32 currency_source = 3;</code>
+       */
+      public boolean hasCurrencySource() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 currency_source = 3;</code>
+       */
+      public int getCurrencySource() {
+        return currencySource_;
+      }
+      /**
+       * <code>optional int32 currency_source = 3;</code>
+       */
+      public Builder setCurrencySource(int value) {
+        bitField0_ |= 0x00000004;
+        currencySource_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 currency_source = 3;</code>
+       */
+      public Builder clearCurrencySource() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        currencySource_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int delta_ ;
+      /**
+       * <code>optional int32 delta = 4;</code>
+       */
+      public boolean hasDelta() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 delta = 4;</code>
+       */
+      public int getDelta() {
+        return delta_;
+      }
+      /**
+       * <code>optional int32 delta = 4;</code>
+       */
+      public Builder setDelta(int value) {
+        bitField0_ |= 0x00000008;
+        delta_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 delta = 4;</code>
+       */
+      public Builder clearDelta() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        delta_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean notification_ ;
+      /**
+       * <code>optional bool notification = 5;</code>
+       */
+      public boolean hasNotification() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional bool notification = 5;</code>
+       */
+      public boolean getNotification() {
+        return notification_;
+      }
+      /**
+       * <code>optional bool notification = 5;</code>
+       */
+      public Builder setNotification(boolean value) {
+        bitField0_ |= 0x00000010;
+        notification_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool notification = 5;</code>
+       */
+      public Builder clearNotification() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        notification_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int victim_ = 16777215;
+      /**
+       * <code>optional uint32 victim = 6 [default = 16777215];</code>
+       */
+      public boolean hasVictim() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional uint32 victim = 6 [default = 16777215];</code>
+       */
+      public int getVictim() {
+        return victim_;
+      }
+      /**
+       * <code>optional uint32 victim = 6 [default = 16777215];</code>
+       */
+      public Builder setVictim(int value) {
+        bitField0_ |= 0x00000020;
+        victim_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 victim = 6 [default = 16777215];</code>
+       */
+      public Builder clearVictim() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        victim_ = 16777215;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector victimPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> victimPosBuilder_;
+      /**
+       * <code>optional .CMsgVector victim_pos = 7;</code>
+       */
+      public boolean hasVictimPos() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional .CMsgVector victim_pos = 7;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getVictimPos() {
+        if (victimPosBuilder_ == null) {
+          return victimPos_;
+        } else {
+          return victimPosBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgVector victim_pos = 7;</code>
+       */
+      public Builder setVictimPos(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+        if (victimPosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          victimPos_ = value;
+          onChanged();
+        } else {
+          victimPosBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector victim_pos = 7;</code>
+       */
+      public Builder setVictimPos(
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+        if (victimPosBuilder_ == null) {
+          victimPos_ = builderForValue.build();
+          onChanged();
+        } else {
+          victimPosBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector victim_pos = 7;</code>
+       */
+      public Builder mergeVictimPos(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+        if (victimPosBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040) &&
+              victimPos_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+            victimPos_ =
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(victimPos_).mergeFrom(value).buildPartial();
+          } else {
+            victimPos_ = value;
+          }
+          onChanged();
+        } else {
+          victimPosBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector victim_pos = 7;</code>
+       */
+      public Builder clearVictimPos() {
+        if (victimPosBuilder_ == null) {
+          victimPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          onChanged();
+        } else {
+          victimPosBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector victim_pos = 7;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getVictimPosBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getVictimPosFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgVector victim_pos = 7;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getVictimPosOrBuilder() {
+        if (victimPosBuilder_ != null) {
+          return victimPosBuilder_.getMessageOrBuilder();
+        } else {
+          return victimPos_;
+        }
+      }
+      /**
+       * <code>optional .CMsgVector victim_pos = 7;</code>
+       */
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+          getVictimPosFieldBuilder() {
+        if (victimPosBuilder_ == null) {
+          victimPosBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                  getVictimPos(),
+                  getParentForChildren(),
+                  isClean());
+          victimPos_ = null;
+        }
+        return victimPosBuilder_;
+      }
+
+      private int playsound_ ;
+      /**
+       * <code>optional int32 playsound = 8;</code>
+       */
+      public boolean hasPlaysound() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional int32 playsound = 8;</code>
+       */
+      public int getPlaysound() {
+        return playsound_;
+      }
+      /**
+       * <code>optional int32 playsound = 8;</code>
+       */
+      public Builder setPlaysound(int value) {
+        bitField0_ |= 0x00000080;
+        playsound_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 playsound = 8;</code>
+       */
+      public Builder clearPlaysound() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        playsound_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int abilityId_ ;
+      /**
+       * <code>optional uint32 ability_id = 9;</code>
+       */
+      public boolean hasAbilityId() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional uint32 ability_id = 9;</code>
+       */
+      public int getAbilityId() {
+        return abilityId_;
+      }
+      /**
+       * <code>optional uint32 ability_id = 9;</code>
+       */
+      public Builder setAbilityId(int value) {
+        bitField0_ |= 0x00000100;
+        abilityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 ability_id = 9;</code>
+       */
+      public Builder clearAbilityId() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        abilityId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int newValue_ ;
+      /**
+       * <code>optional uint32 new_value = 10;</code>
+       */
+      public boolean hasNewValue() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional uint32 new_value = 10;</code>
+       */
+      public int getNewValue() {
+        return newValue_;
+      }
+      /**
+       * <code>optional uint32 new_value = 10;</code>
+       */
+      public Builder setNewValue(int value) {
+        bitField0_ |= 0x00000200;
+        newValue_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 new_value = 10;</code>
+       */
+      public Builder clearNewValue() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        newValue_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CCitadelUserMsg_CurrencyChanged)
+    }
+
+    static {
+      defaultInstance = new CCitadelUserMsg_CurrencyChanged(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CCitadelUserMsg_CurrencyChanged)
+  }
+
+  public interface CCitadelUserMsg_PlayerTypingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_PlayerTyping)
+      skadistats.clarity.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 player_slot = 1 [default = -1];</code>
+     */
+    boolean hasPlayerSlot();
+    /**
+     * <code>optional int32 player_slot = 1 [default = -1];</code>
+     */
+    int getPlayerSlot();
+
+    /**
+     * <code>optional float game_time = 2;</code>
+     */
+    boolean hasGameTime();
+    /**
+     * <code>optional float game_time = 2;</code>
+     */
+    float getGameTime();
+
+    /**
+     * <code>optional bool all_chat = 3;</code>
+     */
+    boolean hasAllChat();
+    /**
+     * <code>optional bool all_chat = 3;</code>
+     */
+    boolean getAllChat();
+
+    /**
+     * <code>optional bool typing = 4;</code>
+     */
+    boolean hasTyping();
+    /**
+     * <code>optional bool typing = 4;</code>
+     */
+    boolean getTyping();
+  }
+  /**
+   * Protobuf type {@code CCitadelUserMsg_PlayerTyping}
+   */
+  public static final class CCitadelUserMsg_PlayerTyping extends
+      skadistats.clarity.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CCitadelUserMsg_PlayerTyping)
+      CCitadelUserMsg_PlayerTypingOrBuilder {
+    // Use CCitadelUserMsg_PlayerTyping.newBuilder() to construct.
+    private CCitadelUserMsg_PlayerTyping(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CCitadelUserMsg_PlayerTyping(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CCitadelUserMsg_PlayerTyping defaultInstance;
+    public static CCitadelUserMsg_PlayerTyping getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CCitadelUserMsg_PlayerTyping getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final skadistats.clarity.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCitadelUserMsg_PlayerTyping(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              playerSlot_ = input.readInt32();
+              break;
+            }
+            case 21: {
+              bitField0_ |= 0x00000002;
+              gameTime_ = input.readFloat();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              allChat_ = input.readBool();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              typing_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PlayerTyping_descriptor;
+    }
+
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PlayerTyping_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping.Builder.class);
+    }
+
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_PlayerTyping> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_PlayerTyping>() {
+      public CCitadelUserMsg_PlayerTyping parsePartialFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return new CCitadelUserMsg_PlayerTyping(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_PlayerTyping> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int PLAYER_SLOT_FIELD_NUMBER = 1;
+    private int playerSlot_;
+    /**
+     * <code>optional int32 player_slot = 1 [default = -1];</code>
+     */
+    public boolean hasPlayerSlot() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 player_slot = 1 [default = -1];</code>
+     */
+    public int getPlayerSlot() {
+      return playerSlot_;
+    }
+
+    public static final int GAME_TIME_FIELD_NUMBER = 2;
+    private float gameTime_;
+    /**
+     * <code>optional float game_time = 2;</code>
+     */
+    public boolean hasGameTime() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional float game_time = 2;</code>
+     */
+    public float getGameTime() {
+      return gameTime_;
+    }
+
+    public static final int ALL_CHAT_FIELD_NUMBER = 3;
+    private boolean allChat_;
+    /**
+     * <code>optional bool all_chat = 3;</code>
+     */
+    public boolean hasAllChat() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional bool all_chat = 3;</code>
+     */
+    public boolean getAllChat() {
+      return allChat_;
+    }
+
+    public static final int TYPING_FIELD_NUMBER = 4;
+    private boolean typing_;
+    /**
+     * <code>optional bool typing = 4;</code>
+     */
+    public boolean hasTyping() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional bool typing = 4;</code>
+     */
+    public boolean getTyping() {
+      return typing_;
+    }
+
+    private void initFields() {
+      playerSlot_ = -1;
+      gameTime_ = 0F;
+      allChat_ = false;
+      typing_ = false;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, playerSlot_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeFloat(2, gameTime_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBool(3, allChat_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBool(4, typing_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(1, playerSlot_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeFloatSize(2, gameTime_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeBoolSize(3, allChat_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeBoolSize(4, typing_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping parseFrom(
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping parseFrom(
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping parseFrom(byte[] data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping parseFrom(
+        byte[] data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping parseFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping parseDelimitedFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCitadelUserMsg_PlayerTyping}
+     */
+    public static final class Builder extends
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_PlayerTyping)
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTypingOrBuilder {
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PlayerTyping_descriptor;
+      }
+
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PlayerTyping_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        playerSlot_ = -1;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        gameTime_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        allChat_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        typing_ = false;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PlayerTyping_descriptor;
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping getDefaultInstanceForType() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping build() {
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping buildPartial() {
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping result = new skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.playerSlot_ = playerSlot_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.gameTime_ = gameTime_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.allChat_ = allChat_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.typing_ = typing_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping) {
+          return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping other) {
+        if (other == skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping.getDefaultInstance()) return this;
+        if (other.hasPlayerSlot()) {
+          setPlayerSlot(other.getPlayerSlot());
+        }
+        if (other.hasGameTime()) {
+          setGameTime(other.getGameTime());
+        }
+        if (other.hasAllChat()) {
+          setAllChat(other.getAllChat());
+        }
+        if (other.hasTyping()) {
+          setTyping(other.getTyping());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerTyping) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int playerSlot_ = -1;
+      /**
+       * <code>optional int32 player_slot = 1 [default = -1];</code>
+       */
+      public boolean hasPlayerSlot() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 player_slot = 1 [default = -1];</code>
+       */
+      public int getPlayerSlot() {
+        return playerSlot_;
+      }
+      /**
+       * <code>optional int32 player_slot = 1 [default = -1];</code>
+       */
+      public Builder setPlayerSlot(int value) {
+        bitField0_ |= 0x00000001;
+        playerSlot_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 player_slot = 1 [default = -1];</code>
+       */
+      public Builder clearPlayerSlot() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        playerSlot_ = -1;
+        onChanged();
+        return this;
+      }
+
+      private float gameTime_ ;
+      /**
+       * <code>optional float game_time = 2;</code>
+       */
+      public boolean hasGameTime() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional float game_time = 2;</code>
+       */
+      public float getGameTime() {
+        return gameTime_;
+      }
+      /**
+       * <code>optional float game_time = 2;</code>
+       */
+      public Builder setGameTime(float value) {
+        bitField0_ |= 0x00000002;
+        gameTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float game_time = 2;</code>
+       */
+      public Builder clearGameTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        gameTime_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private boolean allChat_ ;
+      /**
+       * <code>optional bool all_chat = 3;</code>
+       */
+      public boolean hasAllChat() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional bool all_chat = 3;</code>
+       */
+      public boolean getAllChat() {
+        return allChat_;
+      }
+      /**
+       * <code>optional bool all_chat = 3;</code>
+       */
+      public Builder setAllChat(boolean value) {
+        bitField0_ |= 0x00000004;
+        allChat_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool all_chat = 3;</code>
+       */
+      public Builder clearAllChat() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        allChat_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean typing_ ;
+      /**
+       * <code>optional bool typing = 4;</code>
+       */
+      public boolean hasTyping() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional bool typing = 4;</code>
+       */
+      public boolean getTyping() {
+        return typing_;
+      }
+      /**
+       * <code>optional bool typing = 4;</code>
+       */
+      public Builder setTyping(boolean value) {
+        bitField0_ |= 0x00000008;
+        typing_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool typing = 4;</code>
+       */
+      public Builder clearTyping() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        typing_ = false;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CCitadelUserMsg_PlayerTyping)
+    }
+
+    static {
+      defaultInstance = new CCitadelUserMsg_PlayerTyping(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CCitadelUserMsg_PlayerTyping)
+  }
+
   private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMessage_Damage_descriptor;
   private static
@@ -27078,6 +37535,51 @@ public final class CitadelUserMessages {
   private static
     skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_BannedHeroes_fieldAccessorTable;
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
+    internal_static_CCitadelUserMsg_AbilitiesChanged_descriptor;
+  private static
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCitadelUserMsg_AbilitiesChanged_fieldAccessorTable;
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
+    internal_static_CCitadelUserMsg_CameraController_descriptor;
+  private static
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCitadelUserMsg_CameraController_fieldAccessorTable;
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
+    internal_static_CCitadelUserMsg_CameraController_Maintain_descriptor;
+  private static
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCitadelUserMsg_CameraController_Maintain_fieldAccessorTable;
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
+    internal_static_CCitadelUserMsg_CameraController_Approach_descriptor;
+  private static
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCitadelUserMsg_CameraController_Approach_fieldAccessorTable;
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
+    internal_static_CCitadelUserMsg_CameraController_Spring_descriptor;
+  private static
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCitadelUserMsg_CameraController_Spring_fieldAccessorTable;
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
+    internal_static_CCitadelUserMsg_CameraController_Lerp_descriptor;
+  private static
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCitadelUserMsg_CameraController_Lerp_fieldAccessorTable;
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
+    internal_static_CCitadelUserMsg_CameraController_Lag_descriptor;
+  private static
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCitadelUserMsg_CameraController_Lag_fieldAccessorTable;
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
+    internal_static_CCitadelUserMsg_CurrencyChanged_descriptor;
+  private static
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCitadelUserMsg_CurrencyChanged_fieldAccessorTable;
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
+    internal_static_CCitadelUserMsg_PlayerTyping_descriptor;
+  private static
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCitadelUserMsg_PlayerTyping_fieldAccessorTable;
 
   public static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -27090,7 +37592,7 @@ public final class CitadelUserMessages {
       "\n\032citadel_usermessages.proto\032\035networkbas" +
       "etypes-common.proto\032\033networkbasetypes-de" +
       "mo.proto\032\023gameevents-s2.proto\032\037citadel_g" +
-      "cmessages_common.proto\"\366\005\n\032CCitadelUserM" +
+      "cmessages_common.proto\"\221\006\n\032CCitadelUserM" +
       "essage_Damage\022\016\n\006damage\030\001 \001(\005\022\035\n\025pre_dam" +
       "age_deprecated\030\002 \001(\005\022\014\n\004type\030\003 \001(\005\022\024\n\014ci" +
       "tadel_type\030\004 \001(\005\022\033\n\006origin\030\005 \001(\0132\013.CMsgV" +
@@ -27109,149 +37611,226 @@ public final class CitadelUserMessages {
       "Vector\022\031\n\021is_secondary_stat\030\030 \001(\010\022\025\n\reff",
       "ectiveness\030\031 \001(\002\022\023\n\013crit_damage\030\032 \001(\002\022\022\n" +
       "\npre_damage\030\033 \001(\002\022\027\n\017damage_absorbed\030\034 \001" +
-      "(\002\022\023\n\013server_tick\030\035 \001(\005\"\325\001\n\016PingCommonDa" +
-      "ta\022\027\n\017ping_message_id\030\001 \001(\r\022\"\n\rping_loca" +
-      "tion\030\002 \001(\0132\013.CMsgVector\022\036\n\014entity_index\030" +
-      "\003 \001(\r:\01016777215\022\036\n\022sender_player_slot\030\004 " +
-      "\001(\005:\002-1\022\026\n\016speech_concept\030\005 \001(\005\022\027\n\017respo" +
-      "nse_chosen\030\006 \001(\t\022\025\n\rcooldown_time\030\007 \001(\002\"" +
-      "\267\002\n\027CCitadelUserMsg_MapPing\022\"\n\tping_data" +
-      "\030\001 \002(\0132\017.PingCommonData\022\022\n\nevent_type\030\002 ",
-      "\001(\r\022`\n\032ping_marker_and_sound_info\030\003 \001(\0162" +
-      "\026.ChatMsgPingMarkerInfo:$k_EPingMarkerIn" +
-      "fo_ShowMarkerAndSound\022\033\n\023pinged_enemy_en" +
-      "tity\030\004 \001(\010\022\033\n\023pinged_entity_class\030\005 \001(\r\022" +
-      "\027\n\017is_minimap_ping\030\006 \001(\010\022\030\n\020pinged_hero_" +
-      "name\030\007 \001(\t\022\025\n\ris_blind_ping\030\010 \001(\010\"\360\001\n\"CC" +
-      "itadelUserMsg_TriggerDamageFlash\022!\n\025enti" +
-      "ndex_flash_victim\030\001 \001(\005:\002-1\022#\n\027entindex_" +
-      "flash_attacker\030\002 \001(\005:\002-1\022\037\n\027entindex_fla" +
-      "sh_hitgroup\030\003 \001(\005\022\023\n\013flash_value\030\004 \001(\r\022\022",
-      "\n\nflash_type\030\005 \001(\r\022\023\n\013flash_flags\030\006 \001(\r\022" +
-      "#\n\016flash_position\030\007 \001(\0132\013.CMsgVector\"\330\001\n" +
-      "\031CCitadelUserMsg_ChatWheel\022\027\n\017chat_messa" +
-      "ge_id\030\001 \001(\r\022\027\n\013player_slot\030\002 \001(\005:\002-1\022\031\n\r" +
-      "pawn_entindex\030\003 \001(\005:\002-1\022\022\n\naccount_id\030\004 " +
-      "\001(\r\022\017\n\007hero_id\030\005 \001(\r\022\017\n\007param_1\030\006 \001(\t\0228\n" +
-      "\nlane_color\030\007 \001(\0162\016.CMsgLaneColor:\024k_ELa" +
-      "neColor_Invalid\"\214\001\n\027CCitadelUserMsg_Chat" +
-      "Msg\022\027\n\013player_slot\030\001 \001(\005:\002-1\022\014\n\004text\030\002 \001" +
-      "(\t\022\020\n\010all_chat\030\003 \001(\010\0228\n\nlane_color\030\004 \001(\016",
-      "2\016.CMsgLaneColor:\024k_ELaneColor_Invalid\"9" +
-      "\n CCitadelUserMsg_PostMatchDetails\022\025\n\rma" +
-      "tch_details\030\001 \001(\014\"\215\001\n\031CCitadelUserMsg_Ch" +
-      "atEvent\022J\n\004type\030\001 \001(\0162\024.ECitadelChatMess" +
-      "age:&CITADEL_CHAT_MESSAGE_UNPAUSE_COUNTD" +
-      "OWN\022\016\n\006values\030\002 \003(\r\022\024\n\014player_slots\030\003 \003(" +
-      "\005\"\345\001\n\032CCitadelUserMsg_HeroKilled\022\033\n\017enti" +
-      "ndex_victim\030\001 \001(\005:\002-1\022\036\n\022entindex_inflic" +
-      "tor\030\002 \001(\005:\002-1\022\035\n\021entindex_attacker\030\003 \001(\005" +
-      ":\002-1\022\032\n\022entindex_assisters\030\004 \003(\005\022\033\n\017enti",
-      "ndex_scorer\030\005 \001(\005:\002-1\022\026\n\016respawn_reason\030" +
-      "\006 \001(\005\022\032\n\022victim_team_number\030\007 \001(\005\"\241\001\n*CC" +
-      "itadelEntityMsg_BreakablePropSpawnDebris" +
-      "\022\037\n\nentity_msg\030\001 \001(\0132\013.CEntityMsg\022\037\n\ndam" +
-      "age_pos\030\002 \001(\0132\013.CMsgVector\022\016\n\006damage\030\003 \001" +
-      "(\002\022!\n\014damage_force\030\004 \001(\0132\013.CMsgVector\"\375\001" +
-      "\n\"CCitadelUserMsg_PostProcessingAnim\022\032\n\016" +
-      "entindex_owner\030\001 \001(\005:\002-1\022\030\n\020clear_all_st" +
-      "ates\030\002 \001(\010\022>\n\005state\030\003 \001(\0162\031.PostProcessi" +
-      "ngGameStates:\024PostProcState_Killed\022\022\n\nst",
-      "art_time\030\004 \001(\002\022\024\n\014fade_in_time\030\005 \001(\002\022\021\n\t" +
-      "hold_time\030\006 \001(\002\022\025\n\rfade_out_time\030\007 \001(\002\022\r" +
-      "\n\005scale\030\010 \001(\002\"\212\001\n!CCitadelUserMessage_Ab" +
-      "ilityNotify\022\033\n\017entindex_victim\030\001 \001(\005:\002-1" +
-      "\022\035\n\021entindex_attacker\030\002 \001(\005:\002-1\022\022\n\nabili" +
-      "ty_id\030\003 \001(\r\022\025\n\rstatus_impact\030\004 \001(\r\"I\n\034CC" +
-      "itadelUserMessage_GameOver\022\024\n\014winning_te" +
-      "am\030\001 \001(\005\022\023\n\013just_a_test\030\002 \001(\010\"j\n*CCitade" +
-      "lUserMsg_ParticipantStartSoundEvent\022&\n\005e" +
-      "vent\030\001 \002(\0132\027.CMsgSosStartSoundEvent\022\024\n\014p",
-      "layer_slots\030\002 \003(\005\"h\n)CCitadelUserMsg_Par" +
-      "ticipantStopSoundEvent\022%\n\005event\030\001 \002(\0132\026." +
-      "CMsgSosStopSoundEvent\022\024\n\014player_slots\030\002 " +
-      "\003(\005\"p\n-CCitadelUserMsg_ParticipantStopSo" +
-      "undEventHash\022)\n\005event\030\001 \002(\0132\032.CMsgSosSto" +
-      "pSoundEventHash\022\024\n\014player_slots\030\002 \003(\005\"r\n" +
-      ".CCitadelUserMsg_ParticipantSetSoundEven" +
-      "tParams\022*\n\005event\030\001 \002(\0132\033.CMsgSosSetSound" +
-      "EventParams\022\024\n\014player_slots\030\002 \003(\005\"v\n0CCi" +
-      "tadelUserMsg_ParticipantSetLibraryStackF",
-      "ields\022,\n\005event\030\001 \002(\0132\035.CMsgSosSetLibrary" +
-      "StackFields\022\024\n\014player_slots\030\002 \003(\005\"\204\002\n\032CC" +
-      "itadelUserMsg_BossKilled\022\026\n\016objective_te" +
-      "am\030\001 \001(\005\022\035\n\025objective_mask_change\030\002 \001(\005\022" +
-      "\037\n\rentity_killed\030\003 \002(\r:\01016777215\022\033\n\023enti" +
-      "ty_killed_class\030\004 \002(\005\022\037\n\rentity_killer\030\005" +
-      " \002(\r:\01016777215\022\020\n\010gametime\030\006 \002(\002\022\030\n\020boss" +
-      "es_remaining\030\007 \001(\005\022$\n\017entity_position\030\010 " +
-      "\001(\0132\013.CMsgVector\"m\n\033CCitadelUserMsg_Boss" +
-      "Damaged\022\026\n\016objective_team\030\001 \001(\005\022\024\n\014objec",
-      "tive_id\030\002 \001(\005\022 \n\016entity_damaged\030\003 \001(\r:\0101" +
-      "6777215\" \n\036CCitadelUserMsg_MidBossSpawne" +
-      "d\"y\n\033CCitadelUserMsg_RejuvStatus\022\024\n\014kill" +
-      "ing_team\030\001 \001(\005\022\035\n\013player_pawn\030\002 \001(\r:\010167" +
-      "77215\022\021\n\tuser_team\030\003 \001(\005\022\022\n\nevent_type\030\004" +
-      " \001(\005\"\221\001\n\032CCitadelUserMsg_KillStreak\022\035\n\013p" +
-      "layer_pawn\030\001 \001(\r:\01016777215\022\021\n\tnum_kills\030" +
-      "\002 \001(\005\022\026\n\016is_first_blood\030\003 \001(\010\022\024\n\014streak_" +
-      "ended\030\004 \001(\010\022\023\n\010duration\030\005 \001(\002:\0015\"{\n\027CCit" +
-      "adelUserMsg_TeamMsg\022\022\n\nevent_type\030\001 \001(\005\022",
-      "\023\n\013team_number\030\002 \001(\005\022\022\n\nlane_color\030\003 \001(\005" +
-      "\022#\n\021player_controller\030\004 \001(\r:\01016777215\"T\n" +
-      "\037CCitadelUserMsg_PlayerRespawned\022\035\n\013play" +
-      "er_pawn\030\001 \001(\r:\01016777215\022\022\n\nfacing_yaw\030\002 " +
-      "\001(\002\":\n\037CCitadelUserMsg_CallCheaterVote\022\027" +
-      "\n\013player_slot\030\001 \001(\005:\002-1\"R\n CCitadelUserM" +
-      "sg_FlexSlotUnlocked\022\023\n\013team_number\030\001 \001(\005" +
-      "\022\031\n\021flexslot_unlocked\030\002 \001(\005\"R\n\034CCitadelU" +
-      "serMsg_SeasonalKill\022\030\n\006killer\030\001 \001(\r:\010167" +
-      "77215\022\030\n\006victim\030\002 \001(\r:\01016777215\"C\n\032CCita",
-      "delUserMsg_MusicQueue\022\023\n\013music_state\030\001 \001" +
-      "(\005\022\020\n\010override\030\002 \001(\010\"H\n\037CCitadelUserMsg_" +
-      "AG2ParamTrigger\022\020\n\010param_id\030\001 \001(\t\022\023\n\013par" +
-      "am_value\030\002 \001(\t\"o\n\037CCitadelUserMsg_Entity" +
-      "Portalled\022\"\n\020entity_portalled\030\001 \001(\r:\010167" +
-      "77215\022(\n\020portal_transform\030\002 \001(\0132\016.CMsgTr" +
-      "ansform\"|\n\"CCitadelUserMsg_StreetBrawlSc" +
-      "oring\022\024\n\014scoring_team\030\001 \001(\005\022\023\n\013just_a_te" +
-      "st\030\002 \001(\010\022\026\n\016sapphire_score\030\003 \001(\005\022\023\n\013ambe" +
-      "r_score\030\004 \001(\005\"\261\001\n#CCitadelUserMsg_HudGam",
-      "eAnnouncement\022\027\n\017title_locstring\030\001 \001(\t\022\035" +
-      "\n\025description_locstring\030\002 \001(\t\022\021\n\tclassna" +
-      "me\030\003 \003(\t\022\034\n\024dialog_variable_name\030\004 \003(\t\022!" +
-      "\n\031dialog_variable_locstring\030\005 \003(\t\"h\n!CCi" +
-      "tadelUserMsg_ItemDraftReaction\022\"\n\tping_d" +
-      "ata\030\001 \001(\0132\017.PingCommonData\022\014\n\004rare\030\002 \001(\010" +
-      "\022\021\n\tlegendary\030\003 \001(\010\"7\n\034CCitadelUserMsg_B" +
-      "annedHeroes\022\027\n\017banned_hero_ids\030\001 \003(\r*\203\002\n" +
-      "\025ChatMsgPingMarkerInfo\022(\n$k_EPingMarkerI" +
-      "nfo_ShowMarkerAndSound\020\000\022(\n$k_EPingMarke",
-      "rInfo_HideMarkerAndSound\020\001\022(\n$k_EPingMar" +
-      "kerInfo_ShowMarkerOnSender\020\002\022$\n k_EPingM" +
-      "arkerInfo_OnlyShowMarker\020\003\022#\n\037k_EPingMar" +
-      "kerInfo_OnlyPlaySound\020\004\022!\n\035k_EPingMarker" +
-      "Info_OnlyMiniMap\020\005*\231\004\n\023ECitadelChatMessa" +
-      "ge\022*\n&CITADEL_CHAT_MESSAGE_UNPAUSE_COUNT" +
-      "DOWN\020\001\022!\n\035CITADEL_CHAT_MESSAGE_UNPAUSED\020" +
-      "\002\022&\n\"CITADEL_CHAT_MESSAGE_AUTO_UNPAUSED\020" +
-      "\003\022(\n$CITADEL_CHAT_MESSAGE_PAUSE_COUNTDOW" +
-      "N\020\004\022\037\n\033CITADEL_CHAT_MESSAGE_PAUSED\020\005\022\"\n\036",
-      "CITADEL_CHAT_MESSAGE_YOUPAUSED\020\006\022\"\n\036CITA" +
-      "DEL_CHAT_MESSAGE_CANTPAUSE\020\007\022(\n$CITADEL_" +
-      "CHAT_MESSAGE_CANTUNPAUSETEAM\020\010\022%\n!CITADE" +
-      "L_CHAT_MESSAGE_NOPAUSESLEFT\020\t\022%\n!CITADEL" +
-      "_CHAT_MESSAGE_CANTPAUSEYET\020\n\022*\n&CITADEL_" +
-      "CHAT_MESSAGE_PREGAME_COUNTDOWN\020\013\022)\n%CITA" +
-      "DEL_CHAT_MESSAGE_NOTEAMPAUSESLEFT\020\014\022)\n%C" +
-      "ITADEL_CHAT_MESSAGE_COMMS_RESTRICTED\020\r*\320" +
-      "\001\n\030PostProcessingGameStates\022\030\n\024PostProcS" +
-      "tate_Killed\020\000\022\027\n\023PostProcState_Black\020\001\022\031",
-      "\n\025PostProcState_Blinded\020\002\022\037\n\033PostProcSta" +
-      "te_ShivPossessed\020\003\022\'\n#PostProcState_Drif" +
-      "terDarknessCaster\020\004\022\034\n\030PostProcState_Mat" +
-      "chIntro\020\005B=\n&skadistats.clarity.wire.dea" +
-      "dlock.protoB\023CitadelUserMessages"
+      "(\002\022\023\n\013server_tick\030\035 \001(\005\022\031\n\021attacker_subc" +
+      "lass\030\037 \001(\r\"\326\002\n\016PingCommonData\022\027\n\017ping_me" +
+      "ssage_id\030\001 \001(\r\022\"\n\rping_location\030\002 \001(\0132\013." +
+      "CMsgVector\022\036\n\014entity_index\030\003 \001(\r:\010167772" +
+      "15\022\036\n\022sender_player_slot\030\004 \001(\005:\002-1\022\026\n\016sp" +
+      "eech_concept\030\005 \001(\005\022\027\n\017response_chosen\030\006 " +
+      "\001(\t\022\025\n\rcooldown_time\030\007 \001(\002\0228\n\nlane_color" +
+      "\030\010 \001(\0162\016.CMsgLaneColor:\024k_ELaneColor_Inv",
+      "alid\022\026\n\016ping_anim_type\030\t \001(\005\022\022\n\nability_" +
+      "id\030\n \001(\r\022\031\n\021is_corrupted_item\030\013 \001(\010\"\267\002\n\027" +
+      "CCitadelUserMsg_MapPing\022\"\n\tping_data\030\001 \002" +
+      "(\0132\017.PingCommonData\022\022\n\nevent_type\030\002 \001(\r\022" +
+      "`\n\032ping_marker_and_sound_info\030\003 \001(\0162\026.Ch" +
+      "atMsgPingMarkerInfo:$k_EPingMarkerInfo_S" +
+      "howMarkerAndSound\022\033\n\023pinged_enemy_entity" +
+      "\030\004 \001(\010\022\033\n\023pinged_entity_class\030\005 \001(\r\022\027\n\017i" +
+      "s_minimap_ping\030\006 \001(\010\022\030\n\020pinged_hero_name" +
+      "\030\007 \001(\t\022\025\n\ris_blind_ping\030\010 \001(\010\"\360\001\n\"CCitad",
+      "elUserMsg_TriggerDamageFlash\022!\n\025entindex" +
+      "_flash_victim\030\001 \001(\005:\002-1\022#\n\027entindex_flas" +
+      "h_attacker\030\002 \001(\005:\002-1\022\037\n\027entindex_flash_h" +
+      "itgroup\030\003 \001(\005\022\023\n\013flash_value\030\004 \001(\r\022\022\n\nfl" +
+      "ash_type\030\005 \001(\r\022\023\n\013flash_flags\030\006 \001(\r\022#\n\016f" +
+      "lash_position\030\007 \001(\0132\013.CMsgVector\"\330\001\n\031CCi" +
+      "tadelUserMsg_ChatWheel\022\027\n\017chat_message_i" +
+      "d\030\001 \001(\r\022\027\n\013player_slot\030\002 \001(\005:\002-1\022\031\n\rpawn" +
+      "_entindex\030\003 \001(\005:\002-1\022\022\n\naccount_id\030\004 \001(\r\022" +
+      "\017\n\007hero_id\030\005 \001(\r\022\017\n\007param_1\030\006 \001(\t\0228\n\nlan",
+      "e_color\030\007 \001(\0162\016.CMsgLaneColor:\024k_ELaneCo" +
+      "lor_Invalid\"\214\001\n\027CCitadelUserMsg_ChatMsg\022" +
+      "\027\n\013player_slot\030\001 \001(\005:\002-1\022\014\n\004text\030\002 \001(\t\022\020" +
+      "\n\010all_chat\030\003 \001(\010\0228\n\nlane_color\030\004 \001(\0162\016.C" +
+      "MsgLaneColor:\024k_ELaneColor_Invalid\"9\n CC" +
+      "itadelUserMsg_PostMatchDetails\022\025\n\rmatch_" +
+      "details\030\001 \001(\014\"\215\001\n\031CCitadelUserMsg_ChatEv" +
+      "ent\022J\n\004type\030\001 \001(\0162\024.ECitadelChatMessage:" +
+      "&CITADEL_CHAT_MESSAGE_UNPAUSE_COUNTDOWN\022" +
+      "\016\n\006values\030\002 \003(\r\022\024\n\014player_slots\030\003 \003(\005\"\227\002",
+      "\n\032CCitadelUserMsg_HeroKilled\022\033\n\017entindex" +
+      "_victim\030\001 \001(\005:\002-1\022\036\n\022entindex_inflictor\030" +
+      "\002 \001(\005:\002-1\022\035\n\021entindex_attacker\030\003 \001(\005:\002-1" +
+      "\022\032\n\022entindex_assisters\030\004 \003(\005\022\033\n\017entindex" +
+      "_scorer\030\005 \001(\005:\002-1\022\026\n\016respawn_reason\030\006 \001(" +
+      "\005\022\032\n\022victim_team_number\030\007 \001(\005\022\025\n\rkillfee" +
+      "d_gold\030\010 \001(\005\022\031\n\021killer_ability_id\030\t \001(\r\"" +
+      "\267\001\n*CCitadelEntityMsg_BreakablePropSpawn" +
+      "Debris\022\037\n\nentity_msg\030\001 \001(\0132\013.CEntityMsg\022" +
+      "\037\n\ndamage_pos\030\002 \001(\0132\013.CMsgVector\022\016\n\006dama",
+      "ge\030\003 \001(\002\022!\n\014damage_force\030\004 \001(\0132\013.CMsgVec" +
+      "tor\022\024\n\014radial_force\030\005 \001(\002\"\375\001\n\"CCitadelUs" +
+      "erMsg_PostProcessingAnim\022\032\n\016entindex_own" +
+      "er\030\001 \001(\005:\002-1\022\030\n\020clear_all_states\030\002 \001(\010\022>" +
+      "\n\005state\030\003 \001(\0162\031.PostProcessingGameStates" +
+      ":\024PostProcState_Killed\022\022\n\nstart_time\030\004 \001" +
+      "(\002\022\024\n\014fade_in_time\030\005 \001(\002\022\021\n\thold_time\030\006 " +
+      "\001(\002\022\025\n\rfade_out_time\030\007 \001(\002\022\r\n\005scale\030\010 \001(" +
+      "\002\"\212\001\n!CCitadelUserMessage_AbilityNotify\022" +
+      "\033\n\017entindex_victim\030\001 \001(\005:\002-1\022\035\n\021entindex",
+      "_attacker\030\002 \001(\005:\002-1\022\022\n\nability_id\030\003 \001(\r\022" +
+      "\025\n\rstatus_impact\030\004 \001(\r\"I\n\034CCitadelUserMe" +
+      "ssage_GameOver\022\024\n\014winning_team\030\001 \001(\005\022\023\n\013" +
+      "just_a_test\030\002 \001(\010\"j\n*CCitadelUserMsg_Par" +
+      "ticipantStartSoundEvent\022&\n\005event\030\001 \002(\0132\027" +
+      ".CMsgSosStartSoundEvent\022\024\n\014player_slots\030" +
+      "\002 \003(\005\"h\n)CCitadelUserMsg_ParticipantStop" +
+      "SoundEvent\022%\n\005event\030\001 \002(\0132\026.CMsgSosStopS" +
+      "oundEvent\022\024\n\014player_slots\030\002 \003(\005\"p\n-CCita" +
+      "delUserMsg_ParticipantStopSoundEventHash",
+      "\022)\n\005event\030\001 \002(\0132\032.CMsgSosStopSoundEventH" +
+      "ash\022\024\n\014player_slots\030\002 \003(\005\"r\n.CCitadelUse" +
+      "rMsg_ParticipantSetSoundEventParams\022*\n\005e" +
+      "vent\030\001 \002(\0132\033.CMsgSosSetSoundEventParams\022" +
+      "\024\n\014player_slots\030\002 \003(\005\"v\n0CCitadelUserMsg" +
+      "_ParticipantSetLibraryStackFields\022,\n\005eve" +
+      "nt\030\001 \002(\0132\035.CMsgSosSetLibraryStackFields\022" +
+      "\024\n\014player_slots\030\002 \003(\005\"\266\002\n\032CCitadelUserMs" +
+      "g_BossKilled\022\026\n\016objective_team\030\001 \001(\005\022\035\n\025" +
+      "objective_mask_change\030\002 \001(\005\022\037\n\rentity_ki",
+      "lled\030\003 \002(\r:\01016777215\022\033\n\023entity_killed_cl" +
+      "ass\030\004 \002(\005\022\037\n\rentity_killer\030\005 \002(\r:\010167772" +
+      "15\022\020\n\010gametime\030\006 \002(\002\022\030\n\020bosses_remaining" +
+      "\030\007 \001(\005\022$\n\017entity_position\030\010 \001(\0132\013.CMsgVe" +
+      "ctor\022\025\n\rkillfeed_gold\030\t \001(\005\022\031\n\021killer_ab" +
+      "ility_id\030\n \001(\r\"m\n\033CCitadelUserMsg_BossDa" +
+      "maged\022\026\n\016objective_team\030\001 \001(\005\022\024\n\014objecti" +
+      "ve_id\030\002 \001(\005\022 \n\016entity_damaged\030\003 \001(\r:\010167" +
+      "77215\" \n\036CCitadelUserMsg_MidBossSpawned\"" +
+      "y\n\033CCitadelUserMsg_RejuvStatus\022\024\n\014killin",
+      "g_team\030\001 \001(\005\022\035\n\013player_pawn\030\002 \001(\r:\01016777" +
+      "215\022\021\n\tuser_team\030\003 \001(\005\022\022\n\nevent_type\030\004 \001" +
+      "(\005\"\221\001\n\032CCitadelUserMsg_KillStreak\022\035\n\013pla" +
+      "yer_pawn\030\001 \001(\r:\01016777215\022\021\n\tnum_kills\030\002 " +
+      "\001(\005\022\026\n\016is_first_blood\030\003 \001(\010\022\024\n\014streak_en" +
+      "ded\030\004 \001(\010\022\023\n\010duration\030\005 \001(\002:\0015\"\222\001\n\027CCita" +
+      "delUserMsg_TeamMsg\022\022\n\nevent_type\030\001 \001(\005\022\023" +
+      "\n\013team_number\030\002 \001(\005\022\022\n\nlane_color\030\003 \001(\005\022" +
+      "#\n\021player_controller\030\004 \001(\r:\01016777215\022\025\n\r" +
+      "killfeed_gold\030\005 \001(\005\"l\n\037CCitadelUserMsg_P",
+      "layerRespawned\022\035\n\013player_pawn\030\001 \001(\r:\010167" +
+      "77215\022\022\n\nfacing_yaw\030\002 \001(\002\022\026\n\016respawn_rea" +
+      "son\030\003 \001(\r\":\n\037CCitadelUserMsg_CallCheater" +
+      "Vote\022\027\n\013player_slot\030\001 \001(\005:\002-1\"R\n CCitade" +
+      "lUserMsg_FlexSlotUnlocked\022\023\n\013team_number" +
+      "\030\001 \001(\005\022\031\n\021flexslot_unlocked\030\002 \001(\005\"R\n\034CCi" +
+      "tadelUserMsg_SeasonalKill\022\030\n\006killer\030\001 \001(" +
+      "\r:\01016777215\022\030\n\006victim\030\002 \001(\r:\01016777215\"C\n" +
+      "\032CCitadelUserMsg_MusicQueue\022\023\n\013music_sta" +
+      "te\030\001 \001(\005\022\020\n\010override\030\002 \001(\010\"H\n\037CCitadelUs",
+      "erMsg_AG2ParamTrigger\022\020\n\010param_id\030\001 \001(\t\022" +
+      "\023\n\013param_value\030\002 \001(\t\"o\n\037CCitadelUserMsg_" +
+      "EntityPortalled\022\"\n\020entity_portalled\030\001 \001(" +
+      "\r:\01016777215\022(\n\020portal_transform\030\002 \001(\0132\016." +
+      "CMsgTransform\"|\n\"CCitadelUserMsg_StreetB" +
+      "rawlScoring\022\024\n\014scoring_team\030\001 \001(\005\022\023\n\013jus" +
+      "t_a_test\030\002 \001(\010\022\026\n\016sapphire_score\030\003 \001(\005\022\023" +
+      "\n\013amber_score\030\004 \001(\005\"\250\002\n#CCitadelUserMsg_" +
+      "HudGameAnnouncement\022\027\n\017title_locstring\030\001" +
+      " \001(\t\022\035\n\025description_locstring\030\002 \001(\t\022\021\n\tc",
+      "lassname\030\003 \003(\t\022\034\n\024dialog_variable_name\030\004" +
+      " \003(\t\022!\n\031dialog_variable_locstring\030\005 \003(\t\022" +
+      "\031\n\021duration_override\030\006 \001(\002\022\025\n\rsnippet_pa" +
+      "nel\030\007 \001(\t\022 \n\030dialog_variable_int_name\030\010 " +
+      "\003(\t\022!\n\031dialog_variable_int_value\030\t \003(\005\"h" +
+      "\n!CCitadelUserMsg_ItemDraftReaction\022\"\n\tp" +
+      "ing_data\030\001 \001(\0132\017.PingCommonData\022\014\n\004rare\030" +
+      "\002 \001(\010\022\021\n\tlegendary\030\003 \001(\010\"7\n\034CCitadelUser" +
+      "Msg_BannedHeroes\022\027\n\017banned_hero_ids\030\001 \003(" +
+      "\r\"\245\002\n CCitadelUserMsg_AbilitiesChanged\022!",
+      "\n\025purchaser_player_slot\030\001 \001(\005:\002-1\022\022\n\nabi" +
+      "lity_id\030\002 \001(\r\022B\n\006change\030\003 \001(\0162(.CCitadel" +
+      "UserMsg_AbilitiesChanged.Change:\010EInvali" +
+      "d\"\205\001\n\006Change\022\025\n\010EInvalid\020\377\377\377\377\377\377\377\377\377\001\022\016\n\nE" +
+      "Purchased\020\000\022\r\n\tEUpgraded\020\001\022\t\n\005ESold\020\002\022\034\n" +
+      "\030ESwappedActivatedAbility\020\003\022\016\n\nELeveledU" +
+      "p\020\004\022\014\n\010EFailure\020\005\"\331\n\n CCitadelUserMsg_Ca" +
+      "meraController\022.\n\006action\030\001 \001(\0162\r.CameraA" +
+      "ction:\017k_EAction_AddOp\0229\n\toperation\030\002 \001(" +
+      "\0162\020.CameraOperation:\024k_ECameraOp_Maintai",
+      "n\0221\n\005param\030\003 \001(\0162\014.CameraParam:\024k_EParam" +
+      "_ClearAllOps\022D\n\nparam_mode\030\014 \001(\0162\020.Camer" +
+      "aParamMode:\036k_EParamMode_AllowInOneConte" +
+      "xt\022\r\n\005delay\030\004 \001(\002\022\027\n\017relative_values\030\013 \001" +
+      "(\010\022\031\n\021context_symbol_id\030\005 \001(\r\022\023\n\010priorit" +
+      "y\030\r \001(\r:\0011\022\035\n\013target_pawn\030\016 \001(\r:\0101677721" +
+      "5\022<\n\010maintain\030\006 \001(\0132*.CCitadelUserMsg_Ca" +
+      "meraController.Maintain\022<\n\010approach\030\007 \001(" +
+      "\0132*.CCitadelUserMsg_CameraController.App" +
+      "roach\0228\n\006spring\030\010 \001(\0132(.CCitadelUserMsg_",
+      "CameraController.Spring\0224\n\004lerp\030\t \001(\0132&." +
+      "CCitadelUserMsg_CameraController.Lerp\0222\n" +
+      "\003lag\030\n \001(\0132%.CCitadelUserMsg_CameraContr" +
+      "oller.Lag\032\037\n\010Maintain\022\023\n\010duration\030\001 \001(\002:" +
+      "\0010\032\304\001\n\010Approach\022\022\n\005speed\030\001 \001(\002:\003600\022\032\n\rd" +
+      "efault_speed\030\002 \001(\002:\003600\022\032\n\014acceleration\030" +
+      "\003 \001(\002:\0041000\022\027\n\014min_duration\030\004 \001(\002:\0010\022\026\n\016" +
+      "approach_float\030\005 \001(\002\022$\n\017approach_vector\030" +
+      "\006 \001(\0132\013.CMsgVector\022\025\n\rchase_default\030\007 \001(" +
+      "\010\032\216\001\n\006Spring\022\033\n\017spring_strength\030\001 \001(\002:\0021",
+      "0\022\024\n\tmin_speed\030\004 \001(\002:\0010\022\027\n\014max_duration\030" +
+      "\005 \001(\002:\0010\022\024\n\014target_float\030\006 \001(\002\022\"\n\rtarget" +
+      "_vector\030\007 \001(\0132\013.CMsgVector\032\243\001\n\004Lerp\022\023\n\013s" +
+      "tart_float\030\001 \001(\002\022!\n\014start_vector\030\002 \001(\0132\013" +
+      ".CMsgVector\022\021\n\tend_float\030\003 \001(\002\022\037\n\nend_ve" +
+      "ctor\030\004 \001(\0132\013.CMsgVector\022\014\n\004bias\030\005 \001(\002\022\014\n" +
+      "\004gain\030\006 \001(\002\022\023\n\010duration\030\007 \001(\002:\0011\032\232\001\n\003Lag" +
+      "\022\024\n\014min_duration\030\001 \001(\002\022\020\n\010lag_time\030\002 \001(\002" +
+      "\022\021\n\tmax_speed\030\003 \001(\002\022\027\n\017spring_strength\030\004" +
+      " \001(\002\022?\n1increase_spring_strength_to_keep",
+      "_target_on_screen\030\005 \001(\010:\004true\"\377\001\n\037CCitad" +
+      "elUserMsg_CurrencyChanged\022\022\n\006userid\030\001 \001(" +
+      "\005:\002-1\022\025\n\rcurrency_type\030\002 \001(\005\022\027\n\017currency" +
+      "_source\030\003 \001(\005\022\r\n\005delta\030\004 \001(\005\022\024\n\014notifica" +
+      "tion\030\005 \001(\010\022\030\n\006victim\030\006 \001(\r:\01016777215\022\037\n\n" +
+      "victim_pos\030\007 \001(\0132\013.CMsgVector\022\021\n\tplaysou" +
+      "nd\030\010 \001(\005\022\022\n\nability_id\030\t \001(\r\022\021\n\tnew_valu" +
+      "e\030\n \001(\r\"l\n\034CCitadelUserMsg_PlayerTyping\022" +
+      "\027\n\013player_slot\030\001 \001(\005:\002-1\022\021\n\tgame_time\030\002 " +
+      "\001(\002\022\020\n\010all_chat\030\003 \001(\010\022\016\n\006typing\030\004 \001(\010*\262\002",
+      "\n\025ChatMsgPingMarkerInfo\022(\n$k_EPingMarker" +
+      "Info_ShowMarkerAndSound\020\000\022(\n$k_EPingMark" +
+      "erInfo_HideMarkerAndSound\020\001\022(\n$k_EPingMa" +
+      "rkerInfo_ShowMarkerOnSender\020\002\022$\n k_EPing" +
+      "MarkerInfo_OnlyShowMarker\020\003\022#\n\037k_EPingMa" +
+      "rkerInfo_OnlyPlaySound\020\004\022!\n\035k_EPingMarke" +
+      "rInfo_OnlyMiniMap\020\005\022-\n)k_EPingMarkerInfo" +
+      "_NoMarkerYesSoundMiniMap\020\006*\231\004\n\023ECitadelC" +
+      "hatMessage\022*\n&CITADEL_CHAT_MESSAGE_UNPAU" +
+      "SE_COUNTDOWN\020\001\022!\n\035CITADEL_CHAT_MESSAGE_U",
+      "NPAUSED\020\002\022&\n\"CITADEL_CHAT_MESSAGE_AUTO_U" +
+      "NPAUSED\020\003\022(\n$CITADEL_CHAT_MESSAGE_PAUSE_" +
+      "COUNTDOWN\020\004\022\037\n\033CITADEL_CHAT_MESSAGE_PAUS" +
+      "ED\020\005\022\"\n\036CITADEL_CHAT_MESSAGE_YOUPAUSED\020\006" +
+      "\022\"\n\036CITADEL_CHAT_MESSAGE_CANTPAUSE\020\007\022(\n$" +
+      "CITADEL_CHAT_MESSAGE_CANTUNPAUSETEAM\020\010\022%" +
+      "\n!CITADEL_CHAT_MESSAGE_NOPAUSESLEFT\020\t\022%\n" +
+      "!CITADEL_CHAT_MESSAGE_CANTPAUSEYET\020\n\022*\n&" +
+      "CITADEL_CHAT_MESSAGE_PREGAME_COUNTDOWN\020\013" +
+      "\022)\n%CITADEL_CHAT_MESSAGE_NOTEAMPAUSESLEF",
+      "T\020\014\022)\n%CITADEL_CHAT_MESSAGE_COMMS_RESTRI" +
+      "CTED\020\r*\320\001\n\030PostProcessingGameStates\022\030\n\024P" +
+      "ostProcState_Killed\020\000\022\027\n\023PostProcState_B" +
+      "lack\020\001\022\031\n\025PostProcState_Blinded\020\002\022\037\n\033Pos" +
+      "tProcState_ShivPossessed\020\003\022\'\n#PostProcSt" +
+      "ate_DrifterDarknessCaster\020\004\022\034\n\030PostProcS" +
+      "tate_MatchIntro\020\005*`\n\014CameraAction\022\023\n\017k_E" +
+      "Action_AddOp\020\000\022\031\n\025k_EAction_ClearAllOps\020" +
+      "\001\022 \n\034k_EAction_ClearOpsForContext\020\002*\210\001\n\017" +
+      "CameraOperation\022\030\n\024k_ECameraOp_Maintain\020",
+      "\002\022\030\n\024k_ECameraOp_Approach\020\003\022\026\n\022k_ECamera" +
+      "Op_Spring\020\004\022\024\n\020k_ECameraOp_Lerp\020\005\022\023\n\017k_E" +
+      "CameraOp_Lag\020\006*\304\001\n\013CameraParam\022\030\n\024k_EPar" +
+      "am_ClearAllOps\020\000\022\"\n\036k_EParam_ClearAllOps" +
+      "ForContext\020\001\022\025\n\021k_EParam_Distance\020\002\022\020\n\014k" +
+      "_EParam_FOV\020\003\022\033\n\027k_EParam_TargetPosition" +
+      "\020\004\022\027\n\023k_EParam_VertOffset\020\005\022\030\n\024k_EParam_" +
+      "HorizOffset\020\006*_\n\017CameraParamMode\022\"\n\036k_EP" +
+      "aramMode_AllowInOneContext\020\000\022(\n$k_EParam" +
+      "Mode_AllowInMultipleContexts\020\001B=\n&skadis",
+      "tats.clarity.wire.deadlock.protoB\023Citade" +
+      "lUserMessages"
     };
     skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -27274,13 +37853,13 @@ public final class CitadelUserMessages {
     internal_static_CCitadelUserMessage_Damage_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMessage_Damage_descriptor,
-        new java.lang.String[] { "Damage", "PreDamageDeprecated", "Type", "CitadelType", "Origin", "EntindexVictim", "EntindexInflictor", "EntindexAttacker", "EntindexAbility", "DamageAbsorbedDeprecated", "VictimHealthMax", "VictimHealthNew", "Flags", "AbilityId", "AttackerClass", "VictimClass", "VictimShieldMax", "VictimShieldNew", "Hits", "HealthLost", "HitgroupId", "EntindexAttackingObject", "DamageDirection", "IsSecondaryStat", "Effectiveness", "CritDamage", "PreDamage", "DamageAbsorbed", "ServerTick", });
+        new java.lang.String[] { "Damage", "PreDamageDeprecated", "Type", "CitadelType", "Origin", "EntindexVictim", "EntindexInflictor", "EntindexAttacker", "EntindexAbility", "DamageAbsorbedDeprecated", "VictimHealthMax", "VictimHealthNew", "Flags", "AbilityId", "AttackerClass", "VictimClass", "VictimShieldMax", "VictimShieldNew", "Hits", "HealthLost", "HitgroupId", "EntindexAttackingObject", "DamageDirection", "IsSecondaryStat", "Effectiveness", "CritDamage", "PreDamage", "DamageAbsorbed", "ServerTick", "AttackerSubclass", });
     internal_static_PingCommonData_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_PingCommonData_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_PingCommonData_descriptor,
-        new java.lang.String[] { "PingMessageId", "PingLocation", "EntityIndex", "SenderPlayerSlot", "SpeechConcept", "ResponseChosen", "CooldownTime", });
+        new java.lang.String[] { "PingMessageId", "PingLocation", "EntityIndex", "SenderPlayerSlot", "SpeechConcept", "ResponseChosen", "CooldownTime", "LaneColor", "PingAnimType", "AbilityId", "IsCorruptedItem", });
     internal_static_CCitadelUserMsg_MapPing_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_CCitadelUserMsg_MapPing_fieldAccessorTable = new
@@ -27322,13 +37901,13 @@ public final class CitadelUserMessages {
     internal_static_CCitadelUserMsg_HeroKilled_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_HeroKilled_descriptor,
-        new java.lang.String[] { "EntindexVictim", "EntindexInflictor", "EntindexAttacker", "EntindexAssisters", "EntindexScorer", "RespawnReason", "VictimTeamNumber", });
+        new java.lang.String[] { "EntindexVictim", "EntindexInflictor", "EntindexAttacker", "EntindexAssisters", "EntindexScorer", "RespawnReason", "VictimTeamNumber", "KillfeedGold", "KillerAbilityId", });
     internal_static_CCitadelEntityMsg_BreakablePropSpawnDebris_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_CCitadelEntityMsg_BreakablePropSpawnDebris_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelEntityMsg_BreakablePropSpawnDebris_descriptor,
-        new java.lang.String[] { "EntityMsg", "DamagePos", "Damage", "DamageForce", });
+        new java.lang.String[] { "EntityMsg", "DamagePos", "Damage", "DamageForce", "RadialForce", });
     internal_static_CCitadelUserMsg_PostProcessingAnim_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_CCitadelUserMsg_PostProcessingAnim_fieldAccessorTable = new
@@ -27382,7 +37961,7 @@ public final class CitadelUserMessages {
     internal_static_CCitadelUserMsg_BossKilled_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_BossKilled_descriptor,
-        new java.lang.String[] { "ObjectiveTeam", "ObjectiveMaskChange", "EntityKilled", "EntityKilledClass", "EntityKiller", "Gametime", "BossesRemaining", "EntityPosition", });
+        new java.lang.String[] { "ObjectiveTeam", "ObjectiveMaskChange", "EntityKilled", "EntityKilledClass", "EntityKiller", "Gametime", "BossesRemaining", "EntityPosition", "KillfeedGold", "KillerAbilityId", });
     internal_static_CCitadelUserMsg_BossDamaged_descriptor =
       getDescriptor().getMessageTypes().get(19);
     internal_static_CCitadelUserMsg_BossDamaged_fieldAccessorTable = new
@@ -27412,13 +37991,13 @@ public final class CitadelUserMessages {
     internal_static_CCitadelUserMsg_TeamMsg_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_TeamMsg_descriptor,
-        new java.lang.String[] { "EventType", "TeamNumber", "LaneColor", "PlayerController", });
+        new java.lang.String[] { "EventType", "TeamNumber", "LaneColor", "PlayerController", "KillfeedGold", });
     internal_static_CCitadelUserMsg_PlayerRespawned_descriptor =
       getDescriptor().getMessageTypes().get(24);
     internal_static_CCitadelUserMsg_PlayerRespawned_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_PlayerRespawned_descriptor,
-        new java.lang.String[] { "PlayerPawn", "FacingYaw", });
+        new java.lang.String[] { "PlayerPawn", "FacingYaw", "RespawnReason", });
     internal_static_CCitadelUserMsg_CallCheaterVote_descriptor =
       getDescriptor().getMessageTypes().get(25);
     internal_static_CCitadelUserMsg_CallCheaterVote_fieldAccessorTable = new
@@ -27466,7 +38045,7 @@ public final class CitadelUserMessages {
     internal_static_CCitadelUserMsg_HudGameAnnouncement_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_HudGameAnnouncement_descriptor,
-        new java.lang.String[] { "TitleLocstring", "DescriptionLocstring", "Classname", "DialogVariableName", "DialogVariableLocstring", });
+        new java.lang.String[] { "TitleLocstring", "DescriptionLocstring", "Classname", "DialogVariableName", "DialogVariableLocstring", "DurationOverride", "SnippetPanel", "DialogVariableIntName", "DialogVariableIntValue", });
     internal_static_CCitadelUserMsg_ItemDraftReaction_descriptor =
       getDescriptor().getMessageTypes().get(33);
     internal_static_CCitadelUserMsg_ItemDraftReaction_fieldAccessorTable = new
@@ -27479,6 +38058,60 @@ public final class CitadelUserMessages {
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_BannedHeroes_descriptor,
         new java.lang.String[] { "BannedHeroIds", });
+    internal_static_CCitadelUserMsg_AbilitiesChanged_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_CCitadelUserMsg_AbilitiesChanged_fieldAccessorTable = new
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCitadelUserMsg_AbilitiesChanged_descriptor,
+        new java.lang.String[] { "PurchaserPlayerSlot", "AbilityId", "Change", });
+    internal_static_CCitadelUserMsg_CameraController_descriptor =
+      getDescriptor().getMessageTypes().get(36);
+    internal_static_CCitadelUserMsg_CameraController_fieldAccessorTable = new
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCitadelUserMsg_CameraController_descriptor,
+        new java.lang.String[] { "Action", "Operation", "Param", "ParamMode", "Delay", "RelativeValues", "ContextSymbolId", "Priority", "TargetPawn", "Maintain", "Approach", "Spring", "Lerp", "Lag", });
+    internal_static_CCitadelUserMsg_CameraController_Maintain_descriptor =
+      internal_static_CCitadelUserMsg_CameraController_descriptor.getNestedTypes().get(0);
+    internal_static_CCitadelUserMsg_CameraController_Maintain_fieldAccessorTable = new
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCitadelUserMsg_CameraController_Maintain_descriptor,
+        new java.lang.String[] { "Duration", });
+    internal_static_CCitadelUserMsg_CameraController_Approach_descriptor =
+      internal_static_CCitadelUserMsg_CameraController_descriptor.getNestedTypes().get(1);
+    internal_static_CCitadelUserMsg_CameraController_Approach_fieldAccessorTable = new
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCitadelUserMsg_CameraController_Approach_descriptor,
+        new java.lang.String[] { "Speed", "DefaultSpeed", "Acceleration", "MinDuration", "ApproachFloat", "ApproachVector", "ChaseDefault", });
+    internal_static_CCitadelUserMsg_CameraController_Spring_descriptor =
+      internal_static_CCitadelUserMsg_CameraController_descriptor.getNestedTypes().get(2);
+    internal_static_CCitadelUserMsg_CameraController_Spring_fieldAccessorTable = new
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCitadelUserMsg_CameraController_Spring_descriptor,
+        new java.lang.String[] { "SpringStrength", "MinSpeed", "MaxDuration", "TargetFloat", "TargetVector", });
+    internal_static_CCitadelUserMsg_CameraController_Lerp_descriptor =
+      internal_static_CCitadelUserMsg_CameraController_descriptor.getNestedTypes().get(3);
+    internal_static_CCitadelUserMsg_CameraController_Lerp_fieldAccessorTable = new
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCitadelUserMsg_CameraController_Lerp_descriptor,
+        new java.lang.String[] { "StartFloat", "StartVector", "EndFloat", "EndVector", "Bias", "Gain", "Duration", });
+    internal_static_CCitadelUserMsg_CameraController_Lag_descriptor =
+      internal_static_CCitadelUserMsg_CameraController_descriptor.getNestedTypes().get(4);
+    internal_static_CCitadelUserMsg_CameraController_Lag_fieldAccessorTable = new
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCitadelUserMsg_CameraController_Lag_descriptor,
+        new java.lang.String[] { "MinDuration", "LagTime", "MaxSpeed", "SpringStrength", "IncreaseSpringStrengthToKeepTargetOnScreen", });
+    internal_static_CCitadelUserMsg_CurrencyChanged_descriptor =
+      getDescriptor().getMessageTypes().get(37);
+    internal_static_CCitadelUserMsg_CurrencyChanged_fieldAccessorTable = new
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCitadelUserMsg_CurrencyChanged_descriptor,
+        new java.lang.String[] { "Userid", "CurrencyType", "CurrencySource", "Delta", "Notification", "Victim", "VictimPos", "Playsound", "AbilityId", "NewValue", });
+    internal_static_CCitadelUserMsg_PlayerTyping_descriptor =
+      getDescriptor().getMessageTypes().get(38);
+    internal_static_CCitadelUserMsg_PlayerTyping_fieldAccessorTable = new
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCitadelUserMsg_PlayerTyping_descriptor,
+        new java.lang.String[] { "PlayerSlot", "GameTime", "AllChat", "Typing", });
     skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor();
     skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.getDescriptor();
     skadistats.clarity.wire.shared.s2.proto.S2GameEvents.getDescriptor();

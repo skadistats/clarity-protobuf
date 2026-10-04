@@ -413,4 +413,5 @@ message CDOTAMatchPrivateMetadata {
     }
 
     repeated .CDOTAMatchPrivateMetadata.ContributionsCombatSegment contributions = 4;
+    repeated string contribution_unit_names = 5;
 }

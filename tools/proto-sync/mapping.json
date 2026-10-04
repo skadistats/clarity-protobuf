@@ -1,7 +1,7 @@
 {
   "_comment": "Maps clarity proto files to their upstream SteamDatabase/Protobufs source(s). For shared files, all listed upstream sources should be unioned. Default behavior: only show updates to existing messages/enums (no new items).",
   "_upstream_repo": "SteamDatabase/Protobufs",
-  "_last_synced_commit": "854ecbbe56bf5cf86b9a9728e73fb120539319e1",
+  "_last_synced_commit": "95b1384a1396ff02f23435e21ef50bd8fac64c09",
   "shared/common/network_connection-common.proto": {
     "upstream": [
       "csgo/network_connection.proto",
