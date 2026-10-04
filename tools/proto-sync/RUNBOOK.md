@@ -199,7 +199,7 @@ The registry size in the constructor (`new KindToClassMessageRegistry(N)`) must 
 | `DOTA_UM_Foo` | `CDOTAUserMsg_Foo` | `DOTAUserMessages.CDOTAUserMsg_Foo` |
 | `DOTA_EM_Foo` | `CDOTAEntityMsg_Foo` | `DOTAUserMessages.CDOTAEntityMsg_Foo` |
 | `CS_UM_Foo` | `CCSUsrMsg_Foo` | `CsCommonUserMessages.CCSUsrMsg_Foo` |
-| `k_EUserMsg_Foo` | `CCitadelUserMsg_Foo` | `CitadelUserMessages.CCitadelUserMsg_Foo` |
+| `k_EUserMsg_Foo` | `CCitadelUserMsg_Foo` or `CCitadelUserMessage_Foo` | `CitadelUserMessages.<message name>` |
 | `k_EEntityMsg_Foo` | `CCitadelEntityMsg_Foo` | `CitadelUserMessages.CCitadelEntityMsg_Foo` |
 | `UM_Foo` | `CUserMessage_Foo` | `S2UserMessages.CUserMessage_Foo` |
 | `EM_Foo` | `CEntityMessage_Foo` | `S2UserMessages.CEntityMessage_Foo` |
@@ -209,9 +209,14 @@ The registry size in the constructor (`new KindToClassMessageRegistry(N)`) must 
 **Watch out:** if new S2-only messages were placed in their own `.proto` file under `s2/` (e.g. `dota_usermessages_s2.proto` → `DOTAS2UserMessages`), then the EmbeddedPackets class references the corresponding Java outer-classname, **not** the `common` class.
 
 ### When no message definition is found upstream
-Some IDs have no proto definition (internal events and similar). These get `null`:
+The message prefix is not reliable — upstream mixes prefixes within the same file (e.g. `CCitadelUserMsg_BannedHeroes` next to `CCitadelUserMessage_ImportantAbilityUsed`). Before concluding there is no definition, search upstream by the enum name stem alone:
+```bash
+grep -rn -E '^message [A-Za-z0-9]*_ImportantAbilityUsed \{' /tmp/SteamDatabase-Protobufs
+```
+
+Some IDs really have no proto definition (internal events and similar). These get `null`:
 ```java
-// /* 355 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_MeleeHit_VALUE, null);
+// /* 367 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_CombatLogEntry_VALUE, null);
 ```
 
 ---
@@ -231,7 +236,7 @@ For every ID reported there:
 1. **Enum value** must exist in `message_id.proto` (should be the case after Step 3)
 2. **Activate the EmbeddedPackets.java line** (remove the comment) — for embedded messages
 3. **Add the DemoPackets.java line** — for top-level messages (`unknown top level message`)
-4. **Add the proto message**: take the message definition from the report section "USER MESSAGE DEFINITIONS" and insert it into the appropriate `.proto` file (in the right place: common vs. s2!)
+4. **Add the proto message**: take the message definition from the report section "USER MESSAGE DEFINITIONS" and insert it into the appropriate `.proto` file (in the right place: common vs. s2!). The report only covers changes since the baseline; a message that already existed upstream before the last sync is not in it — search upstream directly (see "When no message definition is found upstream")
 5. If the message is mapped to `null` (no proto needed), just activate the EmbeddedPackets line with `null`
 
 ---
