@@ -23149,6 +23149,637 @@ public final class CitadelUserMessages {
     // @@protoc_insertion_point(class_scope:CCitadelUserMsg_FlexSlotUnlocked)
   }
 
+  public interface CCitadelUserMessage_ItemPurchaseNotificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCitadelUserMessage_ItemPurchaseNotification)
+      skadistats.clarity.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 userid = 1 [default = -1];</code>
+     */
+    boolean hasUserid();
+    /**
+     * <code>optional int32 userid = 1 [default = -1];</code>
+     */
+    int getUserid();
+
+    /**
+     * <code>optional uint32 ability_id = 2;</code>
+     */
+    boolean hasAbilityId();
+    /**
+     * <code>optional uint32 ability_id = 2;</code>
+     */
+    int getAbilityId();
+
+    /**
+     * <code>optional bool sell = 3;</code>
+     */
+    boolean hasSell();
+    /**
+     * <code>optional bool sell = 3;</code>
+     */
+    boolean getSell();
+
+    /**
+     * <code>optional bool quickbuy = 4;</code>
+     */
+    boolean hasQuickbuy();
+    /**
+     * <code>optional bool quickbuy = 4;</code>
+     */
+    boolean getQuickbuy();
+  }
+  /**
+   * Protobuf type {@code CCitadelUserMessage_ItemPurchaseNotification}
+   */
+  public static final class CCitadelUserMessage_ItemPurchaseNotification extends
+      skadistats.clarity.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CCitadelUserMessage_ItemPurchaseNotification)
+      CCitadelUserMessage_ItemPurchaseNotificationOrBuilder {
+    // Use CCitadelUserMessage_ItemPurchaseNotification.newBuilder() to construct.
+    private CCitadelUserMessage_ItemPurchaseNotification(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CCitadelUserMessage_ItemPurchaseNotification(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CCitadelUserMessage_ItemPurchaseNotification defaultInstance;
+    public static CCitadelUserMessage_ItemPurchaseNotification getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CCitadelUserMessage_ItemPurchaseNotification getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final skadistats.clarity.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCitadelUserMessage_ItemPurchaseNotification(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              userid_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              abilityId_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              sell_ = input.readBool();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              quickbuy_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_ItemPurchaseNotification_descriptor;
+    }
+
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_ItemPurchaseNotification_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification.Builder.class);
+    }
+
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMessage_ItemPurchaseNotification> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMessage_ItemPurchaseNotification>() {
+      public CCitadelUserMessage_ItemPurchaseNotification parsePartialFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return new CCitadelUserMessage_ItemPurchaseNotification(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMessage_ItemPurchaseNotification> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int USERID_FIELD_NUMBER = 1;
+    private int userid_;
+    /**
+     * <code>optional int32 userid = 1 [default = -1];</code>
+     */
+    public boolean hasUserid() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 userid = 1 [default = -1];</code>
+     */
+    public int getUserid() {
+      return userid_;
+    }
+
+    public static final int ABILITY_ID_FIELD_NUMBER = 2;
+    private int abilityId_;
+    /**
+     * <code>optional uint32 ability_id = 2;</code>
+     */
+    public boolean hasAbilityId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional uint32 ability_id = 2;</code>
+     */
+    public int getAbilityId() {
+      return abilityId_;
+    }
+
+    public static final int SELL_FIELD_NUMBER = 3;
+    private boolean sell_;
+    /**
+     * <code>optional bool sell = 3;</code>
+     */
+    public boolean hasSell() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional bool sell = 3;</code>
+     */
+    public boolean getSell() {
+      return sell_;
+    }
+
+    public static final int QUICKBUY_FIELD_NUMBER = 4;
+    private boolean quickbuy_;
+    /**
+     * <code>optional bool quickbuy = 4;</code>
+     */
+    public boolean hasQuickbuy() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional bool quickbuy = 4;</code>
+     */
+    public boolean getQuickbuy() {
+      return quickbuy_;
+    }
+
+    private void initFields() {
+      userid_ = -1;
+      abilityId_ = 0;
+      sell_ = false;
+      quickbuy_ = false;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, userid_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeUInt32(2, abilityId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBool(3, sell_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBool(4, quickbuy_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(1, userid_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(2, abilityId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeBoolSize(3, sell_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeBoolSize(4, quickbuy_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification parseFrom(
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification parseFrom(
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification parseFrom(byte[] data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification parseFrom(
+        byte[] data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification parseFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification parseDelimitedFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCitadelUserMessage_ItemPurchaseNotification}
+     */
+    public static final class Builder extends
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCitadelUserMessage_ItemPurchaseNotification)
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotificationOrBuilder {
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_ItemPurchaseNotification_descriptor;
+      }
+
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_ItemPurchaseNotification_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        userid_ = -1;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        abilityId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sell_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        quickbuy_ = false;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_ItemPurchaseNotification_descriptor;
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification getDefaultInstanceForType() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification build() {
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification buildPartial() {
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification result = new skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.userid_ = userid_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.abilityId_ = abilityId_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.sell_ = sell_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.quickbuy_ = quickbuy_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification) {
+          return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification other) {
+        if (other == skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification.getDefaultInstance()) return this;
+        if (other.hasUserid()) {
+          setUserid(other.getUserid());
+        }
+        if (other.hasAbilityId()) {
+          setAbilityId(other.getAbilityId());
+        }
+        if (other.hasSell()) {
+          setSell(other.getSell());
+        }
+        if (other.hasQuickbuy()) {
+          setQuickbuy(other.getQuickbuy());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int userid_ = -1;
+      /**
+       * <code>optional int32 userid = 1 [default = -1];</code>
+       */
+      public boolean hasUserid() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 userid = 1 [default = -1];</code>
+       */
+      public int getUserid() {
+        return userid_;
+      }
+      /**
+       * <code>optional int32 userid = 1 [default = -1];</code>
+       */
+      public Builder setUserid(int value) {
+        bitField0_ |= 0x00000001;
+        userid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 userid = 1 [default = -1];</code>
+       */
+      public Builder clearUserid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        userid_ = -1;
+        onChanged();
+        return this;
+      }
+
+      private int abilityId_ ;
+      /**
+       * <code>optional uint32 ability_id = 2;</code>
+       */
+      public boolean hasAbilityId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional uint32 ability_id = 2;</code>
+       */
+      public int getAbilityId() {
+        return abilityId_;
+      }
+      /**
+       * <code>optional uint32 ability_id = 2;</code>
+       */
+      public Builder setAbilityId(int value) {
+        bitField0_ |= 0x00000002;
+        abilityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 ability_id = 2;</code>
+       */
+      public Builder clearAbilityId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        abilityId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean sell_ ;
+      /**
+       * <code>optional bool sell = 3;</code>
+       */
+      public boolean hasSell() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional bool sell = 3;</code>
+       */
+      public boolean getSell() {
+        return sell_;
+      }
+      /**
+       * <code>optional bool sell = 3;</code>
+       */
+      public Builder setSell(boolean value) {
+        bitField0_ |= 0x00000004;
+        sell_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool sell = 3;</code>
+       */
+      public Builder clearSell() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        sell_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean quickbuy_ ;
+      /**
+       * <code>optional bool quickbuy = 4;</code>
+       */
+      public boolean hasQuickbuy() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional bool quickbuy = 4;</code>
+       */
+      public boolean getQuickbuy() {
+        return quickbuy_;
+      }
+      /**
+       * <code>optional bool quickbuy = 4;</code>
+       */
+      public Builder setQuickbuy(boolean value) {
+        bitField0_ |= 0x00000008;
+        quickbuy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool quickbuy = 4;</code>
+       */
+      public Builder clearQuickbuy() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        quickbuy_ = false;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CCitadelUserMessage_ItemPurchaseNotification)
+    }
+
+    static {
+      defaultInstance = new CCitadelUserMessage_ItemPurchaseNotification(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CCitadelUserMessage_ItemPurchaseNotification)
+  }
+
   public interface CCitadelUserMsg_SeasonalKillOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_SeasonalKill)
       skadistats.clarity.protobuf.MessageOrBuilder {
@@ -28366,6 +28997,638 @@ public final class CitadelUserMessages {
     }
 
     // @@protoc_insertion_point(class_scope:CCitadelUserMsg_ItemDraftReaction)
+  }
+
+  public interface CCitadelUserMessage_ImportantAbilityUsedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCitadelUserMessage_ImportantAbilityUsed)
+      skadistats.clarity.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 player = 1 [default = 16777215];</code>
+     */
+    boolean hasPlayer();
+    /**
+     * <code>optional uint32 player = 1 [default = 16777215];</code>
+     */
+    int getPlayer();
+
+    /**
+     * <code>optional uint32 caster = 2 [default = 16777215];</code>
+     */
+    boolean hasCaster();
+    /**
+     * <code>optional uint32 caster = 2 [default = 16777215];</code>
+     */
+    int getCaster();
+
+    /**
+     * <code>optional string ability_name = 3;</code>
+     */
+    boolean hasAbilityName();
+    /**
+     * <code>optional string ability_name = 3;</code>
+     */
+    java.lang.String getAbilityName();
+    /**
+     * <code>optional string ability_name = 3;</code>
+     */
+    skadistats.clarity.protobuf.ByteString
+        getAbilityNameBytes();
+  }
+  /**
+   * Protobuf type {@code CCitadelUserMessage_ImportantAbilityUsed}
+   */
+  public static final class CCitadelUserMessage_ImportantAbilityUsed extends
+      skadistats.clarity.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CCitadelUserMessage_ImportantAbilityUsed)
+      CCitadelUserMessage_ImportantAbilityUsedOrBuilder {
+    // Use CCitadelUserMessage_ImportantAbilityUsed.newBuilder() to construct.
+    private CCitadelUserMessage_ImportantAbilityUsed(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CCitadelUserMessage_ImportantAbilityUsed(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CCitadelUserMessage_ImportantAbilityUsed defaultInstance;
+    public static CCitadelUserMessage_ImportantAbilityUsed getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CCitadelUserMessage_ImportantAbilityUsed getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final skadistats.clarity.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCitadelUserMessage_ImportantAbilityUsed(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              player_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              caster_ = input.readUInt32();
+              break;
+            }
+            case 26: {
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              abilityName_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_ImportantAbilityUsed_descriptor;
+    }
+
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_ImportantAbilityUsed_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed.Builder.class);
+    }
+
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMessage_ImportantAbilityUsed> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMessage_ImportantAbilityUsed>() {
+      public CCitadelUserMessage_ImportantAbilityUsed parsePartialFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return new CCitadelUserMessage_ImportantAbilityUsed(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMessage_ImportantAbilityUsed> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int PLAYER_FIELD_NUMBER = 1;
+    private int player_;
+    /**
+     * <code>optional uint32 player = 1 [default = 16777215];</code>
+     */
+    public boolean hasPlayer() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional uint32 player = 1 [default = 16777215];</code>
+     */
+    public int getPlayer() {
+      return player_;
+    }
+
+    public static final int CASTER_FIELD_NUMBER = 2;
+    private int caster_;
+    /**
+     * <code>optional uint32 caster = 2 [default = 16777215];</code>
+     */
+    public boolean hasCaster() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional uint32 caster = 2 [default = 16777215];</code>
+     */
+    public int getCaster() {
+      return caster_;
+    }
+
+    public static final int ABILITY_NAME_FIELD_NUMBER = 3;
+    private java.lang.Object abilityName_;
+    /**
+     * <code>optional string ability_name = 3;</code>
+     */
+    public boolean hasAbilityName() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string ability_name = 3;</code>
+     */
+    public java.lang.String getAbilityName() {
+      java.lang.Object ref = abilityName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          abilityName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string ability_name = 3;</code>
+     */
+    public skadistats.clarity.protobuf.ByteString
+        getAbilityNameBytes() {
+      java.lang.Object ref = abilityName_;
+      if (ref instanceof java.lang.String) {
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        abilityName_ = b;
+        return b;
+      } else {
+        return (skadistats.clarity.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      player_ = 16777215;
+      caster_ = 16777215;
+      abilityName_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeUInt32(1, player_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeUInt32(2, caster_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getAbilityNameBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(1, player_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeUInt32Size(2, caster_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeBytesSize(3, getAbilityNameBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed parseFrom(
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed parseFrom(
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed parseFrom(byte[] data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed parseFrom(
+        byte[] data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed parseFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed parseDelimitedFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCitadelUserMessage_ImportantAbilityUsed}
+     */
+    public static final class Builder extends
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCitadelUserMessage_ImportantAbilityUsed)
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsedOrBuilder {
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_ImportantAbilityUsed_descriptor;
+      }
+
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_ImportantAbilityUsed_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        player_ = 16777215;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        caster_ = 16777215;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        abilityName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_ImportantAbilityUsed_descriptor;
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed getDefaultInstanceForType() {
+        return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed build() {
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed buildPartial() {
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed result = new skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.player_ = player_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.caster_ = caster_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.abilityName_ = abilityName_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed) {
+          return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed other) {
+        if (other == skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed.getDefaultInstance()) return this;
+        if (other.hasPlayer()) {
+          setPlayer(other.getPlayer());
+        }
+        if (other.hasCaster()) {
+          setCaster(other.getCaster());
+        }
+        if (other.hasAbilityName()) {
+          bitField0_ |= 0x00000004;
+          abilityName_ = other.abilityName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int player_ = 16777215;
+      /**
+       * <code>optional uint32 player = 1 [default = 16777215];</code>
+       */
+      public boolean hasPlayer() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional uint32 player = 1 [default = 16777215];</code>
+       */
+      public int getPlayer() {
+        return player_;
+      }
+      /**
+       * <code>optional uint32 player = 1 [default = 16777215];</code>
+       */
+      public Builder setPlayer(int value) {
+        bitField0_ |= 0x00000001;
+        player_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 player = 1 [default = 16777215];</code>
+       */
+      public Builder clearPlayer() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        player_ = 16777215;
+        onChanged();
+        return this;
+      }
+
+      private int caster_ = 16777215;
+      /**
+       * <code>optional uint32 caster = 2 [default = 16777215];</code>
+       */
+      public boolean hasCaster() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional uint32 caster = 2 [default = 16777215];</code>
+       */
+      public int getCaster() {
+        return caster_;
+      }
+      /**
+       * <code>optional uint32 caster = 2 [default = 16777215];</code>
+       */
+      public Builder setCaster(int value) {
+        bitField0_ |= 0x00000002;
+        caster_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 caster = 2 [default = 16777215];</code>
+       */
+      public Builder clearCaster() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        caster_ = 16777215;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object abilityName_ = "";
+      /**
+       * <code>optional string ability_name = 3;</code>
+       */
+      public boolean hasAbilityName() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string ability_name = 3;</code>
+       */
+      public java.lang.String getAbilityName() {
+        java.lang.Object ref = abilityName_;
+        if (!(ref instanceof java.lang.String)) {
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            abilityName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ability_name = 3;</code>
+       */
+      public skadistats.clarity.protobuf.ByteString
+          getAbilityNameBytes() {
+        java.lang.Object ref = abilityName_;
+        if (ref instanceof String) {
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          abilityName_ = b;
+          return b;
+        } else {
+          return (skadistats.clarity.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ability_name = 3;</code>
+       */
+      public Builder setAbilityName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        abilityName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ability_name = 3;</code>
+       */
+      public Builder clearAbilityName() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        abilityName_ = getDefaultInstance().getAbilityName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ability_name = 3;</code>
+       */
+      public Builder setAbilityNameBytes(
+          skadistats.clarity.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        abilityName_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CCitadelUserMessage_ImportantAbilityUsed)
+    }
+
+    static {
+      defaultInstance = new CCitadelUserMessage_ImportantAbilityUsed(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CCitadelUserMessage_ImportantAbilityUsed)
   }
 
   public interface CCitadelUserMsg_BannedHeroesOrBuilder extends
@@ -37496,6 +38759,11 @@ public final class CitadelUserMessages {
     skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_FlexSlotUnlocked_fieldAccessorTable;
   private static final skadistats.clarity.protobuf.Descriptors.Descriptor
+    internal_static_CCitadelUserMessage_ItemPurchaseNotification_descriptor;
+  private static
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCitadelUserMessage_ItemPurchaseNotification_fieldAccessorTable;
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_SeasonalKill_descriptor;
   private static
     skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
@@ -37530,6 +38798,11 @@ public final class CitadelUserMessages {
   private static
     skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_ItemDraftReaction_fieldAccessorTable;
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
+    internal_static_CCitadelUserMessage_ImportantAbilityUsed_descriptor;
+  private static
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCitadelUserMessage_ImportantAbilityUsed_fieldAccessorTable;
   private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_BannedHeroes_descriptor;
   private static
@@ -37714,123 +38987,129 @@ public final class CitadelUserMessages {
       "son\030\003 \001(\r\":\n\037CCitadelUserMsg_CallCheater" +
       "Vote\022\027\n\013player_slot\030\001 \001(\005:\002-1\"R\n CCitade" +
       "lUserMsg_FlexSlotUnlocked\022\023\n\013team_number" +
-      "\030\001 \001(\005\022\031\n\021flexslot_unlocked\030\002 \001(\005\"R\n\034CCi" +
-      "tadelUserMsg_SeasonalKill\022\030\n\006killer\030\001 \001(" +
+      "\030\001 \001(\005\022\031\n\021flexslot_unlocked\030\002 \001(\005\"v\n,CCi" +
+      "tadelUserMessage_ItemPurchaseNotificatio" +
+      "n\022\022\n\006userid\030\001 \001(\005:\002-1\022\022\n\nability_id\030\002 \001(" +
+      "\r\022\014\n\004sell\030\003 \001(\010\022\020\n\010quickbuy\030\004 \001(\010\"R\n\034CCi" +
+      "tadelUserMsg_SeasonalKill\022\030\n\006killer\030\001 \001(",
       "\r:\01016777215\022\030\n\006victim\030\002 \001(\r:\01016777215\"C\n" +
       "\032CCitadelUserMsg_MusicQueue\022\023\n\013music_sta" +
-      "te\030\001 \001(\005\022\020\n\010override\030\002 \001(\010\"H\n\037CCitadelUs",
+      "te\030\001 \001(\005\022\020\n\010override\030\002 \001(\010\"H\n\037CCitadelUs" +
       "erMsg_AG2ParamTrigger\022\020\n\010param_id\030\001 \001(\t\022" +
       "\023\n\013param_value\030\002 \001(\t\"o\n\037CCitadelUserMsg_" +
       "EntityPortalled\022\"\n\020entity_portalled\030\001 \001(" +
       "\r:\01016777215\022(\n\020portal_transform\030\002 \001(\0132\016." +
       "CMsgTransform\"|\n\"CCitadelUserMsg_StreetB" +
       "rawlScoring\022\024\n\014scoring_team\030\001 \001(\005\022\023\n\013jus" +
-      "t_a_test\030\002 \001(\010\022\026\n\016sapphire_score\030\003 \001(\005\022\023" +
+      "t_a_test\030\002 \001(\010\022\026\n\016sapphire_score\030\003 \001(\005\022\023",
       "\n\013amber_score\030\004 \001(\005\"\250\002\n#CCitadelUserMsg_" +
       "HudGameAnnouncement\022\027\n\017title_locstring\030\001" +
-      " \001(\t\022\035\n\025description_locstring\030\002 \001(\t\022\021\n\tc",
+      " \001(\t\022\035\n\025description_locstring\030\002 \001(\t\022\021\n\tc" +
       "lassname\030\003 \003(\t\022\034\n\024dialog_variable_name\030\004" +
       " \003(\t\022!\n\031dialog_variable_locstring\030\005 \003(\t\022" +
       "\031\n\021duration_override\030\006 \001(\002\022\025\n\rsnippet_pa" +
       "nel\030\007 \001(\t\022 \n\030dialog_variable_int_name\030\010 " +
       "\003(\t\022!\n\031dialog_variable_int_value\030\t \003(\005\"h" +
       "\n!CCitadelUserMsg_ItemDraftReaction\022\"\n\tp" +
-      "ing_data\030\001 \001(\0132\017.PingCommonData\022\014\n\004rare\030" +
-      "\002 \001(\010\022\021\n\tlegendary\030\003 \001(\010\"7\n\034CCitadelUser" +
-      "Msg_BannedHeroes\022\027\n\017banned_hero_ids\030\001 \003(" +
-      "\r\"\245\002\n CCitadelUserMsg_AbilitiesChanged\022!",
-      "\n\025purchaser_player_slot\030\001 \001(\005:\002-1\022\022\n\nabi" +
-      "lity_id\030\002 \001(\r\022B\n\006change\030\003 \001(\0162(.CCitadel" +
-      "UserMsg_AbilitiesChanged.Change:\010EInvali" +
-      "d\"\205\001\n\006Change\022\025\n\010EInvalid\020\377\377\377\377\377\377\377\377\377\001\022\016\n\nE" +
-      "Purchased\020\000\022\r\n\tEUpgraded\020\001\022\t\n\005ESold\020\002\022\034\n" +
-      "\030ESwappedActivatedAbility\020\003\022\016\n\nELeveledU" +
-      "p\020\004\022\014\n\010EFailure\020\005\"\331\n\n CCitadelUserMsg_Ca" +
-      "meraController\022.\n\006action\030\001 \001(\0162\r.CameraA" +
-      "ction:\017k_EAction_AddOp\0229\n\toperation\030\002 \001(" +
-      "\0162\020.CameraOperation:\024k_ECameraOp_Maintai",
-      "n\0221\n\005param\030\003 \001(\0162\014.CameraParam:\024k_EParam" +
-      "_ClearAllOps\022D\n\nparam_mode\030\014 \001(\0162\020.Camer" +
-      "aParamMode:\036k_EParamMode_AllowInOneConte" +
-      "xt\022\r\n\005delay\030\004 \001(\002\022\027\n\017relative_values\030\013 \001" +
-      "(\010\022\031\n\021context_symbol_id\030\005 \001(\r\022\023\n\010priorit" +
-      "y\030\r \001(\r:\0011\022\035\n\013target_pawn\030\016 \001(\r:\0101677721" +
-      "5\022<\n\010maintain\030\006 \001(\0132*.CCitadelUserMsg_Ca" +
-      "meraController.Maintain\022<\n\010approach\030\007 \001(" +
-      "\0132*.CCitadelUserMsg_CameraController.App" +
-      "roach\0228\n\006spring\030\010 \001(\0132(.CCitadelUserMsg_",
-      "CameraController.Spring\0224\n\004lerp\030\t \001(\0132&." +
-      "CCitadelUserMsg_CameraController.Lerp\0222\n" +
-      "\003lag\030\n \001(\0132%.CCitadelUserMsg_CameraContr" +
-      "oller.Lag\032\037\n\010Maintain\022\023\n\010duration\030\001 \001(\002:" +
-      "\0010\032\304\001\n\010Approach\022\022\n\005speed\030\001 \001(\002:\003600\022\032\n\rd" +
-      "efault_speed\030\002 \001(\002:\003600\022\032\n\014acceleration\030" +
-      "\003 \001(\002:\0041000\022\027\n\014min_duration\030\004 \001(\002:\0010\022\026\n\016" +
-      "approach_float\030\005 \001(\002\022$\n\017approach_vector\030" +
-      "\006 \001(\0132\013.CMsgVector\022\025\n\rchase_default\030\007 \001(" +
-      "\010\032\216\001\n\006Spring\022\033\n\017spring_strength\030\001 \001(\002:\0021",
-      "0\022\024\n\tmin_speed\030\004 \001(\002:\0010\022\027\n\014max_duration\030" +
-      "\005 \001(\002:\0010\022\024\n\014target_float\030\006 \001(\002\022\"\n\rtarget" +
-      "_vector\030\007 \001(\0132\013.CMsgVector\032\243\001\n\004Lerp\022\023\n\013s" +
-      "tart_float\030\001 \001(\002\022!\n\014start_vector\030\002 \001(\0132\013" +
-      ".CMsgVector\022\021\n\tend_float\030\003 \001(\002\022\037\n\nend_ve" +
-      "ctor\030\004 \001(\0132\013.CMsgVector\022\014\n\004bias\030\005 \001(\002\022\014\n" +
-      "\004gain\030\006 \001(\002\022\023\n\010duration\030\007 \001(\002:\0011\032\232\001\n\003Lag" +
-      "\022\024\n\014min_duration\030\001 \001(\002\022\020\n\010lag_time\030\002 \001(\002" +
-      "\022\021\n\tmax_speed\030\003 \001(\002\022\027\n\017spring_strength\030\004" +
-      " \001(\002\022?\n1increase_spring_strength_to_keep",
-      "_target_on_screen\030\005 \001(\010:\004true\"\377\001\n\037CCitad" +
-      "elUserMsg_CurrencyChanged\022\022\n\006userid\030\001 \001(" +
-      "\005:\002-1\022\025\n\rcurrency_type\030\002 \001(\005\022\027\n\017currency" +
-      "_source\030\003 \001(\005\022\r\n\005delta\030\004 \001(\005\022\024\n\014notifica" +
-      "tion\030\005 \001(\010\022\030\n\006victim\030\006 \001(\r:\01016777215\022\037\n\n" +
-      "victim_pos\030\007 \001(\0132\013.CMsgVector\022\021\n\tplaysou" +
-      "nd\030\010 \001(\005\022\022\n\nability_id\030\t \001(\r\022\021\n\tnew_valu" +
-      "e\030\n \001(\r\"l\n\034CCitadelUserMsg_PlayerTyping\022" +
-      "\027\n\013player_slot\030\001 \001(\005:\002-1\022\021\n\tgame_time\030\002 " +
-      "\001(\002\022\020\n\010all_chat\030\003 \001(\010\022\016\n\006typing\030\004 \001(\010*\262\002",
-      "\n\025ChatMsgPingMarkerInfo\022(\n$k_EPingMarker" +
-      "Info_ShowMarkerAndSound\020\000\022(\n$k_EPingMark" +
-      "erInfo_HideMarkerAndSound\020\001\022(\n$k_EPingMa" +
-      "rkerInfo_ShowMarkerOnSender\020\002\022$\n k_EPing" +
-      "MarkerInfo_OnlyShowMarker\020\003\022#\n\037k_EPingMa" +
-      "rkerInfo_OnlyPlaySound\020\004\022!\n\035k_EPingMarke" +
-      "rInfo_OnlyMiniMap\020\005\022-\n)k_EPingMarkerInfo" +
-      "_NoMarkerYesSoundMiniMap\020\006*\231\004\n\023ECitadelC" +
-      "hatMessage\022*\n&CITADEL_CHAT_MESSAGE_UNPAU" +
-      "SE_COUNTDOWN\020\001\022!\n\035CITADEL_CHAT_MESSAGE_U",
-      "NPAUSED\020\002\022&\n\"CITADEL_CHAT_MESSAGE_AUTO_U" +
-      "NPAUSED\020\003\022(\n$CITADEL_CHAT_MESSAGE_PAUSE_" +
-      "COUNTDOWN\020\004\022\037\n\033CITADEL_CHAT_MESSAGE_PAUS" +
-      "ED\020\005\022\"\n\036CITADEL_CHAT_MESSAGE_YOUPAUSED\020\006" +
-      "\022\"\n\036CITADEL_CHAT_MESSAGE_CANTPAUSE\020\007\022(\n$" +
-      "CITADEL_CHAT_MESSAGE_CANTUNPAUSETEAM\020\010\022%" +
-      "\n!CITADEL_CHAT_MESSAGE_NOPAUSESLEFT\020\t\022%\n" +
-      "!CITADEL_CHAT_MESSAGE_CANTPAUSEYET\020\n\022*\n&" +
-      "CITADEL_CHAT_MESSAGE_PREGAME_COUNTDOWN\020\013" +
-      "\022)\n%CITADEL_CHAT_MESSAGE_NOTEAMPAUSESLEF",
-      "T\020\014\022)\n%CITADEL_CHAT_MESSAGE_COMMS_RESTRI" +
-      "CTED\020\r*\320\001\n\030PostProcessingGameStates\022\030\n\024P" +
-      "ostProcState_Killed\020\000\022\027\n\023PostProcState_B" +
-      "lack\020\001\022\031\n\025PostProcState_Blinded\020\002\022\037\n\033Pos" +
-      "tProcState_ShivPossessed\020\003\022\'\n#PostProcSt" +
-      "ate_DrifterDarknessCaster\020\004\022\034\n\030PostProcS" +
-      "tate_MatchIntro\020\005*`\n\014CameraAction\022\023\n\017k_E" +
-      "Action_AddOp\020\000\022\031\n\025k_EAction_ClearAllOps\020" +
-      "\001\022 \n\034k_EAction_ClearOpsForContext\020\002*\210\001\n\017" +
-      "CameraOperation\022\030\n\024k_ECameraOp_Maintain\020",
-      "\002\022\030\n\024k_ECameraOp_Approach\020\003\022\026\n\022k_ECamera" +
-      "Op_Spring\020\004\022\024\n\020k_ECameraOp_Lerp\020\005\022\023\n\017k_E" +
-      "CameraOp_Lag\020\006*\304\001\n\013CameraParam\022\030\n\024k_EPar" +
-      "am_ClearAllOps\020\000\022\"\n\036k_EParam_ClearAllOps" +
-      "ForContext\020\001\022\025\n\021k_EParam_Distance\020\002\022\020\n\014k" +
-      "_EParam_FOV\020\003\022\033\n\027k_EParam_TargetPosition" +
-      "\020\004\022\027\n\023k_EParam_VertOffset\020\005\022\030\n\024k_EParam_" +
-      "HorizOffset\020\006*_\n\017CameraParamMode\022\"\n\036k_EP" +
-      "aramMode_AllowInOneContext\020\000\022(\n$k_EParam" +
-      "Mode_AllowInMultipleContexts\020\001B=\n&skadis",
-      "tats.clarity.wire.deadlock.protoB\023Citade" +
-      "lUserMessages"
+      "ing_data\030\001 \001(\0132\017.PingCommonData\022\014\n\004rare\030",
+      "\002 \001(\010\022\021\n\tlegendary\030\003 \001(\010\"t\n(CCitadelUser" +
+      "Message_ImportantAbilityUsed\022\030\n\006player\030\001" +
+      " \001(\r:\01016777215\022\030\n\006caster\030\002 \001(\r:\01016777215" +
+      "\022\024\n\014ability_name\030\003 \001(\t\"7\n\034CCitadelUserMs" +
+      "g_BannedHeroes\022\027\n\017banned_hero_ids\030\001 \003(\r\"" +
+      "\245\002\n CCitadelUserMsg_AbilitiesChanged\022!\n\025" +
+      "purchaser_player_slot\030\001 \001(\005:\002-1\022\022\n\nabili" +
+      "ty_id\030\002 \001(\r\022B\n\006change\030\003 \001(\0162(.CCitadelUs" +
+      "erMsg_AbilitiesChanged.Change:\010EInvalid\"" +
+      "\205\001\n\006Change\022\025\n\010EInvalid\020\377\377\377\377\377\377\377\377\377\001\022\016\n\nEPu",
+      "rchased\020\000\022\r\n\tEUpgraded\020\001\022\t\n\005ESold\020\002\022\034\n\030E" +
+      "SwappedActivatedAbility\020\003\022\016\n\nELeveledUp\020" +
+      "\004\022\014\n\010EFailure\020\005\"\331\n\n CCitadelUserMsg_Came" +
+      "raController\022.\n\006action\030\001 \001(\0162\r.CameraAct" +
+      "ion:\017k_EAction_AddOp\0229\n\toperation\030\002 \001(\0162" +
+      "\020.CameraOperation:\024k_ECameraOp_Maintain\022" +
+      "1\n\005param\030\003 \001(\0162\014.CameraParam:\024k_EParam_C" +
+      "learAllOps\022D\n\nparam_mode\030\014 \001(\0162\020.CameraP" +
+      "aramMode:\036k_EParamMode_AllowInOneContext" +
+      "\022\r\n\005delay\030\004 \001(\002\022\027\n\017relative_values\030\013 \001(\010",
+      "\022\031\n\021context_symbol_id\030\005 \001(\r\022\023\n\010priority\030" +
+      "\r \001(\r:\0011\022\035\n\013target_pawn\030\016 \001(\r:\01016777215\022" +
+      "<\n\010maintain\030\006 \001(\0132*.CCitadelUserMsg_Came" +
+      "raController.Maintain\022<\n\010approach\030\007 \001(\0132" +
+      "*.CCitadelUserMsg_CameraController.Appro" +
+      "ach\0228\n\006spring\030\010 \001(\0132(.CCitadelUserMsg_Ca" +
+      "meraController.Spring\0224\n\004lerp\030\t \001(\0132&.CC" +
+      "itadelUserMsg_CameraController.Lerp\0222\n\003l" +
+      "ag\030\n \001(\0132%.CCitadelUserMsg_CameraControl" +
+      "ler.Lag\032\037\n\010Maintain\022\023\n\010duration\030\001 \001(\002:\0010",
+      "\032\304\001\n\010Approach\022\022\n\005speed\030\001 \001(\002:\003600\022\032\n\rdef" +
+      "ault_speed\030\002 \001(\002:\003600\022\032\n\014acceleration\030\003 " +
+      "\001(\002:\0041000\022\027\n\014min_duration\030\004 \001(\002:\0010\022\026\n\016ap" +
+      "proach_float\030\005 \001(\002\022$\n\017approach_vector\030\006 " +
+      "\001(\0132\013.CMsgVector\022\025\n\rchase_default\030\007 \001(\010\032" +
+      "\216\001\n\006Spring\022\033\n\017spring_strength\030\001 \001(\002:\00210\022" +
+      "\024\n\tmin_speed\030\004 \001(\002:\0010\022\027\n\014max_duration\030\005 " +
+      "\001(\002:\0010\022\024\n\014target_float\030\006 \001(\002\022\"\n\rtarget_v" +
+      "ector\030\007 \001(\0132\013.CMsgVector\032\243\001\n\004Lerp\022\023\n\013sta" +
+      "rt_float\030\001 \001(\002\022!\n\014start_vector\030\002 \001(\0132\013.C",
+      "MsgVector\022\021\n\tend_float\030\003 \001(\002\022\037\n\nend_vect" +
+      "or\030\004 \001(\0132\013.CMsgVector\022\014\n\004bias\030\005 \001(\002\022\014\n\004g" +
+      "ain\030\006 \001(\002\022\023\n\010duration\030\007 \001(\002:\0011\032\232\001\n\003Lag\022\024" +
+      "\n\014min_duration\030\001 \001(\002\022\020\n\010lag_time\030\002 \001(\002\022\021" +
+      "\n\tmax_speed\030\003 \001(\002\022\027\n\017spring_strength\030\004 \001" +
+      "(\002\022?\n1increase_spring_strength_to_keep_t" +
+      "arget_on_screen\030\005 \001(\010:\004true\"\377\001\n\037CCitadel" +
+      "UserMsg_CurrencyChanged\022\022\n\006userid\030\001 \001(\005:" +
+      "\002-1\022\025\n\rcurrency_type\030\002 \001(\005\022\027\n\017currency_s" +
+      "ource\030\003 \001(\005\022\r\n\005delta\030\004 \001(\005\022\024\n\014notificati",
+      "on\030\005 \001(\010\022\030\n\006victim\030\006 \001(\r:\01016777215\022\037\n\nvi" +
+      "ctim_pos\030\007 \001(\0132\013.CMsgVector\022\021\n\tplaysound" +
+      "\030\010 \001(\005\022\022\n\nability_id\030\t \001(\r\022\021\n\tnew_value\030" +
+      "\n \001(\r\"l\n\034CCitadelUserMsg_PlayerTyping\022\027\n" +
+      "\013player_slot\030\001 \001(\005:\002-1\022\021\n\tgame_time\030\002 \001(" +
+      "\002\022\020\n\010all_chat\030\003 \001(\010\022\016\n\006typing\030\004 \001(\010*\262\002\n\025" +
+      "ChatMsgPingMarkerInfo\022(\n$k_EPingMarkerIn" +
+      "fo_ShowMarkerAndSound\020\000\022(\n$k_EPingMarker" +
+      "Info_HideMarkerAndSound\020\001\022(\n$k_EPingMark" +
+      "erInfo_ShowMarkerOnSender\020\002\022$\n k_EPingMa",
+      "rkerInfo_OnlyShowMarker\020\003\022#\n\037k_EPingMark" +
+      "erInfo_OnlyPlaySound\020\004\022!\n\035k_EPingMarkerI" +
+      "nfo_OnlyMiniMap\020\005\022-\n)k_EPingMarkerInfo_N" +
+      "oMarkerYesSoundMiniMap\020\006*\231\004\n\023ECitadelCha" +
+      "tMessage\022*\n&CITADEL_CHAT_MESSAGE_UNPAUSE" +
+      "_COUNTDOWN\020\001\022!\n\035CITADEL_CHAT_MESSAGE_UNP" +
+      "AUSED\020\002\022&\n\"CITADEL_CHAT_MESSAGE_AUTO_UNP" +
+      "AUSED\020\003\022(\n$CITADEL_CHAT_MESSAGE_PAUSE_CO" +
+      "UNTDOWN\020\004\022\037\n\033CITADEL_CHAT_MESSAGE_PAUSED" +
+      "\020\005\022\"\n\036CITADEL_CHAT_MESSAGE_YOUPAUSED\020\006\022\"",
+      "\n\036CITADEL_CHAT_MESSAGE_CANTPAUSE\020\007\022(\n$CI" +
+      "TADEL_CHAT_MESSAGE_CANTUNPAUSETEAM\020\010\022%\n!" +
+      "CITADEL_CHAT_MESSAGE_NOPAUSESLEFT\020\t\022%\n!C" +
+      "ITADEL_CHAT_MESSAGE_CANTPAUSEYET\020\n\022*\n&CI" +
+      "TADEL_CHAT_MESSAGE_PREGAME_COUNTDOWN\020\013\022)" +
+      "\n%CITADEL_CHAT_MESSAGE_NOTEAMPAUSESLEFT\020" +
+      "\014\022)\n%CITADEL_CHAT_MESSAGE_COMMS_RESTRICT" +
+      "ED\020\r*\320\001\n\030PostProcessingGameStates\022\030\n\024Pos" +
+      "tProcState_Killed\020\000\022\027\n\023PostProcState_Bla" +
+      "ck\020\001\022\031\n\025PostProcState_Blinded\020\002\022\037\n\033PostP",
+      "rocState_ShivPossessed\020\003\022\'\n#PostProcStat" +
+      "e_DrifterDarknessCaster\020\004\022\034\n\030PostProcSta" +
+      "te_MatchIntro\020\005*`\n\014CameraAction\022\023\n\017k_EAc" +
+      "tion_AddOp\020\000\022\031\n\025k_EAction_ClearAllOps\020\001\022" +
+      " \n\034k_EAction_ClearOpsForContext\020\002*\210\001\n\017Ca" +
+      "meraOperation\022\030\n\024k_ECameraOp_Maintain\020\002\022" +
+      "\030\n\024k_ECameraOp_Approach\020\003\022\026\n\022k_ECameraOp" +
+      "_Spring\020\004\022\024\n\020k_ECameraOp_Lerp\020\005\022\023\n\017k_ECa" +
+      "meraOp_Lag\020\006*\304\001\n\013CameraParam\022\030\n\024k_EParam" +
+      "_ClearAllOps\020\000\022\"\n\036k_EParam_ClearAllOpsFo",
+      "rContext\020\001\022\025\n\021k_EParam_Distance\020\002\022\020\n\014k_E" +
+      "Param_FOV\020\003\022\033\n\027k_EParam_TargetPosition\020\004" +
+      "\022\027\n\023k_EParam_VertOffset\020\005\022\030\n\024k_EParam_Ho" +
+      "rizOffset\020\006*_\n\017CameraParamMode\022\"\n\036k_EPar" +
+      "amMode_AllowInOneContext\020\000\022(\n$k_EParamMo" +
+      "de_AllowInMultipleContexts\020\001B=\n&skadista" +
+      "ts.clarity.wire.deadlock.protoB\023CitadelU" +
+      "serMessages"
     };
     skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -38010,62 +39289,74 @@ public final class CitadelUserMessages {
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_FlexSlotUnlocked_descriptor,
         new java.lang.String[] { "TeamNumber", "FlexslotUnlocked", });
-    internal_static_CCitadelUserMsg_SeasonalKill_descriptor =
+    internal_static_CCitadelUserMessage_ItemPurchaseNotification_descriptor =
       getDescriptor().getMessageTypes().get(27);
+    internal_static_CCitadelUserMessage_ItemPurchaseNotification_fieldAccessorTable = new
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCitadelUserMessage_ItemPurchaseNotification_descriptor,
+        new java.lang.String[] { "Userid", "AbilityId", "Sell", "Quickbuy", });
+    internal_static_CCitadelUserMsg_SeasonalKill_descriptor =
+      getDescriptor().getMessageTypes().get(28);
     internal_static_CCitadelUserMsg_SeasonalKill_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_SeasonalKill_descriptor,
         new java.lang.String[] { "Killer", "Victim", });
     internal_static_CCitadelUserMsg_MusicQueue_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_CCitadelUserMsg_MusicQueue_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_MusicQueue_descriptor,
         new java.lang.String[] { "MusicState", "Override", });
     internal_static_CCitadelUserMsg_AG2ParamTrigger_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_CCitadelUserMsg_AG2ParamTrigger_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_AG2ParamTrigger_descriptor,
         new java.lang.String[] { "ParamId", "ParamValue", });
     internal_static_CCitadelUserMsg_EntityPortalled_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_CCitadelUserMsg_EntityPortalled_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_EntityPortalled_descriptor,
         new java.lang.String[] { "EntityPortalled", "PortalTransform", });
     internal_static_CCitadelUserMsg_StreetBrawlScoring_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_CCitadelUserMsg_StreetBrawlScoring_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_StreetBrawlScoring_descriptor,
         new java.lang.String[] { "ScoringTeam", "JustATest", "SapphireScore", "AmberScore", });
     internal_static_CCitadelUserMsg_HudGameAnnouncement_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_CCitadelUserMsg_HudGameAnnouncement_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_HudGameAnnouncement_descriptor,
         new java.lang.String[] { "TitleLocstring", "DescriptionLocstring", "Classname", "DialogVariableName", "DialogVariableLocstring", "DurationOverride", "SnippetPanel", "DialogVariableIntName", "DialogVariableIntValue", });
     internal_static_CCitadelUserMsg_ItemDraftReaction_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_CCitadelUserMsg_ItemDraftReaction_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_ItemDraftReaction_descriptor,
         new java.lang.String[] { "PingData", "Rare", "Legendary", });
+    internal_static_CCitadelUserMessage_ImportantAbilityUsed_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_CCitadelUserMessage_ImportantAbilityUsed_fieldAccessorTable = new
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCitadelUserMessage_ImportantAbilityUsed_descriptor,
+        new java.lang.String[] { "Player", "Caster", "AbilityName", });
     internal_static_CCitadelUserMsg_BannedHeroes_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_CCitadelUserMsg_BannedHeroes_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_BannedHeroes_descriptor,
         new java.lang.String[] { "BannedHeroIds", });
     internal_static_CCitadelUserMsg_AbilitiesChanged_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_CCitadelUserMsg_AbilitiesChanged_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_AbilitiesChanged_descriptor,
         new java.lang.String[] { "PurchaserPlayerSlot", "AbilityId", "Change", });
     internal_static_CCitadelUserMsg_CameraController_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_CCitadelUserMsg_CameraController_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_CameraController_descriptor,
@@ -38101,13 +39392,13 @@ public final class CitadelUserMessages {
         internal_static_CCitadelUserMsg_CameraController_Lag_descriptor,
         new java.lang.String[] { "MinDuration", "LagTime", "MaxSpeed", "SpringStrength", "IncreaseSpringStrengthToKeepTargetOnScreen", });
     internal_static_CCitadelUserMsg_CurrencyChanged_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_CCitadelUserMsg_CurrencyChanged_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_CurrencyChanged_descriptor,
         new java.lang.String[] { "Userid", "CurrencyType", "CurrencySource", "Delta", "Notification", "Victim", "VictimPos", "Playsound", "AbilityId", "NewValue", });
     internal_static_CCitadelUserMsg_PlayerTyping_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_CCitadelUserMsg_PlayerTyping_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_PlayerTyping_descriptor,

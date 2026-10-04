@@ -161,12 +161,12 @@ public class EmbeddedPackets {
 //      /* 357 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_SeasonalKill_VALUE, CitadelUserMessages.CCitadelUserMsg_SeasonalKill.class);
         /* 358 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_MusicQueue_VALUE, CitadelUserMessages.CCitadelUserMsg_MusicQueue.class);
 //      /* 359 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_AG2ParamTrigger_VALUE, CitadelUserMessages.CCitadelUserMsg_AG2ParamTrigger.class);
-//      /* 360 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_ItemPurchaseNotification_VALUE, null);
+        /* 360 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_ItemPurchaseNotification_VALUE, CitadelUserMessages.CCitadelUserMessage_ItemPurchaseNotification.class);
 //      /* 361 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_EntityPortalled_VALUE, CitadelUserMessages.CCitadelUserMsg_EntityPortalled.class);
         /* 362 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_StreetBrawlScoring_VALUE, CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoring.class);
         /* 363 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_HudGameAnnouncement_VALUE, CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncement.class);
 //      /* 364 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_ItemDraftReaction_VALUE, CitadelUserMessages.CCitadelUserMsg_ItemDraftReaction.class);
-//      /* 365 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_ImportantAbilityUsed_VALUE, null);
+        /* 365 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_ImportantAbilityUsed_VALUE, CitadelUserMessages.CCitadelUserMessage_ImportantAbilityUsed.class);
         /* 366 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_BannedHeroes_VALUE, CitadelUserMessages.CCitadelUserMsg_BannedHeroes.class);
 //      /* 367 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_CombatLogEntry_VALUE, null);
 //      /* 368 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_CombatLogBulkData_VALUE, CitadelUserMessages.CCitadelUserMsg_CombatLogBulkData.class);

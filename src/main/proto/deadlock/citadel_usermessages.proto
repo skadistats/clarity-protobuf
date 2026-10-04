@@ -293,6 +293,13 @@ message CCitadelUserMsg_FlexSlotUnlocked {
 	optional int32 flexslot_unlocked = 2;
 }
 
+message CCitadelUserMessage_ItemPurchaseNotification {
+	optional int32 userid = 1 [default = -1];
+	optional uint32 ability_id = 2;
+	optional bool sell = 3;
+	optional bool quickbuy = 4;
+}
+
 message CCitadelUserMsg_SeasonalKill {
 	optional uint32 killer = 1 [default = 16777215];
 	optional uint32 victim = 2 [default = 16777215];
@@ -336,6 +343,12 @@ message CCitadelUserMsg_ItemDraftReaction {
 	optional .PingCommonData ping_data = 1;
 	optional bool rare = 2;
 	optional bool legendary = 3;
+}
+
+message CCitadelUserMessage_ImportantAbilityUsed {
+	optional uint32 player = 1 [default = 16777215];
+	optional uint32 caster = 2 [default = 16777215];
+	optional string ability_name = 3;
 }
 
 message CCitadelUserMsg_BannedHeroes {
