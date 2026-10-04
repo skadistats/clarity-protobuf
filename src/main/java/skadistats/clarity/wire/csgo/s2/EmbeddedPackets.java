@@ -51,6 +51,7 @@ public class EmbeddedPackets {
         /*  70 */ K2C.put(CSGOS2MessageId.SVC_Messages.svc_FullFrameSplit_VALUE, CommonNetMessages.CSVCMsg_FullFrameSplit.class);
         /*  76 */ K2C.put(CSGOS2MessageId.SVC_Messages.svc_UserCmds_VALUE, CommonNetMessages.CSVCMsg_UserCommands.class);
         /*  77 */ K2C.put(CSGOS2MessageId.SVC_Messages.svc_NextMsgPredicted_VALUE, CommonNetMessages.CSVCMsg_NextMsgPredicted.class);
+//      /*  78 */ K2C.put(CSGOS2MessageId.SVC_Messages.svc_EncryptedData_VALUE, null);
 
         /* 101 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_AchievementEvent_VALUE, S2UserMessages.CUserMessageAchievementEvent.class);
         /* 102 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_CloseCaption_VALUE, S2UserMessages.CUserMessageCloseCaption.class);
@@ -96,6 +97,10 @@ public class EmbeddedPackets {
         /* 155 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_LagCompensationError_VALUE, S2UserMessages.CUserMessageLagCompensationError.class);
         /* 156 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_RequestDllStatus_VALUE, S2UserMessages.CUserMessageRequestDllStatus.class);
         /* 157 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_RequestUtilAction_VALUE, S2UserMessages.CUserMessageRequestUtilAction.class);
+//      /* 167 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_UserSentBugBug_VALUE, null);
+//      /* 168 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_UsageReport_VALUE, null);
+//      /* 169 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_RemoteServerCommand_VALUE, null);
+//      /* 170 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_RemoteServerResponse_VALUE, S2UserMessages.CUserMessageRemoteServerResponse.class);
 
         /* 201 */ K2C.put(S2GameEvents.EBaseGameEvents.GE_PlaceDecalEvent_VALUE, S2GameEvents.CMsgPlaceDecalEvent.class);
         /* 205 */ K2C.put(S2GameEvents.EBaseGameEvents.GE_Source1LegacyGameEventList_VALUE, CommonNetMessages.CSVCMsg_GameEventList.class);
@@ -187,6 +192,7 @@ public class EmbeddedPackets {
 //      /* 387 */ K2C.put(CSGOS2MessageId.ECstrike15UserMessages.CS_UM_RecurringMissionSchema_VALUE, CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema.class);
 //      /* 388 */ K2C.put(CSGOS2MessageId.ECstrike15UserMessages.CS_UM_SendPlayerLoadout_VALUE, CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.class);
         /* 389 */ K2C.put(CSGOS2MessageId.ECstrike15UserMessages.CS_UM_WeaponMagDrop_VALUE, CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop.class);
+//      /* 390 */ K2C.put(CSGOS2MessageId.ECstrike15UserMessages.CS_UM_CustomHudClicked_VALUE, CSGOCommonUserMessages.CCSUsrMsg_CustomHudClicked.class);
 
         /* 400 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_EffectDispatchId_VALUE, S2TempEntities.CMsgTEEffectDispatch.class);
         /* 401 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_ArmorRicochetId_VALUE, S2TempEntities.CMsgTEArmorRicochet.class);

@@ -902,6 +902,19 @@ public final class S2GameEvents {
      * <code>optional bool is_adjacent = 14;</code>
      */
     boolean getIsAdjacent();
+
+    /**
+     * <code>optional .CMsgVector normal_objectspace = 15;</code>
+     */
+    boolean hasNormalObjectspace();
+    /**
+     * <code>optional .CMsgVector normal_objectspace = 15;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getNormalObjectspace();
+    /**
+     * <code>optional .CMsgVector normal_objectspace = 15;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getNormalObjectspaceOrBuilder();
   }
   /**
    * Protobuf type {@code CMsgPlaceDecalEvent}
@@ -1047,6 +1060,19 @@ public final class S2GameEvents {
             case 112: {
               bitField0_ |= 0x00002000;
               isAdjacent_ = input.readBool();
+              break;
+            }
+            case 122: {
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+              if (((bitField0_ & 0x00004000) == 0x00004000)) {
+                subBuilder = normalObjectspace_.toBuilder();
+              }
+              normalObjectspace_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(normalObjectspace_);
+                normalObjectspace_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00004000;
               break;
             }
           }
@@ -1317,6 +1343,27 @@ public final class S2GameEvents {
       return isAdjacent_;
     }
 
+    public static final int NORMAL_OBJECTSPACE_FIELD_NUMBER = 15;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector normalObjectspace_;
+    /**
+     * <code>optional .CMsgVector normal_objectspace = 15;</code>
+     */
+    public boolean hasNormalObjectspace() {
+      return ((bitField0_ & 0x00004000) == 0x00004000);
+    }
+    /**
+     * <code>optional .CMsgVector normal_objectspace = 15;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getNormalObjectspace() {
+      return normalObjectspace_;
+    }
+    /**
+     * <code>optional .CMsgVector normal_objectspace = 15;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getNormalObjectspaceOrBuilder() {
+      return normalObjectspace_;
+    }
+
     private void initFields() {
       position_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
       normal_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
@@ -1332,6 +1379,7 @@ public final class S2GameEvents {
       boneindex_ = 0;
       translucenthit_ = false;
       isAdjacent_ = false;
+      normalObjectspace_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1387,6 +1435,9 @@ public final class S2GameEvents {
       }
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
         output.writeBool(14, isAdjacent_);
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        output.writeMessage(15, normalObjectspace_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1452,6 +1503,10 @@ public final class S2GameEvents {
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(14, isAdjacent_);
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, normalObjectspace_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1565,6 +1620,7 @@ public final class S2GameEvents {
           getPositionFieldBuilder();
           getNormalFieldBuilder();
           getSaxisFieldBuilder();
+          getNormalObjectspaceFieldBuilder();
         }
       }
       private static Builder create() {
@@ -1613,6 +1669,12 @@ public final class S2GameEvents {
         bitField0_ = (bitField0_ & ~0x00001000);
         isAdjacent_ = false;
         bitField0_ = (bitField0_ & ~0x00002000);
+        if (normalObjectspaceBuilder_ == null) {
+          normalObjectspace_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        } else {
+          normalObjectspaceBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00004000);
         return this;
       }
 
@@ -1709,6 +1771,14 @@ public final class S2GameEvents {
           to_bitField0_ |= 0x00002000;
         }
         result.isAdjacent_ = isAdjacent_;
+        if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
+          to_bitField0_ |= 0x00004000;
+        }
+        if (normalObjectspaceBuilder_ == null) {
+          result.normalObjectspace_ = normalObjectspace_;
+        } else {
+          result.normalObjectspace_ = normalObjectspaceBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1766,6 +1836,9 @@ public final class S2GameEvents {
         }
         if (other.hasIsAdjacent()) {
           setIsAdjacent(other.getIsAdjacent());
+        }
+        if (other.hasNormalObjectspace()) {
+          mergeNormalObjectspace(other.getNormalObjectspace());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -2492,6 +2565,122 @@ public final class S2GameEvents {
         isAdjacent_ = false;
         onChanged();
         return this;
+      }
+
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector normalObjectspace_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> normalObjectspaceBuilder_;
+      /**
+       * <code>optional .CMsgVector normal_objectspace = 15;</code>
+       */
+      public boolean hasNormalObjectspace() {
+        return ((bitField0_ & 0x00004000) == 0x00004000);
+      }
+      /**
+       * <code>optional .CMsgVector normal_objectspace = 15;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getNormalObjectspace() {
+        if (normalObjectspaceBuilder_ == null) {
+          return normalObjectspace_;
+        } else {
+          return normalObjectspaceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgVector normal_objectspace = 15;</code>
+       */
+      public Builder setNormalObjectspace(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+        if (normalObjectspaceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          normalObjectspace_ = value;
+          onChanged();
+        } else {
+          normalObjectspaceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00004000;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector normal_objectspace = 15;</code>
+       */
+      public Builder setNormalObjectspace(
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+        if (normalObjectspaceBuilder_ == null) {
+          normalObjectspace_ = builderForValue.build();
+          onChanged();
+        } else {
+          normalObjectspaceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00004000;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector normal_objectspace = 15;</code>
+       */
+      public Builder mergeNormalObjectspace(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+        if (normalObjectspaceBuilder_ == null) {
+          if (((bitField0_ & 0x00004000) == 0x00004000) &&
+              normalObjectspace_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+            normalObjectspace_ =
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(normalObjectspace_).mergeFrom(value).buildPartial();
+          } else {
+            normalObjectspace_ = value;
+          }
+          onChanged();
+        } else {
+          normalObjectspaceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00004000;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector normal_objectspace = 15;</code>
+       */
+      public Builder clearNormalObjectspace() {
+        if (normalObjectspaceBuilder_ == null) {
+          normalObjectspace_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          onChanged();
+        } else {
+          normalObjectspaceBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00004000);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector normal_objectspace = 15;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getNormalObjectspaceBuilder() {
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return getNormalObjectspaceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgVector normal_objectspace = 15;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getNormalObjectspaceOrBuilder() {
+        if (normalObjectspaceBuilder_ != null) {
+          return normalObjectspaceBuilder_.getMessageOrBuilder();
+        } else {
+          return normalObjectspace_;
+        }
+      }
+      /**
+       * <code>optional .CMsgVector normal_objectspace = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+          getNormalObjectspaceFieldBuilder() {
+        if (normalObjectspaceBuilder_ == null) {
+          normalObjectspaceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                  getNormalObjectspace(),
+                  getParentForChildren(),
+                  isClean());
+          normalObjectspace_ = null;
+        }
+        return normalObjectspaceBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:CMsgPlaceDecalEvent)
@@ -11350,7 +11539,7 @@ public final class S2GameEvents {
       "\n\023gameevents-s2.proto\032\035networkbasetypes-" +
       "common.proto\"G\n\034CMsgVDebugGameSessionIDE" +
       "vent\022\020\n\010clientid\030\001 \001(\005\022\025\n\rgamesessionid\030" +
-      "\002 \001(\t\"\316\002\n\023CMsgPlaceDecalEvent\022\035\n\010positio" +
+      "\002 \001(\t\"\367\002\n\023CMsgPlaceDecalEvent\022\035\n\010positio" +
       "n\030\001 \001(\0132\013.CMsgVector\022\033\n\006normal\030\002 \001(\0132\013.C" +
       "MsgVector\022\032\n\005saxis\030\003 \001(\0132\013.CMsgVector\022\032\n" +
       "\022decalmaterialindex\030\004 \001(\r\022\r\n\005flags\030\005 \001(\r" +
@@ -11358,54 +11547,55 @@ public final class S2GameEvents {
       "\030\010 \001(\002\022\r\n\005depth\030\t \001(\002\022\031\n\021entityhandleind" +
       "ex\030\n \001(\r\022\034\n\024skeletoninstancehash\030\013 \001(\007\022\021",
       "\n\tboneindex\030\014 \001(\005\022\026\n\016translucenthit\030\r \001(" +
-      "\010\022\023\n\013is_adjacent\030\016 \001(\010\"1\n\031CMsgClearWorld" +
-      "DecalsEvent\022\024\n\014flagstoclear\030\001 \001(\r\"2\n\032CMs" +
-      "gClearEntityDecalsEvent\022\024\n\014flagstoclear\030" +
-      "\001 \001(\r\"x\n\'CMsgClearDecalsForSkeletonInsta" +
-      "nceEvent\022\024\n\014flagstoclear\030\001 \001(\r\022\031\n\021entity" +
-      "handleindex\030\002 \001(\r\022\034\n\024skeletoninstancehas" +
-      "h\030\003 \001(\r\"\354\001\n\036CMsgSource1LegacyGameEventLi" +
-      "st\022A\n\013descriptors\030\001 \003(\0132,.CMsgSource1Leg" +
-      "acyGameEventList.descriptor_t\032#\n\005key_t\022\014",
-      "\n\004type\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\032b\n\014descriptor" +
-      "_t\022\017\n\007eventid\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\0223\n\004key" +
-      "s\030\003 \003(\0132%.CMsgSource1LegacyGameEventList" +
-      ".key_t\"K\n\035CMsgSource1LegacyListenEvents\022" +
-      "\022\n\nplayerslot\030\001 \001(\005\022\026\n\016eventarraybits\030\002 " +
-      "\003(\r\"\270\002\n\032CMsgSource1LegacyGameEvent\022\022\n\nev" +
-      "ent_name\030\001 \001(\t\022\017\n\007eventid\030\002 \001(\005\022/\n\004keys\030" +
-      "\003 \003(\0132!.CMsgSource1LegacyGameEvent.key_t" +
-      "\022\023\n\013server_tick\030\004 \001(\005\022\023\n\013passthrough\030\005 \001" +
-      "(\005\032\231\001\n\005key_t\022\014\n\004type\030\001 \001(\005\022\022\n\nval_string",
-      "\030\002 \001(\t\022\021\n\tval_float\030\003 \001(\002\022\020\n\010val_long\030\004 " +
-      "\001(\005\022\021\n\tval_short\030\005 \001(\005\022\020\n\010val_byte\030\006 \001(\005" +
-      "\022\020\n\010val_bool\030\007 \001(\010\022\022\n\nval_uint64\030\010 \001(\004\"\244" +
-      "\001\n\026CMsgSosStartSoundEvent\022\027\n\017soundevent_" +
-      "guid\030\001 \001(\005\022\027\n\017soundevent_hash\030\002 \001(\007\022\037\n\023s" +
-      "ource_entity_index\030\003 \001(\005:\002-1\022\014\n\004seed\030\004 \001" +
-      "(\005\022\025\n\rpacked_params\030\005 \001(\014\022\022\n\nstart_time\030" +
-      "\006 \001(\002\"0\n\025CMsgSosStopSoundEvent\022\027\n\017sounde" +
-      "vent_guid\030\001 \001(\005\"U\n\031CMsgSosStopSoundEvent" +
-      "Hash\022\027\n\017soundevent_hash\030\001 \001(\007\022\037\n\023source_",
-      "entity_index\030\002 \001(\005:\002-1\"L\n\032CMsgSosSetSoun" +
-      "dEventParams\022\027\n\017soundevent_guid\030\001 \001(\005\022\025\n" +
-      "\rpacked_params\030\005 \001(\014\"I\n\034CMsgSosSetLibrar" +
-      "yStackFields\022\022\n\nstack_hash\030\001 \001(\007\022\025\n\rpack" +
-      "ed_fields\030\005 \001(\014*\364\003\n\017EBaseGameEvents\022 \n\033G" +
-      "E_VDebugGameSessionIDEvent\020\310\001\022\027\n\022GE_Plac" +
-      "eDecalEvent\020\311\001\022\035\n\030GE_ClearWorldDecalsEve" +
-      "nt\020\312\001\022\036\n\031GE_ClearEntityDecalsEvent\020\313\001\022+\n" +
-      "&GE_ClearDecalsForSkeletonInstanceEvent\020" +
-      "\314\001\022\"\n\035GE_Source1LegacyGameEventList\020\315\001\022!",
-      "\n\034GE_Source1LegacyListenEvents\020\316\001\022\036\n\031GE_" +
-      "Source1LegacyGameEvent\020\317\001\022\032\n\025GE_SosStart" +
-      "SoundEvent\020\320\001\022\031\n\024GE_SosStopSoundEvent\020\321\001" +
-      "\022\036\n\031GE_SosSetSoundEventParams\020\322\001\022 \n\033GE_S" +
-      "osSetLibraryStackFields\020\323\001\022\035\n\030GE_SosStop" +
-      "SoundEventHash\020\324\001\022\035\n\030GE_ClothStiffenAnim" +
-      "Event\020\325\001\022\034\n\027GE_ClothEffectAnimEvent\020\326\001B7" +
-      "\n\'skadistats.clarity.wire.shared.s2.prot" +
-      "oB\014S2GameEvents"
+      "\010\022\023\n\013is_adjacent\030\016 \001(\010\022\'\n\022normal_objects" +
+      "pace\030\017 \001(\0132\013.CMsgVector\"1\n\031CMsgClearWorl" +
+      "dDecalsEvent\022\024\n\014flagstoclear\030\001 \001(\r\"2\n\032CM" +
+      "sgClearEntityDecalsEvent\022\024\n\014flagstoclear" +
+      "\030\001 \001(\r\"x\n\'CMsgClearDecalsForSkeletonInst" +
+      "anceEvent\022\024\n\014flagstoclear\030\001 \001(\r\022\031\n\021entit" +
+      "yhandleindex\030\002 \001(\r\022\034\n\024skeletoninstanceha" +
+      "sh\030\003 \001(\r\"\354\001\n\036CMsgSource1LegacyGameEventL" +
+      "ist\022A\n\013descriptors\030\001 \003(\0132,.CMsgSource1Le",
+      "gacyGameEventList.descriptor_t\032#\n\005key_t\022" +
+      "\014\n\004type\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\032b\n\014descripto" +
+      "r_t\022\017\n\007eventid\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\0223\n\004ke" +
+      "ys\030\003 \003(\0132%.CMsgSource1LegacyGameEventLis" +
+      "t.key_t\"K\n\035CMsgSource1LegacyListenEvents" +
+      "\022\022\n\nplayerslot\030\001 \001(\005\022\026\n\016eventarraybits\030\002" +
+      " \003(\r\"\270\002\n\032CMsgSource1LegacyGameEvent\022\022\n\ne" +
+      "vent_name\030\001 \001(\t\022\017\n\007eventid\030\002 \001(\005\022/\n\004keys" +
+      "\030\003 \003(\0132!.CMsgSource1LegacyGameEvent.key_" +
+      "t\022\023\n\013server_tick\030\004 \001(\005\022\023\n\013passthrough\030\005 ",
+      "\001(\005\032\231\001\n\005key_t\022\014\n\004type\030\001 \001(\005\022\022\n\nval_strin" +
+      "g\030\002 \001(\t\022\021\n\tval_float\030\003 \001(\002\022\020\n\010val_long\030\004" +
+      " \001(\005\022\021\n\tval_short\030\005 \001(\005\022\020\n\010val_byte\030\006 \001(" +
+      "\005\022\020\n\010val_bool\030\007 \001(\010\022\022\n\nval_uint64\030\010 \001(\004\"" +
+      "\244\001\n\026CMsgSosStartSoundEvent\022\027\n\017soundevent" +
+      "_guid\030\001 \001(\005\022\027\n\017soundevent_hash\030\002 \001(\007\022\037\n\023" +
+      "source_entity_index\030\003 \001(\005:\002-1\022\014\n\004seed\030\004 " +
+      "\001(\005\022\025\n\rpacked_params\030\005 \001(\014\022\022\n\nstart_time" +
+      "\030\006 \001(\002\"0\n\025CMsgSosStopSoundEvent\022\027\n\017sound" +
+      "event_guid\030\001 \001(\005\"U\n\031CMsgSosStopSoundEven",
+      "tHash\022\027\n\017soundevent_hash\030\001 \001(\007\022\037\n\023source" +
+      "_entity_index\030\002 \001(\005:\002-1\"L\n\032CMsgSosSetSou" +
+      "ndEventParams\022\027\n\017soundevent_guid\030\001 \001(\005\022\025" +
+      "\n\rpacked_params\030\005 \001(\014\"I\n\034CMsgSosSetLibra" +
+      "ryStackFields\022\022\n\nstack_hash\030\001 \001(\007\022\025\n\rpac" +
+      "ked_fields\030\005 \001(\014*\364\003\n\017EBaseGameEvents\022 \n\033" +
+      "GE_VDebugGameSessionIDEvent\020\310\001\022\027\n\022GE_Pla" +
+      "ceDecalEvent\020\311\001\022\035\n\030GE_ClearWorldDecalsEv" +
+      "ent\020\312\001\022\036\n\031GE_ClearEntityDecalsEvent\020\313\001\022+" +
+      "\n&GE_ClearDecalsForSkeletonInstanceEvent",
+      "\020\314\001\022\"\n\035GE_Source1LegacyGameEventList\020\315\001\022" +
+      "!\n\034GE_Source1LegacyListenEvents\020\316\001\022\036\n\031GE" +
+      "_Source1LegacyGameEvent\020\317\001\022\032\n\025GE_SosStar" +
+      "tSoundEvent\020\320\001\022\031\n\024GE_SosStopSoundEvent\020\321" +
+      "\001\022\036\n\031GE_SosSetSoundEventParams\020\322\001\022 \n\033GE_" +
+      "SosSetLibraryStackFields\020\323\001\022\035\n\030GE_SosSto" +
+      "pSoundEventHash\020\324\001\022\035\n\030GE_ClothStiffenAni" +
+      "mEvent\020\325\001\022\034\n\027GE_ClothEffectAnimEvent\020\326\001B" +
+      "7\n\'skadistats.clarity.wire.shared.s2.pro" +
+      "toB\014S2GameEvents"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11431,7 +11621,7 @@ public final class S2GameEvents {
     internal_static_CMsgPlaceDecalEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgPlaceDecalEvent_descriptor,
-        new java.lang.String[] { "Position", "Normal", "Saxis", "Decalmaterialindex", "Flags", "Color", "Width", "Height", "Depth", "Entityhandleindex", "Skeletoninstancehash", "Boneindex", "Translucenthit", "IsAdjacent", });
+        new java.lang.String[] { "Position", "Normal", "Saxis", "Decalmaterialindex", "Flags", "Color", "Width", "Height", "Depth", "Entityhandleindex", "Skeletoninstancehash", "Boneindex", "Translucenthit", "IsAdjacent", "NormalObjectspace", });
     internal_static_CMsgClearWorldDecalsEvent_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_CMsgClearWorldDecalsEvent_fieldAccessorTable = new

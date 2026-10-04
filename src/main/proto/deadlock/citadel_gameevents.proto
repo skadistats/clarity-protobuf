@@ -46,6 +46,11 @@ message CMsgFireBullets {
   optional float bullet_gravity_override = 23 [default = 0];
   optional int32 muzzle_number = 24;
   optional bool ability_as_bullet = 25;
+  optional bool friendly_fire = 26;
+  optional uint32 friendly_fire_damage_type = 27;
+  optional uint32 bullet_state = 28;
+  optional uint32 weapon_info_id = 29;
+  optional .CMsgVector target_pos = 30;
 }
 
 message CMsgBulletImpact {
@@ -60,5 +65,11 @@ message CMsgBulletImpact {
   optional uint32 weapon_subclass_id = 10;
   optional int32 shooter_entindex = 11 [default = -1];
   optional float bullet_radius_override = 12;
+  optional uint32 weapon_info_id = 13;
 }
 
+message CMsgRemoveBullet {
+	optional int32 shooter_entindex = 1 [default = -1];
+	optional uint32 shot_id = 2;
+	optional uint32 bullet_index = 3;
+}

@@ -69,6 +69,8 @@ enum SVC_Messages {
   svc_HltvFixupOperatorStatus = 75;
   svc_UserCmds = 76;
   svc_NextMsgPredicted = 77;
+  svc_EncryptedData = 78;
+  svc_UserCmdKeyframe = 79;
 }
 
 enum EBaseUserMessages {
@@ -123,6 +125,10 @@ enum EBaseUserMessages {
   UM_ExtraUserData = 164;
   UM_NotifyResponseFound = 165;
   UM_PlayResponseConditional = 166;
+  UM_UserSentBugBug = 167;
+  UM_UsageReport = 168;
+  UM_RemoteServerCommand = 169;
+  UM_RemoteServerResponse = 170;
   UM_MAX_BASE = 200;
 }
 
@@ -197,6 +203,13 @@ enum CitadelUserMessageIds {
   k_EUserMsg_ItemDraftReaction = 364;
   k_EUserMsg_ImportantAbilityUsed = 365;
   k_EUserMsg_BannedHeroes = 366;
+  k_EUserMsg_CombatLogEntry = 367;
+  k_EUserMsg_CombatLogBulkData = 368;
+  k_EUserMsg_PlayerTyping = 369;
+  k_EUserMsg_ChangeHeroStatus = 370;
+  k_EUserMsg_LocalLobby = 371;
+  k_EUserMsg_SoulBagPickup = 372;
+  k_EUserMsg_HeroReleaseVote = 373;
 }
 
 enum CitadelEntityMessageIds {

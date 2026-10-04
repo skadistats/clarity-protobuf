@@ -185,6 +185,7 @@ message CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve {
 	optional uint32 tv_control = 17;
 	repeated int32 teammate_colors = 21;
 	optional uint32 match_id_additional = 22;
+	repeated string clan_tags = 23;
 }
 
 // 713
@@ -250,6 +251,8 @@ message CEconItemPreviewDataBlock {
 	optional uint32 style = 21;
 	repeated .CEconItemPreviewDataBlock.Sticker variations = 22;
 	optional uint32 upgrade_level = 23;
+	optional uint32 pet_food_expiration_date = 24;
+	optional bytes blobdata = 25;
 }
 
 // 1133

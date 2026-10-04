@@ -22803,6 +22803,24 @@ public final class CommonNetMessages {
      * <code>optional int32 client_tick = 5;</code>
      */
     int getClientTick();
+
+    /**
+     * <code>optional bytes delta_data = 6;</code>
+     */
+    boolean hasDeltaData();
+    /**
+     * <code>optional bytes delta_data = 6;</code>
+     */
+    com.google.protobuf.ByteString getDeltaData();
+
+    /**
+     * <code>optional bool delta_processed = 7;</code>
+     */
+    boolean hasDeltaProcessed();
+    /**
+     * <code>optional bool delta_processed = 7;</code>
+     */
+    boolean getDeltaProcessed();
   }
   /**
    * Protobuf type {@code CMsgServerUserCmd}
@@ -22879,6 +22897,16 @@ public final class CommonNetMessages {
             case 40: {
               bitField0_ |= 0x00000010;
               clientTick_ = input.readInt32();
+              break;
+            }
+            case 50: {
+              bitField0_ |= 0x00000020;
+              deltaData_ = input.readBytes();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              deltaProcessed_ = input.readBool();
               break;
             }
           }
@@ -22996,12 +23024,44 @@ public final class CommonNetMessages {
       return clientTick_;
     }
 
+    public static final int DELTA_DATA_FIELD_NUMBER = 6;
+    private com.google.protobuf.ByteString deltaData_;
+    /**
+     * <code>optional bytes delta_data = 6;</code>
+     */
+    public boolean hasDeltaData() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional bytes delta_data = 6;</code>
+     */
+    public com.google.protobuf.ByteString getDeltaData() {
+      return deltaData_;
+    }
+
+    public static final int DELTA_PROCESSED_FIELD_NUMBER = 7;
+    private boolean deltaProcessed_;
+    /**
+     * <code>optional bool delta_processed = 7;</code>
+     */
+    public boolean hasDeltaProcessed() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional bool delta_processed = 7;</code>
+     */
+    public boolean getDeltaProcessed() {
+      return deltaProcessed_;
+    }
+
     private void initFields() {
       data_ = com.google.protobuf.ByteString.EMPTY;
       cmdNumber_ = 0;
       playerSlot_ = -1;
       serverTickExecuted_ = 0;
       clientTick_ = 0;
+      deltaData_ = com.google.protobuf.ByteString.EMPTY;
+      deltaProcessed_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -23031,6 +23091,12 @@ public final class CommonNetMessages {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeInt32(5, clientTick_);
       }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBytes(6, deltaData_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBool(7, deltaProcessed_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -23059,6 +23125,14 @@ public final class CommonNetMessages {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(5, clientTick_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, deltaData_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, deltaProcessed_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -23187,6 +23261,10 @@ public final class CommonNetMessages {
         bitField0_ = (bitField0_ & ~0x00000008);
         clientTick_ = 0;
         bitField0_ = (bitField0_ & ~0x00000010);
+        deltaData_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        deltaProcessed_ = false;
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -23235,6 +23313,14 @@ public final class CommonNetMessages {
           to_bitField0_ |= 0x00000010;
         }
         result.clientTick_ = clientTick_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.deltaData_ = deltaData_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.deltaProcessed_ = deltaProcessed_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -23265,6 +23351,12 @@ public final class CommonNetMessages {
         }
         if (other.hasClientTick()) {
           setClientTick(other.getClientTick());
+        }
+        if (other.hasDeltaData()) {
+          setDeltaData(other.getDeltaData());
+        }
+        if (other.hasDeltaProcessed()) {
+          setDeltaProcessed(other.getDeltaProcessed());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -23452,6 +23544,73 @@ public final class CommonNetMessages {
       public Builder clearClientTick() {
         bitField0_ = (bitField0_ & ~0x00000010);
         clientTick_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString deltaData_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes delta_data = 6;</code>
+       */
+      public boolean hasDeltaData() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional bytes delta_data = 6;</code>
+       */
+      public com.google.protobuf.ByteString getDeltaData() {
+        return deltaData_;
+      }
+      /**
+       * <code>optional bytes delta_data = 6;</code>
+       */
+      public Builder setDeltaData(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        deltaData_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes delta_data = 6;</code>
+       */
+      public Builder clearDeltaData() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        deltaData_ = getDefaultInstance().getDeltaData();
+        onChanged();
+        return this;
+      }
+
+      private boolean deltaProcessed_ ;
+      /**
+       * <code>optional bool delta_processed = 7;</code>
+       */
+      public boolean hasDeltaProcessed() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional bool delta_processed = 7;</code>
+       */
+      public boolean getDeltaProcessed() {
+        return deltaProcessed_;
+      }
+      /**
+       * <code>optional bool delta_processed = 7;</code>
+       */
+      public Builder setDeltaProcessed(boolean value) {
+        bitField0_ |= 0x00000040;
+        deltaProcessed_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool delta_processed = 7;</code>
+       */
+      public Builder clearDeltaProcessed() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        deltaProcessed_ = false;
         onChanged();
         return this;
       }
@@ -24981,21 +25140,22 @@ public final class CommonNetMessages {
       "e_id\030\001 \001(\005\022\033\n\023num_changed_entries\030\002 \001(\005\022" +
       "\023\n\013string_data\030\003 \001(\014\"T\n\026CSVCMsg_FullFram" +
       "eSplit\022\014\n\004tick\030\001 \001(\005\022\017\n\007section\030\002 \001(\005\022\r\n" +
-      "\005total\030\003 \001(\005\022\014\n\004data\030\004 \001(\014\"\201\001\n\021CMsgServe" +
+      "\005total\030\003 \001(\005\022\014\n\004data\030\004 \001(\014\"\256\001\n\021CMsgServe" +
       "rUserCmd\022\014\n\004data\030\001 \001(\014\022\022\n\ncmd_number\030\002 \001" +
       "(\005\022\027\n\013player_slot\030\003 \001(\005:\002-1\022\034\n\024server_ti" +
-      "ck_executed\030\004 \001(\005\022\023\n\013client_tick\030\005 \001(\005\"<" +
-      "\n\024CSVCMsg_UserCommands\022$\n\010commands\030\001 \003(\013" +
-      "2\022.CMsgServerUserCmd\"N\n\023CSVCMsg_UserMess" +
-      "age\022\020\n\010msg_type\030\001 \001(\005\022\020\n\010msg_data\030\002 \001(\014\022",
-      "\023\n\013passthrough\030\003 \001(\005*g\n\021VoiceDataFormat_" +
-      "t\022\032\n\026VOICEDATA_FORMAT_STEAM\020\000\022\033\n\027VOICEDA" +
-      "TA_FORMAT_ENGINE\020\001\022\031\n\025VOICEDATA_FORMAT_O" +
-      "PUS\020\002*B\n\016RequestPause_t\022\014\n\010RP_PAUSE\020\000\022\016\n" +
-      "\nRP_UNPAUSE\020\001\022\022\n\016RP_TOGGLEPAUSE\020\002*\035\n\014Pre" +
-      "fetchType\022\r\n\tPFT_SOUND\020\000B@\n+skadistats.c" +
-      "larity.wire.shared.common.protoB\021CommonN" +
-      "etMessages"
+      "ck_executed\030\004 \001(\005\022\023\n\013client_tick\030\005 \001(\005\022\022" +
+      "\n\ndelta_data\030\006 \001(\014\022\027\n\017delta_processed\030\007 " +
+      "\001(\010\"<\n\024CSVCMsg_UserCommands\022$\n\010commands\030" +
+      "\001 \003(\0132\022.CMsgServerUserCmd\"N\n\023CSVCMsg_Use",
+      "rMessage\022\020\n\010msg_type\030\001 \001(\005\022\020\n\010msg_data\030\002" +
+      " \001(\014\022\023\n\013passthrough\030\003 \001(\005*g\n\021VoiceDataFo" +
+      "rmat_t\022\032\n\026VOICEDATA_FORMAT_STEAM\020\000\022\033\n\027VO" +
+      "ICEDATA_FORMAT_ENGINE\020\001\022\031\n\025VOICEDATA_FOR" +
+      "MAT_OPUS\020\002*B\n\016RequestPause_t\022\014\n\010RP_PAUSE" +
+      "\020\000\022\016\n\nRP_UNPAUSE\020\001\022\022\n\016RP_TOGGLEPAUSE\020\002*\035" +
+      "\n\014PrefetchType\022\r\n\tPFT_SOUND\020\000B@\n+skadist" +
+      "ats.clarity.wire.shared.common.protoB\021Co" +
+      "mmonNetMessages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -25213,7 +25373,7 @@ public final class CommonNetMessages {
     internal_static_CMsgServerUserCmd_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgServerUserCmd_descriptor,
-        new java.lang.String[] { "Data", "CmdNumber", "PlayerSlot", "ServerTickExecuted", "ClientTick", });
+        new java.lang.String[] { "Data", "CmdNumber", "PlayerSlot", "ServerTickExecuted", "ClientTick", "DeltaData", "DeltaProcessed", });
     internal_static_CSVCMsg_UserCommands_descriptor =
       getDescriptor().getMessageTypes().get(26);
     internal_static_CSVCMsg_UserCommands_fieldAccessorTable = new

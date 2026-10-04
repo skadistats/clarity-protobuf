@@ -107,6 +107,8 @@ public class EmbeddedPackets {
 //      /* 155 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_LagCompensationError_VALUE, null);
 //      /* 156 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_RequestDllStatus_VALUE, null);
 //      /* 154 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_RequestUtilAction_VALUE, null);
+//      /* 167 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_UserSentBugBug_VALUE, null);
+//      /* 168 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_UsageReport_VALUE, null);
 
         /* 205 */ K2C.put(S2GameEvents.EBaseGameEvents.GE_Source1LegacyGameEventList_VALUE, CommonNetMessages.CSVCMsg_GameEventList.class);
         /* 206 */ K2C.put(S2GameEvents.EBaseGameEvents.GE_Source1LegacyListenEvents_VALUE, S2GameEvents.CMsgSource1LegacyListenEvents.class);

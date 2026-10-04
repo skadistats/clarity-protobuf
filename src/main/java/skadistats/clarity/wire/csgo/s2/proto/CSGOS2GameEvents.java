@@ -4427,6 +4427,15 @@ public final class CSGOS2GameEvents {
      * <code>optional bool is_kill = 7;</code>
      */
     boolean getIsKill();
+
+    /**
+     * <code>optional bool through_smoke = 8;</code>
+     */
+    boolean hasThroughSmoke();
+    /**
+     * <code>optional bool through_smoke = 8;</code>
+     */
+    boolean getThroughSmoke();
   }
   /**
    * Protobuf type {@code CMsgPlayerBulletHit}
@@ -4521,6 +4530,11 @@ public final class CSGOS2GameEvents {
             case 56: {
               bitField0_ |= 0x00000040;
               isKill_ = input.readBool();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              throughSmoke_ = input.readBool();
               break;
             }
           }
@@ -4674,6 +4688,21 @@ public final class CSGOS2GameEvents {
       return isKill_;
     }
 
+    public static final int THROUGH_SMOKE_FIELD_NUMBER = 8;
+    private boolean throughSmoke_;
+    /**
+     * <code>optional bool through_smoke = 8;</code>
+     */
+    public boolean hasThroughSmoke() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional bool through_smoke = 8;</code>
+     */
+    public boolean getThroughSmoke() {
+      return throughSmoke_;
+    }
+
     private void initFields() {
       attackerSlot_ = -1;
       victimSlot_ = -1;
@@ -4682,6 +4711,7 @@ public final class CSGOS2GameEvents {
       damage_ = 0;
       penetrationCount_ = 0;
       isKill_ = false;
+      throughSmoke_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -4716,6 +4746,9 @@ public final class CSGOS2GameEvents {
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         output.writeBool(7, isKill_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeBool(8, throughSmoke_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -4753,6 +4786,10 @@ public final class CSGOS2GameEvents {
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, isKill_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, throughSmoke_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -4890,6 +4927,8 @@ public final class CSGOS2GameEvents {
         bitField0_ = (bitField0_ & ~0x00000020);
         isKill_ = false;
         bitField0_ = (bitField0_ & ~0x00000040);
+        throughSmoke_ = false;
+        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
 
@@ -4950,6 +4989,10 @@ public final class CSGOS2GameEvents {
           to_bitField0_ |= 0x00000040;
         }
         result.isKill_ = isKill_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.throughSmoke_ = throughSmoke_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4986,6 +5029,9 @@ public final class CSGOS2GameEvents {
         }
         if (other.hasIsKill()) {
           setIsKill(other.getIsKill());
+        }
+        if (other.hasThroughSmoke()) {
+          setThroughSmoke(other.getThroughSmoke());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -5322,6 +5368,38 @@ public final class CSGOS2GameEvents {
         return this;
       }
 
+      private boolean throughSmoke_ ;
+      /**
+       * <code>optional bool through_smoke = 8;</code>
+       */
+      public boolean hasThroughSmoke() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional bool through_smoke = 8;</code>
+       */
+      public boolean getThroughSmoke() {
+        return throughSmoke_;
+      }
+      /**
+       * <code>optional bool through_smoke = 8;</code>
+       */
+      public Builder setThroughSmoke(boolean value) {
+        bitField0_ |= 0x00000080;
+        throughSmoke_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool through_smoke = 8;</code>
+       */
+      public Builder clearThroughSmoke() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        throughSmoke_ = false;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:CMsgPlayerBulletHit)
     }
 
@@ -5388,16 +5466,17 @@ public final class CSGOS2GameEvents {
       "(\005\022\030\n\020attack_tick_frac\030\003 \001(\002\022\031\n\021render_t" +
       "ick_count\030\004 \001(\005\022\030\n\020render_tick_frac\030\005 \001(",
       "\002\022\027\n\017inaccuracy_move\030\006 \001(\002\022\026\n\016inaccuracy" +
-      "_air\030\007 \001(\002\022\014\n\004type\030\010 \001(\005\"\271\001\n\023CMsgPlayerB" +
+      "_air\030\007 \001(\002\022\014\n\004type\030\010 \001(\005\"\320\001\n\023CMsgPlayerB" +
       "ulletHit\022\031\n\rattacker_slot\030\001 \001(\005:\002-1\022\027\n\013v" +
       "ictim_slot\030\002 \001(\005:\002-1\022\037\n\nvictim_pos\030\003 \001(\013" +
       "2\013.CMsgVector\022\021\n\thit_group\030\004 \001(\005\022\016\n\006dama" +
       "ge\030\005 \001(\005\022\031\n\021penetration_count\030\006 \001(\005\022\017\n\007i" +
-      "s_kill\030\007 \001(\010*x\n\017ECsgoGameEvents\022\031\n\024GE_Pl" +
-      "ayerAnimEventId\020\302\003\022\030\n\023GE_RadioIconEventI" +
-      "d\020\303\003\022\025\n\020GE_FireBulletsId\020\304\003\022\031\n\024GE_Player" +
-      "BulletHitId\020\305\003B9\n%skadistats.clarity.wir",
-      "e.csgo.s2.protoB\020CSGOS2GameEvents"
+      "s_kill\030\007 \001(\010\022\025\n\rthrough_smoke\030\010 \001(\010*x\n\017E" +
+      "CsgoGameEvents\022\031\n\024GE_PlayerAnimEventId\020\302" +
+      "\003\022\030\n\023GE_RadioIconEventId\020\303\003\022\025\n\020GE_FireBu" +
+      "lletsId\020\304\003\022\031\n\024GE_PlayerBulletHitId\020\305\003B9\n",
+      "%skadistats.clarity.wire.csgo.s2.protoB\020" +
+      "CSGOS2GameEvents"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5441,7 +5520,7 @@ public final class CSGOS2GameEvents {
     internal_static_CMsgPlayerBulletHit_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgPlayerBulletHit_descriptor,
-        new java.lang.String[] { "AttackerSlot", "VictimSlot", "VictimPos", "HitGroup", "Damage", "PenetrationCount", "IsKill", });
+        new java.lang.String[] { "AttackerSlot", "VictimSlot", "VictimPos", "HitGroup", "Damage", "PenetrationCount", "IsKill", "ThroughSmoke", });
     skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor();
   }
 

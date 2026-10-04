@@ -48,6 +48,8 @@ public class EmbeddedPackets {
         /*  70 */ K2C.put(DeadlockMessageId.SVC_Messages.svc_FullFrameSplit_VALUE, CommonNetMessages.CSVCMsg_FullFrameSplit.class);
         /*  76 */ K2C.put(DeadlockMessageId.SVC_Messages.svc_UserCmds_VALUE, CommonNetMessages.CSVCMsg_UserCommands.class);
         /*  77 */ K2C.put(DeadlockMessageId.SVC_Messages.svc_NextMsgPredicted_VALUE, CommonNetMessages.CSVCMsg_NextMsgPredicted.class);
+//      /*  78 */ K2C.put(DeadlockMessageId.SVC_Messages.svc_EncryptedData_VALUE, null);
+//      /*  79 */ K2C.put(DeadlockMessageId.SVC_Messages.svc_UserCmdKeyframe_VALUE, null);
 
         /* 101 */ K2C.put(DeadlockMessageId.EBaseUserMessages.UM_AchievementEvent_VALUE, S2UserMessages.CUserMessageAchievementEvent.class);
         /* 102 */ K2C.put(DeadlockMessageId.EBaseUserMessages.UM_CloseCaption_VALUE, S2UserMessages.CUserMessageCloseCaption.class);
@@ -92,6 +94,10 @@ public class EmbeddedPackets {
         /* 156 */ K2C.put(DeadlockMessageId.EBaseUserMessages.UM_RequestDllStatus_VALUE, S2UserMessages.CUserMessageRequestDllStatus.class);
         /* 157 */ K2C.put(DeadlockMessageId.EBaseUserMessages.UM_RequestUtilAction_VALUE, S2UserMessages.CUserMessageRequestUtilAction.class);
         /* 166 */ K2C.put(DeadlockMessageId.EBaseUserMessages.UM_PlayResponseConditional_VALUE, S2UserMessages.CUserMessage_PlayResponseConditional.class);
+//      /* 167 */ K2C.put(DeadlockMessageId.EBaseUserMessages.UM_UserSentBugBug_VALUE, null);
+//      /* 168 */ K2C.put(DeadlockMessageId.EBaseUserMessages.UM_UsageReport_VALUE, null);
+//      /* 169 */ K2C.put(DeadlockMessageId.EBaseUserMessages.UM_RemoteServerCommand_VALUE, null);
+//      /* 170 */ K2C.put(DeadlockMessageId.EBaseUserMessages.UM_RemoteServerResponse_VALUE, S2UserMessages.CUserMessageRemoteServerResponse.class);
 
         /* 205 */ K2C.put(S2GameEvents.EBaseGameEvents.GE_Source1LegacyGameEventList_VALUE, CommonNetMessages.CSVCMsg_GameEventList.class);
         /* 206 */ K2C.put(S2GameEvents.EBaseGameEvents.GE_Source1LegacyListenEvents_VALUE, S2GameEvents.CMsgSource1LegacyListenEvents.class);
@@ -106,7 +112,7 @@ public class EmbeddedPackets {
         /* 304 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_TeamRewards_VALUE, null);
         /* 306 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_AbilityFailed_VALUE, null);
         /* 308 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_TriggerDamageFlash_VALUE, CitadelUserMessages.CCitadelUserMsg_TriggerDamageFlash.class);
-        /* 309 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_AbilitiesChanged_VALUE, null);
+        /* 309 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_AbilitiesChanged_VALUE, CitadelUserMessages.CCitadelUserMsg_AbilitiesChanged.class);
         /* 310 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_RecentDamageSummary_VALUE, null);
         /* 311 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_SpectatorTeamChanged_VALUE, null);
         /* 312 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_ChatWheel_VALUE, CitadelUserMessages.CCitadelUserMsg_ChatWheel.class);
@@ -123,7 +129,7 @@ public class EmbeddedPackets {
         /* 323 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_BulletHit_VALUE, null);
         /* 324 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_ObjectiveMask_VALUE, null);
         /* 325 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_ModifierApplied_VALUE, null);
-        /* 326 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_CameraController_VALUE, null);
+        /* 326 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_CameraController_VALUE, CitadelUserMessages.CCitadelUserMsg_CameraController.class);
         /* 327 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_AuraModifierApplied_VALUE, null);
         /* 329 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_ObstructedShotFired_VALUE, null);
         /* 330 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_AbilityLateFailure_VALUE, null);
@@ -140,7 +146,7 @@ public class EmbeddedPackets {
         /* 342 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_ParticipantStopSoundEventHash_VALUE, CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEventHash.class);
         /* 343 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_ParticipantSetSoundEventParams_VALUE, CitadelUserMessages.CCitadelUserMsg_ParticipantSetSoundEventParams.class);
         /* 344 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_ParticipantSetLibraryStackFields_VALUE, CitadelUserMessages.CCitadelUserMsg_ParticipantSetLibraryStackFields.class);
-        /* 345 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_CurrencyChanged_VALUE, null);
+        /* 345 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_CurrencyChanged_VALUE, CitadelUserMessages.CCitadelUserMsg_CurrencyChanged.class);
         /* 346 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_GameOver_VALUE, CitadelUserMessages.CCitadelUserMessage_GameOver.class);
         /* 347 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_BossKilled_VALUE, CitadelUserMessages.CCitadelUserMsg_BossKilled.class);
         /* 348 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_BossDamaged_VALUE, CitadelUserMessages.CCitadelUserMsg_BossDamaged.class);
@@ -151,17 +157,24 @@ public class EmbeddedPackets {
         /* 353 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_PlayerRespawned_VALUE, CitadelUserMessages.CCitadelUserMsg_PlayerRespawned.class);
 //      /* 354 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_CallCheaterVote_VALUE, CitadelUserMessages.CCitadelUserMsg_CallCheaterVote.class);
 //      /* 355 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_MeleeHit_VALUE, null);
-//      /* 356 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_FlexSlotUnlocked_VALUE, CitadelUserMessages.CCitadelUserMsg_FlexSlotUnlocked.class);
+        /* 356 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_FlexSlotUnlocked_VALUE, CitadelUserMessages.CCitadelUserMsg_FlexSlotUnlocked.class);
 //      /* 357 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_SeasonalKill_VALUE, CitadelUserMessages.CCitadelUserMsg_SeasonalKill.class);
-//      /* 358 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_MusicQueue_VALUE, CitadelUserMessages.CCitadelUserMsg_MusicQueue.class);
+        /* 358 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_MusicQueue_VALUE, CitadelUserMessages.CCitadelUserMsg_MusicQueue.class);
 //      /* 359 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_AG2ParamTrigger_VALUE, CitadelUserMessages.CCitadelUserMsg_AG2ParamTrigger.class);
 //      /* 360 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_ItemPurchaseNotification_VALUE, null);
 //      /* 361 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_EntityPortalled_VALUE, CitadelUserMessages.CCitadelUserMsg_EntityPortalled.class);
-//      /* 362 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_StreetBrawlScoring_VALUE, CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoring.class);
-//      /* 363 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_HudGameAnnouncement_VALUE, CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncement.class);
+        /* 362 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_StreetBrawlScoring_VALUE, CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoring.class);
+        /* 363 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_HudGameAnnouncement_VALUE, CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncement.class);
 //      /* 364 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_ItemDraftReaction_VALUE, CitadelUserMessages.CCitadelUserMsg_ItemDraftReaction.class);
 //      /* 365 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_ImportantAbilityUsed_VALUE, null);
-//      /* 366 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_BannedHeroes_VALUE, CitadelUserMessages.CCitadelUserMsg_BannedHeroes.class);
+        /* 366 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_BannedHeroes_VALUE, CitadelUserMessages.CCitadelUserMsg_BannedHeroes.class);
+//      /* 367 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_CombatLogEntry_VALUE, null);
+//      /* 368 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_CombatLogBulkData_VALUE, CitadelUserMessages.CCitadelUserMsg_CombatLogBulkData.class);
+        /* 369 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_PlayerTyping_VALUE, CitadelUserMessages.CCitadelUserMsg_PlayerTyping.class);
+//      /* 370 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_ChangeHeroStatus_VALUE, CitadelUserMessages.CCitadelUserMsg_ChangeHeroStatus.class);
+//      /* 371 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_LocalLobby_VALUE, CitadelUserMessages.CCitadelUserMsg_LocalLobby.class);
+//      /* 372 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_SoulBagPickup_VALUE, CitadelUserMessages.CCitadelUserMsg_SoulBagPickup.class);
+//      /* 373 */ K2C.put(DeadlockMessageId.CitadelUserMessageIds.k_EUserMsg_HeroReleaseVote_VALUE, CitadelUserMessages.CCitadelUserMsg_HeroReleaseVote.class);
 
         /* 400 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_EffectDispatchId_VALUE, S2TempEntities.CMsgTEEffectDispatch.class);
         /* 401 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_ArmorRicochetId_VALUE, S2TempEntities.CMsgTEArmorRicochet.class);
@@ -193,6 +206,7 @@ public class EmbeddedPackets {
 
         /* 450 */ K2C.put(DeadlockGameEvents.ECitadelGameEvents.GE_FireBullets_VALUE, DeadlockGameEvents.CMsgFireBullets.class);
         /* 461 */ K2C.put(DeadlockGameEvents.ECitadelGameEvents.GE_BulletImpact_VALUE, DeadlockGameEvents.CMsgBulletImpact.class);
+        /* 466 */ K2C.put(DeadlockGameEvents.ECitadelGameEvents.GE_RemoveBullet_VALUE, DeadlockGameEvents.CMsgRemoveBullet.class);
 
         /* 500 */ K2C.put(DeadlockMessageId.CitadelEntityMessageIds.k_EEntityMsg_BreakablePropSpawnDebris_VALUE, CitadelUserMessages.CCitadelEntityMsg_BreakablePropSpawnDebris.class);
     }

@@ -535,6 +535,14 @@ public final class DeadlockMessageId {
      * <code>svc_NextMsgPredicted = 77;</code>
      */
     svc_NextMsgPredicted(30, 77),
+    /**
+     * <code>svc_EncryptedData = 78;</code>
+     */
+    svc_EncryptedData(31, 78),
+    /**
+     * <code>svc_UserCmdKeyframe = 79;</code>
+     */
+    svc_UserCmdKeyframe(32, 79),
     ;
 
     /**
@@ -661,6 +669,14 @@ public final class DeadlockMessageId {
      * <code>svc_NextMsgPredicted = 77;</code>
      */
     public static final int svc_NextMsgPredicted_VALUE = 77;
+    /**
+     * <code>svc_EncryptedData = 78;</code>
+     */
+    public static final int svc_EncryptedData_VALUE = 78;
+    /**
+     * <code>svc_UserCmdKeyframe = 79;</code>
+     */
+    public static final int svc_UserCmdKeyframe_VALUE = 79;
 
 
     public final int getNumber() { return value; }
@@ -698,6 +714,8 @@ public final class DeadlockMessageId {
         case 75: return svc_HltvFixupOperatorStatus;
         case 76: return svc_UserCmds;
         case 77: return svc_NextMsgPredicted;
+        case 78: return svc_EncryptedData;
+        case 79: return svc_UserCmdKeyframe;
         default: return null;
       }
     }
@@ -959,9 +977,25 @@ public final class DeadlockMessageId {
      */
     UM_PlayResponseConditional(50, 166),
     /**
+     * <code>UM_UserSentBugBug = 167;</code>
+     */
+    UM_UserSentBugBug(51, 167),
+    /**
+     * <code>UM_UsageReport = 168;</code>
+     */
+    UM_UsageReport(52, 168),
+    /**
+     * <code>UM_RemoteServerCommand = 169;</code>
+     */
+    UM_RemoteServerCommand(53, 169),
+    /**
+     * <code>UM_RemoteServerResponse = 170;</code>
+     */
+    UM_RemoteServerResponse(54, 170),
+    /**
      * <code>UM_MAX_BASE = 200;</code>
      */
-    UM_MAX_BASE(51, 200),
+    UM_MAX_BASE(55, 200),
     ;
 
     /**
@@ -1169,6 +1203,22 @@ public final class DeadlockMessageId {
      */
     public static final int UM_PlayResponseConditional_VALUE = 166;
     /**
+     * <code>UM_UserSentBugBug = 167;</code>
+     */
+    public static final int UM_UserSentBugBug_VALUE = 167;
+    /**
+     * <code>UM_UsageReport = 168;</code>
+     */
+    public static final int UM_UsageReport_VALUE = 168;
+    /**
+     * <code>UM_RemoteServerCommand = 169;</code>
+     */
+    public static final int UM_RemoteServerCommand_VALUE = 169;
+    /**
+     * <code>UM_RemoteServerResponse = 170;</code>
+     */
+    public static final int UM_RemoteServerResponse_VALUE = 170;
+    /**
      * <code>UM_MAX_BASE = 200;</code>
      */
     public static final int UM_MAX_BASE_VALUE = 200;
@@ -1229,6 +1279,10 @@ public final class DeadlockMessageId {
         case 164: return UM_ExtraUserData;
         case 165: return UM_NotifyResponseFound;
         case 166: return UM_PlayResponseConditional;
+        case 167: return UM_UserSentBugBug;
+        case 168: return UM_UsageReport;
+        case 169: return UM_RemoteServerCommand;
+        case 170: return UM_RemoteServerResponse;
         case 200: return UM_MAX_BASE;
         default: return null;
       }
@@ -1648,6 +1702,34 @@ public final class DeadlockMessageId {
      * <code>k_EUserMsg_BannedHeroes = 366;</code>
      */
     k_EUserMsg_BannedHeroes(60, 366),
+    /**
+     * <code>k_EUserMsg_CombatLogEntry = 367;</code>
+     */
+    k_EUserMsg_CombatLogEntry(61, 367),
+    /**
+     * <code>k_EUserMsg_CombatLogBulkData = 368;</code>
+     */
+    k_EUserMsg_CombatLogBulkData(62, 368),
+    /**
+     * <code>k_EUserMsg_PlayerTyping = 369;</code>
+     */
+    k_EUserMsg_PlayerTyping(63, 369),
+    /**
+     * <code>k_EUserMsg_ChangeHeroStatus = 370;</code>
+     */
+    k_EUserMsg_ChangeHeroStatus(64, 370),
+    /**
+     * <code>k_EUserMsg_LocalLobby = 371;</code>
+     */
+    k_EUserMsg_LocalLobby(65, 371),
+    /**
+     * <code>k_EUserMsg_SoulBagPickup = 372;</code>
+     */
+    k_EUserMsg_SoulBagPickup(66, 372),
+    /**
+     * <code>k_EUserMsg_HeroReleaseVote = 373;</code>
+     */
+    k_EUserMsg_HeroReleaseVote(67, 373),
     ;
 
     /**
@@ -1894,6 +1976,34 @@ public final class DeadlockMessageId {
      * <code>k_EUserMsg_BannedHeroes = 366;</code>
      */
     public static final int k_EUserMsg_BannedHeroes_VALUE = 366;
+    /**
+     * <code>k_EUserMsg_CombatLogEntry = 367;</code>
+     */
+    public static final int k_EUserMsg_CombatLogEntry_VALUE = 367;
+    /**
+     * <code>k_EUserMsg_CombatLogBulkData = 368;</code>
+     */
+    public static final int k_EUserMsg_CombatLogBulkData_VALUE = 368;
+    /**
+     * <code>k_EUserMsg_PlayerTyping = 369;</code>
+     */
+    public static final int k_EUserMsg_PlayerTyping_VALUE = 369;
+    /**
+     * <code>k_EUserMsg_ChangeHeroStatus = 370;</code>
+     */
+    public static final int k_EUserMsg_ChangeHeroStatus_VALUE = 370;
+    /**
+     * <code>k_EUserMsg_LocalLobby = 371;</code>
+     */
+    public static final int k_EUserMsg_LocalLobby_VALUE = 371;
+    /**
+     * <code>k_EUserMsg_SoulBagPickup = 372;</code>
+     */
+    public static final int k_EUserMsg_SoulBagPickup_VALUE = 372;
+    /**
+     * <code>k_EUserMsg_HeroReleaseVote = 373;</code>
+     */
+    public static final int k_EUserMsg_HeroReleaseVote_VALUE = 373;
 
 
     public final int getNumber() { return value; }
@@ -1961,6 +2071,13 @@ public final class DeadlockMessageId {
         case 364: return k_EUserMsg_ItemDraftReaction;
         case 365: return k_EUserMsg_ImportantAbilityUsed;
         case 366: return k_EUserMsg_BannedHeroes;
+        case 367: return k_EUserMsg_CombatLogEntry;
+        case 368: return k_EUserMsg_CombatLogBulkData;
+        case 369: return k_EUserMsg_PlayerTyping;
+        case 370: return k_EUserMsg_ChangeHeroStatus;
+        case 371: return k_EUserMsg_LocalLobby;
+        case 372: return k_EUserMsg_SoulBagPickup;
+        case 373: return k_EUserMsg_HeroReleaseVote;
         default: return null;
       }
     }
@@ -2112,7 +2229,7 @@ public final class DeadlockMessageId {
       "ayerDisconnect\020\036\022\024\n\020clc_ServerStatus\020\037\022\024" +
       "\n\020clc_RequestPause\020!\022\024\n\020clc_CmdKeyValues" +
       "\020\"\022\031\n\025clc_RconServerDetails\020#\022\022\n\016clc_Hlt" +
-      "vReplay\020$\022\022\n\016clc_Diagnostic\020%*\261\005\n\014SVC_Me" +
+      "vReplay\020$\022\022\n\016clc_Diagnostic\020%*\341\005\n\014SVC_Me" +
       "ssages\022\022\n\016svc_ServerInfo\020(\022\033\n\027svc_Flatte",
       "nedSerializer\020)\022\021\n\rsvc_ClassInfo\020*\022\020\n\014sv" +
       "c_SetPause\020+\022\031\n\025svc_CreateStringTable\020,\022" +
@@ -2130,95 +2247,104 @@ public final class DeadlockMessageId {
       "svc_UserMessage\020H\022\031\n\025svc_Broadcast_Comma" +
       "nd\020J\022\037\n\033svc_HltvFixupOperatorStatus\020K\022\020\n" +
       "\014svc_UserCmds\020L\022\030\n\024svc_NextMsgPredicted\020" +
-      "M*\254\t\n\021EBaseUserMessages\022\027\n\023UM_Achievemen" +
-      "tEvent\020e\022\023\n\017UM_CloseCaption\020f\022\031\n\025UM_Clos" +
-      "eCaptionDirect\020g\022\027\n\023UM_CurrentTimescale\020" +
-      "h\022\027\n\023UM_DesiredTimescale\020i\022\013\n\007UM_Fade\020j\022",
-      "\020\n\014UM_GameTitle\020k\022\r\n\tUM_HudMsg\020n\022\016\n\nUM_H" +
-      "udText\020o\022\022\n\016UM_ColoredText\020q\022\023\n\017UM_Reque" +
-      "stState\020r\022\017\n\013UM_ResetHUD\020s\022\r\n\tUM_Rumble\020" +
-      "t\022\016\n\nUM_SayText\020u\022\017\n\013UM_SayText2\020v\022\025\n\021UM" +
-      "_SayTextChannel\020w\022\014\n\010UM_Shake\020x\022\017\n\013UM_Sh" +
-      "akeDir\020y\022\021\n\rUM_WaterShake\020z\022\016\n\nUM_TextMs" +
-      "g\020|\022\021\n\rUM_ScreenTilt\020}\022\021\n\014UM_VoiceMask\020\200" +
-      "\001\022\021\n\014UM_SendAudio\020\202\001\022\022\n\rUM_ItemPickup\020\203\001" +
-      "\022\022\n\rUM_AmmoDenied\020\204\001\022\020\n\013UM_ShowMenu\020\206\001\022\022" +
-      "\n\rUM_CreditsMsg\020\207\001\022\037\n\032UM_CloseCaptionPla",
-      "ceholder\020\216\001\022\030\n\023UM_CameraTransition\020\217\001\022\026\n" +
-      "\021UM_AudioParameter\020\220\001\022\027\n\022UM_ParticleMana" +
-      "ger\020\221\001\022\020\n\013UM_HudError\020\222\001\022\027\n\022UM_CustomGam" +
-      "eEvent\020\224\001\022\027\n\022UM_AnimGraphUpdate\020\225\001\022\033\n\026UM" +
-      "_HapticsManagerPulse\020\226\001\022\034\n\027UM_HapticsMan" +
-      "agerEffect\020\227\001\022\031\n\024UM_CommandQueueState\020\230\001" +
-      "\022\030\n\023UM_UpdateCssClasses\020\231\001\022\027\n\022UM_ServerF" +
-      "rameTime\020\232\001\022\034\n\027UM_LagCompensationError\020\233" +
-      "\001\022\030\n\023UM_RequestDllStatus\020\234\001\022\031\n\024UM_Reques" +
-      "tUtilAction\020\235\001\022\032\n\025UM_UtilActionResponse\020",
-      "\236\001\022\031\n\024UM_DllStatusResponse\020\237\001\022\030\n\023UM_Requ" +
-      "estInventory\020\240\001\022\031\n\024UM_InventoryResponse\020" +
-      "\241\001\022\031\n\024UM_RequestDiagnostic\020\242\001\022\032\n\025UM_Diag" +
-      "nosticResponse\020\243\001\022\025\n\020UM_ExtraUserData\020\244\001" +
-      "\022\033\n\026UM_NotifyResponseFound\020\245\001\022\037\n\032UM_Play" +
-      "ResponseConditional\020\246\001\022\020\n\013UM_MAX_BASE\020\310\001" +
-      "*\224\001\n\023EBaseEntityMessages\022\022\n\rEM_PlayJingl" +
-      "e\020\210\001\022\025\n\020EM_ScreenOverlay\020\211\001\022\027\n\022EM_Remove" +
-      "AllDecals\020\212\001\022\026\n\021EM_PropagateForce\020\213\001\022\017\n\n" +
-      "EM_DoSpark\020\214\001\022\020\n\013EM_FixAngle\020\215\001*\375\017\n\025Cita",
-      "delUserMessageIds\022\026\n\021k_EUserMsg_Damage\020\254" +
-      "\002\022\027\n\022k_EUserMsg_MapPing\020\257\002\022\033\n\026k_EUserMsg" +
-      "_TeamRewards\020\260\002\022\035\n\030k_EUserMsg_AbilityFai" +
-      "led\020\262\002\022\"\n\035k_EUserMsg_TriggerDamageFlash\020" +
-      "\264\002\022 \n\033k_EUserMsg_AbilitiesChanged\020\265\002\022#\n\036" +
-      "k_EUserMsg_RecentDamageSummary\020\266\002\022$\n\037k_E" +
-      "UserMsg_SpectatorTeamChanged\020\267\002\022\031\n\024k_EUs" +
-      "erMsg_ChatWheel\020\270\002\022\033\n\026k_EUserMsg_GoldHis" +
-      "tory\020\271\002\022\027\n\022k_EUserMsg_ChatMsg\020\272\002\022\035\n\030k_EU" +
-      "serMsg_QuickResponse\020\273\002\022 \n\033k_EUserMsg_Po",
-      "stMatchDetails\020\274\002\022\031\n\024k_EUserMsg_ChatEven" +
-      "t\020\275\002\022\"\n\035k_EUserMsg_AbilityInterrupted\020\276\002" +
-      "\022\032\n\025k_EUserMsg_HeroKilled\020\277\002\022\032\n\025k_EUserM" +
-      "sg_ReturnIdol\020\300\002\022%\n k_EUserMsg_SetClient" +
-      "CameraAngles\020\301\002\022\027\n\022k_EUserMsg_MapLine\020\302\002" +
-      "\022\031\n\024k_EUserMsg_BulletHit\020\303\002\022\035\n\030k_EUserMs" +
-      "g_ObjectiveMask\020\304\002\022\037\n\032k_EUserMsg_Modifie" +
-      "rApplied\020\305\002\022 \n\033k_EUserMsg_CameraControll" +
-      "er\020\306\002\022#\n\036k_EUserMsg_AuraModifierApplied\020" +
-      "\307\002\022#\n\036k_EUserMsg_ObstructedShotFired\020\311\002\022",
-      "\"\n\035k_EUserMsg_AbilityLateFailure\020\312\002\022\033\n\026k" +
-      "_EUserMsg_AbilityPing\020\313\002\022\"\n\035k_EUserMsg_P" +
-      "ostProcessingAnim\020\314\002\022\037\n\032k_EUserMsg_Death" +
-      "ReplayData\020\315\002\022&\n!k_EUserMsg_PlayerLifeti" +
-      "meStatInfo\020\316\002\022\037\n\032k_EUserMsg_ForceShopClo" +
-      "sed\020\320\002\022\036\n\031k_EUserMsg_StaminaDrained\020\321\002\022\035" +
-      "\n\030k_EUserMsg_AbilityNotify\020\322\002\022&\n!k_EUser" +
-      "Msg_GetDamageStatsResponse\020\323\002\022*\n%k_EUser" +
-      "Msg_ParticipantStartSoundEvent\020\324\002\022)\n$k_E" +
-      "UserMsg_ParticipantStopSoundEvent\020\325\002\022-\n(",
-      "k_EUserMsg_ParticipantStopSoundEventHash" +
-      "\020\326\002\022.\n)k_EUserMsg_ParticipantSetSoundEve" +
-      "ntParams\020\327\002\0220\n+k_EUserMsg_ParticipantSet" +
-      "LibraryStackFields\020\330\002\022\037\n\032k_EUserMsg_Curr" +
-      "encyChanged\020\331\002\022\030\n\023k_EUserMsg_GameOver\020\332\002" +
-      "\022\032\n\025k_EUserMsg_BossKilled\020\333\002\022\033\n\026k_EUserM" +
-      "sg_BossDamaged\020\334\002\022\036\n\031k_EUserMsg_MidBossS" +
-      "pawned\020\335\002\022\033\n\026k_EUserMsg_RejuvStatus\020\336\002\022\032" +
-      "\n\025k_EUserMsg_KillStreak\020\337\002\022\027\n\022k_EUserMsg" +
-      "_TeamMsg\020\340\002\022\037\n\032k_EUserMsg_PlayerRespawne",
-      "d\020\341\002\022\037\n\032k_EUserMsg_CallCheaterVote\020\342\002\022\030\n" +
-      "\023k_EUserMsg_MeleeHit\020\343\002\022 \n\033k_EUserMsg_Fl" +
-      "exSlotUnlocked\020\344\002\022\034\n\027k_EUserMsg_Seasonal" +
-      "Kill\020\345\002\022\032\n\025k_EUserMsg_MusicQueue\020\346\002\022\037\n\032k" +
-      "_EUserMsg_AG2ParamTrigger\020\347\002\022(\n#k_EUserM" +
-      "sg_ItemPurchaseNotification\020\350\002\022\037\n\032k_EUse" +
-      "rMsg_EntityPortalled\020\351\002\022\"\n\035k_EUserMsg_St" +
-      "reetBrawlScoring\020\352\002\022#\n\036k_EUserMsg_HudGam" +
-      "eAnnouncement\020\353\002\022!\n\034k_EUserMsg_ItemDraft" +
-      "Reaction\020\354\002\022$\n\037k_EUserMsg_ImportantAbili",
-      "tyUsed\020\355\002\022\034\n\027k_EUserMsg_BannedHeroes\020\356\002*" +
-      "E\n\027CitadelEntityMessageIds\022*\n%k_EEntityM" +
-      "sg_BreakablePropSpawnDebris\020\364\003B;\n&skadis" +
-      "tats.clarity.wire.deadlock.protoB\021Deadlo" +
-      "ckMessageId"
+      "M\022\025\n\021svc_EncryptedData\020N\022\027\n\023svc_UserCmdK" +
+      "eyframe\020O*\224\n\n\021EBaseUserMessages\022\027\n\023UM_Ac" +
+      "hievementEvent\020e\022\023\n\017UM_CloseCaption\020f\022\031\n" +
+      "\025UM_CloseCaptionDirect\020g\022\027\n\023UM_CurrentTi",
+      "mescale\020h\022\027\n\023UM_DesiredTimescale\020i\022\013\n\007UM" +
+      "_Fade\020j\022\020\n\014UM_GameTitle\020k\022\r\n\tUM_HudMsg\020n" +
+      "\022\016\n\nUM_HudText\020o\022\022\n\016UM_ColoredText\020q\022\023\n\017" +
+      "UM_RequestState\020r\022\017\n\013UM_ResetHUD\020s\022\r\n\tUM" +
+      "_Rumble\020t\022\016\n\nUM_SayText\020u\022\017\n\013UM_SayText2" +
+      "\020v\022\025\n\021UM_SayTextChannel\020w\022\014\n\010UM_Shake\020x\022" +
+      "\017\n\013UM_ShakeDir\020y\022\021\n\rUM_WaterShake\020z\022\016\n\nU" +
+      "M_TextMsg\020|\022\021\n\rUM_ScreenTilt\020}\022\021\n\014UM_Voi" +
+      "ceMask\020\200\001\022\021\n\014UM_SendAudio\020\202\001\022\022\n\rUM_ItemP" +
+      "ickup\020\203\001\022\022\n\rUM_AmmoDenied\020\204\001\022\020\n\013UM_ShowM",
+      "enu\020\206\001\022\022\n\rUM_CreditsMsg\020\207\001\022\037\n\032UM_CloseCa" +
+      "ptionPlaceholder\020\216\001\022\030\n\023UM_CameraTransiti" +
+      "on\020\217\001\022\026\n\021UM_AudioParameter\020\220\001\022\027\n\022UM_Part" +
+      "icleManager\020\221\001\022\020\n\013UM_HudError\020\222\001\022\027\n\022UM_C" +
+      "ustomGameEvent\020\224\001\022\027\n\022UM_AnimGraphUpdate\020" +
+      "\225\001\022\033\n\026UM_HapticsManagerPulse\020\226\001\022\034\n\027UM_Ha" +
+      "pticsManagerEffect\020\227\001\022\031\n\024UM_CommandQueue" +
+      "State\020\230\001\022\030\n\023UM_UpdateCssClasses\020\231\001\022\027\n\022UM" +
+      "_ServerFrameTime\020\232\001\022\034\n\027UM_LagCompensatio" +
+      "nError\020\233\001\022\030\n\023UM_RequestDllStatus\020\234\001\022\031\n\024U",
+      "M_RequestUtilAction\020\235\001\022\032\n\025UM_UtilActionR" +
+      "esponse\020\236\001\022\031\n\024UM_DllStatusResponse\020\237\001\022\030\n" +
+      "\023UM_RequestInventory\020\240\001\022\031\n\024UM_InventoryR" +
+      "esponse\020\241\001\022\031\n\024UM_RequestDiagnostic\020\242\001\022\032\n" +
+      "\025UM_DiagnosticResponse\020\243\001\022\025\n\020UM_ExtraUse" +
+      "rData\020\244\001\022\033\n\026UM_NotifyResponseFound\020\245\001\022\037\n" +
+      "\032UM_PlayResponseConditional\020\246\001\022\026\n\021UM_Use" +
+      "rSentBugBug\020\247\001\022\023\n\016UM_UsageReport\020\250\001\022\033\n\026U" +
+      "M_RemoteServerCommand\020\251\001\022\034\n\027UM_RemoteSer" +
+      "verResponse\020\252\001\022\020\n\013UM_MAX_BASE\020\310\001*\224\001\n\023EBa",
+      "seEntityMessages\022\022\n\rEM_PlayJingle\020\210\001\022\025\n\020" +
+      "EM_ScreenOverlay\020\211\001\022\027\n\022EM_RemoveAllDecal" +
+      "s\020\212\001\022\026\n\021EM_PropagateForce\020\213\001\022\017\n\nEM_DoSpa" +
+      "rk\020\214\001\022\020\n\013EM_FixAngle\020\215\001*\334\021\n\025CitadelUserM" +
+      "essageIds\022\026\n\021k_EUserMsg_Damage\020\254\002\022\027\n\022k_E" +
+      "UserMsg_MapPing\020\257\002\022\033\n\026k_EUserMsg_TeamRew" +
+      "ards\020\260\002\022\035\n\030k_EUserMsg_AbilityFailed\020\262\002\022\"" +
+      "\n\035k_EUserMsg_TriggerDamageFlash\020\264\002\022 \n\033k_" +
+      "EUserMsg_AbilitiesChanged\020\265\002\022#\n\036k_EUserM" +
+      "sg_RecentDamageSummary\020\266\002\022$\n\037k_EUserMsg_",
+      "SpectatorTeamChanged\020\267\002\022\031\n\024k_EUserMsg_Ch" +
+      "atWheel\020\270\002\022\033\n\026k_EUserMsg_GoldHistory\020\271\002\022" +
+      "\027\n\022k_EUserMsg_ChatMsg\020\272\002\022\035\n\030k_EUserMsg_Q" +
+      "uickResponse\020\273\002\022 \n\033k_EUserMsg_PostMatchD" +
+      "etails\020\274\002\022\031\n\024k_EUserMsg_ChatEvent\020\275\002\022\"\n\035" +
+      "k_EUserMsg_AbilityInterrupted\020\276\002\022\032\n\025k_EU" +
+      "serMsg_HeroKilled\020\277\002\022\032\n\025k_EUserMsg_Retur" +
+      "nIdol\020\300\002\022%\n k_EUserMsg_SetClientCameraAn" +
+      "gles\020\301\002\022\027\n\022k_EUserMsg_MapLine\020\302\002\022\031\n\024k_EU" +
+      "serMsg_BulletHit\020\303\002\022\035\n\030k_EUserMsg_Object",
+      "iveMask\020\304\002\022\037\n\032k_EUserMsg_ModifierApplied" +
+      "\020\305\002\022 \n\033k_EUserMsg_CameraController\020\306\002\022#\n" +
+      "\036k_EUserMsg_AuraModifierApplied\020\307\002\022#\n\036k_" +
+      "EUserMsg_ObstructedShotFired\020\311\002\022\"\n\035k_EUs" +
+      "erMsg_AbilityLateFailure\020\312\002\022\033\n\026k_EUserMs" +
+      "g_AbilityPing\020\313\002\022\"\n\035k_EUserMsg_PostProce" +
+      "ssingAnim\020\314\002\022\037\n\032k_EUserMsg_DeathReplayDa" +
+      "ta\020\315\002\022&\n!k_EUserMsg_PlayerLifetimeStatIn" +
+      "fo\020\316\002\022\037\n\032k_EUserMsg_ForceShopClosed\020\320\002\022\036" +
+      "\n\031k_EUserMsg_StaminaDrained\020\321\002\022\035\n\030k_EUse",
+      "rMsg_AbilityNotify\020\322\002\022&\n!k_EUserMsg_GetD" +
+      "amageStatsResponse\020\323\002\022*\n%k_EUserMsg_Part" +
+      "icipantStartSoundEvent\020\324\002\022)\n$k_EUserMsg_" +
+      "ParticipantStopSoundEvent\020\325\002\022-\n(k_EUserM" +
+      "sg_ParticipantStopSoundEventHash\020\326\002\022.\n)k" +
+      "_EUserMsg_ParticipantSetSoundEventParams" +
+      "\020\327\002\0220\n+k_EUserMsg_ParticipantSetLibraryS" +
+      "tackFields\020\330\002\022\037\n\032k_EUserMsg_CurrencyChan" +
+      "ged\020\331\002\022\030\n\023k_EUserMsg_GameOver\020\332\002\022\032\n\025k_EU" +
+      "serMsg_BossKilled\020\333\002\022\033\n\026k_EUserMsg_BossD",
+      "amaged\020\334\002\022\036\n\031k_EUserMsg_MidBossSpawned\020\335" +
+      "\002\022\033\n\026k_EUserMsg_RejuvStatus\020\336\002\022\032\n\025k_EUse" +
+      "rMsg_KillStreak\020\337\002\022\027\n\022k_EUserMsg_TeamMsg" +
+      "\020\340\002\022\037\n\032k_EUserMsg_PlayerRespawned\020\341\002\022\037\n\032" +
+      "k_EUserMsg_CallCheaterVote\020\342\002\022\030\n\023k_EUser" +
+      "Msg_MeleeHit\020\343\002\022 \n\033k_EUserMsg_FlexSlotUn" +
+      "locked\020\344\002\022\034\n\027k_EUserMsg_SeasonalKill\020\345\002\022" +
+      "\032\n\025k_EUserMsg_MusicQueue\020\346\002\022\037\n\032k_EUserMs" +
+      "g_AG2ParamTrigger\020\347\002\022(\n#k_EUserMsg_ItemP" +
+      "urchaseNotification\020\350\002\022\037\n\032k_EUserMsg_Ent",
+      "ityPortalled\020\351\002\022\"\n\035k_EUserMsg_StreetBraw" +
+      "lScoring\020\352\002\022#\n\036k_EUserMsg_HudGameAnnounc" +
+      "ement\020\353\002\022!\n\034k_EUserMsg_ItemDraftReaction" +
+      "\020\354\002\022$\n\037k_EUserMsg_ImportantAbilityUsed\020\355" +
+      "\002\022\034\n\027k_EUserMsg_BannedHeroes\020\356\002\022\036\n\031k_EUs" +
+      "erMsg_CombatLogEntry\020\357\002\022!\n\034k_EUserMsg_Co" +
+      "mbatLogBulkData\020\360\002\022\034\n\027k_EUserMsg_PlayerT" +
+      "yping\020\361\002\022 \n\033k_EUserMsg_ChangeHeroStatus\020" +
+      "\362\002\022\032\n\025k_EUserMsg_LocalLobby\020\363\002\022\035\n\030k_EUse" +
+      "rMsg_SoulBagPickup\020\364\002\022\037\n\032k_EUserMsg_Hero",
+      "ReleaseVote\020\365\002*E\n\027CitadelEntityMessageId" +
+      "s\022*\n%k_EEntityMsg_BreakablePropSpawnDebr" +
+      "is\020\364\003B;\n&skadistats.clarity.wire.deadloc" +
+      "k.protoB\021DeadlockMessageId"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

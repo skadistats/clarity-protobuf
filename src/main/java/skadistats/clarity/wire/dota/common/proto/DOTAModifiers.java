@@ -514,6 +514,32 @@ public final class DOTAModifiers {
      * <code>optional bool has_shard = 42;</code>
      */
     boolean getHasShard();
+
+    /**
+     * <code>repeated int32 custom_int_values = 43;</code>
+     */
+    java.util.List<java.lang.Integer> getCustomIntValuesList();
+    /**
+     * <code>repeated int32 custom_int_values = 43;</code>
+     */
+    int getCustomIntValuesCount();
+    /**
+     * <code>repeated int32 custom_int_values = 43;</code>
+     */
+    int getCustomIntValues(int index);
+
+    /**
+     * <code>repeated float custom_float_values = 44;</code>
+     */
+    java.util.List<java.lang.Float> getCustomFloatValuesList();
+    /**
+     * <code>repeated float custom_float_values = 44;</code>
+     */
+    int getCustomFloatValuesCount();
+    /**
+     * <code>repeated float custom_float_values = 44;</code>
+     */
+    float getCustomFloatValues(int index);
   }
   /**
    * Protobuf type {@code CDOTAModifierBuffTableEntry}
@@ -807,6 +833,48 @@ public final class DOTAModifiers {
               hasShard_ = input.readBool();
               break;
             }
+            case 344: {
+              if (!((mutable_bitField1_ & 0x00000400) == 0x00000400)) {
+                customIntValues_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField1_ |= 0x00000400;
+              }
+              customIntValues_.add(input.readInt32());
+              break;
+            }
+            case 346: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField1_ & 0x00000400) == 0x00000400) && input.getBytesUntilLimit() > 0) {
+                customIntValues_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField1_ |= 0x00000400;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                customIntValues_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 357: {
+              if (!((mutable_bitField1_ & 0x00000800) == 0x00000800)) {
+                customFloatValues_ = new java.util.ArrayList<java.lang.Float>();
+                mutable_bitField1_ |= 0x00000800;
+              }
+              customFloatValues_.add(input.readFloat());
+              break;
+            }
+            case 354: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField1_ & 0x00000800) == 0x00000800) && input.getBytesUntilLimit() > 0) {
+                customFloatValues_ = new java.util.ArrayList<java.lang.Float>();
+                mutable_bitField1_ |= 0x00000800;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                customFloatValues_.add(input.readFloat());
+              }
+              input.popLimit(limit);
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -815,6 +883,12 @@ public final class DOTAModifiers {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField1_ & 0x00000400) == 0x00000400)) {
+          customIntValues_ = java.util.Collections.unmodifiableList(customIntValues_);
+        }
+        if (((mutable_bitField1_ & 0x00000800) == 0x00000800)) {
+          customFloatValues_ = java.util.Collections.unmodifiableList(customFloatValues_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -1679,6 +1753,50 @@ public final class DOTAModifiers {
       return hasShard_;
     }
 
+    public static final int CUSTOM_INT_VALUES_FIELD_NUMBER = 43;
+    private java.util.List<java.lang.Integer> customIntValues_;
+    /**
+     * <code>repeated int32 custom_int_values = 43;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getCustomIntValuesList() {
+      return customIntValues_;
+    }
+    /**
+     * <code>repeated int32 custom_int_values = 43;</code>
+     */
+    public int getCustomIntValuesCount() {
+      return customIntValues_.size();
+    }
+    /**
+     * <code>repeated int32 custom_int_values = 43;</code>
+     */
+    public int getCustomIntValues(int index) {
+      return customIntValues_.get(index);
+    }
+
+    public static final int CUSTOM_FLOAT_VALUES_FIELD_NUMBER = 44;
+    private java.util.List<java.lang.Float> customFloatValues_;
+    /**
+     * <code>repeated float custom_float_values = 44;</code>
+     */
+    public java.util.List<java.lang.Float>
+        getCustomFloatValuesList() {
+      return customFloatValues_;
+    }
+    /**
+     * <code>repeated float custom_float_values = 44;</code>
+     */
+    public int getCustomFloatValuesCount() {
+      return customFloatValues_.size();
+    }
+    /**
+     * <code>repeated float custom_float_values = 44;</code>
+     */
+    public float getCustomFloatValues(int index) {
+      return customFloatValues_.get(index);
+    }
+
     private void initFields() {
       entryType_ = skadistats.clarity.wire.dota.common.proto.DOTAModifiers.DOTA_MODIFIER_ENTRY_TYPE.DOTA_MODIFIER_ENTRY_TYPE_ACTIVE;
       parent_ = 16777215;
@@ -1722,6 +1840,8 @@ public final class DOTAModifiers {
       moveSlow_ = 0F;
       hasScepter_ = false;
       hasShard_ = false;
+      customIntValues_ = java.util.Collections.emptyList();
+      customFloatValues_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1877,6 +1997,12 @@ public final class DOTAModifiers {
       }
       if (((bitField1_ & 0x00000200) == 0x00000200)) {
         output.writeBool(42, hasShard_);
+      }
+      for (int i = 0; i < customIntValues_.size(); i++) {
+        output.writeInt32(43, customIntValues_.get(i));
+      }
+      for (int i = 0; i < customFloatValues_.size(); i++) {
+        output.writeFloat(44, customFloatValues_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -2054,6 +2180,21 @@ public final class DOTAModifiers {
       if (((bitField1_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(42, hasShard_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < customIntValues_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(customIntValues_.get(i));
+        }
+        size += dataSize;
+        size += 2 * getCustomIntValuesList().size();
+      }
+      {
+        int dataSize = 0;
+        dataSize = 4 * getCustomFloatValuesList().size();
+        size += dataSize;
+        size += 2 * getCustomFloatValuesList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2266,6 +2407,10 @@ public final class DOTAModifiers {
         bitField1_ = (bitField1_ & ~0x00000100);
         hasShard_ = false;
         bitField1_ = (bitField1_ & ~0x00000200);
+        customIntValues_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000400);
+        customFloatValues_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000800);
         return this;
       }
 
@@ -2472,6 +2617,16 @@ public final class DOTAModifiers {
           to_bitField1_ |= 0x00000200;
         }
         result.hasShard_ = hasShard_;
+        if (((bitField1_ & 0x00000400) == 0x00000400)) {
+          customIntValues_ = java.util.Collections.unmodifiableList(customIntValues_);
+          bitField1_ = (bitField1_ & ~0x00000400);
+        }
+        result.customIntValues_ = customIntValues_;
+        if (((bitField1_ & 0x00000800) == 0x00000800)) {
+          customFloatValues_ = java.util.Collections.unmodifiableList(customFloatValues_);
+          bitField1_ = (bitField1_ & ~0x00000800);
+        }
+        result.customFloatValues_ = customFloatValues_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -2628,6 +2783,26 @@ public final class DOTAModifiers {
         }
         if (other.hasHasShard()) {
           setHasShard(other.getHasShard());
+        }
+        if (!other.customIntValues_.isEmpty()) {
+          if (customIntValues_.isEmpty()) {
+            customIntValues_ = other.customIntValues_;
+            bitField1_ = (bitField1_ & ~0x00000400);
+          } else {
+            ensureCustomIntValuesIsMutable();
+            customIntValues_.addAll(other.customIntValues_);
+          }
+          onChanged();
+        }
+        if (!other.customFloatValues_.isEmpty()) {
+          if (customFloatValues_.isEmpty()) {
+            customFloatValues_ = other.customFloatValues_;
+            bitField1_ = (bitField1_ & ~0x00000800);
+          } else {
+            ensureCustomFloatValuesIsMutable();
+            customFloatValues_.addAll(other.customFloatValues_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -4496,6 +4671,138 @@ public final class DOTAModifiers {
         return this;
       }
 
+      private java.util.List<java.lang.Integer> customIntValues_ = java.util.Collections.emptyList();
+      private void ensureCustomIntValuesIsMutable() {
+        if (!((bitField1_ & 0x00000400) == 0x00000400)) {
+          customIntValues_ = new java.util.ArrayList<java.lang.Integer>(customIntValues_);
+          bitField1_ |= 0x00000400;
+         }
+      }
+      /**
+       * <code>repeated int32 custom_int_values = 43;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getCustomIntValuesList() {
+        return java.util.Collections.unmodifiableList(customIntValues_);
+      }
+      /**
+       * <code>repeated int32 custom_int_values = 43;</code>
+       */
+      public int getCustomIntValuesCount() {
+        return customIntValues_.size();
+      }
+      /**
+       * <code>repeated int32 custom_int_values = 43;</code>
+       */
+      public int getCustomIntValues(int index) {
+        return customIntValues_.get(index);
+      }
+      /**
+       * <code>repeated int32 custom_int_values = 43;</code>
+       */
+      public Builder setCustomIntValues(
+          int index, int value) {
+        ensureCustomIntValuesIsMutable();
+        customIntValues_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 custom_int_values = 43;</code>
+       */
+      public Builder addCustomIntValues(int value) {
+        ensureCustomIntValuesIsMutable();
+        customIntValues_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 custom_int_values = 43;</code>
+       */
+      public Builder addAllCustomIntValues(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureCustomIntValuesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, customIntValues_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 custom_int_values = 43;</code>
+       */
+      public Builder clearCustomIntValues() {
+        customIntValues_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000400);
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Float> customFloatValues_ = java.util.Collections.emptyList();
+      private void ensureCustomFloatValuesIsMutable() {
+        if (!((bitField1_ & 0x00000800) == 0x00000800)) {
+          customFloatValues_ = new java.util.ArrayList<java.lang.Float>(customFloatValues_);
+          bitField1_ |= 0x00000800;
+         }
+      }
+      /**
+       * <code>repeated float custom_float_values = 44;</code>
+       */
+      public java.util.List<java.lang.Float>
+          getCustomFloatValuesList() {
+        return java.util.Collections.unmodifiableList(customFloatValues_);
+      }
+      /**
+       * <code>repeated float custom_float_values = 44;</code>
+       */
+      public int getCustomFloatValuesCount() {
+        return customFloatValues_.size();
+      }
+      /**
+       * <code>repeated float custom_float_values = 44;</code>
+       */
+      public float getCustomFloatValues(int index) {
+        return customFloatValues_.get(index);
+      }
+      /**
+       * <code>repeated float custom_float_values = 44;</code>
+       */
+      public Builder setCustomFloatValues(
+          int index, float value) {
+        ensureCustomFloatValuesIsMutable();
+        customFloatValues_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated float custom_float_values = 44;</code>
+       */
+      public Builder addCustomFloatValues(float value) {
+        ensureCustomFloatValuesIsMutable();
+        customFloatValues_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated float custom_float_values = 44;</code>
+       */
+      public Builder addAllCustomFloatValues(
+          java.lang.Iterable<? extends java.lang.Float> values) {
+        ensureCustomFloatValuesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, customFloatValues_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated float custom_float_values = 44;</code>
+       */
+      public Builder clearCustomFloatValues() {
+        customFloatValues_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000800);
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:CDOTAModifierBuffTableEntry)
     }
 
@@ -5097,7 +5404,7 @@ public final class DOTAModifiers {
   static {
     java.lang.String[] descriptorData = {
       "\n\024dota_modifiers.proto\032\035networkbasetypes" +
-      "-common.proto\"\215\010\n\033CDOTAModifierBuffTable" +
+      "-common.proto\"\305\010\n\033CDOTAModifierBuffTable" +
       "Entry\022N\n\nentry_type\030\001 \002(\0162\031.DOTA_MODIFIE" +
       "R_ENTRY_TYPE:\037DOTA_MODIFIER_ENTRY_TYPE_A" +
       "CTIVE\022\030\n\006parent\030\002 \002(\r:\01016777215\022\r\n\005index" +
@@ -5123,13 +5430,14 @@ public final class DOTAModifiers {
       "nus_mana\030% \001(\005\022\037\n\rcustom_entity\030& \001(\r:\0101" +
       "6777215\022\031\n\021aura_within_range\030\' \001(\010\022\021\n\tmo" +
       "ve_slow\030( \001(\002\022\023\n\013has_scepter\030) \001(\010\022\021\n\tha" +
-      "s_shard\030* \001(\010\"I\n\025CDOTALuaModifierEntry\022\025" +
-      "\n\rmodifier_type\030\001 \002(\005\022\031\n\021modifier_filena" +
-      "me\030\002 \002(\t*e\n\030DOTA_MODIFIER_ENTRY_TYPE\022#\n\037",
-      "DOTA_MODIFIER_ENTRY_TYPE_ACTIVE\020\001\022$\n DOT" +
-      "A_MODIFIER_ENTRY_TYPE_REMOVED\020\002B:\n)skadi" +
-      "stats.clarity.wire.dota.common.protoB\rDO" +
-      "TAModifiers"
+      "s_shard\030* \001(\010\022\031\n\021custom_int_values\030+ \003(\005" +
+      "\022\033\n\023custom_float_values\030, \003(\002\"I\n\025CDOTALu" +
+      "aModifierEntry\022\025\n\rmodifier_type\030\001 \002(\005\022\031\n",
+      "\021modifier_filename\030\002 \002(\t*e\n\030DOTA_MODIFIE" +
+      "R_ENTRY_TYPE\022#\n\037DOTA_MODIFIER_ENTRY_TYPE" +
+      "_ACTIVE\020\001\022$\n DOTA_MODIFIER_ENTRY_TYPE_RE" +
+      "MOVED\020\002B:\n)skadistats.clarity.wire.dota." +
+      "common.protoB\rDOTAModifiers"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5149,7 +5457,7 @@ public final class DOTAModifiers {
     internal_static_CDOTAModifierBuffTableEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAModifierBuffTableEntry_descriptor,
-        new java.lang.String[] { "EntryType", "Parent", "Index", "SerialNum", "ModifierClass", "AbilityLevel", "StackCount", "CreationTime", "Duration", "Caster", "Ability", "Armor", "FadeTime", "Subtle", "ChannelTime", "VStart", "VEnd", "PortalLoopAppear", "PortalLoopDisappear", "HeroLoopAppear", "HeroLoopDisappear", "MovementSpeed", "Aura", "Activity", "Damage", "Range", "DdModifierIndex", "DdAbilityId", "IllusionLabel", "Active", "PlayerIds", "LuaName", "AttackSpeed", "AuraOwner", "BonusAllStats", "BonusHealth", "BonusMana", "CustomEntity", "AuraWithinRange", "MoveSlow", "HasScepter", "HasShard", });
+        new java.lang.String[] { "EntryType", "Parent", "Index", "SerialNum", "ModifierClass", "AbilityLevel", "StackCount", "CreationTime", "Duration", "Caster", "Ability", "Armor", "FadeTime", "Subtle", "ChannelTime", "VStart", "VEnd", "PortalLoopAppear", "PortalLoopDisappear", "HeroLoopAppear", "HeroLoopDisappear", "MovementSpeed", "Aura", "Activity", "Damage", "Range", "DdModifierIndex", "DdAbilityId", "IllusionLabel", "Active", "PlayerIds", "LuaName", "AttackSpeed", "AuraOwner", "BonusAllStats", "BonusHealth", "BonusMana", "CustomEntity", "AuraWithinRange", "MoveSlow", "HasScepter", "HasShard", "CustomIntValues", "CustomFloatValues", });
     internal_static_CDOTALuaModifierEntry_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CDOTALuaModifierEntry_fieldAccessorTable = new
