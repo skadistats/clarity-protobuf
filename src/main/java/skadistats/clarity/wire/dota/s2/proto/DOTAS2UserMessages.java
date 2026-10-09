@@ -5907,6 +5907,632 @@ public final class DOTAS2UserMessages {
     // @@protoc_insertion_point(class_scope:CDOTAUserMsg_MonsterHunter_HuntAlert)
   }
 
+  public interface CDOTAUserMsg_TidehunterArcanaProgress_RavagesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CDOTAUserMsg_TidehunterArcanaProgress_Ravages)
+      skadistats.clarity.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code CDOTAUserMsg_TidehunterArcanaProgress_Ravages}
+   */
+  public static final class CDOTAUserMsg_TidehunterArcanaProgress_Ravages extends
+      skadistats.clarity.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CDOTAUserMsg_TidehunterArcanaProgress_Ravages)
+      CDOTAUserMsg_TidehunterArcanaProgress_RavagesOrBuilder {
+    // Use CDOTAUserMsg_TidehunterArcanaProgress_Ravages.newBuilder() to construct.
+    private CDOTAUserMsg_TidehunterArcanaProgress_Ravages(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CDOTAUserMsg_TidehunterArcanaProgress_Ravages(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CDOTAUserMsg_TidehunterArcanaProgress_Ravages defaultInstance;
+    public static CDOTAUserMsg_TidehunterArcanaProgress_Ravages getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CDOTAUserMsg_TidehunterArcanaProgress_Ravages getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final skadistats.clarity.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CDOTAUserMsg_TidehunterArcanaProgress_Ravages(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      initFields();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Ravages_descriptor;
+    }
+
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Ravages_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages.Builder.class);
+    }
+
+    public static skadistats.clarity.protobuf.Parser<CDOTAUserMsg_TidehunterArcanaProgress_Ravages> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CDOTAUserMsg_TidehunterArcanaProgress_Ravages>() {
+      public CDOTAUserMsg_TidehunterArcanaProgress_Ravages parsePartialFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return new CDOTAUserMsg_TidehunterArcanaProgress_Ravages(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public skadistats.clarity.protobuf.Parser<CDOTAUserMsg_TidehunterArcanaProgress_Ravages> getParserForType() {
+      return PARSER;
+    }
+
+    private void initFields() {
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages parseFrom(
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages parseFrom(
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages parseFrom(byte[] data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages parseFrom(
+        byte[] data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages parseFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages parseDelimitedFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CDOTAUserMsg_TidehunterArcanaProgress_Ravages}
+     */
+    public static final class Builder extends
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CDOTAUserMsg_TidehunterArcanaProgress_Ravages)
+        skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_RavagesOrBuilder {
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Ravages_descriptor;
+      }
+
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Ravages_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Ravages_descriptor;
+      }
+
+      public skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages getDefaultInstanceForType() {
+        return skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages build() {
+        skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages buildPartial() {
+        skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages result = new skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages) {
+          return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages other) {
+        if (other == skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Ravages) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CDOTAUserMsg_TidehunterArcanaProgress_Ravages)
+    }
+
+    static {
+      defaultInstance = new CDOTAUserMsg_TidehunterArcanaProgress_Ravages(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CDOTAUserMsg_TidehunterArcanaProgress_Ravages)
+  }
+
+  public interface CDOTAUserMsg_TidehunterArcanaProgress_FishOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CDOTAUserMsg_TidehunterArcanaProgress_Fish)
+      skadistats.clarity.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code CDOTAUserMsg_TidehunterArcanaProgress_Fish}
+   */
+  public static final class CDOTAUserMsg_TidehunterArcanaProgress_Fish extends
+      skadistats.clarity.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CDOTAUserMsg_TidehunterArcanaProgress_Fish)
+      CDOTAUserMsg_TidehunterArcanaProgress_FishOrBuilder {
+    // Use CDOTAUserMsg_TidehunterArcanaProgress_Fish.newBuilder() to construct.
+    private CDOTAUserMsg_TidehunterArcanaProgress_Fish(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CDOTAUserMsg_TidehunterArcanaProgress_Fish(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CDOTAUserMsg_TidehunterArcanaProgress_Fish defaultInstance;
+    public static CDOTAUserMsg_TidehunterArcanaProgress_Fish getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CDOTAUserMsg_TidehunterArcanaProgress_Fish getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final skadistats.clarity.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CDOTAUserMsg_TidehunterArcanaProgress_Fish(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      initFields();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Fish_descriptor;
+    }
+
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Fish_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish.Builder.class);
+    }
+
+    public static skadistats.clarity.protobuf.Parser<CDOTAUserMsg_TidehunterArcanaProgress_Fish> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CDOTAUserMsg_TidehunterArcanaProgress_Fish>() {
+      public CDOTAUserMsg_TidehunterArcanaProgress_Fish parsePartialFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+        return new CDOTAUserMsg_TidehunterArcanaProgress_Fish(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public skadistats.clarity.protobuf.Parser<CDOTAUserMsg_TidehunterArcanaProgress_Fish> getParserForType() {
+      return PARSER;
+    }
+
+    private void initFields() {
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish parseFrom(
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish parseFrom(
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish parseFrom(byte[] data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish parseFrom(
+        byte[] data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish parseFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish parseDelimitedFrom(
+        java.io.InputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish parseFrom(
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CDOTAUserMsg_TidehunterArcanaProgress_Fish}
+     */
+    public static final class Builder extends
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CDOTAUserMsg_TidehunterArcanaProgress_Fish)
+        skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_FishOrBuilder {
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Fish_descriptor;
+      }
+
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Fish_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Fish_descriptor;
+      }
+
+      public skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish getDefaultInstanceForType() {
+        return skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish build() {
+        skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish buildPartial() {
+        skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish result = new skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish) {
+          return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish other) {
+        if (other == skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages.CDOTAUserMsg_TidehunterArcanaProgress_Fish) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CDOTAUserMsg_TidehunterArcanaProgress_Fish)
+    }
+
+    static {
+      defaultInstance = new CDOTAUserMsg_TidehunterArcanaProgress_Fish(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CDOTAUserMsg_TidehunterArcanaProgress_Fish)
+  }
+
   private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgMonsterHunterMaterialQuantity_descriptor;
   private static
@@ -5947,6 +6573,16 @@ public final class DOTAS2UserMessages {
   private static
     skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDOTAUserMsg_MonsterHunter_HuntAlert_fieldAccessorTable;
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Ravages_descriptor;
+  private static
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Ravages_fieldAccessorTable;
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Fish_descriptor;
+  private static
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Fish_fieldAccessorTable;
 
   public static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5992,9 +6628,11 @@ public final class DOTAS2UserMessages {
       "jectiveAll\020\001\022\014\n\010HuntedBy\020\002\022\017\n\013HuntedByAl" +
       "l\020\003\022\016\n\nHunterDuel\020\004\022\021\n\rHunterDuelAll\020\005\022\021" +
       "\n\rHuntSelection\020\006\"7\n\017EHuntStatusType\022\013\n\007" +
-      "Pending\020\000\022\013\n\007Success\020\001\022\n\n\006Failed\020\002B;\n%sk" +
-      "adistats.clarity.wire.dota.s2.protoB\022DOT" +
-      "AS2UserMessages"
+      "Pending\020\000\022\013\n\007Success\020\001\022\n\n\006Failed\020\002\"/\n-CD" +
+      "OTAUserMsg_TidehunterArcanaProgress_Rava" +
+      "ges\",\n*CDOTAUserMsg_TidehunterArcanaProg" +
+      "ress_FishB;\n%skadistats.clarity.wire.dot",
+      "a.s2.protoB\022DOTAS2UserMessages"
     };
     skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6056,6 +6694,18 @@ public final class DOTAS2UserMessages {
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAUserMsg_MonsterHunter_HuntAlert_descriptor,
         new java.lang.String[] { "PlayerId", "HeroId", "HuntAlertType", "HuntStatusType", "Index", });
+    internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Ravages_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Ravages_fieldAccessorTable = new
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Ravages_descriptor,
+        new java.lang.String[] { });
+    internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Fish_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Fish_fieldAccessorTable = new
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAUserMsg_TidehunterArcanaProgress_Fish_descriptor,
+        new java.lang.String[] { });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

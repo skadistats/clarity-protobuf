@@ -60,3 +60,9 @@ message CDOTAUserMsg_MonsterHunter_HuntAlert {
   optional .CDOTAUserMsg_MonsterHunter_HuntAlert.EHuntStatusType hunt_status_type = 4 [default = Pending];
   optional int32 index = 5;
 }
+
+message CDOTAUserMsg_TidehunterArcanaProgress_Ravages {
+}
+
+message CDOTAUserMsg_TidehunterArcanaProgress_Fish {
+}

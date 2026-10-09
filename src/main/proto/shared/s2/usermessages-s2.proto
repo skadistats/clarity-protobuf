@@ -20,6 +20,7 @@ enum EHapticPulseType {
 
 message CUserMessageAchievementEvent {
   optional uint32 achievement = 1;
+  optional int32 count = 2 [default = 1];
 }
 
 message CUserMessageCloseCaption {

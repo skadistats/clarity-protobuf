@@ -73,6 +73,8 @@ enum SVC_Messages {
   svc_HltvFixupOperatorStatus = 75;
   svc_UserCmds = 76;
   svc_NextMsgPredicted = 77;
+  svc_EncryptedData = 78;
+  svc_UserCmdKeyframe = 79;
 }
 
 enum EBaseUserMessages {
@@ -134,6 +136,8 @@ enum EBaseUserMessages {
   UM_PlayResponseConditional = 166;
   UM_UserSentBugBug = 167;
   UM_UsageReport = 168;
+  UM_RemoteServerCommand = 169;
+  UM_RemoteServerResponse = 170;
   UM_MAX_BASE = 200;
 }
 
@@ -318,4 +322,6 @@ enum EDotaUserMessages {
   DOTA_UM_TormentorTimer = 634;
   DOTA_UM_KillEffect = 635;
   DOTA_UM_GiveItem = 636;
+  DOTA_UM_TidehunterArcanaProgress_Ravages = 637;
+  DOTA_UM_TidehunterArcanaProgress_Fish = 638;
 }

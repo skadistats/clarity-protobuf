@@ -220,6 +220,15 @@ public final class S2UserMessages {
      * <code>optional uint32 achievement = 1;</code>
      */
     int getAchievement();
+
+    /**
+     * <code>optional int32 count = 2 [default = 1];</code>
+     */
+    boolean hasCount();
+    /**
+     * <code>optional int32 count = 2 [default = 1];</code>
+     */
+    int getCount();
   }
   /**
    * Protobuf type {@code CUserMessageAchievementEvent}
@@ -278,6 +287,11 @@ public final class S2UserMessages {
               achievement_ = input.readUInt32();
               break;
             }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              count_ = input.readInt32();
+              break;
+            }
           }
         }
       } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
@@ -333,8 +347,24 @@ public final class S2UserMessages {
       return achievement_;
     }
 
+    public static final int COUNT_FIELD_NUMBER = 2;
+    private int count_;
+    /**
+     * <code>optional int32 count = 2 [default = 1];</code>
+     */
+    public boolean hasCount() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 count = 2 [default = 1];</code>
+     */
+    public int getCount() {
+      return count_;
+    }
+
     private void initFields() {
       achievement_ = 0;
+      count_ = 1;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -352,6 +382,9 @@ public final class S2UserMessages {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeUInt32(1, achievement_);
       }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, count_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -364,6 +397,10 @@ public final class S2UserMessages {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(1, achievement_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += skadistats.clarity.protobuf.CodedOutputStream
+          .computeInt32Size(2, count_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -484,6 +521,8 @@ public final class S2UserMessages {
         super.clear();
         achievement_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
+        count_ = 1;
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -516,6 +555,10 @@ public final class S2UserMessages {
           to_bitField0_ |= 0x00000001;
         }
         result.achievement_ = achievement_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.count_ = count_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -534,6 +577,9 @@ public final class S2UserMessages {
         if (other == skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageAchievementEvent.getDefaultInstance()) return this;
         if (other.hasAchievement()) {
           setAchievement(other.getAchievement());
+        }
+        if (other.hasCount()) {
+          setCount(other.getCount());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -590,6 +636,38 @@ public final class S2UserMessages {
       public Builder clearAchievement() {
         bitField0_ = (bitField0_ & ~0x00000001);
         achievement_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int count_ = 1;
+      /**
+       * <code>optional int32 count = 2 [default = 1];</code>
+       */
+      public boolean hasCount() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 count = 2 [default = 1];</code>
+       */
+      public int getCount() {
+        return count_;
+      }
+      /**
+       * <code>optional int32 count = 2 [default = 1];</code>
+       */
+      public Builder setCount(int value) {
+        bitField0_ |= 0x00000002;
+        count_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 count = 2 [default = 1];</code>
+       */
+      public Builder clearCount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        count_ = 1;
         onChanged();
         return this;
       }
@@ -40391,166 +40469,166 @@ public final class S2UserMessages {
     java.lang.String[] descriptorData = {
       "\n\025usermessages-s2.proto\032\035networkbasetype" +
       "s-common.proto\032\033networkbasetypes-demo.pr" +
-      "oto\"3\n\034CUserMessageAchievementEvent\022\023\n\013a" +
-      "chievement\030\001 \001(\r\"f\n\030CUserMessageCloseCap" +
-      "tion\022\014\n\004hash\030\001 \001(\007\022\020\n\010duration\030\002 \001(\002\022\023\n\013" +
-      "from_player\030\003 \001(\010\022\025\n\tent_index\030\004 \001(\005:\002-1" +
-      "\"l\n\036CUserMessageCloseCaptionDirect\022\014\n\004ha" +
-      "sh\030\001 \001(\007\022\020\n\010duration\030\002 \001(\002\022\023\n\013from_playe" +
-      "r\030\003 \001(\010\022\025\n\tent_index\030\004 \001(\005:\002-1\"s\n#CUserM" +
-      "essageCloseCaptionPlaceholder\022\016\n\006string\030",
-      "\001 \001(\t\022\020\n\010duration\030\002 \001(\002\022\023\n\013from_player\030\003" +
-      " \001(\010\022\025\n\tent_index\030\004 \001(\005:\002-1\"/\n\034CUserMess" +
-      "ageCurrentTimescale\022\017\n\007current\030\001 \001(\002\"y\n\034" +
-      "CUserMessageDesiredTimescale\022\017\n\007desired\030" +
-      "\001 \001(\002\022\024\n\014acceleration\030\002 \001(\002\022\024\n\014minblendr" +
-      "ate\030\003 \001(\002\022\034\n\024blenddeltamultiplier\030\004 \001(\002\"" +
-      "U\n\020CUserMessageFade\022\020\n\010duration\030\001 \001(\r\022\021\n" +
-      "\thold_time\030\002 \001(\r\022\r\n\005flags\030\003 \001(\r\022\r\n\005color" +
-      "\030\004 \001(\007\"\\\n\021CUserMessageShake\022\017\n\007command\030\001" +
-      " \001(\r\022\021\n\tamplitude\030\002 \001(\002\022\021\n\tfrequency\030\003 \001",
-      "(\002\022\020\n\010duration\030\004 \001(\002\"Y\n\024CUserMessageShak" +
-      "eDir\022!\n\005shake\030\001 \001(\0132\022.CUserMessageShake\022" +
-      "\036\n\tdirection\030\002 \001(\0132\013.CMsgVector\"a\n\026CUser" +
-      "MessageWaterShake\022\017\n\007command\030\001 \001(\r\022\021\n\tam" +
-      "plitude\030\002 \001(\002\022\021\n\tfrequency\030\003 \001(\002\022\020\n\010dura" +
-      "tion\030\004 \001(\002\"z\n\026CUserMessageScreenTilt\022\017\n\007" +
-      "command\030\001 \001(\r\022\023\n\013ease_in_out\030\002 \001(\010\022\032\n\005an" +
-      "gle\030\003 \001(\0132\013.CMsgVector\022\020\n\010duration\030\004 \001(\002" +
-      "\022\014\n\004time\030\005 \001(\002\"_\n\023CUserMessageSayText\022\027\n" +
-      "\013playerindex\030\001 \001(\005:\002-1\022\014\n\004text\030\002 \001(\t\022\014\n\004",
-      "chat\030\003 \001(\010\022\023\n\013textallchat\030\004 \001(\010\"\247\001\n\024CUse" +
-      "rMessageSayText2\022\027\n\013entityindex\030\001 \001(\005:\002-" +
-      "1\022\014\n\004chat\030\002 \001(\010\022\023\n\013messagename\030\003 \001(\t\022\016\n\006" +
-      "param1\030\004 \001(\t\022\016\n\006param2\030\005 \001(\t\022\016\n\006param3\030\006" +
-      " \001(\t\022\016\n\006param4\030\007 \001(\t\022\023\n\013textallchat\030\010 \001(" +
-      "\010\"|\n\022CUserMessageHudMsg\022\017\n\007channel\030\001 \001(\r" +
-      "\022\t\n\001x\030\002 \001(\002\022\t\n\001y\030\003 \001(\002\022\016\n\006color1\030\004 \001(\007\022\016" +
-      "\n\006color2\030\005 \001(\007\022\016\n\006effect\030\006 \001(\r\022\017\n\007messag" +
-      "e\030\013 \001(\t\"&\n\023CUserMessageHudText\022\017\n\007messag" +
-      "e\030\001 \001(\t\"2\n\023CUserMessageTextMsg\022\014\n\004dest\030\001",
-      " \001(\r\022\r\n\005param\030\002 \003(\t\"\027\n\025CUserMessageGameT" +
-      "itle\"\026\n\024CUserMessageResetHUD\"8\n\025CUserMes" +
-      "sageSendAudio\022\021\n\tsoundname\030\001 \001(\t\022\014\n\004stop" +
-      "\030\002 \001(\010\"n\n\032CUserMessageAudioParameter\022\026\n\016" +
-      "parameter_type\030\001 \001(\r\022\026\n\016name_hash_code\030\002" +
-      " \001(\r\022\r\n\005value\030\003 \001(\002\022\021\n\tint_value\030\004 \001(\r\"W" +
-      "\n\025CUserMessageVoiceMask\022\027\n\017gamerules_mas" +
-      "ks\030\001 \003(\r\022\021\n\tban_masks\030\002 \003(\r\022\022\n\nmod_enabl" +
-      "e\030\003 \001(\010\"\032\n\030CUserMessageRequestState\"@\n\022C" +
-      "UserMessageRumble\022\r\n\005index\030\001 \001(\005\022\014\n\004data",
-      "\030\002 \001(\005\022\r\n\005flags\030\003 \001(\005\"K\n\032CUserMessageSay" +
-      "TextChannel\022\016\n\006player\030\001 \001(\005\022\017\n\007channel\030\002" +
-      " \001(\005\022\014\n\004text\030\003 \001(\t\"\226\001\n\027CUserMessageColor" +
-      "edText\022\r\n\005color\030\001 \001(\r\022\014\n\004text\030\002 \001(\t\022\r\n\005r" +
-      "eset\030\003 \001(\010\022\037\n\023context_player_slot\030\004 \001(\005:" +
-      "\002-1\022\025\n\rcontext_value\030\005 \001(\005\022\027\n\017context_te" +
-      "am_id\030\006 \001(\005\"*\n\026CUserMessageItemPickup\022\020\n" +
-      "\010itemname\030\001 \001(\t\")\n\026CUserMessageAmmoDenie" +
-      "d\022\017\n\007ammo_id\030\001 \001(\r\"e\n\024CUserMessageShowMe" +
-      "nu\022\022\n\nvalidslots\030\001 \001(\r\022\023\n\013displaytime\030\002 ",
-      "\001(\r\022\020\n\010needmore\030\003 \001(\010\022\022\n\nmenustring\030\004 \001(" +
-      "\t\"V\n\026CUserMessageCreditsMsg\022\'\n\010rolltype\030" +
-      "\001 \001(\0162\n.eRollType:\tROLL_NONE\022\023\n\013logo_len" +
-      "gth\030\002 \001(\002\"m\n\027CUserMessageHapticPulse\022\017\n\007" +
-      "hand_id\030\001 \001(\005\022A\n\npulse_type\030\002 \001(\0162\021.EHap" +
-      "ticPulseType:\032VR_HAND_HAPTIC_PULSE_LIGHT" +
-      "\";\n\030CEntityMessagePlayJingle\022\037\n\nentity_m" +
-      "sg\030\001 \001(\0132\013.CEntityMsg\"T\n\033CEntityMessageS" +
-      "creenOverlay\022\024\n\014start_effect\030\001 \001(\010\022\037\n\nen" +
-      "tity_msg\030\002 \001(\0132\013.CEntityMsg\"W\n\035CEntityMe",
-      "ssageRemoveAllDecals\022\025\n\rremove_decals\030\001 " +
-      "\001(\010\022\037\n\nentity_msg\030\002 \001(\0132\013.CEntityMsg\"]\n\034" +
-      "CEntityMessagePropagateForce\022\034\n\007impulse\030" +
-      "\001 \001(\0132\013.CMsgVector\022\037\n\nentity_msg\030\002 \001(\0132\013" +
-      ".CEntityMsg\"\275\001\n\025CEntityMessageDoSpark\022\033\n" +
-      "\006origin\030\001 \001(\0132\013.CMsgVector\022\027\n\013entityinde" +
-      "x\030\002 \001(\005:\002-1\022\016\n\006radius\030\003 \001(\002\022\r\n\005color\030\004 \001" +
-      "(\007\022\r\n\005beams\030\005 \001(\r\022\r\n\005thick\030\006 \001(\002\022\020\n\010dura" +
-      "tion\030\007 \001(\002\022\037\n\nentity_msg\030\010 \001(\0132\013.CEntity" +
-      "Msg\"g\n\026CEntityMessageFixAngle\022\020\n\010relativ",
-      "e\030\001 \001(\010\022\032\n\005angle\030\002 \001(\0132\013.CMsgQAngle\022\037\n\ne" +
-      "ntity_msg\030\003 \001(\0132\013.CEntityMsg\"\361\001\n\034CUserMe" +
-      "ssageCameraTransition\022\023\n\013camera_type\030\001 \001" +
-      "(\r\022\020\n\010duration\030\002 \001(\002\022O\n\022params_data_driv" +
-      "en\030\003 \001(\01323.CUserMessageCameraTransition." +
-      "Transition_DataDriven\032Y\n\025Transition_Data" +
-      "Driven\022\020\n\010filename\030\001 \001(\t\022\034\n\020attach_ent_i" +
-      "ndex\030\002 \001(\005:\002-1\022\020\n\010duration\030\003 \001(\002\"%\n\021CUse" +
-      "rMsg_HudError\022\020\n\010order_id\030\001 \001(\005\"<\n\030CUser" +
-      "Msg_CustomGameEvent\022\022\n\nevent_name\030\001 \001(\t\022",
-      "\014\n\004data\030\002 \001(\014\"\177\n\037CUserMessageHapticsMana" +
-      "gerPulse\022\017\n\007hand_id\030\001 \001(\005\022\030\n\020effect_ampl" +
-      "itude\030\002 \001(\002\022\030\n\020effect_frequency\030\003 \001(\002\022\027\n" +
-      "\017effect_duration\030\004 \001(\002\"h\n CUserMessageHa" +
-      "pticsManagerEffect\022\017\n\007hand_id\030\001 \001(\005\022\035\n\025e" +
-      "ffect_name_hash_code\030\002 \001(\r\022\024\n\014effect_sca" +
-      "le\030\003 \001(\002\"E\n\037CUserMessageAnimStateGraphSt" +
-      "ate\022\024\n\014entity_index\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\"" +
-      "\235\002\n\035CUserMessageCommandQueueState\022\027\n\013pla" +
-      "yer_slot\030\001 \001(\005:\002-1\022O\n\022command_queue_info",
-      "\030\002 \001(\01323.CUserMessageCommandQueueState.c" +
-      "ommand_queue_info_t\032\221\001\n\024command_queue_in" +
-      "fo_t\022\027\n\017commands_queued\030\001 \001(\r\022\"\n\032command" +
-      "_queue_desired_size\030\002 \001(\r\022\035\n\025starved_com" +
-      "mand_ticks\030\003 \001(\r\022\035\n\025time_dilation_percen" +
-      "t\030\004 \001(\005\"_\n\034CUserMessageUpdateCssClasses\022" +
-      "\032\n\022target_world_panel\030\001 \001(\005\022\023\n\013css_class" +
-      "es\030\002 \001(\t\022\016\n\006is_add\030\003 \001(\010\"1\n\033CUserMessage" +
-      "ServerFrameTime\022\022\n\nframe_time\030\001 \001(\002\"4\n C" +
-      "UserMessageLagCompensationError\022\020\n\010dista",
-      "nce\030\001 \001(\002\"G\n\034CUserMessageRequestDllStatu" +
-      "s\022\022\n\ndll_action\030\001 \001(\t\022\023\n\013full_report\030\002 \001" +
-      "(\010\"j\n\035CUserMessageRequestUtilAction\022\r\n\005u" +
-      "til1\030\002 \001(\005\022\r\n\005util2\030\003 \001(\005\022\r\n\005util3\030\004 \001(\005" +
-      "\022\r\n\005util4\030\005 \001(\005\022\r\n\005util5\030\006 \001(\005\"\370\002\n\035CUser" +
-      "Message_UtilMsg_Response\022\013\n\003crc\030\001 \001(\007\022\022\n" +
-      "\nitem_count\030\002 \001(\005\022\014\n\004crc2\030\003 \001(\007\022\023\n\013item_" +
-      "count2\030\004 \001(\005\022\020\n\010crc_part\030\005 \003(\005\022\021\n\tcrc_pa" +
-      "rt2\030\006 \003(\005\022\030\n\020client_timestamp\030\007 \001(\005\022\020\n\010p" +
-      "latform\030\010 \001(\005\022>\n\013itemdetails\030\t \003(\0132).CUs",
-      "erMessage_UtilMsg_Response.ItemDetail\022\021\n" +
-      "\titemgroup\030\n \001(\005\022\023\n\013total_count\030\013 \001(\005\022\024\n" +
-      "\014total_count2\030\014 \001(\005\032D\n\nItemDetail\022\r\n\005ind" +
-      "ex\030\001 \001(\005\022\014\n\004hash\030\002 \001(\005\022\013\n\003crc\030\003 \001(\005\022\014\n\004n" +
-      "ame\030\004 \001(\t\"\242\002\n\026CUserMessage_DllStatus\022\023\n\013" +
-      "file_report\030\001 \001(\t\022\024\n\014command_line\030\002 \001(\t\022" +
-      "\023\n\013total_files\030\003 \001(\r\022\022\n\nprocess_id\030\004 \001(\r" +
-      "\022\021\n\tosversion\030\005 \001(\005\022\023\n\013client_time\030\006 \001(\004" +
-      "\0229\n\013diagnostics\030\007 \003(\0132$.CUserMessage_Dll" +
-      "Status.CVDiagnostic\032Q\n\014CVDiagnostic\022\n\n\002i",
-      "d\030\001 \001(\r\022\020\n\010extended\030\002 \001(\r\022\r\n\005value\030\003 \001(\004" +
-      "\022\024\n\014string_value\030\004 \001(\t\"R\n\034CUserMessageRe" +
-      "questInventory\022\021\n\tinventory\030\001 \001(\005\022\016\n\006off" +
-      "set\030\002 \001(\005\022\017\n\007options\030\003 \001(\005\"\367\004\n\037CUserMess" +
-      "age_Inventory_Response\022\013\n\003crc\030\001 \001(\007\022\022\n\ni" +
-      "tem_count\030\002 \001(\005\022\021\n\tosversion\030\005 \001(\005\022\021\n\tpe" +
-      "rf_time\030\006 \001(\005\022\030\n\020client_timestamp\030\007 \001(\005\022" +
-      "\020\n\010platform\030\010 \001(\005\022E\n\013inventories\030\t \003(\01320" +
-      ".CUserMessage_Inventory_Response.Invento" +
-      "ryDetail\022F\n\014inventories2\030\n \003(\01320.CUserMe",
-      "ssage_Inventory_Response.InventoryDetail" +
-      "\022F\n\014inventories3\030\016 \003(\01320.CUserMessage_In" +
-      "ventory_Response.InventoryDetail\022\020\n\010inv_" +
-      "type\030\013 \001(\005\022\025\n\rbuild_version\030\014 \001(\005\022\020\n\010ins" +
-      "tance\030\r \001(\005\022\022\n\nstart_time\030\017 \001(\003\032\272\001\n\017Inve" +
-      "ntoryDetail\022\r\n\005index\030\001 \001(\005\022\017\n\007primary\030\002 " +
-      "\001(\003\022\016\n\006offset\030\003 \001(\003\022\r\n\005first\030\004 \001(\003\022\014\n\004ba" +
-      "se\030\005 \001(\003\022\014\n\004name\030\006 \001(\t\022\021\n\tbase_name\030\007 \001(" +
-      "\t\022\023\n\013base_detail\030\010 \001(\005\022\021\n\tbase_time\030\t \001(" +
-      "\005\022\021\n\tbase_hash\030\n \001(\005\"\257\001\n$CUserMessage_Pl",
-      "ayResponseConditional\022\025\n\tent_index\030\001 \001(\005" +
-      ":\002-1\022\024\n\014player_slots\030\002 \003(\005\022\020\n\010response\030\003" +
-      " \001(\t\022\037\n\nent_origin\030\004 \001(\0132\013.CMsgVector\022\021\n" +
-      "\tpre_delay\030\005 \001(\002\022\024\n\014mix_priority\030\006 \001(\005*o" +
-      "\n\teRollType\022\026\n\tROLL_NONE\020\377\377\377\377\377\377\377\377\377\001\022\016\n\nR" +
-      "OLL_STATS\020\000\022\020\n\014ROLL_CREDITS\020\001\022\027\n\023ROLL_LA" +
-      "TE_JOIN_LOGO\020\002\022\017\n\013ROLL_OUTTRO\020\003*t\n\020EHapt" +
-      "icPulseType\022\036\n\032VR_HAND_HAPTIC_PULSE_LIGH" +
-      "T\020\000\022\037\n\033VR_HAND_HAPTIC_PULSE_MEDIUM\020\001\022\037\n\033" +
-      "VR_HAND_HAPTIC_PULSE_STRONG\020\002B9\n\'skadist",
-      "ats.clarity.wire.shared.s2.protoB\016S2User" +
-      "Messages"
+      "oto\"E\n\034CUserMessageAchievementEvent\022\023\n\013a" +
+      "chievement\030\001 \001(\r\022\020\n\005count\030\002 \001(\005:\0011\"f\n\030CU" +
+      "serMessageCloseCaption\022\014\n\004hash\030\001 \001(\007\022\020\n\010" +
+      "duration\030\002 \001(\002\022\023\n\013from_player\030\003 \001(\010\022\025\n\te" +
+      "nt_index\030\004 \001(\005:\002-1\"l\n\036CUserMessageCloseC" +
+      "aptionDirect\022\014\n\004hash\030\001 \001(\007\022\020\n\010duration\030\002" +
+      " \001(\002\022\023\n\013from_player\030\003 \001(\010\022\025\n\tent_index\030\004" +
+      " \001(\005:\002-1\"s\n#CUserMessageCloseCaptionPlac",
+      "eholder\022\016\n\006string\030\001 \001(\t\022\020\n\010duration\030\002 \001(" +
+      "\002\022\023\n\013from_player\030\003 \001(\010\022\025\n\tent_index\030\004 \001(" +
+      "\005:\002-1\"/\n\034CUserMessageCurrentTimescale\022\017\n" +
+      "\007current\030\001 \001(\002\"y\n\034CUserMessageDesiredTim" +
+      "escale\022\017\n\007desired\030\001 \001(\002\022\024\n\014acceleration\030" +
+      "\002 \001(\002\022\024\n\014minblendrate\030\003 \001(\002\022\034\n\024blenddelt" +
+      "amultiplier\030\004 \001(\002\"U\n\020CUserMessageFade\022\020\n" +
+      "\010duration\030\001 \001(\r\022\021\n\thold_time\030\002 \001(\r\022\r\n\005fl" +
+      "ags\030\003 \001(\r\022\r\n\005color\030\004 \001(\007\"\\\n\021CUserMessage" +
+      "Shake\022\017\n\007command\030\001 \001(\r\022\021\n\tamplitude\030\002 \001(",
+      "\002\022\021\n\tfrequency\030\003 \001(\002\022\020\n\010duration\030\004 \001(\002\"Y" +
+      "\n\024CUserMessageShakeDir\022!\n\005shake\030\001 \001(\0132\022." +
+      "CUserMessageShake\022\036\n\tdirection\030\002 \001(\0132\013.C" +
+      "MsgVector\"a\n\026CUserMessageWaterShake\022\017\n\007c" +
+      "ommand\030\001 \001(\r\022\021\n\tamplitude\030\002 \001(\002\022\021\n\tfrequ" +
+      "ency\030\003 \001(\002\022\020\n\010duration\030\004 \001(\002\"z\n\026CUserMes" +
+      "sageScreenTilt\022\017\n\007command\030\001 \001(\r\022\023\n\013ease_" +
+      "in_out\030\002 \001(\010\022\032\n\005angle\030\003 \001(\0132\013.CMsgVector" +
+      "\022\020\n\010duration\030\004 \001(\002\022\014\n\004time\030\005 \001(\002\"_\n\023CUse" +
+      "rMessageSayText\022\027\n\013playerindex\030\001 \001(\005:\002-1",
+      "\022\014\n\004text\030\002 \001(\t\022\014\n\004chat\030\003 \001(\010\022\023\n\013textallc" +
+      "hat\030\004 \001(\010\"\247\001\n\024CUserMessageSayText2\022\027\n\013en" +
+      "tityindex\030\001 \001(\005:\002-1\022\014\n\004chat\030\002 \001(\010\022\023\n\013mes" +
+      "sagename\030\003 \001(\t\022\016\n\006param1\030\004 \001(\t\022\016\n\006param2" +
+      "\030\005 \001(\t\022\016\n\006param3\030\006 \001(\t\022\016\n\006param4\030\007 \001(\t\022\023" +
+      "\n\013textallchat\030\010 \001(\010\"|\n\022CUserMessageHudMs" +
+      "g\022\017\n\007channel\030\001 \001(\r\022\t\n\001x\030\002 \001(\002\022\t\n\001y\030\003 \001(\002" +
+      "\022\016\n\006color1\030\004 \001(\007\022\016\n\006color2\030\005 \001(\007\022\016\n\006effe" +
+      "ct\030\006 \001(\r\022\017\n\007message\030\013 \001(\t\"&\n\023CUserMessag" +
+      "eHudText\022\017\n\007message\030\001 \001(\t\"2\n\023CUserMessag",
+      "eTextMsg\022\014\n\004dest\030\001 \001(\r\022\r\n\005param\030\002 \003(\t\"\027\n" +
+      "\025CUserMessageGameTitle\"\026\n\024CUserMessageRe" +
+      "setHUD\"8\n\025CUserMessageSendAudio\022\021\n\tsound" +
+      "name\030\001 \001(\t\022\014\n\004stop\030\002 \001(\010\"n\n\032CUserMessage" +
+      "AudioParameter\022\026\n\016parameter_type\030\001 \001(\r\022\026" +
+      "\n\016name_hash_code\030\002 \001(\r\022\r\n\005value\030\003 \001(\002\022\021\n" +
+      "\tint_value\030\004 \001(\r\"W\n\025CUserMessageVoiceMas" +
+      "k\022\027\n\017gamerules_masks\030\001 \003(\r\022\021\n\tban_masks\030" +
+      "\002 \003(\r\022\022\n\nmod_enable\030\003 \001(\010\"\032\n\030CUserMessag" +
+      "eRequestState\"@\n\022CUserMessageRumble\022\r\n\005i",
+      "ndex\030\001 \001(\005\022\014\n\004data\030\002 \001(\005\022\r\n\005flags\030\003 \001(\005\"" +
+      "K\n\032CUserMessageSayTextChannel\022\016\n\006player\030" +
+      "\001 \001(\005\022\017\n\007channel\030\002 \001(\005\022\014\n\004text\030\003 \001(\t\"\226\001\n" +
+      "\027CUserMessageColoredText\022\r\n\005color\030\001 \001(\r\022" +
+      "\014\n\004text\030\002 \001(\t\022\r\n\005reset\030\003 \001(\010\022\037\n\023context_" +
+      "player_slot\030\004 \001(\005:\002-1\022\025\n\rcontext_value\030\005" +
+      " \001(\005\022\027\n\017context_team_id\030\006 \001(\005\"*\n\026CUserMe" +
+      "ssageItemPickup\022\020\n\010itemname\030\001 \001(\t\")\n\026CUs" +
+      "erMessageAmmoDenied\022\017\n\007ammo_id\030\001 \001(\r\"e\n\024" +
+      "CUserMessageShowMenu\022\022\n\nvalidslots\030\001 \001(\r",
+      "\022\023\n\013displaytime\030\002 \001(\r\022\020\n\010needmore\030\003 \001(\010\022" +
+      "\022\n\nmenustring\030\004 \001(\t\"V\n\026CUserMessageCredi" +
+      "tsMsg\022\'\n\010rolltype\030\001 \001(\0162\n.eRollType:\tROL" +
+      "L_NONE\022\023\n\013logo_length\030\002 \001(\002\"m\n\027CUserMess" +
+      "ageHapticPulse\022\017\n\007hand_id\030\001 \001(\005\022A\n\npulse" +
+      "_type\030\002 \001(\0162\021.EHapticPulseType:\032VR_HAND_" +
+      "HAPTIC_PULSE_LIGHT\";\n\030CEntityMessagePlay" +
+      "Jingle\022\037\n\nentity_msg\030\001 \001(\0132\013.CEntityMsg\"" +
+      "T\n\033CEntityMessageScreenOverlay\022\024\n\014start_" +
+      "effect\030\001 \001(\010\022\037\n\nentity_msg\030\002 \001(\0132\013.CEnti",
+      "tyMsg\"W\n\035CEntityMessageRemoveAllDecals\022\025" +
+      "\n\rremove_decals\030\001 \001(\010\022\037\n\nentity_msg\030\002 \001(" +
+      "\0132\013.CEntityMsg\"]\n\034CEntityMessagePropagat" +
+      "eForce\022\034\n\007impulse\030\001 \001(\0132\013.CMsgVector\022\037\n\n" +
+      "entity_msg\030\002 \001(\0132\013.CEntityMsg\"\275\001\n\025CEntit" +
+      "yMessageDoSpark\022\033\n\006origin\030\001 \001(\0132\013.CMsgVe" +
+      "ctor\022\027\n\013entityindex\030\002 \001(\005:\002-1\022\016\n\006radius\030" +
+      "\003 \001(\002\022\r\n\005color\030\004 \001(\007\022\r\n\005beams\030\005 \001(\r\022\r\n\005t" +
+      "hick\030\006 \001(\002\022\020\n\010duration\030\007 \001(\002\022\037\n\nentity_m" +
+      "sg\030\010 \001(\0132\013.CEntityMsg\"g\n\026CEntityMessageF",
+      "ixAngle\022\020\n\010relative\030\001 \001(\010\022\032\n\005angle\030\002 \001(\013" +
+      "2\013.CMsgQAngle\022\037\n\nentity_msg\030\003 \001(\0132\013.CEnt" +
+      "ityMsg\"\361\001\n\034CUserMessageCameraTransition\022" +
+      "\023\n\013camera_type\030\001 \001(\r\022\020\n\010duration\030\002 \001(\002\022O" +
+      "\n\022params_data_driven\030\003 \001(\01323.CUserMessag" +
+      "eCameraTransition.Transition_DataDriven\032" +
+      "Y\n\025Transition_DataDriven\022\020\n\010filename\030\001 \001" +
+      "(\t\022\034\n\020attach_ent_index\030\002 \001(\005:\002-1\022\020\n\010dura" +
+      "tion\030\003 \001(\002\"%\n\021CUserMsg_HudError\022\020\n\010order" +
+      "_id\030\001 \001(\005\"<\n\030CUserMsg_CustomGameEvent\022\022\n",
+      "\nevent_name\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\"\177\n\037CUser" +
+      "MessageHapticsManagerPulse\022\017\n\007hand_id\030\001 " +
+      "\001(\005\022\030\n\020effect_amplitude\030\002 \001(\002\022\030\n\020effect_" +
+      "frequency\030\003 \001(\002\022\027\n\017effect_duration\030\004 \001(\002" +
+      "\"h\n CUserMessageHapticsManagerEffect\022\017\n\007" +
+      "hand_id\030\001 \001(\005\022\035\n\025effect_name_hash_code\030\002" +
+      " \001(\r\022\024\n\014effect_scale\030\003 \001(\002\"E\n\037CUserMessa" +
+      "geAnimStateGraphState\022\024\n\014entity_index\030\001 " +
+      "\001(\005\022\014\n\004data\030\002 \001(\014\"\235\002\n\035CUserMessageComman" +
+      "dQueueState\022\027\n\013player_slot\030\001 \001(\005:\002-1\022O\n\022",
+      "command_queue_info\030\002 \001(\01323.CUserMessageC" +
+      "ommandQueueState.command_queue_info_t\032\221\001" +
+      "\n\024command_queue_info_t\022\027\n\017commands_queue" +
+      "d\030\001 \001(\r\022\"\n\032command_queue_desired_size\030\002 " +
+      "\001(\r\022\035\n\025starved_command_ticks\030\003 \001(\r\022\035\n\025ti" +
+      "me_dilation_percent\030\004 \001(\005\"_\n\034CUserMessag" +
+      "eUpdateCssClasses\022\032\n\022target_world_panel\030" +
+      "\001 \001(\005\022\023\n\013css_classes\030\002 \001(\t\022\016\n\006is_add\030\003 \001" +
+      "(\010\"1\n\033CUserMessageServerFrameTime\022\022\n\nfra" +
+      "me_time\030\001 \001(\002\"4\n CUserMessageLagCompensa",
+      "tionError\022\020\n\010distance\030\001 \001(\002\"G\n\034CUserMess" +
+      "ageRequestDllStatus\022\022\n\ndll_action\030\001 \001(\t\022" +
+      "\023\n\013full_report\030\002 \001(\010\"j\n\035CUserMessageRequ" +
+      "estUtilAction\022\r\n\005util1\030\002 \001(\005\022\r\n\005util2\030\003 " +
+      "\001(\005\022\r\n\005util3\030\004 \001(\005\022\r\n\005util4\030\005 \001(\005\022\r\n\005uti" +
+      "l5\030\006 \001(\005\"\370\002\n\035CUserMessage_UtilMsg_Respon" +
+      "se\022\013\n\003crc\030\001 \001(\007\022\022\n\nitem_count\030\002 \001(\005\022\014\n\004c" +
+      "rc2\030\003 \001(\007\022\023\n\013item_count2\030\004 \001(\005\022\020\n\010crc_pa" +
+      "rt\030\005 \003(\005\022\021\n\tcrc_part2\030\006 \003(\005\022\030\n\020client_ti" +
+      "mestamp\030\007 \001(\005\022\020\n\010platform\030\010 \001(\005\022>\n\013itemd",
+      "etails\030\t \003(\0132).CUserMessage_UtilMsg_Resp" +
+      "onse.ItemDetail\022\021\n\titemgroup\030\n \001(\005\022\023\n\013to" +
+      "tal_count\030\013 \001(\005\022\024\n\014total_count2\030\014 \001(\005\032D\n" +
+      "\nItemDetail\022\r\n\005index\030\001 \001(\005\022\014\n\004hash\030\002 \001(\005" +
+      "\022\013\n\003crc\030\003 \001(\005\022\014\n\004name\030\004 \001(\t\"\242\002\n\026CUserMes" +
+      "sage_DllStatus\022\023\n\013file_report\030\001 \001(\t\022\024\n\014c" +
+      "ommand_line\030\002 \001(\t\022\023\n\013total_files\030\003 \001(\r\022\022" +
+      "\n\nprocess_id\030\004 \001(\r\022\021\n\tosversion\030\005 \001(\005\022\023\n" +
+      "\013client_time\030\006 \001(\004\0229\n\013diagnostics\030\007 \003(\0132" +
+      "$.CUserMessage_DllStatus.CVDiagnostic\032Q\n",
+      "\014CVDiagnostic\022\n\n\002id\030\001 \001(\r\022\020\n\010extended\030\002 " +
+      "\001(\r\022\r\n\005value\030\003 \001(\004\022\024\n\014string_value\030\004 \001(\t" +
+      "\"R\n\034CUserMessageRequestInventory\022\021\n\tinve" +
+      "ntory\030\001 \001(\005\022\016\n\006offset\030\002 \001(\005\022\017\n\007options\030\003" +
+      " \001(\005\"\367\004\n\037CUserMessage_Inventory_Response" +
+      "\022\013\n\003crc\030\001 \001(\007\022\022\n\nitem_count\030\002 \001(\005\022\021\n\tosv" +
+      "ersion\030\005 \001(\005\022\021\n\tperf_time\030\006 \001(\005\022\030\n\020clien" +
+      "t_timestamp\030\007 \001(\005\022\020\n\010platform\030\010 \001(\005\022E\n\013i" +
+      "nventories\030\t \003(\01320.CUserMessage_Inventor" +
+      "y_Response.InventoryDetail\022F\n\014inventorie",
+      "s2\030\n \003(\01320.CUserMessage_Inventory_Respon" +
+      "se.InventoryDetail\022F\n\014inventories3\030\016 \003(\013" +
+      "20.CUserMessage_Inventory_Response.Inven" +
+      "toryDetail\022\020\n\010inv_type\030\013 \001(\005\022\025\n\rbuild_ve" +
+      "rsion\030\014 \001(\005\022\020\n\010instance\030\r \001(\005\022\022\n\nstart_t" +
+      "ime\030\017 \001(\003\032\272\001\n\017InventoryDetail\022\r\n\005index\030\001" +
+      " \001(\005\022\017\n\007primary\030\002 \001(\003\022\016\n\006offset\030\003 \001(\003\022\r\n" +
+      "\005first\030\004 \001(\003\022\014\n\004base\030\005 \001(\003\022\014\n\004name\030\006 \001(\t" +
+      "\022\021\n\tbase_name\030\007 \001(\t\022\023\n\013base_detail\030\010 \001(\005" +
+      "\022\021\n\tbase_time\030\t \001(\005\022\021\n\tbase_hash\030\n \001(\005\"\257",
+      "\001\n$CUserMessage_PlayResponseConditional\022" +
+      "\025\n\tent_index\030\001 \001(\005:\002-1\022\024\n\014player_slots\030\002" +
+      " \003(\005\022\020\n\010response\030\003 \001(\t\022\037\n\nent_origin\030\004 \001" +
+      "(\0132\013.CMsgVector\022\021\n\tpre_delay\030\005 \001(\002\022\024\n\014mi" +
+      "x_priority\030\006 \001(\005*o\n\teRollType\022\026\n\tROLL_NO" +
+      "NE\020\377\377\377\377\377\377\377\377\377\001\022\016\n\nROLL_STATS\020\000\022\020\n\014ROLL_CR" +
+      "EDITS\020\001\022\027\n\023ROLL_LATE_JOIN_LOGO\020\002\022\017\n\013ROLL" +
+      "_OUTTRO\020\003*t\n\020EHapticPulseType\022\036\n\032VR_HAND" +
+      "_HAPTIC_PULSE_LIGHT\020\000\022\037\n\033VR_HAND_HAPTIC_" +
+      "PULSE_MEDIUM\020\001\022\037\n\033VR_HAND_HAPTIC_PULSE_S",
+      "TRONG\020\002B9\n\'skadistats.clarity.wire.share" +
+      "d.s2.protoB\016S2UserMessages"
     };
     skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -40571,7 +40649,7 @@ public final class S2UserMessages {
     internal_static_CUserMessageAchievementEvent_fieldAccessorTable = new
       skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageAchievementEvent_descriptor,
-        new java.lang.String[] { "Achievement", });
+        new java.lang.String[] { "Achievement", "Count", });
     internal_static_CUserMessageCloseCaption_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CUserMessageCloseCaption_fieldAccessorTable = new
